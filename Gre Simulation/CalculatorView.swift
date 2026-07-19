@@ -128,12 +128,17 @@ struct CalculatorView: View {
             ForEach(rows, id: \.self) { row in
                 HStack(spacing: 9) {
                     ForEach(row, id: \.self) { key in
-                        Button(key) { model.input(key) }
-                            .font(.headline.monospacedDigit())
-                            .frame(maxWidth: .infinity, minHeight: 43)
-                            .background(buttonColor(key), in: RoundedRectangle(cornerRadius: 5))
-                            .foregroundStyle(buttonForeground(key))
-                            .buttonStyle(.plain)
+                        Button {
+                            model.input(key)
+                        } label: {
+                            Text(key)
+                                .font(.headline.monospacedDigit())
+                                .frame(maxWidth: .infinity, minHeight: 43)
+                                .contentShape(Rectangle())
+                                .background(buttonColor(key), in: RoundedRectangle(cornerRadius: 5))
+                                .foregroundStyle(buttonForeground(key))
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
             }
