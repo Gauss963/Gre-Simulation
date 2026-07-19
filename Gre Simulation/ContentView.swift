@@ -1,8 +1,5 @@
 import SwiftUI
 import Foundation
-#if os(macOS)
-import AppKit
-#endif
 
 enum AppPage: String, CaseIterable, Identifiable {
     case dashboard
@@ -53,7 +50,6 @@ struct ContentView: View {
                 examDestination(activeExamMode)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(GRETheme.canvas.ignoresSafeArea())
-                    .background(MacExamFullScreenController())
             } else {
                 rootContent
             }
@@ -133,60 +129,6 @@ struct ContentView: View {
         .padding(16)
     }
 }
-
-#if os(macOS)
-private struct MacExamFullScreenController: NSViewRepresentable {
-    final class Coordinator {
-        weak var window: NSWindow?
-        private var enteredFullScreen = false
-
-        func attach(to window: NSWindow) {
-            self.window = window
-            guard !enteredFullScreen, !window.styleMask.contains(.fullScreen) else { return }
-            enteredFullScreen = true
-            window.toggleFullScreen(nil)
-        }
-
-        func restoreWindowedMode() {
-            guard enteredFullScreen else { return }
-            enteredFullScreen = false
-            DispatchQueue.main.async { [weak window] in
-                guard let window, window.styleMask.contains(.fullScreen) else { return }
-                window.toggleFullScreen(nil)
-            }
-        }
-    }
-
-    final class WindowTrackingView: NSView {
-        var didAttachToWindow: ((NSWindow) -> Void)?
-
-        override func viewDidMoveToWindow() {
-            super.viewDidMoveToWindow()
-            if let window {
-                didAttachToWindow?(window)
-            }
-        }
-    }
-
-    func makeCoordinator() -> Coordinator {
-        Coordinator()
-    }
-
-    func makeNSView(context: Context) -> NSView {
-        let view = WindowTrackingView()
-        view.didAttachToWindow = { window in
-            context.coordinator.attach(to: window)
-        }
-        return view
-    }
-
-    func updateNSView(_ nsView: NSView, context: Context) {}
-
-    static func dismantleNSView(_ nsView: NSView, coordinator: Coordinator) {
-        coordinator.restoreWindowedMode()
-    }
-}
-#endif
 
 #Preview {
     ContentView()

@@ -1,32 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0D2B45"/>
-      <stop offset="0.58" stop-color="#0D5B91"/>
-      <stop offset="1" stop-color="#15939A"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0.72" cy="0.18" r="0.72">
-      <stop offset="0" stop-color="#72D5E6" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#72D5E6" stop-opacity="0"/>
-    </radialGradient>
     <clipPath id="icon-mask">
       <rect x="96" y="86" width="832" height="832" rx="188"/>
     </clipPath>
     <filter id="shadow" x="0" y="0" width="1024" height="1024" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#001221" flood-opacity="0.34"/>
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#002E24" flood-opacity="0.34"/>
     </filter>
   </defs>
 
-  <rect x="96" y="86" width="832" height="832" rx="188" fill="#0D2B45" filter="url(#shadow)"/>
-  <g clip-path="url(#icon-mask)">
-    <rect x="96" y="86" width="832" height="832" fill="url(#background)"/>
-    <rect x="96" y="86" width="832" height="832" fill="url(#glow)"/>
-    <circle cx="512" cy="502" r="284" fill="none" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="25"/>
-    <circle cx="512" cy="502" r="221" fill="#071D2F" fill-opacity="0.28" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="5"/>
-    <text x="512" y="614" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="348" font-weight="700" fill="#FFFFFF">G</text>
-    <rect x="402" y="686" width="58" height="15" rx="7.5" fill="#80E1DF"/>
-    <rect x="475" y="686" width="58" height="15" rx="7.5" fill="#FFFFFF" fill-opacity="0.88"/>
-    <rect x="548" y="686" width="73" height="15" rx="7.5" fill="#80E1DF"/>
-  </g>
+  <rect x="96" y="86" width="832" height="832" rx="188" fill="#007054" filter="url(#shadow)"/>
+  <image x="96" y="86" width="832" height="832" preserveAspectRatio="xMidYMid slice"
+         xlink:href="AppIconSource.png" clip-path="url(#icon-mask)"/>
 </svg>
