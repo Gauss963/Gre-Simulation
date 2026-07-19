@@ -122,7 +122,7 @@ struct CalculatorView: View {
                 .minimumScaleFactor(0.65)
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding(14)
-                .background(.white)
+                .background(GRETheme.input)
                 .overlay(RoundedRectangle(cornerRadius: 5).stroke(GRETheme.navy, lineWidth: 2))
 
             ForEach(rows, id: \.self) { row in
@@ -147,9 +147,9 @@ struct CalculatorView: View {
     }
 
     private func buttonColor(_ key: String) -> Color {
-        if ["+", "−", "×", "÷", "="].contains(key) { return GRETheme.blue }
+        if ["+", "−", "×", "÷", "="].contains(key) { return GRETheme.actionBlue }
         if ["MC", "MR", "M+", "M−"].contains(key) { return GRETheme.teal.opacity(0.18) }
-        return .white
+        return GRETheme.input
     }
 
     private func buttonForeground(_ key: String) -> Color {

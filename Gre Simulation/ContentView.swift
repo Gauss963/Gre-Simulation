@@ -111,7 +111,7 @@ struct ContentView: View {
         HStack(spacing: 11) {
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(GRETheme.blue)
+                    .fill(GRETheme.actionBlue)
                     .frame(width: 38, height: 38)
                 Text("G")
                     .font(.system(size: 21, weight: .bold, design: .serif))

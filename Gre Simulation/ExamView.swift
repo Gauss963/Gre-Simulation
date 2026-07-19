@@ -38,7 +38,6 @@ struct ExamContainerView: View {
                 }
             }
         }
-        .preferredColorScheme(.light)
         .interactiveDismissDisabled()
         .onReceive(timer) { _ in session.tick() }
         .onAppear {
@@ -187,7 +186,7 @@ private struct TestInterfaceView: View {
         }
         .padding(.horizontal, 18)
         .padding(.vertical, 9)
-        .background(.white)
+        .background(GRETheme.surface)
         .overlay(alignment: .bottom) { Divider() }
     }
 
@@ -221,7 +220,7 @@ private struct TestInterfaceView: View {
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 12)
-        .background(.white)
+        .background(GRETheme.surface)
         .overlay(alignment: .top) { Divider() }
     }
 
@@ -269,7 +268,7 @@ private struct QuestionView: View {
             .lineSpacing(7)
             .padding(18)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color(red: 0.97, green: 0.97, blue: 0.95), in: RoundedRectangle(cornerRadius: 6))
+            .background(GRETheme.canvas, in: RoundedRectangle(cornerRadius: 6))
             .overlay(RoundedRectangle(cornerRadius: 6).stroke(GRETheme.border))
     }
 
@@ -357,7 +356,7 @@ private struct QuestionView: View {
             }
             .padding(11)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(selected ? GRETheme.brightBlue.opacity(0.10) : .white)
+            .background(selected ? GRETheme.brightBlue.opacity(0.16) : GRETheme.input)
             .overlay(RoundedRectangle(cornerRadius: 5).stroke(selected ? GRETheme.brightBlue : GRETheme.border, lineWidth: selected ? 2 : 1))
             .clipShape(RoundedRectangle(cornerRadius: 5))
         }
@@ -377,7 +376,7 @@ private struct QuestionView: View {
             .font(.title3.monospacedDigit())
             .padding(12)
             .frame(maxWidth: 260)
-            .background(.white)
+            .background(GRETheme.input)
             .overlay(RoundedRectangle(cornerRadius: 5).stroke(GRETheme.navy, lineWidth: 1.5))
         }
     }
@@ -409,7 +408,7 @@ private struct QuestionView: View {
             .padding(8)
             .frame(minHeight: 360)
             .scrollContentBackground(.hidden)
-            .background(.white)
+            .background(GRETheme.input)
             .overlay(RoundedRectangle(cornerRadius: 4).stroke(GRETheme.navy, lineWidth: 1.5))
         }
     }
@@ -472,7 +471,7 @@ private struct ReviewView: View {
             .padding(18)
         }
         .frame(minWidth: 600, minHeight: 500)
-        .background(.white)
+        .background(GRETheme.surface)
     }
 
     @ViewBuilder
@@ -530,7 +529,7 @@ private func examHeader(title: String, exit: @escaping () -> Void) -> some View 
     .foregroundStyle(.white)
     .padding(.horizontal, 18)
     .frame(height: 54)
-    .background(GRETheme.navy)
+    .background(GRETheme.headerNavy)
 }
 
 private func formatDuration(_ seconds: Int) -> String {

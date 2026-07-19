@@ -16,12 +16,12 @@ struct ScoreReportView: View {
                 Button("Save & Close", action: done)
                     .buttonStyle(.borderedProminent)
                     .tint(.white)
-                    .foregroundStyle(GRETheme.navy)
+                    .foregroundStyle(GRETheme.headerNavy)
             }
             .padding(.horizontal, 20)
             .frame(height: 58)
             .foregroundStyle(.white)
-            .background(GRETheme.navy)
+            .background(GRETheme.headerNavy)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 22) {
@@ -175,7 +175,7 @@ struct ScoreReportView: View {
         }
         .padding(11)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.white, in: RoundedRectangle(cornerRadius: 6))
+        .background(GRETheme.input, in: RoundedRectangle(cornerRadius: 6))
     }
 
     private func answerText(for question: GREQuestion) -> String {
