@@ -12,14 +12,27 @@ Checked on 2026-07-19.
 - [ETS — POWERPREP Practice Tests](https://www.ets.org/gre/test-takers/general-test/prepare/powerprep.html): official reference for timed behavior, calculator availability, and moving, changing, marking, and reviewing answers within a section.
 - [ETS — Khan Academy Quant Mapping](https://www.ets.org/gre/test-takers/general-test/prepare/khan-prep-videos.html): free instructional links mapped by ETS to Math Review topics.
 
-## Vocabulary reference
+## User-authorized local material
 
-- [liurui39660/3000](https://github.com/liurui39660/3000): reviewed at the user's request. The repository traces the spreadsheet to a published Chinese vocabulary book and explicitly says no license has been selected. It permits personal downloads but asks for attribution when redistributing. The workbook is therefore not copied into this project.
+The user explicitly confirmed full rights to incorporate and remix the following supplied material in this project:
 
-The app's compact vocabulary lab uses independently written definitions and example sentences. Words themselves overlap with many general advanced-English lists; no definitions or examples were copied from the 3000 spreadsheet.
+- *The Official Guide to the GRE General Test*, Third Edition (ETS): Chapter 4 Verbal practice and Chapter 6 Quant practice items, keys, and explanations were audited. The build includes 46 source-derived items with book/page metadata.
+- *Peterson's Master the GRE General Test 2020*: the diagnostic Verbal sections and answer explanations were audited. The build includes 16 source-derived items with location metadata.
+- *Magoosh Complete Guide to GRE Vocabulary*: 225 entry headings were identified; 215 valid entries overlap the normalized final bank and retain a Magoosh source tag.
+- `Gauss-HF-words.txt`: 1,923 valid high-frequency entries survive normalization and authoritative-definition matching.
+- `Gauss-GRE單字.xlsx`: all 12 sheets were inspected and the valid terms/synonym groupings were merged and tagged.
+- [liurui39660/3000](https://github.com/liurui39660/3000): all 3,032 valid rows from the authorized workbook are normalized into the app resource.
 
-## Original question policy
+The source PDFs and workbooks remain outside the application repository. The app bundles compact JSON records only. Source-derived questions may be normalized or condensed for computer display; the review screen identifies them as authorized source items, not necessarily verbatim facsimiles.
 
-Official sample items and paid ETS preparation books are authoritative, but redistributing their question text would introduce copyright and licensing problems. The application uses ETS only for the public specification. All built-in item stems, passages, choices, answers, and explanations are original project content.
+## Open lexical supplement
+
+- [Open English WordNet 2025](https://en-word.net/): current open lexical database used to provide definitions, pronunciations, examples, and synonyms for 1,525 valid Gauss/Magoosh terms not found in the 3000 workbook. OEWN is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+Misspellings, stray worksheet annotations, unsupported phrases, and terms without a reliable 3000 or OEWN entry are excluded. This prevents incorrect column adjacency in the workbook from becoming a false definition.
+
+## Generated practice and scoring
+
+The 62 source-derived items are supplemented by 270 original questions: the original 90-item bank plus 180 deterministic vocabulary-synthesis and parameterized Quant items. The generator checks IDs, keys, duplicate choices, and route coverage.
 
 The resulting score is a simulation. It must not be described as an official or predictive ETS score because the operational item parameters and equating tables are not public.

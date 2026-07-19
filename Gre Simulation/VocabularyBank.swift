@@ -1,7 +1,7 @@
 import Foundation
 
 enum VocabularyBank {
-    static let words: [VocabularyWord] = [
+    private static let curatedWords: [VocabularyWord] = [
         word("abate", "/əˈbeɪt/", "to become less intense", "減弱；緩和", ["subside", "diminish"], "The wind finally abated near dawn."),
         word("abstruse", "/əbˈstruːs/", "difficult to understand", "深奧的", ["esoteric", "arcane"], "The article made an abstruse theory unusually clear."),
         word("acumen", "/ˈækjəmən/", "the ability to make sound judgments", "敏銳；洞察力", ["insight", "shrewdness"], "Her financial acumen helped the small firm survive."),
@@ -49,6 +49,38 @@ enum VocabularyBank {
         word("vindicate", "/ˈvɪndɪkeɪt/", "to show to be right or justified", "證明正確；洗清", ["justify", "exonerate"], "Later evidence vindicated the researcher's method.")
     ]
 
+    private static let expandedWords: [VocabularyWord] =
+        BundledResource.decode([VocabularyWord].self, named: "ExpandedVocabulary") ?? []
+
+    static let words: [VocabularyWord] = {
+        var merged: [String: VocabularyWord] = [:]
+        for item in expandedWords + curatedWords {
+            let key = item.word.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !key.isEmpty else { continue }
+            if let existing = merged[key] {
+                let preferCurated = !item.example.isEmpty && !item.definition.isEmpty
+                let preferred = preferCurated ? item : existing
+                merged[key] = VocabularyWord(
+                    word: preferred.word,
+                    pronunciation: preferred.pronunciation.isEmpty ? existing.pronunciation : preferred.pronunciation,
+                    definition: preferred.definition.isEmpty ? existing.definition : preferred.definition,
+                    chinese: preferred.chinese.isEmpty ? existing.chinese : preferred.chinese,
+                    synonyms: Array(Set(existing.synonyms + item.synonyms)).sorted(),
+                    example: preferred.example.isEmpty ? existing.example : preferred.example,
+                    sources: Array(Set(existing.sources + item.sources)).sorted(),
+                    isHighFrequency: existing.isHighFrequency || item.isHighFrequency
+                )
+            } else {
+                merged[key] = item
+            }
+        }
+        return merged.values.sorted { $0.word.localizedCaseInsensitiveCompare($1.word) == .orderedAscending }
+    }()
+
+    static var sourceOptions: [String] {
+        Array(Set(words.flatMap(\.sources))).sorted()
+    }
+
     private static func word(
         _ word: String,
         _ pronunciation: String,
@@ -63,7 +95,8 @@ enum VocabularyBank {
             definition: definition,
             chinese: chinese,
             synonyms: synonyms,
-            example: example
+            example: example,
+            sources: ["Original app notes"]
         )
     }
 }

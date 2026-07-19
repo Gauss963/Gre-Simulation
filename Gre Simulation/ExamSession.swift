@@ -140,8 +140,7 @@ final class ExamSession: ObservableObject {
     func isCorrect(_ question: GREQuestion) -> Bool {
         let answer = answers[question.id] ?? GREAnswer()
         if question.format == .numericEntry {
-            let value = normalize(answer.numericEntry)
-            return question.acceptedNumericAnswers.map(normalize).contains(value)
+            return question.acceptedNumericAnswers.contains { NumericAnswerMatcher.matches(answer.numericEntry, $0) }
         }
         guard question.format != .essay else { return false }
         return question.correctSelections.allSatisfy { groupID, expected in
@@ -201,14 +200,6 @@ final class ExamSession: ObservableObject {
             .reduce((0, 0)) { ($0.0 + $1.correct, $0.1 + $1.total) }
     }
 
-    private func normalize(_ value: String) -> String {
-        value
-            .trimmingCharacters(in: .whitespacesAndNewlines)
-            .replacingOccurrences(of: ",", with: "")
-            .replacingOccurrences(of: " ", with: "")
-            .lowercased()
-    }
-
     private static func makeSections(mode: ExamMode) -> [ExamSection] {
         let verbalOne = QuestionBank.questions(for: .verbal, count: 12)
         let quantOne = QuestionBank.questions(for: .quantitative, count: 12)
@@ -261,6 +252,31 @@ enum QuestionStatus {
     case unanswered
     case answered
     case marked
+}
+
+enum NumericAnswerMatcher {
+    static func matches(_ entered: String, _ expected: String) -> Bool {
+        let enteredText = normalize(entered)
+        let expectedText = normalize(expected)
+        if enteredText == expectedText { return true }
+        guard let enteredValue = value(enteredText), let expectedValue = value(expectedText) else { return false }
+        return abs(enteredValue - expectedValue) < 0.000_000_1
+    }
+
+    private static func normalize(_ value: String) -> String {
+        value.trimmingCharacters(in: .whitespacesAndNewlines)
+            .replacingOccurrences(of: ",", with: "")
+            .replacingOccurrences(of: " ", with: "")
+            .lowercased()
+    }
+
+    private static func value(_ text: String) -> Double? {
+        let pieces = text.split(separator: "/", omittingEmptySubsequences: false)
+        if pieces.count == 1 { return Double(text) }
+        guard pieces.count == 2, let numerator = Double(pieces[0]),
+              let denominator = Double(pieces[1]), denominator != 0 else { return nil }
+        return numerator / denominator
+    }
 }
 
 enum ScoreEstimator {

@@ -29,6 +29,9 @@ struct DashboardView: View {
                     .font(.title3)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
+                Label("\(QuestionBank.all.count) questions · \(VocabularyBank.words.count) vocabulary entries", systemImage: "books.vertical.fill")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(GRETheme.teal)
                 Button("Start full-length test") { start(.fullLength) }
                     .buttonStyle(PrimaryGREButtonStyle())
                     .padding(.top, 4)
@@ -138,7 +141,7 @@ struct DashboardView: View {
 
     private var accuracyNotice: some View {
         Label {
-            Text("Questions are independently authored to match the official content outline. This app is not affiliated with or endorsed by ETS.")
+            Text("The bank combines authorized source-derived items with clearly labeled original parameterized practice. Exact source details appear only after a timed session ends. This app is not affiliated with or endorsed by ETS.")
         } icon: {
             Image(systemName: "info.circle.fill")
                 .foregroundStyle(GRETheme.blue)

@@ -3,15 +3,18 @@ import SwiftUI
 struct VocabularyView: View {
     @State private var searchText = ""
     @State private var revealed: Set<String> = []
+    @State private var selectedSource = "All sources"
 
     private var filteredWords: [VocabularyWord] {
         let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        guard !query.isEmpty else { return VocabularyBank.words }
         return VocabularyBank.words.filter {
-            $0.word.contains(query)
+            let matchesSource = selectedSource == "All sources" || $0.sources.contains(selectedSource)
+            let matchesQuery = query.isEmpty
+                || $0.word.lowercased().contains(query)
                 || $0.definition.lowercased().contains(query)
                 || $0.chinese.contains(query)
-                || $0.synonyms.contains(where: { $0.contains(query) })
+                || $0.synonyms.contains(where: { $0.lowercased().contains(query) })
+            return matchesSource && matchesQuery
         }
     }
 
@@ -22,21 +25,14 @@ struct VocabularyView: View {
                     Text("High-frequency vocabulary lab")
                         .font(.system(size: 30, weight: .bold, design: .rounded))
                         .foregroundStyle(GRETheme.navy)
-                    Text("Original definitions and examples for common advanced vocabulary. Tap a card to test recall before revealing the meaning.")
+                    Text("An offline, deduplicated vocabulary bank assembled from the authorized 3000, Gauss, and Magoosh materials. Tap a card to test recall before revealing the meaning.")
                         .foregroundStyle(.secondary)
                 }
 
-                HStack {
-                    Image(systemName: "magnifyingglass").foregroundStyle(.secondary)
-                    TextField("Search words, meanings, or synonyms", text: $searchText)
-                        .textFieldStyle(.plain)
-                    Text("\(filteredWords.count) words")
-                        .font(.caption.monospacedDigit())
-                        .foregroundStyle(.secondary)
+                ViewThatFits {
+                    HStack(spacing: 12) { searchField; sourcePicker }
+                    VStack(spacing: 10) { searchField; sourcePicker }
                 }
-                .padding(12)
-                .background(.background, in: RoundedRectangle(cornerRadius: 9))
-                .overlay(RoundedRectangle(cornerRadius: 9).stroke(Color.primary.opacity(0.09)))
 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 285), spacing: 14)], spacing: 14) {
                     ForEach(filteredWords) { item in
@@ -44,7 +40,7 @@ struct VocabularyView: View {
                     }
                 }
 
-                Text("The liurui39660/3000 spreadsheet is listed in Official Resources for personal study. It is not bundled because its repository does not grant a standard redistribution license.")
+                Text("Word entries retain source tags after deduplication. Definitions may be compacted for card display; consult the authorized source material for the complete study notes.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                     .padding(.top, 6)
@@ -53,6 +49,33 @@ struct VocabularyView: View {
             .padding(30)
         }
         .navigationTitle("Vocabulary")
+    }
+
+    private var searchField: some View {
+        HStack {
+            Image(systemName: "magnifyingglass").foregroundStyle(.secondary)
+            TextField("Search words, meanings, or synonyms", text: $searchText)
+                .textFieldStyle(.plain)
+            Text("\(filteredWords.count) words")
+                .font(.caption.monospacedDigit())
+                .foregroundStyle(.secondary)
+        }
+        .padding(12)
+        .background(.background, in: RoundedRectangle(cornerRadius: 9))
+        .overlay(RoundedRectangle(cornerRadius: 9).stroke(Color.primary.opacity(0.09)))
+    }
+
+    private var sourcePicker: some View {
+        Picker("Source", selection: $selectedSource) {
+            Text("All sources").tag("All sources")
+            ForEach(VocabularyBank.sourceOptions, id: \.self) { Text($0).tag($0) }
+        }
+        .pickerStyle(.menu)
+        .frame(minWidth: 190)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 5)
+        .background(.background, in: RoundedRectangle(cornerRadius: 9))
+        .overlay(RoundedRectangle(cornerRadius: 9).stroke(Color.primary.opacity(0.09)))
     }
 
     private func vocabularyCard(_ item: VocabularyWord) -> some View {
@@ -66,9 +89,11 @@ struct VocabularyView: View {
                     Text(item.word)
                         .font(.title2.bold())
                         .foregroundStyle(GRETheme.navy)
-                    Text(item.pronunciation)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                    if !item.pronunciation.isEmpty {
+                        Text(item.pronunciation)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
                     Spacer()
                     Image(systemName: revealed.contains(item.id) ? "eye.fill" : "eye.slash")
                         .foregroundStyle(GRETheme.blue)
@@ -77,15 +102,25 @@ struct VocabularyView: View {
                     Text(item.definition)
                         .font(.body.weight(.medium))
                         .foregroundStyle(.primary)
-                    Text(item.chinese)
-                        .foregroundStyle(GRETheme.teal)
-                    Text(item.synonyms.joined(separator: " · "))
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(.secondary)
-                    Text(item.example)
-                        .font(.subheadline)
-                        .italic()
-                        .foregroundStyle(.secondary)
+                    if !item.chinese.isEmpty {
+                        Text(item.chinese).foregroundStyle(GRETheme.teal)
+                    }
+                    if !item.synonyms.isEmpty {
+                        Text(item.synonyms.joined(separator: " · "))
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(.secondary)
+                    }
+                    if !item.example.isEmpty {
+                        Text(item.example)
+                            .font(.subheadline)
+                            .italic()
+                            .foregroundStyle(.secondary)
+                    }
+                    if !item.sources.isEmpty {
+                        Text(item.sources.joined(separator: " · "))
+                            .font(.caption2)
+                            .foregroundStyle(.tertiary)
+                    }
                 } else {
                     Text("Tap to reveal meaning")
                         .font(.subheadline)
@@ -224,6 +259,27 @@ struct ResourcesView: View {
                         .foregroundStyle(.secondary)
                 }
 
+                VStack(alignment: .leading, spacing: 12) {
+                    Label("Offline content bank", systemImage: "externaldrive.fill.badge.checkmark")
+                        .font(.title3.bold())
+                        .foregroundStyle(GRETheme.navy)
+                    HStack(spacing: 14) {
+                        resultMetric("Questions", "\(QuestionBank.all.count)", "Verbal + Quant")
+                        resultMetric("Vocabulary", "\(VocabularyBank.words.count)", "deduplicated entries")
+                    }
+                    ForEach(Array(QuestionBank.sourceSummary.enumerated()), id: \.offset) { _, item in
+                        HStack {
+                            Text(item.title).font(.subheadline)
+                            Spacer()
+                            Text("\(item.count)").font(.subheadline.monospacedDigit()).foregroundStyle(.secondary)
+                        }
+                    }
+                    Text("Source-derived and generated items are labeled separately in the post-test answer review.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                .greCard()
+
                 resourceSection("Official test format", icon: "clock.badge.checkmark", links: [
                     ResourceLink(title: "GRE General Test Content & Structure", detail: "Current section counts and timing", url: "https://www.ets.org/gre/score-users/about/general-test/content-structure.html"),
                     ResourceLink(title: "Understanding GRE Scores", detail: "Section adaptation, raw scores, and equating", url: "https://www.ets.org/gre/test-takers/general-test/scores/understand-scores.html"),
@@ -238,7 +294,8 @@ struct ResourcesView: View {
 
                 resourceSection("Verbal and vocabulary", icon: "text.book.closed", links: [
                     ResourceLink(title: "Official Verbal Reasoning Overview", detail: "Reading comprehension, text completion, and sentence equivalence", url: "https://www.ets.org/gre/test-takers/general-test/prepare/content/verbal-reasoning.html"),
-                    ResourceLink(title: "liurui39660/3000", detail: "Community spreadsheet · personal study terms; no standard open-source license", url: "https://github.com/liurui39660/3000")
+                    ResourceLink(title: "liurui39660/3000", detail: "Authorized vocabulary workbook used by this build", url: "https://github.com/liurui39660/3000"),
+                    ResourceLink(title: "Open English WordNet 2025", detail: "CC BY 4.0 definitions for unmatched Gauss terms", url: "https://en-word.net/")
                 ])
 
                 VStack(alignment: .leading, spacing: 10) {
@@ -258,6 +315,17 @@ struct ResourcesView: View {
             .padding(30)
         }
         .navigationTitle("Official Resources")
+    }
+
+    private func resultMetric(_ title: String, _ value: String, _ detail: String) -> some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(title).font(.caption).foregroundStyle(.secondary)
+            Text(value).font(.title.bold()).monospacedDigit().foregroundStyle(GRETheme.blue)
+            Text(detail).font(.caption2).foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(12)
+        .background(GRETheme.canvas, in: RoundedRectangle(cornerRadius: 8))
     }
 
     private func resourceSection(_ title: String, icon: String, links: [ResourceLink]) -> some View {

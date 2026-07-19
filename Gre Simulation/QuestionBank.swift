@@ -17,7 +17,17 @@ enum QuestionBank {
         contentArea: "Analyze an Issue"
     )
 
-    static let all: [GREQuestion] = verbalQuestions + quantitativeQuestions
+    static let expandedQuestions: [GREQuestion] =
+        BundledResource.decode([GREQuestion].self, named: "ExpandedQuestions") ?? []
+
+    static let all: [GREQuestion] = verbalQuestions + quantitativeQuestions + expandedQuestions
+
+    static var sourceSummary: [(title: String, count: Int)] {
+        let grouped = Dictionary(grouping: all) { question in
+            question.source?.title ?? "Original app question bank"
+        }
+        return grouped.map { ($0.key, $0.value.count) }.sorted { $0.title < $1.title }
+    }
 
     static func questions(
         for measure: GREMeasure,
@@ -56,6 +66,9 @@ enum QuestionBank {
         if Set(ids).count != ids.count { issues.append("Question IDs must be unique.") }
 
         for question in all {
+            if question.prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                issues.append("\(question.id) has an empty prompt.")
+            }
             if question.format == .numericEntry {
                 if question.acceptedNumericAnswers.isEmpty { issues.append("\(question.id) has no numeric answer.") }
             } else {
@@ -64,6 +77,17 @@ enum QuestionBank {
                 if !correctIDs.isSubset(of: optionIDs) { issues.append("\(question.id) has an invalid choice key.") }
                 if correctIDs.isEmpty { issues.append("\(question.id) has no correct choice.") }
             }
+        }
+
+        let contentSignatures = all.map { question in
+            [question.stimulus, question.prompt, question.quantityA, question.quantityB]
+                .compactMap { $0 }
+                .joined(separator: "|")
+                .lowercased()
+                .filter { !$0.isWhitespace && !$0.isPunctuation }
+        }
+        if Set(contentSignatures).count != contentSignatures.count {
+            issues.append("Question content must be unique after normalization.")
         }
 
         for measure in [GREMeasure.verbal, .quantitative] {

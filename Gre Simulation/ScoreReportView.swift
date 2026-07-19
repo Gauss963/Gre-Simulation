@@ -154,10 +154,51 @@ struct ScoreReportView: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .padding(.leading, 27)
+            VStack(alignment: .leading, spacing: 3) {
+                Text("Your answer: \(answerText(for: question))")
+                Text("Correct answer: \(correctAnswerText(for: question))")
+                    .fontWeight(.semibold)
+            }
+            .font(.caption)
+            .foregroundStyle(correct ? GRETheme.teal : .primary)
+            .padding(.leading, 27)
+            if let source = question.source {
+                Label {
+                    Text("\(source.title) · \(source.detail)")
+                } icon: {
+                    Image(systemName: source.isAuthorizedSourceItem ? "book.closed.fill" : "wand.and.stars")
+                }
+                .font(.caption2)
+                .foregroundStyle(GRETheme.blue)
+                .padding(.leading, 27)
+            }
         }
         .padding(11)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(.white, in: RoundedRectangle(cornerRadius: 6))
+    }
+
+    private func answerText(for question: GREQuestion) -> String {
+        let answer = session.answers[question.id] ?? GREAnswer()
+        if question.format == .numericEntry {
+            return answer.numericEntry.isEmpty ? "Not answered" : answer.numericEntry
+        }
+        let values = question.groups.flatMap { group in
+            let selected = answer.selections[group.id] ?? []
+            return group.options.filter { selected.contains($0.id) }.map(\.text)
+        }
+        return values.isEmpty ? "Not answered" : values.joined(separator: " · ")
+    }
+
+    private func correctAnswerText(for question: GREQuestion) -> String {
+        if question.format == .numericEntry {
+            return question.acceptedNumericAnswers.sorted().joined(separator: " or ")
+        }
+        return question.groups.flatMap { group in
+            let keyed = question.correctSelections[group.id] ?? []
+            return group.options.filter { keyed.contains($0.id) }.map(\.text)
+        }
+        .joined(separator: " · ")
     }
 
     private var methodology: some View {

@@ -61,19 +61,25 @@ enum QuestionFormat: String, Codable {
     }
 }
 
-struct ChoiceOption: Identifiable, Hashable {
+struct ChoiceOption: Identifiable, Hashable, Codable {
     let id: String
     let text: String
 }
 
-struct ChoiceGroup: Identifiable, Hashable {
+struct ChoiceGroup: Identifiable, Hashable, Codable {
     let id: String
     let title: String?
     let options: [ChoiceOption]
     let maximumSelections: Int
 }
 
-struct GREQuestion: Identifiable {
+struct QuestionSource: Hashable, Codable {
+    let title: String
+    let detail: String
+    let isAuthorizedSourceItem: Bool
+}
+
+struct GREQuestion: Identifiable, Codable {
     let id: String
     let measure: GREMeasure
     let difficulty: QuestionDifficulty
@@ -87,6 +93,7 @@ struct GREQuestion: Identifiable {
     let acceptedNumericAnswers: Set<String>
     let explanation: String
     let contentArea: String
+    var source: QuestionSource? = nil
 
     var isScored: Bool { format != .essay }
 }
@@ -170,13 +177,15 @@ struct ExamResult: Identifiable, Codable, Equatable {
     }
 }
 
-struct VocabularyWord: Identifiable, Hashable {
+struct VocabularyWord: Identifiable, Hashable, Codable {
     let word: String
     let pronunciation: String
     let definition: String
     let chinese: String
     let synonyms: [String]
     let example: String
+    var sources: [String] = []
+    var isHighFrequency: Bool = false
 
     var id: String { word }
 }

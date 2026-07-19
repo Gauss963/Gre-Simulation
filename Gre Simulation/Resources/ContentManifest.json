@@ -1,0 +1,13 @@
+{
+  "expandedQuestionCount": 242,
+  "expandedVocabularyCount": 4557,
+  "questionCounts": {
+    "verbal-easy": 42,
+    "verbal-medium": 44,
+    "verbal-hard": 35,
+    "quantitative-easy": 49,
+    "quantitative-medium": 47,
+    "quantitative-hard": 25
+  },
+  "authorizedSourceQuestionCount": 62
+}
