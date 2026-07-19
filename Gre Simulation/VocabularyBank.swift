@@ -67,6 +67,8 @@ enum VocabularyBank {
                     chinese: preferred.chinese.isEmpty ? existing.chinese : preferred.chinese,
                     synonyms: Array(Set(existing.synonyms + item.synonyms)).sorted(),
                     example: preferred.example.isEmpty ? existing.example : preferred.example,
+                    exampleSource: preferred.exampleSource,
+                    exampleSourceURL: preferred.exampleSourceURL,
                     sources: Array(Set(existing.sources + item.sources)).sorted(),
                     isHighFrequency: existing.isHighFrequency || item.isHighFrequency
                 )

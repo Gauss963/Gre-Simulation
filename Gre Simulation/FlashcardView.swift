@@ -283,6 +283,9 @@ struct FlashcardStudyView: View {
                 Text(item.example)
                     .font(.body)
                     .italic()
+                if let source = item.exampleSource, !source.isEmpty {
+                    exampleAttribution(source, urlString: item.exampleSourceURL)
+                }
             }
             if !item.sources.isEmpty {
                 Text(item.sources.joined(separator: " · "))
@@ -302,6 +305,20 @@ struct FlashcardStudyView: View {
             Text(text)
                 .font(.body.weight(.medium))
                 .foregroundStyle(color ?? Color.primary)
+        }
+    }
+
+    @ViewBuilder
+    private func exampleAttribution(_ source: String, urlString: String?) -> some View {
+        if let urlString, let url = URL(string: urlString) {
+            Link(destination: url) {
+                Label(source, systemImage: "arrow.up.right.square")
+                    .font(.caption2)
+            }
+        } else {
+            Text(source)
+                .font(.caption2)
+                .foregroundStyle(.tertiary)
         }
     }
 

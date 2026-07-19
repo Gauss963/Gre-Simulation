@@ -143,6 +143,19 @@ struct VocabularyView: View {
                             .font(.subheadline)
                             .italic()
                             .foregroundStyle(.secondary)
+                        if let source = item.exampleSource, !source.isEmpty {
+                            if let urlString = item.exampleSourceURL,
+                               let url = URL(string: urlString) {
+                                Link(destination: url) {
+                                    Label(source, systemImage: "arrow.up.right.square")
+                                        .font(.caption2)
+                                }
+                            } else {
+                                Text(source)
+                                    .font(.caption2)
+                                    .foregroundStyle(.tertiary)
+                            }
+                        }
                     }
                     if !item.sources.isEmpty {
                         Text(item.sources.joined(separator: " · "))
@@ -323,7 +336,9 @@ struct ResourcesView: View {
                 resourceSection("Verbal and vocabulary", icon: "text.book.closed", links: [
                     ResourceLink(title: "Official Verbal Reasoning Overview", detail: "Reading comprehension, text completion, and sentence equivalence", url: "https://www.ets.org/gre/test-takers/general-test/prepare/content/verbal-reasoning.html"),
                     ResourceLink(title: "liurui39660/3000", detail: "Authorized vocabulary workbook used by this build", url: "https://github.com/liurui39660/3000"),
-                    ResourceLink(title: "Open English WordNet 2025", detail: "CC BY 4.0 definitions for unmatched Gauss terms", url: "https://en-word.net/")
+                    ResourceLink(title: "Open English WordNet 2025", detail: "CC BY 4.0 definitions for unmatched Gauss terms", url: "https://en-word.net/"),
+                    ResourceLink(title: "ECDICT", detail: "MIT-licensed Chinese lexical supplement", url: "https://github.com/skywind3000/ECDICT"),
+                    ResourceLink(title: "Tatoeba Corpus", detail: "CC0 and CC BY 2.0 FR English example sentences", url: "https://tatoeba.org/en/downloads")
                 ])
 
                 VStack(alignment: .leading, spacing: 10) {

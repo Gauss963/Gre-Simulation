@@ -184,6 +184,8 @@ struct VocabularyWord: Identifiable, Hashable, Codable {
     let chinese: String
     let synonyms: [String]
     let example: String
+    var exampleSource: String? = nil
+    var exampleSourceURL: String? = nil
     var sources: [String] = []
     var isHighFrequency: Bool = false
 

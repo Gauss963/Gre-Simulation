@@ -8,6 +8,7 @@ import json
 import math
 import random
 import re
+import sys
 from pathlib import Path
 
 try:
@@ -17,6 +18,12 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[1]
 APP = ROOT / "Gre Simulation"
+TOOLS = Path(__file__).resolve().parent
+if str(TOOLS) not in sys.path:
+    sys.path.insert(0, str(TOOLS))
+
+from enrich_vocabulary import enrich_vocabulary_entries, vocabulary_inventory
+
 _TAIWAN_CONVERTER = None
 
 
@@ -550,6 +557,17 @@ def main():
     parser.add_argument("--high-frequency", type=Path, default=source_root / "Gauss-HF-words.txt")
     parser.add_argument("--magoosh-text", type=Path, default=source_root / "tmp/pdfs/magoosh-vocab.txt")
     parser.add_argument("--oewn-dir", type=Path, default=source_root / "tmp/oewn/json")
+    parser.add_argument("--ecdict-csv", type=Path, default=source_root / "tmp/open-lexicon/ecdict.csv")
+    parser.add_argument(
+        "--tatoeba-cc0",
+        type=Path,
+        default=source_root / "tmp/open-corpus/eng_sentences_CC0.tsv.bz2",
+    )
+    parser.add_argument(
+        "--tatoeba-english",
+        type=Path,
+        default=source_root / "tmp/open-corpus/eng_sentences.tsv.bz2",
+    )
     args = parser.parse_args()
 
     questions = (
@@ -560,6 +578,12 @@ def main():
         + generated_verbal_questions(APP / "VocabularyBank.swift")
     )
     vocabulary = build_vocabulary(args.word3000_json, args.gauss_json, args.high_frequency, args.magoosh_text, args.oewn_dir)
+    enrichment = enrich_vocabulary_entries(
+        vocabulary,
+        args.ecdict_csv,
+        args.tatoeba_cc0,
+        args.tatoeba_english,
+    )
 
     ids = [item["id"] for item in questions]
     if len(ids) != len(set(ids)):
@@ -588,6 +612,8 @@ def main():
             for difficulty in ["easy", "medium", "hard"]
         },
         "authorizedSourceQuestionCount": sum(1 for item in questions if item["source"]["isAuthorizedSourceItem"]),
+        "vocabularyEnrichment": enrichment,
+        "vocabularyCompleteness": vocabulary_inventory(vocabulary),
     }
     (resources / "ContentManifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps(manifest, ensure_ascii=False, indent=2))

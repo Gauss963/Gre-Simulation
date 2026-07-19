@@ -9,5 +9,20 @@
     "quantitative-medium": 47,
     "quantitative-hard": 25
   },
-  "authorizedSourceQuestionCount": 62
+  "authorizedSourceQuestionCount": 62,
+  "vocabularyEnrichment": {
+    "translationsAdded": 1525,
+    "cc0ExamplesAdded": 358,
+    "attributedExamplesAdded": 2428,
+    "originalExamplesAdded": 638
+  },
+  "vocabularyCompleteness": {
+    "recordCount": 4557,
+    "withChineseDefinition": 4557,
+    "withEnglishExample": 4557,
+    "chineseFromECDICT": 1525,
+    "examplesFromTatoebaCC0": 358,
+    "examplesFromTatoebaCCBY": 2428,
+    "originalExamples": 638
+  }
 }

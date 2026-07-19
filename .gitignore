@@ -14,3 +14,7 @@ xcuserdata/
 
 # Local configuration
 *.env
+
+# Python build tools
+__pycache__/
+*.py[cod]

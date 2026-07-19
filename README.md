@@ -13,7 +13,7 @@ A native Swift + SwiftUI GRE® practice simulator for macOS and iPadOS.
 - 332-question offline bank: 166 Verbal and 166 Quant questions, balanced across three difficulty routes
 - 62 source-derived questions from the user's authorized ETS Official Guide and Peterson's book, each labeled in post-test review
 - 180 additional deterministic vocabulary-synthesis and parameterized Quant questions, plus the original 90-question bank
-- 4,560 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, and Magoosh sources, with Open English WordNet 2025 used to fill reliable definitions for unmatched terms
+- 4,560 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, and Magoosh sources; every entry includes a Taiwan Traditional Chinese definition and an English example
 - Vocabulary search and filtering by source or high-frequency list
 - Practice score report, answer explanations, adaptive route details, and persistent on-device score history
 - A transparent 130–170 practice score estimator and a clearly labeled local writing-structure signal
@@ -33,7 +33,7 @@ This build includes source-derived items from the user's locally supplied, fully
 
 ETS reports Verbal and Quant scores on a 130–170 scale and uses proprietary equating to account for edition difficulty and the adaptive second-section route. Since the conversion table is not public, this app maps raw accuracy linearly onto 130–170 and labels the result as an estimate. The writing signal is a local heuristic, not an official score or e-rater® result.
 
-The vocabulary bank is generated from the user's authorized [`liurui39660/3000`](https://github.com/liurui39660/3000) workbook, Gauss high-frequency list and workbook, and Magoosh vocabulary eBook. Unmatched valid terms receive definitions and synonyms from [Open English WordNet 2025](https://en-word.net/), licensed CC BY 4.0. Source workbooks and PDFs are not copied into the app bundle; normalized JSON resources are bundled for offline use.
+The vocabulary bank is generated from the user's authorized [`liurui39660/3000`](https://github.com/liurui39660/3000) workbook, Gauss high-frequency list and workbook, and Magoosh vocabulary eBook. Unmatched valid terms receive definitions and synonyms from [Open English WordNet 2025](https://en-word.net/), licensed CC BY 4.0. Missing Chinese glosses are supplemented by the MIT-licensed [ECDICT](https://github.com/skywind3000/ECDICT) database and localized to Taiwan Traditional Chinese. Missing examples are selected from the [Tatoeba Corpus](https://tatoeba.org/en/downloads) under CC0 1.0 or CC BY 2.0 FR, with definition-grounded original examples used only when the corpus has no suitable complete sentence. Source workbooks and PDFs are not copied into the app bundle; normalized JSON resources are bundled for offline use.
 
 The reproducible import pipeline is in [`Tools`](Tools): the workbook exporter uses `@oai/artifact-tool`, and the deterministic Python generator validates IDs, answer keys, duplicate choices, and difficulty coverage before writing app resources.
 

@@ -28,8 +28,12 @@ The source PDFs and workbooks remain outside the application repository. The app
 ## Open lexical supplement
 
 - [Open English WordNet 2025](https://en-word.net/): current open lexical database used to provide definitions, pronunciations, examples, and synonyms for 1,525 valid Gauss/Magoosh terms not found in the 3000 workbook. OEWN is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- [ECDICT](https://github.com/skywind3000/ECDICT), commit `bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b`: MIT-licensed English-Chinese database used to fill 1,525 missing Chinese glosses. The imported general gloss is converted with OpenCC `s2twp` so the bundled text uses Taiwan Traditional Chinese and Taiwan-localized terminology.
+- [Tatoeba English sentence exports](https://tatoeba.org/en/downloads), generated 2026-07-18: 358 missing examples come from the English CC0 export, and 2,428 come from the English corpus under [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/). Every attributed record stores its Tatoeba sentence URL. Another 638 rare terms use definition-grounded original examples because no neutral, complete corpus sentence passed the quality filters.
 
-Misspellings, stray worksheet annotations, unsupported phrases, and terms without a reliable 3000 or OEWN entry are excluded. This prevents incorrect column adjacency in the workbook from becoming a false definition.
+All 4,557 bundled resource records now contain both a Chinese definition and an English example. The 45 curated app entries are also complete; after deduplication, the runtime bank contains 4,560 complete words.
+
+Misspellings, stray worksheet annotations, unsupported phrases, and terms without a reliable 3000 or OEWN entry are excluded. This prevents incorrect column adjacency in the workbook from becoming a false definition. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the redistribution notices.
 
 ## Generated practice and scoring
 
