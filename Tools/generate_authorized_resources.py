@@ -10,8 +10,30 @@ import random
 import re
 from pathlib import Path
 
+try:
+    from opencc import OpenCC
+except ImportError:
+    OpenCC = None
+
 ROOT = Path(__file__).resolve().parents[1]
 APP = ROOT / "Gre Simulation"
+_TAIWAN_CONVERTER = None
+
+
+def taiwan_traditional(text: str) -> str:
+    """Convert Simplified Chinese and mainland phrases to Taiwan Traditional Chinese."""
+    global _TAIWAN_CONVERTER
+    if not text:
+        return ""
+    if OpenCC is None:
+        raise RuntimeError(
+            "Taiwan Traditional Chinese conversion requires "
+            "opencc-python-reimplemented. Install it with: "
+            "python3 -m pip install opencc-python-reimplemented"
+        )
+    if _TAIWAN_CONVERTER is None:
+        _TAIWAN_CONVERTER = OpenCC("s2twp")
+    return _TAIWAN_CONVERTER.convert(text)
 
 
 def source(title: str, detail: str, original: bool) -> dict:
@@ -475,7 +497,10 @@ def build_vocabulary(word3000_path, gauss_path, hf_path, magoosh_path, oewn_dir)
             "sources": sources,
             "isHighFrequency": word in high_frequency,
         }
-    return sorted(entries.values(), key=lambda item: item["word"])
+    vocabulary = sorted(entries.values(), key=lambda item: item["word"])
+    for item in vocabulary:
+        item["chinese"] = taiwan_traditional(item["chinese"])
+    return vocabulary
 
 
 def generated_verbal_questions(swift_path: Path):

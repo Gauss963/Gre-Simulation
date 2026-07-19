@@ -35,9 +35,13 @@ struct ContentView: View {
 
     init() {
         #if DEBUG
-        if ProcessInfo.processInfo.arguments.contains("-startFullPractice") {
+        let arguments = ProcessInfo.processInfo.arguments
+        if arguments.contains("-openVocabulary") {
+            _selection = State(initialValue: .vocabulary)
+        }
+        if arguments.contains("-startFullPractice") {
             _activeExamMode = State(initialValue: .fullLength)
-        } else if ProcessInfo.processInfo.arguments.contains("-startVerbalPractice") {
+        } else if arguments.contains("-startVerbalPractice") {
             _activeExamMode = State(initialValue: .verbalPractice)
         }
         #endif

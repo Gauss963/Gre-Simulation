@@ -1,9 +1,25 @@
 import SwiftUI
 
+private enum VocabularyStudyMode: String, CaseIterable, Identifiable {
+    case browse = "Browse"
+    case flashCards = "Flash Cards"
+
+    var id: String { rawValue }
+}
+
 struct VocabularyView: View {
     @State private var searchText = ""
     @State private var revealed: Set<String> = []
     @State private var selectedSource = "All sources"
+    @State private var studyMode: VocabularyStudyMode = .browse
+
+    init() {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-openFlashcards") {
+            _studyMode = State(initialValue: .flashCards)
+        }
+        #endif
+    }
 
     private var filteredWords: [VocabularyWord] {
         let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
@@ -25,25 +41,37 @@ struct VocabularyView: View {
                     Text("High-frequency vocabulary lab")
                         .font(.system(size: 30, weight: .bold, design: .rounded))
                         .foregroundStyle(GRETheme.navy)
-                    Text("An offline, deduplicated vocabulary bank assembled from the authorized 3000, Gauss, and Magoosh materials. Tap a card to test recall before revealing the meaning.")
+                    Text("Browse the authorized offline word bank or work through shuffled flash-card sessions with persistent mastery progress.")
                         .foregroundStyle(.secondary)
                 }
 
-                ViewThatFits {
-                    HStack(spacing: 12) { searchField; sourcePicker }
-                    VStack(spacing: 10) { searchField; sourcePicker }
-                }
-
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 285), spacing: 14)], spacing: 14) {
-                    ForEach(filteredWords) { item in
-                        vocabularyCard(item)
+                Picker("Study mode", selection: $studyMode) {
+                    ForEach(VocabularyStudyMode.allCases) { mode in
+                        Text(mode.rawValue).tag(mode)
                     }
                 }
+                .pickerStyle(.segmented)
+                .frame(maxWidth: 360)
 
-                Text("Word entries retain source tags after deduplication. Definitions may be compacted for card display; consult the authorized source material for the complete study notes.")
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-                    .padding(.top, 6)
+                if studyMode == .browse {
+                    ViewThatFits {
+                        HStack(spacing: 12) { searchField; sourcePicker }
+                        VStack(spacing: 10) { searchField; sourcePicker }
+                    }
+
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 285), spacing: 14)], spacing: 14) {
+                        ForEach(filteredWords) { item in
+                            vocabularyCard(item)
+                        }
+                    }
+
+                    Text("Word entries retain source tags after deduplication. Chinese definitions use Taiwan Traditional Chinese. Definitions may be compacted for card display; consult the authorized source material for complete study notes.")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                        .padding(.top, 6)
+                } else {
+                    FlashcardStudyView(words: VocabularyBank.words)
+                }
             }
             .frame(maxWidth: 1050, alignment: .leading)
             .padding(30)

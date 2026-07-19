@@ -1,5 +1,13 @@
 # Authorized content pipeline
 
+Install the build-time conversion dependency before regenerating vocabulary:
+
+```sh
+python3 -m pip install opencc-python-reimplemented
+```
+
+The generator uses OpenCC's `s2twp` conversion so all bundled Chinese definitions use Taiwan Traditional Chinese and Taiwan-localized terminology.
+
 These tools rebuild the app's normalized offline resources without bundling the source books or workbooks.
 
 1. Export each authorized `.xlsx` file with `extract_authorized_workbook.mjs`. It uses `@oai/artifact-tool` from the Codex workspace runtime.
