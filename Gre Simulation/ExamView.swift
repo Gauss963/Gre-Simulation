@@ -157,9 +157,10 @@ private struct TestInterfaceView: View {
                 .scaleEffect(x: 1, y: 0.55)
             ScrollView {
                 QuestionView(session: session)
-                    .frame(maxWidth: 1120, alignment: .leading)
-                    .padding(.horizontal, 28)
-                    .padding(.vertical, 22)
+                    .frame(maxWidth: 1500, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.horizontal, 32)
+                    .padding(.vertical, 24)
             }
             .background(GRETheme.canvas)
             navigationFooter
