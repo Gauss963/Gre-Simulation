@@ -16,9 +16,10 @@ A native Swift + SwiftUI GRE® practice simulator for macOS and iPadOS.
 - 442 Data Analysis and statistics questions in the runtime pool, including 384 questions built around 123 structured data displays
 - Exposure-aware Quant selection that rotates question families and remembers the most recent 800 exact questions to reduce repeat encounters across practice sessions
 - Native, accessible tables, bar and grouped-bar charts, line charts, pie charts, histograms, scatterplots, box plots, normal curves, and Venn diagrams that adapt to macOS, iPadOS, and system appearance
+- Data charts include high-contrast horizontal grid lines, fine trailing-axis ticks, and exact values above bars so frequencies can be read unambiguously
 - 4,613 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, Magoosh, and 2026-07-20 contextual-vocabulary sources; every entry includes a Taiwan Traditional Chinese definition and an English example
 - Vocabulary search and filtering by source or high-frequency list
-- Practice score report, answer explanations, adaptive route details, and persistent on-device score history
+- Practice score report, answer explanations, adaptive route details, and persistent on-device score history with reopenable per-question correct/incorrect review
 - A transparent 130–170 practice score estimator and a clearly labeled local writing-structure signal
 - Direct links to official ETS test format, scoring, POWERPREP, Verbal, Quant, Math Review, and Khan Academy resources
 

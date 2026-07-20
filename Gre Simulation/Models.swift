@@ -131,7 +131,7 @@ struct QuantFigure: Hashable, Codable {
     let annotations: [QuantFigureAnnotation]?
 }
 
-struct GREQuestion: Identifiable, Codable {
+struct GREQuestion: Identifiable, Codable, Equatable {
     let id: String
     let measure: GREMeasure
     let difficulty: QuestionDifficulty
@@ -210,6 +210,18 @@ struct SectionSummary: Codable, Equatable {
     let answered: Int
 }
 
+struct QuestionReviewRecord: Identifiable, Codable, Equatable {
+    let sectionID: String
+    let sectionOrdinal: Int
+    let sectionDifficulty: QuestionDifficulty?
+    let questionNumber: Int
+    let question: GREQuestion
+    let answer: GREAnswer
+    let isCorrect: Bool
+
+    var id: String { "\(sectionID)-\(question.id)" }
+}
+
 struct ExamResult: Identifiable, Codable, Equatable {
     let id: UUID
     let completedAt: Date
@@ -223,6 +235,77 @@ struct ExamResult: Identifiable, Codable, Equatable {
     let quantitativeTotal: Int
     let elapsedSeconds: Int
     let sections: [SectionSummary]
+    let questionReviews: [QuestionReviewRecord]?
+
+    init(
+        id: UUID,
+        completedAt: Date,
+        mode: ExamMode,
+        verbalScore: Int?,
+        quantitativeScore: Int?,
+        writingEstimate: Double?,
+        verbalCorrect: Int,
+        verbalTotal: Int,
+        quantitativeCorrect: Int,
+        quantitativeTotal: Int,
+        elapsedSeconds: Int,
+        sections: [SectionSummary],
+        questionReviews: [QuestionReviewRecord]? = nil
+    ) {
+        self.id = id
+        self.completedAt = completedAt
+        self.mode = mode
+        self.verbalScore = verbalScore
+        self.quantitativeScore = quantitativeScore
+        self.writingEstimate = writingEstimate
+        self.verbalCorrect = verbalCorrect
+        self.verbalTotal = verbalTotal
+        self.quantitativeCorrect = quantitativeCorrect
+        self.quantitativeTotal = quantitativeTotal
+        self.elapsedSeconds = elapsedSeconds
+        self.sections = sections
+        self.questionReviews = questionReviews
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(UUID.self, forKey: .id)
+        completedAt = try container.decode(Date.self, forKey: .completedAt)
+        mode = try container.decode(ExamMode.self, forKey: .mode)
+        verbalScore = try container.decodeIfPresent(Int.self, forKey: .verbalScore)
+        quantitativeScore = try container.decodeIfPresent(Int.self, forKey: .quantitativeScore)
+        writingEstimate = try container.decodeIfPresent(Double.self, forKey: .writingEstimate)
+        verbalCorrect = try container.decode(Int.self, forKey: .verbalCorrect)
+        verbalTotal = try container.decode(Int.self, forKey: .verbalTotal)
+        quantitativeCorrect = try container.decode(Int.self, forKey: .quantitativeCorrect)
+        quantitativeTotal = try container.decode(Int.self, forKey: .quantitativeTotal)
+        elapsedSeconds = try container.decode(Int.self, forKey: .elapsedSeconds)
+        sections = try container.decode([SectionSummary].self, forKey: .sections)
+        questionReviews = try container.decodeIfPresent([QuestionReviewRecord].self, forKey: .questionReviews)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(completedAt, forKey: .completedAt)
+        try container.encode(mode, forKey: .mode)
+        try container.encodeIfPresent(verbalScore, forKey: .verbalScore)
+        try container.encodeIfPresent(quantitativeScore, forKey: .quantitativeScore)
+        try container.encodeIfPresent(writingEstimate, forKey: .writingEstimate)
+        try container.encode(verbalCorrect, forKey: .verbalCorrect)
+        try container.encode(verbalTotal, forKey: .verbalTotal)
+        try container.encode(quantitativeCorrect, forKey: .quantitativeCorrect)
+        try container.encode(quantitativeTotal, forKey: .quantitativeTotal)
+        try container.encode(elapsedSeconds, forKey: .elapsedSeconds)
+        try container.encode(sections, forKey: .sections)
+        try container.encodeIfPresent(questionReviews, forKey: .questionReviews)
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case id, completedAt, mode, verbalScore, quantitativeScore, writingEstimate
+        case verbalCorrect, verbalTotal, quantitativeCorrect, quantitativeTotal
+        case elapsedSeconds, sections, questionReviews
+    }
 
     var combinedScore: Int? {
         guard let verbalScore, let quantitativeScore else { return nil }
@@ -249,12 +332,24 @@ struct VocabularyWord: Identifiable, Hashable, Codable {
 final class HistoryStore: ObservableObject {
     @Published private(set) var results: [ExamResult] = []
 
-    private let storageKey = "gre-simulation.history.v1"
+    private let legacyStorageKey = "gre-simulation.history.v1"
+    private let storageURL: URL?
 
     init() {
-        guard let data = UserDefaults.standard.data(forKey: storageKey),
-              let decoded = try? JSONDecoder().decode([ExamResult].self, from: data) else { return }
-        results = decoded.sorted { $0.completedAt > $1.completedAt }
+        storageURL = Self.makeStorageURL()
+        let fileData = storageURL.flatMap { try? Data(contentsOf: $0) }
+        let legacyData = UserDefaults.standard.data(forKey: legacyStorageKey)
+        let fileResults = fileData.flatMap { Self.decodeHistory($0, source: "application support") }
+        let legacyResults = legacyData.flatMap { Self.decodeHistory($0, source: "legacy preferences") }
+        guard fileResults != nil || legacyResults != nil else { return }
+        var merged = Dictionary(uniqueKeysWithValues: (legacyResults ?? []).map { ($0.id, $0) })
+        for result in fileResults ?? [] {
+            merged[result.id] = result
+        }
+        results = merged.values.sorted { $0.completedAt > $1.completedAt }
+        if legacyResults != nil, save() {
+            UserDefaults.standard.removeObject(forKey: legacyStorageKey)
+        }
     }
 
     func add(_ result: ExamResult) {
@@ -265,10 +360,55 @@ final class HistoryStore: ObservableObject {
     func clear() {
         results.removeAll()
         save()
+        UserDefaults.standard.removeObject(forKey: legacyStorageKey)
     }
 
-    private func save() {
-        guard let data = try? JSONEncoder().encode(results) else { return }
-        UserDefaults.standard.set(data, forKey: storageKey)
+    @discardableResult
+    private func save() -> Bool {
+        guard let data = try? JSONEncoder().encode(results) else { return false }
+        guard let storageURL else {
+            UserDefaults.standard.set(data, forKey: legacyStorageKey)
+            return true
+        }
+        do {
+            try data.write(to: storageURL, options: .atomic)
+            return true
+        } catch {
+            #if DEBUG
+            print("Could not save score history: \(error)")
+            #endif
+            return false
+        }
+    }
+
+    private static func makeStorageURL() -> URL? {
+        guard let supportDirectory = FileManager.default.urls(
+            for: .applicationSupportDirectory,
+            in: .userDomainMask
+        ).first else { return nil }
+        let directory = supportDirectory.appendingPathComponent("Gre Simulation", isDirectory: true)
+        do {
+            try FileManager.default.createDirectory(
+                at: directory,
+                withIntermediateDirectories: true
+            )
+            return directory.appendingPathComponent("ScoreHistory-v2.json")
+        } catch {
+            #if DEBUG
+            print("Could not prepare score-history storage: \(error)")
+            #endif
+            return nil
+        }
+    }
+
+    private static func decodeHistory(_ data: Data, source: String) -> [ExamResult]? {
+        do {
+            return try JSONDecoder().decode([ExamResult].self, from: data)
+        } catch {
+            #if DEBUG
+            print("Could not decode \(source) score history: \(error)")
+            #endif
+            return nil
+        }
     }
 }

@@ -1,11 +1,22 @@
 import SwiftUI
 
 struct ScoreReportView: View {
-    @ObservedObject var session: ExamSession
     let result: ExamResult
+    let heading: String
+    let doneTitle: String
     let done: () -> Void
 
-    @State private var reviewMeasure: GREMeasure?
+    init(
+        result: ExamResult,
+        heading: String = "Practice test complete",
+        doneTitle: String = "Save & Close",
+        done: @escaping () -> Void
+    ) {
+        self.result = result
+        self.heading = heading
+        self.doneTitle = doneTitle
+        self.done = done
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -13,7 +24,7 @@ struct ScoreReportView: View {
                 Text("GRE").font(.system(size: 22, weight: .black, design: .serif))
                 Text("SIMULATION · SCORE REPORT").font(.caption.bold()).tracking(1.2)
                 Spacer()
-                Button("Save & Close", action: done)
+                Button(doneTitle, action: done)
                     .buttonStyle(.borderedProminent)
                     .tint(.white)
                     .foregroundStyle(GRETheme.headerNavy)
@@ -40,7 +51,7 @@ struct ScoreReportView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 7) {
-            Text("Practice test complete")
+            Text(heading)
                 .font(.system(size: 32, weight: .bold, design: .rounded))
                 .foregroundStyle(GRETheme.navy)
             Text("\(result.mode.title) · \(result.completedAt.formatted(date: .abbreviated, time: .shortened))")
@@ -119,30 +130,50 @@ struct ScoreReportView: View {
     private var answerReview: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text("Review answers").font(.title2.bold())
-            Text("Explanations are available only after the timed session ends.")
-                .font(.subheadline).foregroundStyle(.secondary)
+            if reviewRecords.isEmpty {
+                ContentUnavailableView(
+                    "Detailed review unavailable",
+                    systemImage: "doc.text.magnifyingglass",
+                    description: Text("This result was saved before version 1.1.0, when question and answer details were not retained.")
+                )
+                .frame(maxWidth: .infinity, minHeight: 180)
+            } else {
+                Text("Saved questions, your answers, correct answers, and explanations remain available after the session ends.")
+                    .font(.subheadline).foregroundStyle(.secondary)
 
-            ForEach([GREMeasure.verbal, .quantitative].filter { measureQuestions($0).isEmpty == false }) { measure in
-                DisclosureGroup {
-                    VStack(spacing: 10) {
-                        ForEach(measureQuestions(measure)) { question in
-                            reviewRow(question)
+                ForEach([GREMeasure.verbal, .quantitative].filter { records(for: $0).isEmpty == false }) { measure in
+                    let records = records(for: measure)
+                    DisclosureGroup {
+                        VStack(spacing: 10) {
+                            ForEach(records) { record in
+                                reviewRow(record)
+                            }
+                        }
+                        .padding(.top, 10)
+                    } label: {
+                        HStack {
+                            Text(measure.title).font(.headline)
+                            Spacer()
+                            Text("\(records.filter(\.isCorrect).count) / \(records.count) correct")
+                                .font(.caption.monospacedDigit())
+                                .foregroundStyle(.secondary)
                         }
                     }
-                    .padding(.top, 10)
-                } label: {
-                    Text(measure.title).font(.headline)
+                    .padding(14)
+                    .background(GRETheme.canvas.opacity(0.65), in: RoundedRectangle(cornerRadius: 8))
                 }
-                .padding(14)
-                .background(GRETheme.canvas.opacity(0.65), in: RoundedRectangle(cornerRadius: 8))
             }
         }
         .greCard()
     }
 
-    private func reviewRow(_ question: GREQuestion) -> some View {
-        let correct = session.isCorrect(question)
+    private func reviewRow(_ record: QuestionReviewRecord) -> some View {
+        let question = record.question
+        let correct = record.isCorrect
         return VStack(alignment: .leading, spacing: 8) {
+            Text("Section \(record.sectionOrdinal) · Question \(record.questionNumber)")
+                .font(.caption2.weight(.semibold))
+                .foregroundStyle(GRETheme.blue)
             HStack(alignment: .top) {
                 Image(systemName: correct ? "checkmark.circle.fill" : "xmark.circle.fill")
                     .foregroundStyle(correct ? GRETheme.teal : .red)
@@ -161,7 +192,7 @@ struct ScoreReportView: View {
                     .padding(.vertical, 6)
             }
             VStack(alignment: .leading, spacing: 3) {
-                Text("Your answer: \(answerText(for: question))")
+                Text("Your answer: \(answerText(for: question, answer: record.answer))")
                 Text("Correct answer: \(correctAnswerText(for: question))")
                     .fontWeight(.semibold)
             }
@@ -184,8 +215,7 @@ struct ScoreReportView: View {
         .background(GRETheme.input, in: RoundedRectangle(cornerRadius: 6))
     }
 
-    private func answerText(for question: GREQuestion) -> String {
-        let answer = session.answers[question.id] ?? GREAnswer()
+    private func answerText(for question: GREQuestion, answer: GREAnswer) -> String {
         if question.format == .numericEntry {
             return answer.numericEntry.isEmpty ? "Not answered" : answer.numericEntry
         }
@@ -222,14 +252,11 @@ struct ScoreReportView: View {
         .greCard()
     }
 
-    private func measureQuestions(_ measure: GREMeasure) -> [GREQuestion] {
-        session.sections
-            .filter { section in
-                section.measure == measure
-                    && session.result?.sections.contains(where: { summary in
-                        summary.measure == measure && summary.ordinal == section.ordinal
-                    }) == true
-            }
-            .flatMap(\.questions)
+    private var reviewRecords: [QuestionReviewRecord] {
+        result.questionReviews ?? []
+    }
+
+    private func records(for measure: GREMeasure) -> [QuestionReviewRecord] {
+        reviewRecords.filter { $0.question.measure == measure }
     }
 }

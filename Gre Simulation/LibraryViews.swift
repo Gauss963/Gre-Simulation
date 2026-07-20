@@ -179,6 +179,7 @@ struct VocabularyView: View {
 struct HistoryView: View {
     @ObservedObject var store: HistoryStore
     @State private var confirmClear = false
+    @State private var selectedResult: ExamResult?
 
     var body: some View {
         ScrollView {
@@ -218,6 +219,26 @@ struct HistoryView: View {
         .confirmationDialog("Delete every saved result?", isPresented: $confirmClear, titleVisibility: .visible) {
             Button("Delete all results", role: .destructive) { store.clear() }
         }
+        #if os(macOS)
+        .sheet(item: $selectedResult) { result in
+            ScoreReportView(
+                result: result,
+                heading: "Saved score report",
+                doneTitle: "Close",
+                done: { selectedResult = nil }
+            )
+            .frame(minWidth: 940, minHeight: 720)
+        }
+        #else
+        .fullScreenCover(item: $selectedResult) { result in
+            ScoreReportView(
+                result: result,
+                heading: "Saved score report",
+                doneTitle: "Close",
+                done: { selectedResult = nil }
+            )
+        }
+        #endif
     }
 
     private func historyCard(_ result: ExamResult) -> some View {
@@ -229,9 +250,19 @@ struct HistoryView: View {
                         .font(.caption).foregroundStyle(.secondary)
                 }
                 Spacer()
-                Text(duration(result.elapsedSeconds))
-                    .font(.subheadline.monospacedDigit())
-                    .foregroundStyle(.secondary)
+                VStack(alignment: .trailing, spacing: 8) {
+                    Text(duration(result.elapsedSeconds))
+                        .font(.subheadline.monospacedDigit())
+                        .foregroundStyle(.secondary)
+                    if result.questionReviews?.isEmpty == false {
+                        Button("Review answers") { selectedResult = result }
+                            .buttonStyle(.borderedProminent)
+                    } else {
+                        Text("Score-only record")
+                            .font(.caption2)
+                            .foregroundStyle(.tertiary)
+                    }
+                }
             }
 
             HStack(spacing: 12) {

@@ -34,7 +34,7 @@ struct ExamContainerView: View {
                 )
             case .completed:
                 if let result = session.result {
-                    ScoreReportView(session: session, result: result) { onComplete(result) }
+                    ScoreReportView(result: result) { onComplete(result) }
                 }
             }
         }

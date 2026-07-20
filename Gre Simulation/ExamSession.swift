@@ -180,6 +180,22 @@ final class ExamSession: ObservableObject {
         let essay = writingQuestionID.flatMap { answers[$0]?.essayText } ?? ""
         let verbalAnswered = sectionSummaries.filter { $0.measure == .verbal }.reduce(0) { $0 + $1.answered }
         let quantAnswered = sectionSummaries.filter { $0.measure == .quantitative }.reduce(0) { $0 + $1.answered }
+        let questionReviews: [QuestionReviewRecord] = sections
+            .filter { completedSectionIDs.contains($0.id) }
+            .flatMap { section -> [QuestionReviewRecord] in
+                section.questions.enumerated().compactMap { index, question -> QuestionReviewRecord? in
+                    guard question.isScored else { return nil }
+                    return QuestionReviewRecord(
+                        sectionID: section.id,
+                        sectionOrdinal: section.ordinal,
+                        sectionDifficulty: section.adaptiveDifficulty,
+                        questionNumber: index + 1,
+                        question: question,
+                        answer: answers[question.id] ?? GREAnswer(),
+                        isCorrect: isCorrect(question)
+                    )
+                }
+            }
 
         result = ExamResult(
             id: UUID(),
@@ -193,7 +209,8 @@ final class ExamSession: ObservableObject {
             quantitativeCorrect: quant.correct,
             quantitativeTotal: quant.total,
             elapsedSeconds: max(0, Int(Date().timeIntervalSince(startedAt))),
-            sections: sectionSummaries
+            sections: sectionSummaries,
+            questionReviews: questionReviews
         )
     }
 
@@ -248,6 +265,7 @@ final class ExamSession: ObservableObject {
         assert(phase == .completed)
         assert(result?.verbalScore == nil || result?.verbalScore == 170)
         assert(result?.quantitativeScore == nil || result?.quantitativeScore == 170)
+        assert(result?.questionReviews?.count == (result?.verbalTotal ?? 0) + (result?.quantitativeTotal ?? 0))
     }
     #endif
 }

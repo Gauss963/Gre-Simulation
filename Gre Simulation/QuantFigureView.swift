@@ -1,4 +1,5 @@
 import Charts
+import Foundation
 import SwiftUI
 
 struct QuantFigureView: View {
@@ -91,13 +92,29 @@ struct QuantFigureView: View {
     }
 
     private func barChart(grouped: Bool) -> some View {
-        Chart(categoryData) { datum in
-            BarMark(x: .value("Category", datum.label), y: .value("Value", datum.value))
-                .foregroundStyle(by: .value("Series", datum.series))
-                .position(by: .value("Series", grouped ? datum.series : "Value"))
+        let axis = YAxisSpecification(values: categoryData.map(\.value), startsAtZero: true)
+        return Chart {
+            ForEach(categoryData) { datum in
+                BarMark(x: .value("Category", datum.label), y: .value("Value", datum.value))
+                    .foregroundStyle(by: .value("Series", datum.series))
+                    .position(by: .value("Series", grouped ? datum.series : "Value"))
+                    .annotation(position: .top, spacing: 3) {
+                        Text(axisNumber(datum.value))
+                            .font(.system(size: 10, weight: .semibold, design: .rounded))
+                            .monospacedDigit()
+                            .foregroundStyle(.secondary)
+                    }
+            }
+            ForEach(axis.tickValues, id: \.self) { tick in
+                RuleMark(y: .value("Grid", tick))
+                    .lineStyle(StrokeStyle(lineWidth: 0.65))
+                    .foregroundStyle(Color.primary.opacity(0.18))
+                    .accessibilityHidden(true)
+            }
         }
         .chartYAxisLabel(figure.yAxisTitle ?? "")
         .chartLegend(figure.series.count > 1 ? .visible : .hidden)
+        .preciseYAxis(values: categoryData.map(\.value), startsAtZero: true)
         .standardPlotStyle()
         .frame(minHeight: 270)
     }
@@ -113,6 +130,7 @@ struct QuantFigureView: View {
         }
         .chartYAxisLabel(figure.yAxisTitle ?? "")
         .chartLegend(figure.series.count > 1 ? .visible : .hidden)
+        .preciseYAxis(values: coordinateData.map(\.value), startsAtZero: false)
         .standardPlotStyle()
         .frame(minHeight: 270)
     }
@@ -164,16 +182,33 @@ struct QuantFigureView: View {
         }
         .chartYAxisLabel(figure.yAxisTitle ?? "")
         .chartLegend(.visible)
+        .preciseYAxis(values: coordinateData.map(\.value), startsAtZero: false)
         .standardPlotStyle()
         .frame(minHeight: 285)
     }
 
     private var histogram: some View {
-        Chart(categoryData) { datum in
-            BarMark(x: .value("Interval", datum.label), y: .value("Frequency", datum.value), width: .ratio(1))
-                .foregroundStyle(GRETheme.brightBlue.gradient)
+        let axis = YAxisSpecification(values: categoryData.map(\.value), startsAtZero: true)
+        return Chart {
+            ForEach(categoryData) { datum in
+                BarMark(x: .value("Interval", datum.label), y: .value("Frequency", datum.value), width: .ratio(1))
+                    .foregroundStyle(GRETheme.brightBlue.gradient)
+                    .annotation(position: .top, spacing: 3) {
+                        Text(axisNumber(datum.value))
+                            .font(.system(size: 10, weight: .bold, design: .rounded))
+                            .monospacedDigit()
+                            .foregroundStyle(.primary)
+                    }
+            }
+            ForEach(axis.tickValues, id: \.self) { tick in
+                RuleMark(y: .value("Grid", tick))
+                    .lineStyle(StrokeStyle(lineWidth: 0.65))
+                    .foregroundStyle(Color.primary.opacity(0.2))
+                    .accessibilityHidden(true)
+            }
         }
         .chartYAxisLabel(figure.yAxisTitle ?? "")
+        .preciseYAxis(values: categoryData.map(\.value), startsAtZero: true)
         .standardPlotStyle()
         .frame(minHeight: 270)
     }
@@ -244,6 +279,98 @@ private extension View {
                 .overlay(Rectangle().stroke(GRETheme.border, lineWidth: 0.7))
         }
     }
+
+    func preciseYAxis(values: [Double], startsAtZero: Bool) -> some View {
+        modifier(PreciseYAxisModifier(values: values, startsAtZero: startsAtZero))
+    }
+}
+
+private struct PreciseYAxisModifier: ViewModifier {
+    let specification: YAxisSpecification
+
+    init(values: [Double], startsAtZero: Bool) {
+        specification = YAxisSpecification(values: values, startsAtZero: startsAtZero)
+    }
+
+    func body(content: Content) -> some View {
+        content
+            .chartYScale(domain: specification.lowerBound...specification.upperBound)
+            .chartYAxis {
+                AxisMarks(position: .trailing, values: specification.tickValues) { value in
+                    AxisGridLine(stroke: StrokeStyle(lineWidth: 0.7))
+                        .foregroundStyle(Color.primary.opacity(0.2))
+                    AxisTick(length: 7, stroke: StrokeStyle(lineWidth: 1))
+                        .foregroundStyle(Color.primary.opacity(0.6))
+                    AxisValueLabel(anchor: .leading) {
+                        if let number = value.as(Double.self) {
+                            Text(specification.label(for: number))
+                                .font(.caption2)
+                                .monospacedDigit()
+                        }
+                    }
+                }
+            }
+    }
+}
+
+private struct YAxisSpecification {
+    let lowerBound: Double
+    let upperBound: Double
+    let step: Double
+    let tickValues: [Double]
+
+    init(values: [Double], startsAtZero: Bool) {
+        let finiteValues = values.filter(\.isFinite)
+        let dataMinimum = finiteValues.min() ?? 0
+        let dataMaximum = finiteValues.max() ?? 1
+        let effectiveMinimum = startsAtZero && dataMinimum >= 0 ? 0 : dataMinimum
+        let span = max(dataMaximum - effectiveMinimum, max(abs(dataMaximum), 1) * 0.05)
+        let rawStep = span / 15
+        let magnitude = pow(10, floor(log10(max(rawStep, 0.000_001))))
+        let normalized = rawStep / magnitude
+        let multiplier: Double
+        if normalized <= 1 {
+            multiplier = 1
+        } else if normalized <= 2 {
+            multiplier = 2
+        } else if normalized <= 2.5 {
+            multiplier = 2.5
+        } else if normalized <= 5 {
+            multiplier = 5
+        } else {
+            multiplier = 10
+        }
+        let resolvedStep = multiplier * magnitude
+        let resolvedLowerBound = startsAtZero && dataMinimum >= 0
+            ? 0
+            : floor(dataMinimum / resolvedStep) * resolvedStep
+        let roundedUpper = ceil(dataMaximum / resolvedStep) * resolvedStep
+        let resolvedUpperBound = roundedUpper > resolvedLowerBound
+            ? roundedUpper
+            : resolvedLowerBound + resolvedStep
+        let intervalCount = max(1, Int(round((resolvedUpperBound - resolvedLowerBound) / resolvedStep)))
+        step = resolvedStep
+        lowerBound = resolvedLowerBound
+        upperBound = resolvedUpperBound
+        tickValues = (0...intervalCount).map { resolvedLowerBound + Double($0) * resolvedStep }
+    }
+
+    func label(for value: Double) -> String {
+        axisNumber(value, step: step)
+    }
+}
+
+private func axisNumber(_ value: Double, step: Double? = nil) -> String {
+    let effectiveStep = step ?? 1
+    let fractionDigits: Int
+    if effectiveStep >= 1 {
+        fractionDigits = 0
+    } else {
+        fractionDigits = min(4, max(1, Int(ceil(-log10(effectiveStep)))))
+    }
+    return value.formatted(.number
+        .grouping(.automatic)
+        .precision(.fractionLength(0...fractionDigits)))
 }
 
 private struct BoxPlotFigure: View {
