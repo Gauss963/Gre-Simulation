@@ -1,23 +1,23 @@
 {
-  "generatedQuestions": 1357,
+  "generatedQuestions": 2939,
   "byContentArea": {
-    "Algebra": 339,
-    "Arithmetic": 340,
-    "Data Analysis": 339,
-    "Geometry": 339
+    "Algebra": 735,
+    "Arithmetic": 735,
+    "Data Analysis": 734,
+    "Geometry": 735
   },
   "byDifficulty": {
-    "easy": 453,
-    "hard": 452,
-    "medium": 452
+    "easy": 980,
+    "hard": 979,
+    "medium": 980
   },
   "byFormat": {
-    "multipleChoice": 144,
-    "numericEntry": 766,
-    "quantitativeComparison": 126,
-    "singleChoice": 321
+    "multipleChoice": 248,
+    "numericEntry": 1542,
+    "quantitativeComparison": 529,
+    "singleChoice": 620
   },
-  "normalizedStemFamilies": 113,
-  "largestNormalizedStemFamily": 18,
+  "normalizedStemFamilies": 143,
+  "largestNormalizedStemFamily": 31,
   "sourcePolicy": "Original item based on the official GRE Quant content and format rules; no official question text copied"
 }

@@ -386,6 +386,15 @@ def original_contextual_example(
     return f"In this context, “{word}” refers to {meaning}."
 
 
+def example_uses_word(entry: dict) -> bool:
+    """Return whether an example actually demonstrates the headword."""
+    word = entry.get("word", "").strip()
+    example = entry.get("example", "").strip()
+    if not word or not example:
+        return False
+    return bool(re.search(rf"(?<![A-Za-z]){re.escape(word)}(?![A-Za-z])", example, re.I))
+
+
 def append_source(entry: dict, source: str) -> None:
     sources = entry.setdefault("sources", [])
     if source not in sources:
@@ -399,6 +408,7 @@ def enrich_vocabulary_entries(
     tatoeba_cc0: Path,
     tatoeba_english: Path,
     refresh_original_examples: bool = False,
+    refresh_invalid_examples: bool = False,
 ) -> dict[str, int]:
     if refresh_original_examples:
         for entry in entries:
@@ -410,6 +420,15 @@ def enrich_vocabulary_entries(
                     source for source in entry.get("sources", [])
                     if source != ORIGINAL_EXAMPLE_SOURCE
                 ]
+
+    invalid_examples_cleared = 0
+    if refresh_invalid_examples:
+        for entry in entries:
+            if entry.get("example", "").strip() and not example_uses_word(entry):
+                entry["example"] = ""
+                entry.pop("exampleSource", None)
+                entry.pop("exampleSourceURL", None)
+                invalid_examples_cleared += 1
 
     target_words = {
         entry["word"].strip().lower()
@@ -475,12 +494,15 @@ def enrich_vocabulary_entries(
         raise ValueError("Vocabulary enrichment left a Chinese definition empty")
     if any(not entry.get("example", "").strip() for entry in entries):
         raise ValueError("Vocabulary enrichment left an example sentence empty")
+    if refresh_invalid_examples and any(not example_uses_word(entry) for entry in entries):
+        raise ValueError("Vocabulary enrichment left an example that does not use its headword")
 
     return {
         "translationsAdded": translations_added,
         "cc0ExamplesAdded": cc0_added,
         "attributedExamplesAdded": attributed_added,
         "originalExamplesAdded": original_added,
+        "invalidExamplesReplaced": invalid_examples_cleared,
     }
 
 
@@ -528,6 +550,11 @@ def main() -> None:
         action="store_true",
         help="Regenerate entries previously labeled as original app examples.",
     )
+    parser.add_argument(
+        "--refresh-invalid-examples",
+        action="store_true",
+        help="Replace examples that do not contain their vocabulary headword.",
+    )
     args = parser.parse_args()
 
     entries = json.loads(args.vocabulary.read_text(encoding="utf-8"))
@@ -537,6 +564,7 @@ def main() -> None:
         args.tatoeba_cc0,
         args.tatoeba_english,
         refresh_original_examples=args.refresh_original_examples,
+        refresh_invalid_examples=args.refresh_invalid_examples,
     )
     args.vocabulary.write_text(json.dumps(entries, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     manifest_path = args.vocabulary.parent / "ContentManifest.json"

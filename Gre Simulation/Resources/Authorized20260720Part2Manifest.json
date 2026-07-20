@@ -1,0 +1,67 @@
+{
+  "questionCount": 1585,
+  "questionCountsByMeasure": {
+    "analyticalWriting": 3,
+    "verbal": 1582
+  },
+  "questionCountsByFormat": {
+    "essay": 3,
+    "multipleChoice": 37,
+    "singleChoice": 1499,
+    "textCompletion": 46
+  },
+  "questionAudit": {
+    "reading36Sets": {
+      "exercisesDetected": 36,
+      "questionBlocksDetected": 390,
+      "letterKeysRecovered": 366,
+      "detailedExplanationsRecovered": 400,
+      "imported": 337,
+      "duplicatesSkipped": 3,
+      "rejectedIncompleteLayoutOrSentenceSelection": 26
+    },
+    "reading300Passages": {
+      "codedPassagesDetected": 262,
+      "answerEntriesDetected": 266,
+      "passagesUniquelyMatched": 249,
+      "questionBlocksDetected": 1312,
+      "imported": 1199,
+      "duplicatesSkipped": 50,
+      "rejectedAmbiguousAnswerSequence": 61,
+      "rejectedIncompleteLayout": 2,
+      "lowestAcceptedTitleMatch": 0.9024
+    },
+    "gruberGuide": {
+      "practiceTestsDetected": 3,
+      "textCompletionBlocksDetected": 48,
+      "answerKeysRecovered": 48,
+      "issuePromptsRecovered": 3,
+      "imported": 49,
+      "duplicatesSkipped": 0,
+      "rejectedIncompleteLayout": 2,
+      "excludedByPolicy": "Reading and Quant layouts that cannot be paired deterministically, obsolete Analyze-an-Argument tasks, analogies, and antonyms remain audit-only."
+    }
+  },
+  "vocabularyCount": 3380,
+  "vocabularyAudit": {
+    "listEntriesDetected": 3381,
+    "existingWordsSourceMerged": 1997,
+    "newWordsImported": 1383,
+    "rejectedWithoutECDICTChineseDefinition": 1,
+    "completeRecordsWritten": 3380,
+    "enrichment": {
+      "translationsAdded": 1383,
+      "cc0ExamplesAdded": 137,
+      "attributedExamplesAdded": 907,
+      "originalExamplesAdded": 339,
+      "invalidExamplesReplaced": 0
+    }
+  },
+  "sourceInventory": {
+    "pdfFiles": 39,
+    "reading36QuestionPDF": "Text-identical after normalization to the previously audited 36-set question PDF; the newly supplied per-set analyses improve answer and explanation cross-checking.",
+    "reading36SupplementalAnalyses": 34,
+    "policy": "Only items with complete text, choices, and deterministic answer alignment are emitted. Duplicate and obsolete formats remain audit-only."
+  },
+  "languagePolicy": "All bundled Chinese fields are converted with OpenCC s2twp and checked for idempotence; every emitted vocabulary record has a Taiwan Traditional Chinese definition and an English example that uses its headword."
+}

@@ -317,17 +317,18 @@
       "tumid",
       "turgid"
     ],
-    "example": "a man given to large talk",
-    "exampleSource": "GRE Contextual Vocabulary · authorized copy",
-    "exampleSourceURL": null,
+    "example": "The dictator gave a bombastic speech.",
     "sources": [
       "ECDICT English-Chinese Dictionary",
       "GRE Contextual Vocabulary · authorized copy",
       "Gauss high-frequency list",
       "Gauss workbook",
-      "Open English WordNet 2025"
+      "Open English WordNet 2025",
+      "Tatoeba Corpus"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
+    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/11598047"
   },
   {
     "word": "brevity",
@@ -634,16 +635,17 @@
     "definition": "free from error, fallacy, misconception",
     "chinese": "打消錯誤念頭，糾正",
     "synonyms": [],
-    "example": "As a child, I was quickly disabused of the notion that Santa Claus was a rotund benefactor of infinite largess—one night I saw my mother diligently wrapping presents and storing them under our Christmas tree.",
-    "exampleSource": "GRE Contextual Vocabulary · authorized copy",
-    "exampleSourceURL": null,
+    "example": "Nothing could disabuse them of that preposterous notion.",
     "sources": [
       "GRE Contextual Vocabulary · authorized copy",
       "Gauss high-frequency list",
       "Magoosh vocabulary eBook",
+      "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
+    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/8989367"
   },
   {
     "word": "discern",
@@ -1227,16 +1229,17 @@
       "impendent",
       "impending"
     ],
-    "example": "retribution is at hand",
-    "exampleSource": "GRE Contextual Vocabulary · authorized copy",
-    "exampleSourceURL": null,
+    "example": "The dark clouds and swirling wind indicated that a storm was imminent.",
     "sources": [
       "ECDICT English-Chinese Dictionary",
       "GRE Contextual Vocabulary · authorized copy",
       "Gauss high-frequency list",
-      "Open English WordNet 2025"
+      "Open English WordNet 2025",
+      "Tatoeba Corpus"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
+    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/2946075"
   },
   {
     "word": "impugn",
@@ -1545,16 +1548,17 @@
     "synonyms": [
       "greathearted"
     ],
-    "example": "a greathearted general",
-    "exampleSource": "GRE Contextual Vocabulary · authorized copy",
-    "exampleSourceURL": null,
+    "example": "In a serious struggle there is no worse cruelty than to be magnanimous at an inopportune time.",
     "sources": [
       "ECDICT English-Chinese Dictionary",
       "GRE Contextual Vocabulary · authorized copy",
       "Gauss high-frequency list",
-      "Open English WordNet 2025"
+      "Open English WordNet 2025",
+      "Tatoeba Corpus"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
+    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/13169235"
   },
   {
     "word": "minatory",

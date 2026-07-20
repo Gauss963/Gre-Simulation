@@ -10,14 +10,14 @@ A native Swift + SwiftUI GRE® practice simulator for macOS and iPadOS.
 - Test-style navigation with Back, Next, Mark, Review, hidden/visible time, and automatic section submission when time expires
 - Text Completion, Sentence Equivalence, Reading Comprehension, Quantitative Comparison, single-answer, multiple-answer, and Numeric Entry interfaces
 - Basic on-screen Quant calculator with memory operations
-- 3,212-item offline bank with an exact 1:1 scored-measure balance: 1,602 Verbal, 1,602 Quantitative, and 8 imported Analytical Writing prompts, plus the app's original Issue prompt
-- 62 source-derived questions from the user's authorized ETS Official Guide and Peterson's book, each labeled in post-test review
-- 240 deterministic vocabulary-synthesis and ETS-aligned original questions, plus 1,357 new Super Power Pack-aligned original Quant questions and the original 90-question bank
-- 442 Data Analysis and statistics questions in the runtime pool, including 384 questions built around 123 structured data displays
+- 6,379-item offline bank with an exact 1:1 scored-measure balance: 3,184 Verbal, 3,184 Quantitative, and 11 imported Analytical Writing prompts, plus the app's original Issue prompt
+- 3,110 source-derived questions from the user's authorized GRE library, each labeled in post-test review
+- 240 deterministic vocabulary-synthesis and ETS-aligned original questions, plus 2,939 Super Power Pack-aligned original Quant questions and the original 90-question bank
+- 837 Data Analysis and statistics questions in the runtime pool, including 779 questions built around 201 structured data displays
 - Exposure-aware Quant selection that rotates question families and remembers the most recent 800 exact questions to reduce repeat encounters across practice sessions
 - Native, accessible tables, bar and grouped-bar charts, line charts, pie charts, histograms, scatterplots, box plots, normal curves, and Venn diagrams that adapt to macOS, iPadOS, and system appearance
 - Data charts include high-contrast horizontal grid lines, fine trailing-axis ticks, and exact values above bars so frequencies can be read unambiguously
-- 4,613 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, Magoosh, and 2026-07-20 contextual-vocabulary sources; every entry includes a Taiwan Traditional Chinese definition and an English example
+- 5,993 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, Magoosh, Gruber, and 2026-07-20 collections; every entry includes a Taiwan Traditional Chinese definition and an English example
 - Vocabulary search and filtering by source or high-frequency list
 - Practice score report, answer explanations, adaptive route details, and persistent on-device score history with reopenable per-question correct/incorrect review
 - A transparent 130–170 practice score estimator and a clearly labeled local writing-structure signal
@@ -33,7 +33,7 @@ Open [`Gre Simulation.xcodeproj`](Gre%20Simulation.xcodeproj) and run the `Gre S
 
 ## Content provenance and scoring
 
-This build includes source-derived items from the user's locally supplied, fully authorized GRE library, including *The Official Guide to the GRE General Test*, *Peterson's Master the GRE General Test*, the 2026-07-20 Verbal/Quant/Writing collection, and the licensed vocabulary files. It also contains original items aligned to the official content outline. The score-report review identifies the source and location of every sourced item and distinguishes it from generated practice.
+This build includes source-derived items from the user's locally supplied, fully authorized GRE library, including *The Official Guide to the GRE General Test*, *Peterson's Master the GRE General Test*, both 2026-07-20 collections, Gruber's guide, and the licensed vocabulary files. It also contains original items aligned to the official content outline. The score-report review identifies the source and location of every sourced item and distinguishes it from generated practice.
 
 ETS reports Verbal and Quant scores on a 130–170 scale and uses proprietary equating to account for edition difficulty and the adaptive second-section route. Since the conversion table is not public, this app maps raw accuracy linearly onto 130–170 and labels the result as an estimate. The writing signal is a local heuristic, not an official score or e-rater® result.
 

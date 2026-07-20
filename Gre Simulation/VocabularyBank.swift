@@ -55,9 +55,12 @@ enum VocabularyBank {
     private static let authorized20260720Words: [VocabularyWord] =
         BundledResource.decode([VocabularyWord].self, named: "Authorized20260720Vocabulary") ?? []
 
+    private static let authorized20260720Part2Words: [VocabularyWord] =
+        BundledResource.decode([VocabularyWord].self, named: "Authorized20260720Part2Vocabulary") ?? []
+
     static let words: [VocabularyWord] = {
         var merged: [String: VocabularyWord] = [:]
-        for item in expandedWords + authorized20260720Words + curatedWords {
+        for item in expandedWords + authorized20260720Words + authorized20260720Part2Words + curatedWords {
             let key = item.word.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
             guard !key.isEmpty else { continue }
             if let existing = merged[key] {

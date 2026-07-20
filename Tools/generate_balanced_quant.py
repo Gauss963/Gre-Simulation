@@ -14,6 +14,7 @@ import json
 import math
 import random
 import re
+import unicodedata
 from collections import Counter
 from fractions import Fraction
 from pathlib import Path
@@ -24,6 +25,12 @@ SOURCE = {
     "detail": "Original item based on the official GRE Quant content and format rules; no official question text copied",
     "isAuthorizedSourceItem": False,
 }
+
+# The 2026-07-20 part-two import adds 1,582 Verbal questions. Expanding the
+# generated Quant resource from 1,357 to 2,939 preserves the runtime's exact
+# 1:1 scored-measure balance (3,184 questions in each measure).
+VARIANTS_PER_FAMILY = 31
+TARGET_TOTAL = 2_939
 
 QC_CHOICES = [
     "Quantity A is greater.",
@@ -222,7 +229,11 @@ def arithmetic(family: int, variant: int) -> list[dict]:
                     f"先行距離為 {s1} 英里，相對速率為 {s2-s1} mph；追及時間為 {s1}/{s2-s1}={clean_number(Fraction(s1,s2-s1))} 小時。", "Arithmetic"),
         ]
     if family == 3:
-        primes = [(2, 3), (3, 5), (2, 7), (5, 7), (3, 11), (2, 13)][variant % 6]
+        prime_values = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+        primes = (
+            prime_values[variant % len(prime_values)],
+            prime_values[(variant + 1 + variant // len(prime_values)) % len(prime_values)],
+        )
         e1, e2 = 2 + variant % 3, 1 + (variant // 3) % 3
         n = primes[0] ** e1 * primes[1] ** e2
         divisors = (e1 + 1) * (e2 + 1)
@@ -249,15 +260,16 @@ def arithmetic(family: int, variant: int) -> list[dict]:
         total = Fraction(count * (first + last), 2)
         limit_count = count + 3
         limit = first + (limit_count - 1) * step
+        stimulus = f"The arithmetic sequence has first term {first} and common difference {step}."
         return [
             numeric(p + "-e", "easy", f"An arithmetic sequence has first term {first} and common difference {step}. What is its {count}th term?", last,
                     f"aₙ=a₁+(n−1)d={first}+({count}−1)×{step}={last}。", "Arithmetic"),
             numeric(p + "-m", "medium", f"{wording(0, variant)} the sum of the first {count} terms of that sequence?", total,
-                    f"首尾平均乘以項數：{count}({first}+{last})/2={clean_number(total)}。", "Arithmetic"),
+                    f"首尾平均乘以項數：{count}({first}+{last})/2={clean_number(total)}。", "Arithmetic", stimulus=stimulus),
             single(p + "-h", "hard", f"How many terms of the sequence are less than or equal to {limit}?",
                    [str(limit_count + d) for d in (-2, -1, 0, 1, 2)], str(limit_count),
-                   f"解 {first}+(n−1){step}≤{limit}，得到 n≤{limit_count}，共有 {limit_count} 項。", "Arithmetic"),
-            comparison(p + "-x", "medium", f"The first {count} terms form an arithmetic sequence from {first} to {last}.", "Their arithmetic mean", f"({first} + {last})/2", 2,
+                   f"解 {first}+(n−1){step}≤{limit}，得到 n≤{limit_count}，共有 {limit_count} 項。", "Arithmetic", stimulus=stimulus),
+            comparison(p + "-x", "medium", stimulus + f" The first {count} terms run from {first} to {last}.", "Their arithmetic mean", f"({first} + {last})/2", 2,
                        "等差數列的平均數等於首項與末項的平均，兩量相等。", "Arithmetic"),
         ]
     total = 120 + 5 * variant
@@ -314,8 +326,8 @@ def algebra(family: int, variant: int) -> list[dict]:
                        f"聯立解得 x={x}、y={y}，直接比較即可。", "Algebra"),
         ]
     if family == 2:
-        r = 1 + variant % 7
-        s = r + 2 + (variant // 4) % 5
+        r = 1 + variant
+        s = r + 2 + variant % 5
         summ, prod = r + s, r * s
         stimulus = f"x² − {summ}x + {prod} = 0"
         return [
@@ -461,7 +473,7 @@ def geometry(family: int, variant: int) -> list[dict]:
                        f"體積為 {volume}；表面積為 {surface}。", "Geometry"),
         ]
     if family == 4:
-        small = 2 + variant % 5
+        small = 2 + variant
         large = small + 3 + variant % 4
         side = 6 + variant
         matching = Fraction(side*large,small)
@@ -640,19 +652,26 @@ def generate() -> list[dict]:
     questions: list[dict] = []
     scenario_instances: list[tuple[int, int, list[dict]]] = []
     for builder_index, builder in enumerate(BUILDERS):
-        for variant in range(18):
+        for variant in range(VARIANTS_PER_FAMILY):
             generated = builder(variant)
             questions.extend(generated[:3])
             scenario_instances.append((builder_index, variant, generated))
 
-    # Add 61 fourth prompts in a round-robin area order. This yields area totals
-    # 340/339/339/339 and difficulty totals 453/452/452.
-    by_area = [scenario_instances[i * 108:(i + 1) * 108] for i in range(4)]
+    # Add fourth prompts in round-robin area order until the exact balance
+    # target is reached. Cycling difficulty keeps the three tiers within one.
+    scenarios_per_area = 6 * VARIANTS_PER_FAMILY
+    by_area = [
+        scenario_instances[i * scenarios_per_area:(i + 1) * scenarios_per_area]
+        for i in range(4)
+    ]
     ordered: list[tuple[int, int, list[dict]]] = []
-    for position in range(108):
+    for position in range(scenarios_per_area):
         for area in range(4):
             ordered.append(by_area[area][position])
-    for extra_index, (_, _, generated) in enumerate(ordered[:61]):
+    extra_count = TARGET_TOTAL - len(questions)
+    if not 0 <= extra_count <= len(ordered):
+        raise ValueError(f"Target {TARGET_TOTAL} cannot be met by the available scenarios")
+    for extra_index, (_, _, generated) in enumerate(ordered[:extra_count]):
         extra = generated[3]
         extra["difficulty"] = ("easy", "medium", "hard")[extra_index % 3]
         questions.append(extra)
@@ -667,9 +686,21 @@ def normalized_signature(question: dict) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def exact_content_signature(question: dict) -> str:
+    figure = question.get("figure") or {}
+    text = "|".join(str(value) for value in (
+        figure.get("title"), question.get("stimulus"), question.get("prompt"),
+        question.get("quantityA"), question.get("quantityB"),
+    ) if value)
+    return "".join(
+        character for character in text.lower()
+        if not character.isspace() and not unicodedata.category(character).startswith("P")
+    )
+
+
 def validate(questions: list[dict]) -> dict:
-    if len(questions) != 1357:
-        raise ValueError(f"Expected 1,357 questions; generated {len(questions)}")
+    if len(questions) != TARGET_TOTAL:
+        raise ValueError(f"Expected {TARGET_TOTAL:,} questions; generated {len(questions):,}")
     ids = [question["id"] for question in questions]
     if len(ids) != len(set(ids)):
         raise ValueError("Duplicate generated IDs")
@@ -688,6 +719,10 @@ def validate(questions: list[dict]) -> dict:
             if len(texts) != len(set(texts)):
                 raise ValueError(f"{question['id']}: duplicate choices")
     signatures = Counter(normalized_signature(question) for question in questions)
+    exact_signatures = Counter(exact_content_signature(question) for question in questions)
+    duplicate_exact = [signature for signature, count in exact_signatures.items() if count > 1]
+    if duplicate_exact:
+        raise ValueError(f"Generated questions contain {len(duplicate_exact)} duplicate content groups")
     return {
         "generatedQuestions": len(questions),
         "byContentArea": dict(sorted(Counter(q["contentArea"] for q in questions).items())),

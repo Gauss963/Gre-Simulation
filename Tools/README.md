@@ -3,7 +3,7 @@
 Install the build-time conversion dependency before regenerating vocabulary:
 
 ```sh
-python3 -m pip install opencc-python-reimplemented
+python3 -m pip install opencc-python-reimplemented pdfplumber
 ```
 
 The generator uses OpenCC's `s2twp` conversion so all bundled Chinese definitions use Taiwan Traditional Chinese and Taiwan-localized terminology.
@@ -20,7 +20,7 @@ curl -L https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv
   -o ../tmp/open-corpus/eng_sentences.tsv.bz2
 ```
 
-`enrich_vocabulary.py` can fill an existing `ExpandedVocabulary.json` directly. It selects deterministic, complete Tatoeba sentences, rejects explicit, violent, partisan, current-affairs, named-person, and metalinguistic content, and writes sentence-level attribution URLs. If neither corpus has an acceptable example, it uses a definition-grounded original sentence. The command fails if any Chinese definition or example remains empty.
+`enrich_vocabulary.py` can fill an existing vocabulary JSON directly. It selects deterministic, complete Tatoeba sentences, rejects explicit, violent, partisan, current-affairs, named-person, and metalinguistic content, and writes sentence-level attribution URLs. If neither corpus has an acceptable example, it uses a definition-grounded original sentence. Pass `--refresh-invalid-examples` to replace examples that do not use their headword. The command fails if any Chinese definition or example remains empty.
 
 These tools rebuild the app's normalized offline resources without bundling the source books or workbooks.
 
@@ -40,15 +40,30 @@ The generator writes `ExpandedQuestions.json`, `ExpandedVocabulary.json`, and `C
 
 The source-derived question records are intentionally reviewed and curated in the generator rather than scraped blindly from PDF layout. This preserves answer grouping and prevents missing equations or diagrams from becoming malformed questions.
 
+## 20260720-2 import
+
+After extracting the 39 source PDFs into a page-delimited text directory, regenerate the normalized questions, vocabulary, and audit manifest with:
+
+```sh
+python3 Tools/import_20260720_2_resources.py \
+  --source-dir ../20260720-2 \
+  --extracted-dir ../tmp/pdfs/20260720-2/extracted \
+  --ecdict ../tmp/open-lexicon/ecdict.csv \
+  --tatoeba-cc0 ../tmp/open-corpus/eng_sentences_CC0.tsv.bz2 \
+  --tatoeba-english ../tmp/open-corpus/eng_sentences.tsv.bz2
+```
+
+The importer only emits reading items with complete options and a deterministic answer-table match. It cross-checks the 36-set explanations, uses layout-aware extraction for Gruber's practice tests, deduplicates against the existing bank, applies OpenCC `s2twp`, and verifies that every emitted vocabulary example contains its headword.
+
 ## Balanced Quant expansion
 
-Regenerate the 1,357-item original Quant expansion and its audit manifest with:
+Regenerate the 2,939-item original Quant expansion and its audit manifest with:
 
 ```sh
 python3 Tools/generate_balanced_quant.py
 ```
 
-The generator follows the four official Quant content areas and four interaction formats documented in the user-authorized Official GRE Super Power Pack. It calculates every answer deterministically, writes Taiwan Traditional Chinese explanations, rejects malformed keys or duplicate choices, and does not copy official item text. The resulting `BalancedQuantQuestions.json` makes the runtime Quant pool exactly equal to the 1,602-item Verbal pool.
+The generator follows the four official Quant content areas and four interaction formats documented in the user-authorized Official GRE Super Power Pack. It calculates every answer deterministically, writes Taiwan Traditional Chinese explanations, rejects malformed keys or duplicate choices, and does not copy official item text. The resulting `BalancedQuantQuestions.json` makes the runtime Quant pool exactly equal to the 3,184-item Verbal pool.
 
 ## macOS app icon
 

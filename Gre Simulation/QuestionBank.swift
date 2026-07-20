@@ -23,15 +23,21 @@ enum QuestionBank {
     static let authorized20260720Questions: [GREQuestion] =
         BundledResource.decode([GREQuestion].self, named: "Authorized20260720Questions") ?? []
 
+    static let authorized20260720Part2Questions: [GREQuestion] =
+        BundledResource.decode([GREQuestion].self, named: "Authorized20260720Part2Questions") ?? []
+
     static let balancedQuantQuestions: [GREQuestion] =
         BundledResource.decode([GREQuestion].self, named: "BalancedQuantQuestions") ?? []
 
     static let all: [GREQuestion] =
         verbalQuestions + quantitativeQuestions + expandedQuestions
-            + authorized20260720Questions + balancedQuantQuestions
+            + authorized20260720Questions + authorized20260720Part2Questions
+            + balancedQuantQuestions
 
     static let writingQuestions: [GREQuestion] =
-        [writingQuestion] + authorized20260720Questions.filter { $0.measure == .analyticalWriting }
+        [writingQuestion]
+            + authorized20260720Questions.filter { $0.measure == .analyticalWriting }
+            + authorized20260720Part2Questions.filter { $0.measure == .analyticalWriting }
 
     static var sourceSummary: [(title: String, count: Int)] {
         let grouped = Dictionary(grouping: all) { question in
