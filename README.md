@@ -10,10 +10,11 @@ A native Swift + SwiftUI GRE® practice simulator for macOS and iPadOS.
 - Test-style navigation with Back, Next, Mark, Review, hidden/visible time, and automatic section submission when time expires
 - Text Completion, Sentence Equivalence, Reading Comprehension, Quantitative Comparison, single-answer, multiple-answer, and Numeric Entry interfaces
 - Basic on-screen Quant calculator with memory operations
-- 1,855-item offline bank: 1,602 Verbal, 245 Quantitative, and 8 newly imported Analytical Writing prompts, plus the app's original Issue prompt
+- 3,212-item offline bank with an exact 1:1 scored-measure balance: 1,602 Verbal, 1,602 Quantitative, and 8 imported Analytical Writing prompts, plus the app's original Issue prompt
 - 62 source-derived questions from the user's authorized ETS Official Guide and Peterson's book, each labeled in post-test review
-- 240 additional deterministic vocabulary-synthesis and ETS-aligned original Quant questions, plus the original 90-question bank
-- 103 Data Analysis and statistics questions in the runtime pool, including 45 questions built around 15 structured data displays
+- 240 deterministic vocabulary-synthesis and ETS-aligned original questions, plus 1,357 new Super Power Pack-aligned original Quant questions and the original 90-question bank
+- 442 Data Analysis and statistics questions in the runtime pool, including 384 questions built around 123 structured data displays
+- Exposure-aware Quant selection that rotates question families and remembers the most recent 800 exact questions to reduce repeat encounters across practice sessions
 - Native, accessible tables, bar and grouped-bar charts, line charts, pie charts, histograms, scatterplots, box plots, normal curves, and Venn diagrams that adapt to macOS, iPadOS, and system appearance
 - 4,613 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, Magoosh, and 2026-07-20 contextual-vocabulary sources; every entry includes a Taiwan Traditional Chinese definition and an English example
 - Vocabulary search and filtering by source or high-frequency list
@@ -37,7 +38,7 @@ ETS reports Verbal and Quant scores on a 130–170 scale and uses proprietary eq
 
 The vocabulary bank is generated from the user's authorized [`liurui39660/3000`](https://github.com/liurui39660/3000) workbook, Gauss high-frequency list and workbook, Magoosh vocabulary eBook, and contextual-vocabulary collection. Unmatched valid terms receive definitions and synonyms from [Open English WordNet 2025](https://en-word.net/), licensed CC BY 4.0. Missing Chinese glosses are supplemented by the MIT-licensed [ECDICT](https://github.com/skywind3000/ECDICT) database and localized to Taiwan Traditional Chinese. Missing examples are selected from the [Tatoeba Corpus](https://tatoeba.org/en/downloads) under CC0 1.0 or CC BY 2.0 FR, with definition-grounded original examples used only when the corpus has no suitable complete sentence. Source workbooks and PDFs are not copied into the app bundle; normalized JSON resources are bundled for offline use.
 
-The reproducible import pipeline is in [`Tools`](Tools): the workbook exporter uses `@oai/artifact-tool`, and the deterministic Python generator validates IDs, answer keys, duplicate choices, and difficulty coverage before writing app resources.
+The reproducible import pipeline is in [`Tools`](Tools): the workbook exporter uses `@oai/artifact-tool`, and the deterministic Python generators validate IDs, answer keys, duplicate choices, content uniqueness, structured figures, and difficulty coverage before writing app resources.
 
 See [SOURCES.md](SOURCES.md) for the source audit and design decisions.
 

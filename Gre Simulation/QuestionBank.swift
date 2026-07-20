@@ -23,8 +23,12 @@ enum QuestionBank {
     static let authorized20260720Questions: [GREQuestion] =
         BundledResource.decode([GREQuestion].self, named: "Authorized20260720Questions") ?? []
 
+    static let balancedQuantQuestions: [GREQuestion] =
+        BundledResource.decode([GREQuestion].self, named: "BalancedQuantQuestions") ?? []
+
     static let all: [GREQuestion] =
-        verbalQuestions + quantitativeQuestions + expandedQuestions + authorized20260720Questions
+        verbalQuestions + quantitativeQuestions + expandedQuestions
+            + authorized20260720Questions + balancedQuantQuestions
 
     static let writingQuestions: [GREQuestion] =
         [writingQuestion] + authorized20260720Questions.filter { $0.measure == .analyticalWriting }
@@ -53,28 +57,48 @@ enum QuestionBank {
             return Array(([preferred] + remainder).prefix(count))
         }
         #endif
+        let recent = recentQuestionIDs(for: measure)
+        let recentFamilies = recentQuestionFamilies(for: measure)
+        let exposureOrdered: ([GREQuestion]) -> [GREQuestion] = { candidates in
+            diversifiedExposureOrder(candidates, recentIDs: recent, recentFamilies: recentFamilies)
+        }
         guard let difficulty else {
             let each = max(1, count / 3)
             var selected: [GREQuestion] = []
+            var selectedScenarios: Set<String> = []
             for level in QuestionDifficulty.allCases {
-                selected.append(contentsOf: available.filter { $0.difficulty == level }.shuffled().prefix(each))
+                let levelCandidates = available.filter { $0.difficulty == level }
+                let ordered = exposureOrdered(levelCandidates.filter { !selectedScenarios.contains(scenarioFamily($0)) })
+                    + exposureOrdered(levelCandidates.filter { selectedScenarios.contains(scenarioFamily($0)) })
+                let levelSelection = Array(ordered.prefix(each))
+                selected.append(contentsOf: levelSelection)
+                selectedScenarios.formUnion(levelSelection.map { scenarioFamily($0) })
             }
             if selected.count < count {
                 let used = Set(selected.map(\.id))
-                selected.append(contentsOf: available.filter { !used.contains($0.id) }.shuffled().prefix(count - selected.count))
+                selected.append(contentsOf: exposureOrdered(available.filter { !used.contains($0.id) }).prefix(count - selected.count))
             }
-            return Array(selected.shuffled().prefix(count))
+            let result = Array(selected.shuffled().prefix(count))
+            rememberExposure(result, for: measure)
+            return result
         }
 
-        var selected = Array(available.filter { $0.difficulty == difficulty }.shuffled().prefix(count))
+        var selected = Array(exposureOrdered(available.filter { $0.difficulty == difficulty }).prefix(count))
         if selected.count < count {
             let used = Set(selected.map(\.id))
             let fallback = available
                 .filter { !used.contains($0.id) }
-                .sorted { distance($0.difficulty, from: difficulty) < distance($1.difficulty, from: difficulty) }
+                .sorted {
+                    let leftRecent = recent.contains($0.id)
+                    let rightRecent = recent.contains($1.id)
+                    if leftRecent != rightRecent { return !leftRecent }
+                    return distance($0.difficulty, from: difficulty) < distance($1.difficulty, from: difficulty)
+                }
             selected.append(contentsOf: fallback.prefix(count - selected.count))
         }
-        return selected.shuffled()
+        let result = selected.shuffled()
+        rememberExposure(result, for: measure)
+        return result
     }
 
     static func validate() -> [String] {
@@ -146,12 +170,99 @@ enum QuestionBank {
                 if levelCount < 15 { issues.append("\(measure.title) \(difficulty.title) pool needs 15 questions; found \(levelCount).") }
             }
         }
+        let verbalCount = all.lazy.filter { $0.measure == .verbal }.count
+        let quantitativeCount = all.lazy.filter { $0.measure == .quantitative }.count
+        if quantitativeCount < verbalCount {
+            issues.append("Quantitative pool must match or exceed Verbal; found \(quantitativeCount) versus \(verbalCount).")
+        }
         return issues
     }
 
     private static func distance(_ lhs: QuestionDifficulty, from rhs: QuestionDifficulty) -> Int {
         let order: [QuestionDifficulty: Int] = [.easy: 0, .medium: 1, .hard: 2]
         return abs((order[lhs] ?? 0) - (order[rhs] ?? 0))
+    }
+
+    private static func recentQuestionIDs(for measure: GREMeasure) -> Set<String> {
+        Set(UserDefaults.standard.stringArray(forKey: exposureKey(for: measure)) ?? [])
+    }
+
+    private static func rememberExposure(_ questions: [GREQuestion], for measure: GREMeasure) {
+        guard !questions.isEmpty else { return }
+        let key = exposureKey(for: measure)
+        let selectedIDs = questions.map(\.id)
+        let selectedSet = Set(selectedIDs)
+        var history = (UserDefaults.standard.stringArray(forKey: key) ?? [])
+            .filter { !selectedSet.contains($0) }
+        history.append(contentsOf: selectedIDs)
+        let poolCount = all.lazy.filter { $0.measure == measure }.count
+        let limit = min(800, max(120, poolCount / 2))
+        UserDefaults.standard.set(Array(history.suffix(limit)), forKey: key)
+
+        guard measure == .quantitative else { return }
+        let familyKey = familyExposureKey(for: measure)
+        let selectedFamilies = questions.map { selectionFamily($0) }
+        let selectedFamilySet = Set(selectedFamilies)
+        var familyHistory = (UserDefaults.standard.stringArray(forKey: familyKey) ?? [])
+            .filter { !selectedFamilySet.contains($0) }
+        familyHistory.append(contentsOf: selectedFamilies)
+        UserDefaults.standard.set(Array(familyHistory.suffix(48)), forKey: familyKey)
+    }
+
+    private static func exposureKey(for measure: GREMeasure) -> String {
+        "gre-simulation.question-exposure.v1.\(measure.rawValue)"
+    }
+
+    private static func recentQuestionFamilies(for measure: GREMeasure) -> Set<String> {
+        guard measure == .quantitative else { return [] }
+        return Set(UserDefaults.standard.stringArray(forKey: familyExposureKey(for: measure)) ?? [])
+    }
+
+    private static func familyExposureKey(for measure: GREMeasure) -> String {
+        "gre-simulation.question-family-exposure.v1.\(measure.rawValue)"
+    }
+
+    private static func selectionFamily(_ question: GREQuestion) -> String {
+        let components = question.id.split(separator: "-").map(String.init)
+        if components.count == 4, components[0] == "bq" {
+            return [components[0], components[1], components[3]].joined(separator: "-")
+        }
+        return question.id
+    }
+
+    private static func scenarioFamily(_ question: GREQuestion) -> String {
+        let components = question.id.split(separator: "-").map(String.init)
+        if components.count == 4, components[0] == "bq" {
+            return [components[0], components[1]].joined(separator: "-")
+        }
+        return question.id
+    }
+
+    private static func diversifiedExposureOrder(
+        _ candidates: [GREQuestion],
+        recentIDs: Set<String>,
+        recentFamilies: Set<String>
+    ) -> [GREQuestion] {
+        let buckets = Dictionary(grouping: candidates) { selectionFamily($0) }
+            .mapValues { questions in
+                questions.filter { !recentIDs.contains($0.id) }.shuffled()
+                    + questions.filter { recentIDs.contains($0.id) }.shuffled()
+            }
+        let families = buckets.keys.shuffled().sorted { left, right in
+            let leftRecent = recentFamilies.contains(left)
+            let rightRecent = recentFamilies.contains(right)
+            if leftRecent != rightRecent { return !leftRecent }
+            return false
+        }
+        let largestBucket = buckets.values.map(\.count).max() ?? 0
+        var result: [GREQuestion] = []
+        for offset in 0..<largestBucket {
+            for family in families {
+                guard let bucket = buckets[family], bucket.indices.contains(offset) else { continue }
+                result.append(bucket[offset])
+            }
+        }
+        return result
     }
 
     static func single(

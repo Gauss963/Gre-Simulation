@@ -40,6 +40,16 @@ The generator writes `ExpandedQuestions.json`, `ExpandedVocabulary.json`, and `C
 
 The source-derived question records are intentionally reviewed and curated in the generator rather than scraped blindly from PDF layout. This preserves answer grouping and prevents missing equations or diagrams from becoming malformed questions.
 
+## Balanced Quant expansion
+
+Regenerate the 1,357-item original Quant expansion and its audit manifest with:
+
+```sh
+python3 Tools/generate_balanced_quant.py
+```
+
+The generator follows the four official Quant content areas and four interaction formats documented in the user-authorized Official GRE Super Power Pack. It calculates every answer deterministically, writes Taiwan Traditional Chinese explanations, rejects malformed keys or duplicate choices, and does not copy official item text. The resulting `BalancedQuantQuestions.json` makes the runtime Quant pool exactly equal to the 1,602-item Verbal pool.
+
 ## macOS app icon
 
 `generate_mac_app_icon.swift` clips `Design/AppIconSource.png` to the macOS rounded shape on a genuinely transparent canvas. It also validates that the corner alpha is zero before writing the PNG. Generate the 1024-point source with:

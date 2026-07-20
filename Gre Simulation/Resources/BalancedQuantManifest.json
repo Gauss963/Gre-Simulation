@@ -1,0 +1,23 @@
+{
+  "generatedQuestions": 1357,
+  "byContentArea": {
+    "Algebra": 339,
+    "Arithmetic": 340,
+    "Data Analysis": 339,
+    "Geometry": 339
+  },
+  "byDifficulty": {
+    "easy": 453,
+    "hard": 452,
+    "medium": 452
+  },
+  "byFormat": {
+    "multipleChoice": 144,
+    "numericEntry": 766,
+    "quantitativeComparison": 126,
+    "singleChoice": 321
+  },
+  "normalizedStemFamilies": 113,
+  "largestNormalizedStemFamily": 18,
+  "sourcePolicy": "Original item based on the official GRE Quant content and format rules; no official question text copied"
+}
