@@ -154,6 +154,12 @@ struct ScoreReportView: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .padding(.leading, 27)
+            if let figure = question.figure {
+                QuantFigureView(figure: figure)
+                    .frame(maxWidth: 680)
+                    .padding(.leading, 27)
+                    .padding(.vertical, 6)
+            }
             VStack(alignment: .leading, spacing: 3) {
                 Text("Your answer: \(answerText(for: question))")
                 Text("Correct answer: \(correctAnswerText(for: question))")

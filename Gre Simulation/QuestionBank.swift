@@ -36,6 +36,16 @@ enum QuestionBank {
         excluding excluded: Set<String> = []
     ) -> [GREQuestion] {
         let available = all.filter { $0.measure == measure && !excluded.contains($0.id) }
+        #if DEBUG
+        let arguments = ProcessInfo.processInfo.arguments
+        if measure == .quantitative,
+           let flagIndex = arguments.firstIndex(of: "-qaQuestion"),
+           arguments.indices.contains(flagIndex + 1),
+           let preferred = available.first(where: { $0.id == arguments[flagIndex + 1] }) {
+            let remainder = available.filter { $0.id != preferred.id }.shuffled()
+            return Array(([preferred] + remainder).prefix(count))
+        }
+        #endif
         guard let difficulty else {
             let each = max(1, count / 3)
             var selected: [GREQuestion] = []
@@ -77,10 +87,39 @@ enum QuestionBank {
                 if !correctIDs.isSubset(of: optionIDs) { issues.append("\(question.id) has an invalid choice key.") }
                 if correctIDs.isEmpty { issues.append("\(question.id) has no correct choice.") }
             }
+            if let figure = question.figure {
+                if figure.title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    issues.append("\(question.id) has an untitled figure.")
+                }
+                if Set(figure.series.map(\.name)).count != figure.series.count {
+                    issues.append("\(question.id) has duplicate figure-series names.")
+                }
+                switch figure.kind {
+                case .table:
+                    if figure.headers?.isEmpty != false || figure.rows?.isEmpty != false {
+                        issues.append("\(question.id) has an empty table.")
+                    }
+                case .venn:
+                    if figure.annotations?.isEmpty != false {
+                        issues.append("\(question.id) has an empty Venn diagram.")
+                    }
+                case .boxPlot:
+                    let hasIncompleteSummary = figure.series.flatMap(\.points).contains { point in
+                        point.low == nil || point.q1 == nil || point.median == nil || point.q3 == nil || point.high == nil
+                    }
+                    if figure.series.isEmpty || hasIncompleteSummary {
+                        issues.append("\(question.id) has an incomplete box plot.")
+                    }
+                default:
+                    if figure.series.isEmpty || figure.series.contains(where: { $0.points.isEmpty }) {
+                        issues.append("\(question.id) has an empty chart series.")
+                    }
+                }
+            }
         }
 
         let contentSignatures = all.map { question in
-            [question.stimulus, question.prompt, question.quantityA, question.quantityB]
+            [question.figure?.title, question.stimulus, question.prompt, question.quantityA, question.quantityB]
                 .compactMap { $0 }
                 .joined(separator: "|")
                 .lowercased()

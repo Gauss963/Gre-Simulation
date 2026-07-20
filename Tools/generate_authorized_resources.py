@@ -23,6 +23,7 @@ if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
 from enrich_vocabulary import enrich_vocabulary_entries, vocabulary_inventory
+from quantitative_expansion import data_analysis_questions
 
 _TAIWAN_CONVERTER = None
 
@@ -62,7 +63,7 @@ SYNTHETIC_VERBAL = source(
 )
 SYNTHETIC_QUANT = source(
     "Original parameterized Quant item",
-    "Generated locally and audited against ETS Math Review and Peterson's topic coverage",
+    "Generated locally and audited against the ETS Quantitative Reasoning outline and Math Review",
     False,
 )
 
@@ -568,6 +569,11 @@ def main():
         type=Path,
         default=source_root / "tmp/open-corpus/eng_sentences.tsv.bz2",
     )
+    parser.add_argument(
+        "--questions-only",
+        action="store_true",
+        help="Rebuild question resources without regenerating the existing vocabulary bank.",
+    )
     args = parser.parse_args()
 
     questions = (
@@ -575,15 +581,27 @@ def main():
         + petersons_verbal_questions()
         + official_quant_questions()
         + generated_quant_questions()
+        + data_analysis_questions()
         + generated_verbal_questions(APP / "VocabularyBank.swift")
     )
-    vocabulary = build_vocabulary(args.word3000_json, args.gauss_json, args.high_frequency, args.magoosh_text, args.oewn_dir)
-    enrichment = enrich_vocabulary_entries(
-        vocabulary,
-        args.ecdict_csv,
-        args.tatoeba_cc0,
-        args.tatoeba_english,
-    )
+    resources = APP / "Resources"
+    resources.mkdir(parents=True, exist_ok=True)
+    existing_manifest_path = resources / "ContentManifest.json"
+    existing_manifest = json.loads(existing_manifest_path.read_text()) if existing_manifest_path.exists() else {}
+    if args.questions_only:
+        vocabulary_path = resources / "ExpandedVocabulary.json"
+        if not vocabulary_path.exists():
+            raise FileNotFoundError("--questions-only requires an existing ExpandedVocabulary.json")
+        vocabulary = json.loads(vocabulary_path.read_text())
+        enrichment = existing_manifest.get("vocabularyEnrichment", {})
+    else:
+        vocabulary = build_vocabulary(args.word3000_json, args.gauss_json, args.high_frequency, args.magoosh_text, args.oewn_dir)
+        enrichment = enrich_vocabulary_entries(
+            vocabulary,
+            args.ecdict_csv,
+            args.tatoeba_cc0,
+            args.tatoeba_english,
+        )
 
     ids = [item["id"] for item in questions]
     if len(ids) != len(set(ids)):
@@ -598,11 +616,19 @@ def main():
             keyed = item["correctSelections"].get(group["id"], [])
             if not keyed or len(keyed) > group["maximumSelections"]:
                 raise ValueError(f"{item['id']} contains an invalid answer key")
+        if item.get("figure"):
+            display = item["figure"]
+            if display["kind"] == "table" and (not display.get("headers") or not display.get("rows")):
+                raise ValueError(f"{item['id']} contains an empty data table")
+            if display["kind"] == "venn" and not display.get("annotations"):
+                raise ValueError(f"{item['id']} contains an empty Venn diagram")
+            if display["kind"] not in {"table", "venn"} and not display.get("series"):
+                raise ValueError(f"{item['id']} contains an empty chart")
 
-    resources = APP / "Resources"
-    resources.mkdir(parents=True, exist_ok=True)
     (resources / "ExpandedQuestions.json").write_text(json.dumps(questions, ensure_ascii=False, indent=2) + "\n")
-    (resources / "ExpandedVocabulary.json").write_text(json.dumps(vocabulary, ensure_ascii=False, indent=2) + "\n")
+    if not args.questions_only:
+        (resources / "ExpandedVocabulary.json").write_text(json.dumps(vocabulary, ensure_ascii=False, indent=2) + "\n")
+    figure_questions = [item for item in questions if item.get("figure")]
     manifest = {
         "expandedQuestionCount": len(questions),
         "expandedVocabularyCount": len(vocabulary),
@@ -612,6 +638,15 @@ def main():
             for difficulty in ["easy", "medium", "hard"]
         },
         "authorizedSourceQuestionCount": sum(1 for item in questions if item["source"]["isAuthorizedSourceItem"]),
+        "figureQuestionCount": len(figure_questions),
+        "figureCounts": {
+            kind: sum(1 for item in figure_questions if item["figure"]["kind"] == kind)
+            for kind in sorted({item["figure"]["kind"] for item in figure_questions})
+        },
+        "dataAnalysisQuestionCount": sum(
+            1 for item in questions
+            if item["measure"] == "quantitative" and item["contentArea"] == "Data Analysis"
+        ),
         "vocabularyEnrichment": enrichment,
         "vocabularyCompleteness": vocabulary_inventory(vocabulary),
     }

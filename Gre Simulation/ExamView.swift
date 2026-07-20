@@ -246,14 +246,14 @@ private struct QuestionView: View {
                 essayView
             } else {
                 ViewThatFits(in: .horizontal) {
-                    if let stimulus = session.currentQuestion.stimulus, stimulus.count > 280 {
+                    if hasSupportingMaterial {
                         HStack(alignment: .top, spacing: 28) {
-                            stimulusPanel(stimulus).frame(minWidth: 330, maxWidth: .infinity)
+                            supportingPanel.frame(minWidth: 410, maxWidth: .infinity)
                             responsePanel.frame(minWidth: 370, maxWidth: .infinity)
                         }
                     }
                     VStack(alignment: .leading, spacing: 20) {
-                        if let stimulus = session.currentQuestion.stimulus { stimulusPanel(stimulus) }
+                        if hasSupportingMaterial { supportingPanel }
                         responsePanel
                     }
                 }
@@ -262,14 +262,25 @@ private struct QuestionView: View {
         .greCard()
     }
 
-    private func stimulusPanel(_ text: String) -> some View {
-        Text(text)
-            .font(.system(size: 17, design: .serif))
-            .lineSpacing(7)
-            .padding(18)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(GRETheme.canvas, in: RoundedRectangle(cornerRadius: 6))
-            .overlay(RoundedRectangle(cornerRadius: 6).stroke(GRETheme.border))
+    private var hasSupportingMaterial: Bool {
+        session.currentQuestion.stimulus != nil || session.currentQuestion.figure != nil
+    }
+
+    private var supportingPanel: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            if let stimulus = session.currentQuestion.stimulus {
+                Text(stimulus)
+                    .font(.system(size: 17, design: .serif))
+                    .lineSpacing(7)
+            }
+            if let figure = session.currentQuestion.figure {
+                QuantFigureView(figure: figure)
+            }
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(GRETheme.canvas, in: RoundedRectangle(cornerRadius: 6))
+        .overlay(RoundedRectangle(cornerRadius: 6).stroke(GRETheme.border))
     }
 
     private var responsePanel: some View {

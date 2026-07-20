@@ -79,6 +79,58 @@ struct QuestionSource: Hashable, Codable {
     let isAuthorizedSourceItem: Bool
 }
 
+enum QuantFigureKind: String, Codable {
+    case table
+    case bar
+    case groupedBar
+    case line
+    case pie
+    case scatter
+    case histogram
+    case boxPlot
+    case normalCurve
+    case venn
+}
+
+struct QuantFigurePoint: Hashable, Codable {
+    let label: String?
+    let x: Double?
+    let value: Double?
+    let low: Double?
+    let q1: Double?
+    let median: Double?
+    let q3: Double?
+    let high: Double?
+}
+
+struct QuantFigureSeries: Hashable, Codable, Identifiable {
+    let name: String
+    let points: [QuantFigurePoint]
+
+    var id: String { name }
+}
+
+struct QuantFigureAnnotation: Hashable, Codable, Identifiable {
+    let label: String
+    let value: String
+    let x: Double
+    let y: Double
+
+    var id: String { "\(label)-\(x)-\(y)" }
+}
+
+struct QuantFigure: Hashable, Codable {
+    let kind: QuantFigureKind
+    let title: String
+    let caption: String?
+    let xAxisTitle: String?
+    let yAxisTitle: String?
+    let headers: [String]?
+    let rows: [[String]]?
+    let series: [QuantFigureSeries]
+    let annotations: [QuantFigureAnnotation]?
+}
+
 struct GREQuestion: Identifiable, Codable {
     let id: String
     let measure: GREMeasure
@@ -94,6 +146,7 @@ struct GREQuestion: Identifiable, Codable {
     let explanation: String
     let contentArea: String
     var source: QuestionSource? = nil
+    var figure: QuantFigure? = nil
 
     var isScored: Bool { format != .essay }
 }

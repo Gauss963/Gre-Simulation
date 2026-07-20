@@ -1,15 +1,29 @@
 {
-  "expandedQuestionCount": 242,
+  "expandedQuestionCount": 302,
   "expandedVocabularyCount": 4557,
   "questionCounts": {
     "verbal-easy": 42,
     "verbal-medium": 44,
     "verbal-hard": 35,
-    "quantitative-easy": 49,
-    "quantitative-medium": 47,
-    "quantitative-hard": 25
+    "quantitative-easy": 69,
+    "quantitative-medium": 67,
+    "quantitative-hard": 45
   },
   "authorizedSourceQuestionCount": 62,
+  "figureQuestionCount": 45,
+  "figureCounts": {
+    "bar": 3,
+    "boxPlot": 6,
+    "groupedBar": 3,
+    "histogram": 6,
+    "line": 6,
+    "normalCurve": 3,
+    "pie": 6,
+    "scatter": 3,
+    "table": 6,
+    "venn": 3
+  },
+  "dataAnalysisQuestionCount": 84,
   "vocabularyEnrichment": {
     "translationsAdded": 1525,
     "cc0ExamplesAdded": 358,

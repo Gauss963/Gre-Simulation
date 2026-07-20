@@ -30,7 +30,13 @@ These tools rebuild the app's normalized offline resources without bundling the 
 4. Download ECDICT and the Tatoeba English CC0/full exports using the commands above.
 5. Run `generate_authorized_resources.py`, passing alternate paths when the defaults do not match the local workspace.
 
-The generator writes `ExpandedQuestions.json`, `ExpandedVocabulary.json`, and `ContentManifest.json` under the app's `Resources` folder. It is deterministic and fails on duplicate IDs, duplicate answer choices, invalid answer keys, or incomplete vocabulary records.
+To add or revise questions without touching the completed vocabulary resource, run:
+
+```sh
+python3 Tools/generate_authorized_resources.py --questions-only
+```
+
+The generator writes `ExpandedQuestions.json`, `ExpandedVocabulary.json`, and `ContentManifest.json` under the app's `Resources` folder. It is deterministic and fails on duplicate IDs, duplicate answer choices, invalid answer keys, empty structured figures, or incomplete vocabulary records. The original chart-based Data Analysis items live in `quantitative_expansion.py`; their tables, bar charts, line charts, pie charts, histograms, scatterplots, box plots, normal curves, and Venn diagrams are stored as data rather than screenshots.
 
 The source-derived question records are intentionally reviewed and curated in the generator rather than scraped blindly from PDF layout. This preserves answer grouping and prevents missing equations or diagrams from becoming malformed questions.
 

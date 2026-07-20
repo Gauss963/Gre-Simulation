@@ -10,9 +10,11 @@ A native Swift + SwiftUI GRE® practice simulator for macOS and iPadOS.
 - Test-style navigation with Back, Next, Mark, Review, hidden/visible time, and automatic section submission when time expires
 - Text Completion, Sentence Equivalence, Reading Comprehension, Quantitative Comparison, single-answer, multiple-answer, and Numeric Entry interfaces
 - Basic on-screen Quant calculator with memory operations
-- 332-question offline bank: 166 Verbal and 166 Quant questions, balanced across three difficulty routes
+- 392-question offline bank: 166 Verbal and 226 Quant questions, with 20 new Data Analysis items at each difficulty level
 - 62 source-derived questions from the user's authorized ETS Official Guide and Peterson's book, each labeled in post-test review
-- 180 additional deterministic vocabulary-synthesis and parameterized Quant questions, plus the original 90-question bank
+- 240 additional deterministic vocabulary-synthesis and ETS-aligned original Quant questions, plus the original 90-question bank
+- 98 Data Analysis and statistics questions in the runtime pool, including 45 questions built around 15 structured data displays
+- Native, accessible tables, bar and grouped-bar charts, line charts, pie charts, histograms, scatterplots, box plots, normal curves, and Venn diagrams that adapt to macOS, iPadOS, and system appearance
 - 4,560 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, and Magoosh sources; every entry includes a Taiwan Traditional Chinese definition and an English example
 - Vocabulary search and filtering by source or high-frequency list
 - Practice score report, answer explanations, adaptive route details, and persistent on-device score history
@@ -56,7 +58,7 @@ DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer \
   CODE_SIGNING_ALLOWED=NO build
 ```
 
-Debug launches validate unique question identifiers, answer keys, minimum pool sizes, and per-difficulty coverage.
+Debug launches validate unique question identifiers, answer keys, minimum pool sizes, per-difficulty coverage, and structured figure decoding. The content generator separately rejects malformed answer groups and empty chart/table data.
 
 ## Trademark notice
 

@@ -1,14 +1,14 @@
 # Source audit
 
-Checked on 2026-07-19.
+Checked on 2026-07-20.
 
 ## Primary specifications
 
 - [ETS — GRE General Test Content & Structure](https://www.ets.org/gre/score-users/about/general-test/content-structure.html): one 30-minute Analyze an Issue task; Verbal sections of 12/15 questions in 18/23 minutes; Quant sections of 12/15 questions in 21/26 minutes.
 - [ETS — Understanding GRE General Test Scores](https://www.ets.org/gre/test-takers/general-test/scores/understand-scores.html): raw score is the number correct; all questions within a measure contribute equally; the second section is selected based on first-section performance; ETS converts raw scores using equating.
 - [ETS — Verbal Reasoning Overview](https://www.ets.org/gre/test-takers/general-test/prepare/content/verbal-reasoning.html): Reading Comprehension, Text Completion, and Sentence Equivalence.
-- [ETS — Quantitative Reasoning Overview](https://www.ets.org/gre/test-takers/general-test/prepare/content/quantitative-reasoning.html): Arithmetic, Algebra, Geometry, and Data Analysis; Quantitative Comparison, single choice, multiple choice, and Numeric Entry.
-- [ETS — GRE Math Review](https://www.ets.org/content/dam/ets-org/pdfs/gre/gre-math-review.pdf): official topic review used to audit the scope and level of original Quant questions.
+- [ETS — Quantitative Reasoning Overview](https://www.ets.org/gre/test-takers/general-test/prepare/content/quantitative-reasoning.html): Arithmetic, Algebra, Geometry, and Data Analysis; Quantitative Comparison, single choice, multiple choice, and Numeric Entry. The Data Analysis audit covers descriptive statistics, percentiles, standard deviation and interquartile range; tables, line/bar/circle/box/scatter plots and frequency distributions; probability distributions, normal distributions, conditional probability, combinations, permutations, and Venn diagrams. Inferential statistics is intentionally excluded because ETS states that it is not tested.
+- [ETS — GRE Math Review](https://www.ets.org/content/dam/ets-org/pdfs/gre/gre-math-review.pdf): official topic and display review used to audit the scope and level of original Quant questions. The Data Analysis chapter's table, bar, line, circle, histogram, scatterplot, box-plot, and normal-distribution examples were visually inspected before designing the app's structured figures.
 - [ETS — POWERPREP Practice Tests](https://www.ets.org/gre/test-takers/general-test/prepare/powerprep.html): official reference for timed behavior, calculator availability, and moving, changing, marking, and reviewing answers within a section.
 - [ETS — Khan Academy Quant Mapping](https://www.ets.org/gre/test-takers/general-test/prepare/khan-prep-videos.html): free instructional links mapped by ETS to Math Review topics.
 
@@ -37,6 +37,8 @@ Misspellings, stray worksheet annotations, unsupported phrases, and terms withou
 
 ## Generated practice and scoring
 
-The 62 source-derived items are supplemented by 270 original questions: the original 90-item bank plus 180 deterministic vocabulary-synthesis and parameterized Quant items. The generator checks IDs, keys, duplicate choices, and route coverage.
+The 62 source-derived items are supplemented by 330 original questions: the original 90-item bank plus 240 deterministic vocabulary-synthesis and ETS-aligned Quant items. The runtime pool now contains 98 Data Analysis/statistics questions. Of the 60-question 2026-07-20 expansion, 45 questions use 15 original structured data displays and the remaining 15 cover standalone statistics, probability, distributions, and counting. No official question text or numerical scenario was copied for this expansion.
+
+The generator checks IDs, keys, duplicate choices, route coverage, and nonempty chart/table data. Structured figures are rendered at runtime with native SwiftUI Charts, Grid, and Canvas rather than bundled screenshots.
 
 The resulting score is a simulation. It must not be described as an official or predictive ETS score because the operational item parameters and equating tables are not public.
