@@ -334,7 +334,7 @@ def figure_sets():
             {"label": "Coding only", "value": "24", "x": 0.30, "y": 0.53},
             {"label": "Both", "value": "14", "x": 0.50, "y": 0.53},
             {"label": "Chess only", "value": "18", "x": 0.70, "y": 0.53},
-            {"label": "Neither", "value": "10", "x": 0.88, "y": 0.14},
+            {"label": "Neither", "value": "", "x": 0.88, "y": 0.14},
             {"label": "Coding", "value": "", "x": 0.28, "y": 0.14},
             {"label": "Chess", "value": "", "x": 0.72, "y": 0.14},
         ],

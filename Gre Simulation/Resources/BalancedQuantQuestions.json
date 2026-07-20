@@ -23285,7 +23285,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 7 and 2x − 3y = -11",
-    "prompt": "What is the value of (4)x + (3)y?",
+    "prompt": "What is the value of 4x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -23384,7 +23384,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 9 and 3x − 3y = -9",
-    "prompt": "What is the value of (4)x + (4)y?",
+    "prompt": "What is the value of 4x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -23483,7 +23483,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 11 and 4x − 3y = -5",
-    "prompt": "What is the value of (4)x + (5)y?",
+    "prompt": "What is the value of 4x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -23582,7 +23582,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 13 and 2x − 4y = -22",
-    "prompt": "What is the value of (5)x + (3)y?",
+    "prompt": "What is the value of 5x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -23681,7 +23681,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 15 and 3x − 4y = -18",
-    "prompt": "What is the value of (5)x + (4)y?",
+    "prompt": "What is the value of 5x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -23780,7 +23780,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 17 and 4x − 4y = -12",
-    "prompt": "What is the value of (5)x + (5)y?",
+    "prompt": "What is the value of 5x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -23879,7 +23879,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 19 and 2x − 5y = -39",
-    "prompt": "What is the value of (6)x + (3)y?",
+    "prompt": "What is the value of 6x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -23978,7 +23978,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 14 and 3x − 5y = 2",
-    "prompt": "What is the value of (6)x + (4)y?",
+    "prompt": "What is the value of 6x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24077,7 +24077,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 16 and 4x − 5y = 10",
-    "prompt": "What is the value of (6)x + (5)y?",
+    "prompt": "What is the value of 6x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24176,7 +24176,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 18 and 2x − 3y = 1",
-    "prompt": "What is the value of (4)x + (3)y?",
+    "prompt": "What is the value of 4x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24275,7 +24275,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 20 and 3x − 3y = 12",
-    "prompt": "What is the value of (4)x + (4)y?",
+    "prompt": "What is the value of 4x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24374,7 +24374,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 22 and 4x − 3y = 25",
-    "prompt": "What is the value of (4)x + (5)y?",
+    "prompt": "What is the value of 4x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24473,7 +24473,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 24 and 2x − 4y = -12",
-    "prompt": "What is the value of (5)x + (3)y?",
+    "prompt": "What is the value of 5x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24572,7 +24572,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 26 and 3x − 4y = 1",
-    "prompt": "What is the value of (5)x + (4)y?",
+    "prompt": "What is the value of 5x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24671,7 +24671,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 21 and 4x − 4y = 44",
-    "prompt": "What is the value of (5)x + (5)y?",
+    "prompt": "What is the value of 5x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24770,7 +24770,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 23 and 2x − 5y = 4",
-    "prompt": "What is the value of (6)x + (3)y?",
+    "prompt": "What is the value of 6x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24869,7 +24869,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 25 and 3x − 5y = 19",
-    "prompt": "What is the value of (6)x + (4)y?",
+    "prompt": "What is the value of 6x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -24968,7 +24968,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 27 and 4x − 5y = 36",
-    "prompt": "What is the value of (6)x + (5)y?",
+    "prompt": "What is the value of 6x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25067,7 +25067,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 29 and 2x − 3y = 13",
-    "prompt": "What is the value of (4)x + (3)y?",
+    "prompt": "What is the value of 4x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25166,7 +25166,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 31 and 3x − 3y = 33",
-    "prompt": "What is the value of (4)x + (4)y?",
+    "prompt": "What is the value of 4x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25265,7 +25265,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 33 and 4x − 3y = 55",
-    "prompt": "What is the value of (4)x + (5)y?",
+    "prompt": "What is the value of 4x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25364,7 +25364,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 28 and 2x − 4y = 26",
-    "prompt": "What is the value of (5)x + (3)y?",
+    "prompt": "What is the value of 5x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25463,7 +25463,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 30 and 3x − 4y = 48",
-    "prompt": "What is the value of (5)x + (4)y?",
+    "prompt": "What is the value of 5x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25562,7 +25562,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 32 and 4x − 4y = 72",
-    "prompt": "What is the value of (5)x + (5)y?",
+    "prompt": "What is the value of 5x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25661,7 +25661,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 34 and 2x − 5y = 12",
-    "prompt": "What is the value of (6)x + (3)y?",
+    "prompt": "What is the value of 6x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25760,7 +25760,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 36 and 3x − 5y = 36",
-    "prompt": "What is the value of (6)x + (4)y?",
+    "prompt": "What is the value of 6x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25859,7 +25859,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 38 and 4x − 5y = 62",
-    "prompt": "What is the value of (6)x + (5)y?",
+    "prompt": "What is the value of 6x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -25958,7 +25958,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 40 and 2x − 3y = 25",
-    "prompt": "What is the value of (4)x + (3)y?",
+    "prompt": "What is the value of 4x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -26057,7 +26057,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 35 and 3x − 3y = 75",
-    "prompt": "What is the value of (4)x + (4)y?",
+    "prompt": "What is the value of 4x + 4y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -26156,7 +26156,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 37 and 4x − 3y = 106",
-    "prompt": "What is the value of (4)x + (5)y?",
+    "prompt": "What is the value of 4x + 5y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -26255,7 +26255,7 @@
     "difficulty": "hard",
     "format": "singleChoice",
     "stimulus": "x + y = 39 and 2x − 4y = 36",
-    "prompt": "What is the value of (5)x + (3)y?",
+    "prompt": "What is the value of 5x + 3y?",
     "quantityA": null,
     "quantityB": null,
     "groups": [
@@ -29416,7 +29416,7 @@
     "acceptedNumericAnswers": [
       "-2"
     ],
-    "explanation": "代入 x=2：f(2)=2×2−6=-2。",
+    "explanation": "代入 x = 2：f(2) = 2 × 2 − 6 = -2。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29431,7 +29431,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 2x − 6 and g(x) = 1x + 4, what is f(g(2))?",
+    "prompt": "If f(x) = 2x − 6 and g(x) = x + 4, what is f(g(2))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -29453,7 +29453,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 2x + (-6) and g(x) = 1x + 4.",
+    "stimulus": "f(x) = 2x − 6 and g(x) = x + 4.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -29492,7 +29492,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 2x+(-6)=1x+4，得 x=10。",
+    "explanation": "解 2x − 6 = x + 4，得 x = 10。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29515,7 +29515,7 @@
     "acceptedNumericAnswers": [
       "4"
     ],
-    "explanation": "代入 x=3：f(3)=3×3−5=4。",
+    "explanation": "代入 x = 3：f(3) = 3 × 3 − 5 = 4。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29530,7 +29530,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 3x − 5 and g(x) = 1x + 5, what is f(g(3))?",
+    "prompt": "If f(x) = 3x − 5 and g(x) = x + 5, what is f(g(3))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -29552,7 +29552,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 3x + (-5) and g(x) = 1x + 5.",
+    "stimulus": "f(x) = 3x − 5 and g(x) = x + 5.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -29591,7 +29591,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 3x+(-5)=1x+5，得 x=5。",
+    "explanation": "解 3x − 5 = x + 5，得 x = 5。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29614,7 +29614,7 @@
     "acceptedNumericAnswers": [
       "12"
     ],
-    "explanation": "代入 x=4：f(4)=4×4−4=12。",
+    "explanation": "代入 x = 4：f(4) = 4 × 4 − 4 = 12。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29629,7 +29629,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 4x − 4 and g(x) = 1x + 6, what is f(g(4))?",
+    "prompt": "If f(x) = 4x − 4 and g(x) = x + 6, what is f(g(4))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -29651,7 +29651,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 4x + (-4) and g(x) = 1x + 6.",
+    "stimulus": "f(x) = 4x − 4 and g(x) = x + 6.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -29690,7 +29690,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 4x+(-4)=1x+6，得 x=10/3。",
+    "explanation": "解 4x − 4 = x + 6，得 x = 10/3。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29713,7 +29713,7 @@
     "acceptedNumericAnswers": [
       "22"
     ],
-    "explanation": "代入 x=5：f(5)=5×5−3=22。",
+    "explanation": "代入 x = 5：f(5) = 5 × 5 − 3 = 22。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29750,7 +29750,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 5x + (-3) and g(x) = 2x + 7.",
+    "stimulus": "f(x) = 5x − 3 and g(x) = 2x + 7.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -29789,7 +29789,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 5x+(-3)=2x+7，得 x=10/3。",
+    "explanation": "解 5x − 3 = 2x + 7，得 x = 10/3。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29812,7 +29812,7 @@
     "acceptedNumericAnswers": [
       "34"
     ],
-    "explanation": "代入 x=6：f(6)=6×6−2=34。",
+    "explanation": "代入 x = 6：f(6) = 6 × 6 − 2 = 34。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29849,7 +29849,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 6x + (-2) and g(x) = 2x + 8.",
+    "stimulus": "f(x) = 6x − 2 and g(x) = 2x + 8.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -29888,7 +29888,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 6x+(-2)=2x+8，得 x=2.5。",
+    "explanation": "解 6x − 2 = 2x + 8，得 x = 2.5。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29911,7 +29911,7 @@
     "acceptedNumericAnswers": [
       "13"
     ],
-    "explanation": "代入 x=7：f(7)=2×7−1=13。",
+    "explanation": "代入 x = 7：f(7) = 2 × 7 − 1 = 13。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -29948,7 +29948,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 2x + (-1) and g(x) = 2x + 9.",
+    "stimulus": "f(x) = 2x − 1 and g(x) = 2x + 9.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30002,7 +30002,7 @@
     "difficulty": "easy",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 3x + 0, what is f(8)?",
+    "prompt": "If f(x) = 3x, what is f(8)?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -30010,7 +30010,7 @@
     "acceptedNumericAnswers": [
       "24"
     ],
-    "explanation": "代入 x=8：f(8)=3×8+0=24。",
+    "explanation": "代入 x = 8：f(8) = 3 × 8 = 24。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30025,7 +30025,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 3x + 0 and g(x) = 3x + 4, what is f(g(8))?",
+    "prompt": "If f(x) = 3x and g(x) = 3x + 4, what is f(g(8))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -30047,7 +30047,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 3x + (0) and g(x) = 3x + 4.",
+    "stimulus": "f(x) = 3x and g(x) = 3x + 4.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30109,7 +30109,7 @@
     "acceptedNumericAnswers": [
       "9"
     ],
-    "explanation": "代入 x=2：f(2)=4×2+1=9。",
+    "explanation": "代入 x = 2：f(2) = 4 × 2 + 1 = 9。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30146,7 +30146,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 4x + (1) and g(x) = 3x + 5.",
+    "stimulus": "f(x) = 4x + 1 and g(x) = 3x + 5.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30185,7 +30185,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 4x+(1)=3x+5，得 x=4。",
+    "explanation": "解 4x + 1 = 3x + 5，得 x = 4。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30208,7 +30208,7 @@
     "acceptedNumericAnswers": [
       "17"
     ],
-    "explanation": "代入 x=3：f(3)=5×3+2=17。",
+    "explanation": "代入 x = 3：f(3) = 5 × 3 + 2 = 17。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30245,7 +30245,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 5x + (2) and g(x) = 3x + 6.",
+    "stimulus": "f(x) = 5x + 2 and g(x) = 3x + 6.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30284,7 +30284,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 5x+(2)=3x+6，得 x=2。",
+    "explanation": "解 5x + 2 = 3x + 6，得 x = 2。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30307,7 +30307,7 @@
     "acceptedNumericAnswers": [
       "27"
     ],
-    "explanation": "代入 x=4：f(4)=6×4+3=27。",
+    "explanation": "代入 x = 4：f(4) = 6 × 4 + 3 = 27。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30344,7 +30344,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 6x + (3) and g(x) = 4x + 7.",
+    "stimulus": "f(x) = 6x + 3 and g(x) = 4x + 7.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30383,7 +30383,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 6x+(3)=4x+7，得 x=2。",
+    "explanation": "解 6x + 3 = 4x + 7，得 x = 2。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30406,7 +30406,7 @@
     "acceptedNumericAnswers": [
       "14"
     ],
-    "explanation": "代入 x=5：f(5)=2×5+4=14。",
+    "explanation": "代入 x = 5：f(5) = 2 × 5 + 4 = 14。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30443,7 +30443,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 2x + (4) and g(x) = 4x + 8.",
+    "stimulus": "f(x) = 2x + 4 and g(x) = 4x + 8.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30482,7 +30482,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 2x+(4)=4x+8，得 x=-2。",
+    "explanation": "解 2x + 4 = 4x + 8，得 x = -2。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30505,7 +30505,7 @@
     "acceptedNumericAnswers": [
       "23"
     ],
-    "explanation": "代入 x=6：f(6)=3×6+5=23。",
+    "explanation": "代入 x = 6：f(6) = 3 × 6 + 5 = 23。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30542,7 +30542,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 3x + (5) and g(x) = 4x + 9.",
+    "stimulus": "f(x) = 3x + 5 and g(x) = 4x + 9.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30581,7 +30581,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 3x+(5)=4x+9，得 x=-4。",
+    "explanation": "解 3x + 5 = 4x + 9，得 x = -4。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30604,7 +30604,7 @@
     "acceptedNumericAnswers": [
       "34"
     ],
-    "explanation": "代入 x=7：f(7)=4×7+6=34。",
+    "explanation": "代入 x = 7：f(7) = 4 × 7 + 6 = 34。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30619,7 +30619,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 4x + 6 and g(x) = 1x + 4, what is f(g(7))?",
+    "prompt": "If f(x) = 4x + 6 and g(x) = x + 4, what is f(g(7))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -30641,7 +30641,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 4x + (6) and g(x) = 1x + 4.",
+    "stimulus": "f(x) = 4x + 6 and g(x) = x + 4.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30680,7 +30680,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 4x+(6)=1x+4，得 x=-2/3。",
+    "explanation": "解 4x + 6 = x + 4，得 x = -2/3。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30703,7 +30703,7 @@
     "acceptedNumericAnswers": [
       "47"
     ],
-    "explanation": "代入 x=8：f(8)=5×8+7=47。",
+    "explanation": "代入 x = 8：f(8) = 5 × 8 + 7 = 47。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30718,7 +30718,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 5x + 7 and g(x) = 1x + 5, what is f(g(8))?",
+    "prompt": "If f(x) = 5x + 7 and g(x) = x + 5, what is f(g(8))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -30740,7 +30740,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 5x + (7) and g(x) = 1x + 5.",
+    "stimulus": "f(x) = 5x + 7 and g(x) = x + 5.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30779,7 +30779,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 5x+(7)=1x+5，得 x=-0.5。",
+    "explanation": "解 5x + 7 = x + 5，得 x = -0.5。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30802,7 +30802,7 @@
     "acceptedNumericAnswers": [
       "20"
     ],
-    "explanation": "代入 x=2：f(2)=6×2+8=20。",
+    "explanation": "代入 x = 2：f(2) = 6 × 2 + 8 = 20。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30817,7 +30817,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 6x + 8 and g(x) = 1x + 6, what is f(g(2))?",
+    "prompt": "If f(x) = 6x + 8 and g(x) = x + 6, what is f(g(2))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -30839,7 +30839,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 6x + (8) and g(x) = 1x + 6.",
+    "stimulus": "f(x) = 6x + 8 and g(x) = x + 6.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -30878,7 +30878,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 6x+(8)=1x+6，得 x=-0.4。",
+    "explanation": "解 6x + 8 = x + 6，得 x = -0.4。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30901,7 +30901,7 @@
     "acceptedNumericAnswers": [
       "15"
     ],
-    "explanation": "代入 x=3：f(3)=2×3+9=15。",
+    "explanation": "代入 x = 3：f(3) = 2 × 3 + 9 = 15。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -30938,7 +30938,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 2x + (9) and g(x) = 2x + 7.",
+    "stimulus": "f(x) = 2x + 9 and g(x) = 2x + 7.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31000,7 +31000,7 @@
     "acceptedNumericAnswers": [
       "22"
     ],
-    "explanation": "代入 x=4：f(4)=3×4+10=22。",
+    "explanation": "代入 x = 4：f(4) = 3 × 4 + 10 = 22。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31037,7 +31037,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 3x + (10) and g(x) = 2x + 8.",
+    "stimulus": "f(x) = 3x + 10 and g(x) = 2x + 8.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31076,7 +31076,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 3x+(10)=2x+8，得 x=-2。",
+    "explanation": "解 3x + 10 = 2x + 8，得 x = -2。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31099,7 +31099,7 @@
     "acceptedNumericAnswers": [
       "31"
     ],
-    "explanation": "代入 x=5：f(5)=4×5+11=31。",
+    "explanation": "代入 x = 5：f(5) = 4 × 5 + 11 = 31。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31136,7 +31136,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 4x + (11) and g(x) = 2x + 9.",
+    "stimulus": "f(x) = 4x + 11 and g(x) = 2x + 9.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31175,7 +31175,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 4x+(11)=2x+9，得 x=-1。",
+    "explanation": "解 4x + 11 = 2x + 9，得 x = -1。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31198,7 +31198,7 @@
     "acceptedNumericAnswers": [
       "42"
     ],
-    "explanation": "代入 x=6：f(6)=5×6+12=42。",
+    "explanation": "代入 x = 6：f(6) = 5 × 6 + 12 = 42。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31235,7 +31235,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 5x + (12) and g(x) = 3x + 4.",
+    "stimulus": "f(x) = 5x + 12 and g(x) = 3x + 4.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31274,7 +31274,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 5x+(12)=3x+4，得 x=-4。",
+    "explanation": "解 5x + 12 = 3x + 4，得 x = -4。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31297,7 +31297,7 @@
     "acceptedNumericAnswers": [
       "55"
     ],
-    "explanation": "代入 x=7：f(7)=6×7+13=55。",
+    "explanation": "代入 x = 7：f(7) = 6 × 7 + 13 = 55。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31334,7 +31334,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 6x + (13) and g(x) = 3x + 5.",
+    "stimulus": "f(x) = 6x + 13 and g(x) = 3x + 5.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31373,7 +31373,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 6x+(13)=3x+5，得 x=-8/3。",
+    "explanation": "解 6x + 13 = 3x + 5，得 x = -8/3。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31396,7 +31396,7 @@
     "acceptedNumericAnswers": [
       "30"
     ],
-    "explanation": "代入 x=8：f(8)=2×8+14=30。",
+    "explanation": "代入 x = 8：f(8) = 2 × 8 + 14 = 30。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31433,7 +31433,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 2x + (14) and g(x) = 3x + 6.",
+    "stimulus": "f(x) = 2x + 14 and g(x) = 3x + 6.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31472,7 +31472,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 2x+(14)=3x+6，得 x=8。",
+    "explanation": "解 2x + 14 = 3x + 6，得 x = 8。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31495,7 +31495,7 @@
     "acceptedNumericAnswers": [
       "21"
     ],
-    "explanation": "代入 x=2：f(2)=3×2+15=21。",
+    "explanation": "代入 x = 2：f(2) = 3 × 2 + 15 = 21。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31532,7 +31532,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 3x + (15) and g(x) = 4x + 7.",
+    "stimulus": "f(x) = 3x + 15 and g(x) = 4x + 7.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31571,7 +31571,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 3x+(15)=4x+7，得 x=8。",
+    "explanation": "解 3x + 15 = 4x + 7，得 x = 8。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31594,7 +31594,7 @@
     "acceptedNumericAnswers": [
       "28"
     ],
-    "explanation": "代入 x=3：f(3)=4×3+16=28。",
+    "explanation": "代入 x = 3：f(3) = 4 × 3 + 16 = 28。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31631,7 +31631,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 4x + (16) and g(x) = 4x + 8.",
+    "stimulus": "f(x) = 4x + 16 and g(x) = 4x + 8.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31693,7 +31693,7 @@
     "acceptedNumericAnswers": [
       "37"
     ],
-    "explanation": "代入 x=4：f(4)=5×4+17=37。",
+    "explanation": "代入 x = 4：f(4) = 5 × 4 + 17 = 37。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31730,7 +31730,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 5x + (17) and g(x) = 4x + 9.",
+    "stimulus": "f(x) = 5x + 17 and g(x) = 4x + 9.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31769,7 +31769,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 5x+(17)=4x+9，得 x=-8。",
+    "explanation": "解 5x + 17 = 4x + 9，得 x = -8。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31792,7 +31792,7 @@
     "acceptedNumericAnswers": [
       "48"
     ],
-    "explanation": "代入 x=5：f(5)=6×5+18=48。",
+    "explanation": "代入 x = 5：f(5) = 6 × 5 + 18 = 48。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31807,7 +31807,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 6x + 18 and g(x) = 1x + 4, what is f(g(5))?",
+    "prompt": "If f(x) = 6x + 18 and g(x) = x + 4, what is f(g(5))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -31829,7 +31829,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 6x + (18) and g(x) = 1x + 4.",
+    "stimulus": "f(x) = 6x + 18 and g(x) = x + 4.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31868,7 +31868,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 6x+(18)=1x+4，得 x=-2.8。",
+    "explanation": "解 6x + 18 = x + 4，得 x = -2.8。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31891,7 +31891,7 @@
     "acceptedNumericAnswers": [
       "31"
     ],
-    "explanation": "代入 x=6：f(6)=2×6+19=31。",
+    "explanation": "代入 x = 6：f(6) = 2 × 6 + 19 = 31。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31906,7 +31906,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 2x + 19 and g(x) = 1x + 5, what is f(g(6))?",
+    "prompt": "If f(x) = 2x + 19 and g(x) = x + 5, what is f(g(6))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -31928,7 +31928,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 2x + (19) and g(x) = 1x + 5.",
+    "stimulus": "f(x) = 2x + 19 and g(x) = x + 5.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -31967,7 +31967,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 2x+(19)=1x+5，得 x=-14。",
+    "explanation": "解 2x + 19 = x + 5，得 x = -14。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -31990,7 +31990,7 @@
     "acceptedNumericAnswers": [
       "41"
     ],
-    "explanation": "代入 x=7：f(7)=3×7+20=41。",
+    "explanation": "代入 x = 7：f(7) = 3 × 7 + 20 = 41。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -32005,7 +32005,7 @@
     "difficulty": "medium",
     "format": "numericEntry",
     "stimulus": null,
-    "prompt": "If f(x) = 3x + 20 and g(x) = 1x + 6, what is f(g(7))?",
+    "prompt": "If f(x) = 3x + 20 and g(x) = x + 6, what is f(g(7))?",
     "quantityA": null,
     "quantityB": null,
     "groups": [],
@@ -32027,7 +32027,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 3x + (20) and g(x) = 1x + 6.",
+    "stimulus": "f(x) = 3x + 20 and g(x) = x + 6.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -32066,7 +32066,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 3x+(20)=1x+6，得 x=-7。",
+    "explanation": "解 3x + 20 = x + 6，得 x = -7。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -32089,7 +32089,7 @@
     "acceptedNumericAnswers": [
       "53"
     ],
-    "explanation": "代入 x=8：f(8)=4×8+21=53。",
+    "explanation": "代入 x = 8：f(8) = 4 × 8 + 21 = 53。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -32126,7 +32126,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 4x + (21) and g(x) = 2x + 7.",
+    "stimulus": "f(x) = 4x + 21 and g(x) = 2x + 7.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -32165,7 +32165,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 4x+(21)=2x+7，得 x=-7。",
+    "explanation": "解 4x + 21 = 2x + 7，得 x = -7。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -32188,7 +32188,7 @@
     "acceptedNumericAnswers": [
       "32"
     ],
-    "explanation": "代入 x=2：f(2)=5×2+22=32。",
+    "explanation": "代入 x = 2：f(2) = 5 × 2 + 22 = 32。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -32225,7 +32225,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 5x + (22) and g(x) = 2x + 8.",
+    "stimulus": "f(x) = 5x + 22 and g(x) = 2x + 8.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -32264,7 +32264,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 5x+(22)=2x+8，得 x=-14/3。",
+    "explanation": "解 5x + 22 = 2x + 8，得 x = -14/3。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -32287,7 +32287,7 @@
     "acceptedNumericAnswers": [
       "41"
     ],
-    "explanation": "代入 x=3：f(3)=6×3+23=41。",
+    "explanation": "代入 x = 3：f(3) = 6 × 3 + 23 = 41。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -32324,7 +32324,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 6x + (23) and g(x) = 2x + 9.",
+    "stimulus": "f(x) = 6x + 23 and g(x) = 2x + 9.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -32363,7 +32363,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 6x+(23)=2x+9，得 x=-3.5。",
+    "explanation": "解 6x + 23 = 2x + 9，得 x = -3.5。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -32386,7 +32386,7 @@
     "acceptedNumericAnswers": [
       "32"
     ],
-    "explanation": "代入 x=4：f(4)=2×4+24=32。",
+    "explanation": "代入 x = 4：f(4) = 2 × 4 + 24 = 32。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -32423,7 +32423,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "singleChoice",
-    "stimulus": "f(x) = 2x + (24) and g(x) = 3x + 4.",
+    "stimulus": "f(x) = 2x + 24 and g(x) = 3x + 4.",
     "prompt": "For what value of x is f(x) = g(x)?",
     "quantityA": null,
     "quantityB": null,
@@ -32462,7 +32462,7 @@
       ]
     },
     "acceptedNumericAnswers": [],
-    "explanation": "解 2x+(24)=3x+4，得 x=20。",
+    "explanation": "解 2x + 24 = 3x + 4，得 x = 20。",
     "contentArea": "Algebra",
     "source": {
       "title": "Original Super Power Pack-aligned Quant item",
@@ -105688,7 +105688,7 @@
         },
         {
           "label": "Neither",
-          "value": "34",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -105776,7 +105776,7 @@
         },
         {
           "label": "Neither",
-          "value": "34",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -105866,7 +105866,7 @@
         },
         {
           "label": "Neither",
-          "value": "34",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -106314,7 +106314,7 @@
         },
         {
           "label": "Neither",
-          "value": "32",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -106402,7 +106402,7 @@
         },
         {
           "label": "Neither",
-          "value": "32",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -106492,7 +106492,7 @@
         },
         {
           "label": "Neither",
-          "value": "32",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -106940,7 +106940,7 @@
         },
         {
           "label": "Neither",
-          "value": "30",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -107028,7 +107028,7 @@
         },
         {
           "label": "Neither",
-          "value": "30",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -107118,7 +107118,7 @@
         },
         {
           "label": "Neither",
-          "value": "30",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -107566,7 +107566,7 @@
         },
         {
           "label": "Neither",
-          "value": "35",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -107654,7 +107654,7 @@
         },
         {
           "label": "Neither",
-          "value": "35",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -107744,7 +107744,7 @@
         },
         {
           "label": "Neither",
-          "value": "35",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -108192,7 +108192,7 @@
         },
         {
           "label": "Neither",
-          "value": "41",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -108280,7 +108280,7 @@
         },
         {
           "label": "Neither",
-          "value": "41",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -108370,7 +108370,7 @@
         },
         {
           "label": "Neither",
-          "value": "41",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -108818,7 +108818,7 @@
         },
         {
           "label": "Neither",
-          "value": "39",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -108906,7 +108906,7 @@
         },
         {
           "label": "Neither",
-          "value": "39",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -108996,7 +108996,7 @@
         },
         {
           "label": "Neither",
-          "value": "39",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -109444,7 +109444,7 @@
         },
         {
           "label": "Neither",
-          "value": "37",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -109532,7 +109532,7 @@
         },
         {
           "label": "Neither",
-          "value": "37",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -109622,7 +109622,7 @@
         },
         {
           "label": "Neither",
-          "value": "37",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -110070,7 +110070,7 @@
         },
         {
           "label": "Neither",
-          "value": "42",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -110158,7 +110158,7 @@
         },
         {
           "label": "Neither",
-          "value": "42",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -110248,7 +110248,7 @@
         },
         {
           "label": "Neither",
-          "value": "42",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -110696,7 +110696,7 @@
         },
         {
           "label": "Neither",
-          "value": "48",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -110784,7 +110784,7 @@
         },
         {
           "label": "Neither",
-          "value": "48",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -110874,7 +110874,7 @@
         },
         {
           "label": "Neither",
-          "value": "48",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -111322,7 +111322,7 @@
         },
         {
           "label": "Neither",
-          "value": "46",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -111410,7 +111410,7 @@
         },
         {
           "label": "Neither",
-          "value": "46",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -111500,7 +111500,7 @@
         },
         {
           "label": "Neither",
-          "value": "46",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -111948,7 +111948,7 @@
         },
         {
           "label": "Neither",
-          "value": "51",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -112036,7 +112036,7 @@
         },
         {
           "label": "Neither",
-          "value": "51",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -112126,7 +112126,7 @@
         },
         {
           "label": "Neither",
-          "value": "51",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -112574,7 +112574,7 @@
         },
         {
           "label": "Neither",
-          "value": "49",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -112662,7 +112662,7 @@
         },
         {
           "label": "Neither",
-          "value": "49",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -112752,7 +112752,7 @@
         },
         {
           "label": "Neither",
-          "value": "49",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -113200,7 +113200,7 @@
         },
         {
           "label": "Neither",
-          "value": "55",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -113288,7 +113288,7 @@
         },
         {
           "label": "Neither",
-          "value": "55",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -113378,7 +113378,7 @@
         },
         {
           "label": "Neither",
-          "value": "55",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -113826,7 +113826,7 @@
         },
         {
           "label": "Neither",
-          "value": "53",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -113914,7 +113914,7 @@
         },
         {
           "label": "Neither",
-          "value": "53",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -114004,7 +114004,7 @@
         },
         {
           "label": "Neither",
-          "value": "53",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -114452,7 +114452,7 @@
         },
         {
           "label": "Neither",
-          "value": "58",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -114540,7 +114540,7 @@
         },
         {
           "label": "Neither",
-          "value": "58",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -114630,7 +114630,7 @@
         },
         {
           "label": "Neither",
-          "value": "58",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -135827,7 +135827,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=2x+(-6) and g(x)=1x+4",
+    "stimulus": "f(x) = 2x − 6 and g(x) = x + 4",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -136037,7 +136037,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=3x+(-5) and g(x)=1x+5",
+    "stimulus": "f(x) = 3x − 5 and g(x) = x + 5",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -136247,7 +136247,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=4x+(-4) and g(x)=1x+6",
+    "stimulus": "f(x) = 4x − 4 and g(x) = x + 6",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -136457,7 +136457,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=5x+(-3) and g(x)=2x+7",
+    "stimulus": "f(x) = 5x − 3 and g(x) = 2x + 7",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -136667,7 +136667,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=6x+(-2) and g(x)=2x+8",
+    "stimulus": "f(x) = 6x − 2 and g(x) = 2x + 8",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -136877,7 +136877,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=2x+(-1) and g(x)=2x+9",
+    "stimulus": "f(x) = 2x − 1 and g(x) = 2x + 9",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -137087,7 +137087,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=3x+(0) and g(x)=3x+4",
+    "stimulus": "f(x) = 3x and g(x) = 3x + 4",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -137297,7 +137297,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=4x+(1) and g(x)=3x+5",
+    "stimulus": "f(x) = 4x + 1 and g(x) = 3x + 5",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -137507,7 +137507,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=5x+(2) and g(x)=3x+6",
+    "stimulus": "f(x) = 5x + 2 and g(x) = 3x + 6",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -137717,7 +137717,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=6x+(3) and g(x)=4x+7",
+    "stimulus": "f(x) = 6x + 3 and g(x) = 4x + 7",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -137927,7 +137927,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=2x+(4) and g(x)=4x+8",
+    "stimulus": "f(x) = 2x + 4 and g(x) = 4x + 8",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -138137,7 +138137,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=3x+(5) and g(x)=4x+9",
+    "stimulus": "f(x) = 3x + 5 and g(x) = 4x + 9",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -138347,7 +138347,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=4x+(6) and g(x)=1x+4",
+    "stimulus": "f(x) = 4x + 6 and g(x) = x + 4",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -138557,7 +138557,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=5x+(7) and g(x)=1x+5",
+    "stimulus": "f(x) = 5x + 7 and g(x) = x + 5",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -138767,7 +138767,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=6x+(8) and g(x)=1x+6",
+    "stimulus": "f(x) = 6x + 8 and g(x) = x + 6",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -138977,7 +138977,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=2x+(9) and g(x)=2x+7",
+    "stimulus": "f(x) = 2x + 9 and g(x) = 2x + 7",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -139187,7 +139187,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=3x+(10) and g(x)=2x+8",
+    "stimulus": "f(x) = 3x + 10 and g(x) = 2x + 8",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -139397,7 +139397,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=4x+(11) and g(x)=2x+9",
+    "stimulus": "f(x) = 4x + 11 and g(x) = 2x + 9",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -139607,7 +139607,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=5x+(12) and g(x)=3x+4",
+    "stimulus": "f(x) = 5x + 12 and g(x) = 3x + 4",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -139817,7 +139817,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=6x+(13) and g(x)=3x+5",
+    "stimulus": "f(x) = 6x + 13 and g(x) = 3x + 5",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -140027,7 +140027,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=2x+(14) and g(x)=3x+6",
+    "stimulus": "f(x) = 2x + 14 and g(x) = 3x + 6",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -140237,7 +140237,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=3x+(15) and g(x)=4x+7",
+    "stimulus": "f(x) = 3x + 15 and g(x) = 4x + 7",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -140447,7 +140447,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=4x+(16) and g(x)=4x+8",
+    "stimulus": "f(x) = 4x + 16 and g(x) = 4x + 8",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -140657,7 +140657,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=5x+(17) and g(x)=4x+9",
+    "stimulus": "f(x) = 5x + 17 and g(x) = 4x + 9",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -140867,7 +140867,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=6x+(18) and g(x)=1x+4",
+    "stimulus": "f(x) = 6x + 18 and g(x) = x + 4",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -141077,7 +141077,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=2x+(19) and g(x)=1x+5",
+    "stimulus": "f(x) = 2x + 19 and g(x) = x + 5",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -141287,7 +141287,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=3x+(20) and g(x)=1x+6",
+    "stimulus": "f(x) = 3x + 20 and g(x) = x + 6",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -141497,7 +141497,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=4x+(21) and g(x)=2x+7",
+    "stimulus": "f(x) = 4x + 21 and g(x) = 2x + 7",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -141707,7 +141707,7 @@
     "measure": "quantitative",
     "difficulty": "hard",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=5x+(22) and g(x)=2x+8",
+    "stimulus": "f(x) = 5x + 22 and g(x) = 2x + 8",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -141917,7 +141917,7 @@
     "measure": "quantitative",
     "difficulty": "easy",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=6x+(23) and g(x)=2x+9",
+    "stimulus": "f(x) = 6x + 23 and g(x) = 2x + 9",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -142127,7 +142127,7 @@
     "measure": "quantitative",
     "difficulty": "medium",
     "format": "quantitativeComparison",
-    "stimulus": "f(x)=2x+(24) and g(x)=3x+4",
+    "stimulus": "f(x) = 2x + 24 and g(x) = 3x + 4",
     "prompt": "Compare Quantity A and Quantity B.",
     "quantityA": "f(g(0))",
     "quantityB": "g(f(0))",
@@ -149350,7 +149350,7 @@
         },
         {
           "label": "Neither",
-          "value": "34",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -149733,7 +149733,7 @@
         },
         {
           "label": "Neither",
-          "value": "32",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -150116,7 +150116,7 @@
         },
         {
           "label": "Neither",
-          "value": "30",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -150499,7 +150499,7 @@
         },
         {
           "label": "Neither",
-          "value": "35",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -150882,7 +150882,7 @@
         },
         {
           "label": "Neither",
-          "value": "41",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -151265,7 +151265,7 @@
         },
         {
           "label": "Neither",
-          "value": "39",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -151648,7 +151648,7 @@
         },
         {
           "label": "Neither",
-          "value": "37",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -152031,7 +152031,7 @@
         },
         {
           "label": "Neither",
-          "value": "42",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -152414,7 +152414,7 @@
         },
         {
           "label": "Neither",
-          "value": "48",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }
@@ -152797,7 +152797,7 @@
         },
         {
           "label": "Neither",
-          "value": "46",
+          "value": "",
           "x": 0.84,
           "y": 0.82
         }

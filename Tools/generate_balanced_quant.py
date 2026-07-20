@@ -58,6 +58,28 @@ def money(value: Fraction | int) -> str:
     return f"${float(Fraction(value)):,.2f}"
 
 
+def append_constant(expression: str, constant: int) -> str:
+    if constant > 0:
+        return f"{expression} + {constant}"
+    if constant < 0:
+        return f"{expression} − {abs(constant)}"
+    return expression
+
+
+def linear_expression(coefficient: int, constant: int) -> str:
+    if coefficient == 1:
+        variable_term = "x"
+    elif coefficient == -1:
+        variable_term = "−x"
+    else:
+        variable_term = f"{coefficient}x"
+    return append_constant(variable_term, constant)
+
+
+def linear_function(name: str, coefficient: int, constant: int) -> str:
+    return f"{name}(x) = {linear_expression(coefficient, constant)}"
+
+
 def option_group(choices: list[str], maximum: int = 1) -> list[dict]:
     return [{
         "id": "main",
@@ -319,7 +341,7 @@ def algebra(family: int, variant: int) -> list[dict]:
             numeric(p + "-e", "easy", "What is the value of x + y?", s, "第一個方程已直接給出 x+y。", "Algebra", stimulus=stimulus),
             numeric(p + "-m", "medium", "What is the value of x?", x,
                     f"以 y={s}−x 代入第二式，解得 x={x}，再得 y={y}。", "Algebra", stimulus=stimulus),
-            single(p + "-h", "hard", f"What is the value of ({b+1})x + ({a+1})y?",
+            single(p + "-h", "hard", f"What is the value of {b+1}x + {a+1}y?",
                    [str((b+1)*x+(a+1)*y+d) for d in (-s, -2, 0, 2, s)], str((b+1)*x+(a+1)*y),
                    f"聯立解為 x={x}, y={y}；代入得 {(b+1)*x+(a+1)*y}。", "Algebra", stimulus=stimulus),
             comparison(p + "-x", "hard", stimulus, "x", "y", 0 if x > y else 1 if x < y else 2,
@@ -345,18 +367,22 @@ def algebra(family: int, variant: int) -> list[dict]:
         c, d = 1 + (variant // 3) % 4, 4 + variant % 6
         t = 2 + variant % 7
         f_t, composition = a*t+b, a*(c*t+d)+b
+        f_definition = linear_function("f", a, b)
+        g_definition = linear_function("g", c, d)
+        definitions = f"{f_definition} and {g_definition}"
+        equality = f"{linear_expression(a, b)} = {linear_expression(c, d)}"
         return [
-            numeric(p + "-e", "easy", f"If f(x) = {a}x {'+' if b>=0 else '−'} {abs(b)}, what is f({t})?", f_t,
-                    f"代入 x={t}：f({t})={a}×{t}{'+' if b>=0 else '−'}{abs(b)}={f_t}。", "Algebra"),
-            numeric(p + "-m", "medium", f"If f(x) = {a}x {'+' if b>=0 else '−'} {abs(b)} and g(x) = {c}x + {d}, what is f(g({t}))?", composition,
+            numeric(p + "-e", "easy", f"If {f_definition}, what is f({t})?", f_t,
+                    f"代入 x = {t}：f({t}) = {append_constant(f'{a} × {t}', b)} = {f_t}。", "Algebra"),
+            numeric(p + "-m", "medium", f"If {definitions}, what is f(g({t}))?", composition,
                     f"先算 g({t})={c*t+d}，再代入 f，得到 {composition}。", "Algebra"),
             single(p + "-h", "hard", "For what value of x is f(x) = g(x)?",
                    [clean_number(Fraction(d-b, a-c)+k) for k in (-2,-1,0,1,2)] if a != c else ["0","1","2","All real numbers","No solution"],
                    clean_number(Fraction(d-b, a-c)) if a != c else ("All real numbers" if b == d else "No solution"),
-                   (f"解 {a}x+({b})={c}x+{d}，得 x={clean_number(Fraction(d-b,a-c))}。" if a != c else
+                   (f"解 {equality}，得 x = {clean_number(Fraction(d-b,a-c))}。" if a != c else
                     ("兩函數的斜率與截距都相同，因此所有實數皆為解。" if b == d else "兩函數斜率相同但截距不同，因此沒有交點。")), "Algebra",
-                   stimulus=f"f(x) = {a}x + ({b}) and g(x) = {c}x + {d}."),
-            comparison(p + "-x", "hard", f"f(x)={a}x+({b}) and g(x)={c}x+{d}", "f(g(0))", "g(f(0))", 0 if a*d+b > c*b+d else 1 if a*d+b < c*b+d else 2,
+                   stimulus=f"{definitions}."),
+            comparison(p + "-x", "hard", definitions, "f(g(0))", "g(f(0))", 0 if a*d+b > c*b+d else 1 if a*d+b < c*b+d else 2,
                        f"f(g(0))={a*d+b}；g(f(0))={c*b+d}。", "Algebra"),
         ]
     if family == 4:
@@ -623,7 +649,7 @@ def data_analysis(family: int, variant: int) -> list[dict]:
         {"label":"A only","value":str(only_a),"x":0.34,"y":0.50},
         {"label":"A and B","value":str(both),"x":0.50,"y":0.50},
         {"label":"B only","value":str(only_b),"x":0.66,"y":0.50},
-        {"label":"Neither","value":str(neither),"x":0.84,"y":0.82},
+        {"label":"Neither","value":"","x":0.84,"y":0.82},
     ]
     fig=chart("venn",f"Membership in groups A and B — dataset {variant+1}",caption=f"Total: {total}",annotations=annotations)
     return [

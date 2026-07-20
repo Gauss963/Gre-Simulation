@@ -220,14 +220,19 @@ struct HistoryView: View {
             Button("Delete all results", role: .destructive) { store.clear() }
         }
         #if os(macOS)
-        .sheet(item: $selectedResult) { result in
-            ScoreReportView(
-                result: result,
-                heading: "Saved score report",
-                doneTitle: "Close",
-                done: { selectedResult = nil }
-            )
-            .frame(minWidth: 940, minHeight: 720)
+        .overlay {
+            if let result = selectedResult {
+                ScoreReportView(
+                    result: result,
+                    heading: "Saved score report",
+                    doneTitle: "Close",
+                    done: { selectedResult = nil }
+                )
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(GRETheme.canvas.ignoresSafeArea())
+                .accessibilityAddTraits(.isModal)
+                .zIndex(1)
+            }
         }
         #else
         .fullScreenCover(item: $selectedResult) { result in
