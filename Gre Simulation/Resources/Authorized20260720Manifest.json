@@ -1,0 +1,96 @@
+{
+  "questionCount": 1463,
+  "questionAudit": {
+    "textCompletion": {
+      "answerKeys": 1250,
+      "blocksDetected": 1246,
+      "imported": 915,
+      "rejectedAmbiguous": 261,
+      "duplicatesSkipped": 70
+    },
+    "reading": {
+      "sourcePassagesDetected": 247,
+      "solutionPassagesDetected": 247,
+      "questionBlocksDetected": 512,
+      "imported": 427,
+      "rejectedAmbiguous": 83,
+      "duplicatesSkipped": 2
+    },
+    "supplementalTextCompletion": {
+      "numberedBlocksDetected": 130,
+      "imported": 94,
+      "rejectedAmbiguous": 31,
+      "duplicatesSkipped": 5
+    },
+    "quantitative": {
+      "numberedBlocksDetected": 38,
+      "sourceBlocksDetected": 26,
+      "solutionBlocksDetected": 24,
+      "detailedSolutionsDetected": 24,
+      "importedComparisons": 5,
+      "rejectedMissingLayout": 33,
+      "duplicatesSkipped": 0
+    },
+    "officialQuantitative": {
+      "explanationBlocksDetected": 138,
+      "importedQuestions": 14,
+      "formatCounts": {
+        "multipleChoice": 2,
+        "numericEntry": 4,
+        "quantitativeComparison": 3,
+        "singleChoice": 5
+      },
+      "rejectedIncompleteLayout": 124,
+      "duplicatesSkipped": 0
+    },
+    "analyticalWriting": {
+      "promptsDetected": 4,
+      "imported": 4
+    },
+    "supplementalAnalyticalWriting": {
+      "currentIssueNumbersIndexed": 59,
+      "indexedNumbersDetectedInOCR": 23,
+      "completeQuotedPromptsDetected": 4,
+      "imported": 4,
+      "duplicatesSkipped": 0,
+      "rejectedWithoutCompleteQuotedPrompt": 55
+    }
+  },
+  "vocabularyCount": 129,
+  "vocabularyAudit": {
+    "definitionsDetected": 129,
+    "importedOrSourceMerged": 129,
+    "unresolved": []
+  },
+  "privacy": "Order confirmations and personal purchase data are intentionally excluded.",
+  "sourceAudit": [
+    {
+      "collection": "GRE 填空 1000／1100／1250 與答案表",
+      "status": "The 1250-question superset and its answer key were imported; overlapping 1000/1100 files are represented through the superset and deduplicated."
+    },
+    {
+      "collection": "麟渡兮 GRE 填空題目與解答",
+      "status": "Complete numbered items with recoverable blanks, choices, and answer keys were imported; damaged layouts were rejected."
+    },
+    {
+      "collection": "老肖閱讀 250 篇、閱讀 36 套、邏輯 10 套與長難句資料",
+      "status": "The 250-passage bank was imported. Two-column layouts or reference-only material without a reliably paired answer remain audit-only to prevent cross-column corruption."
+    },
+    {
+      "collection": "猴哥數學 112 題、Official Quantitative Reasoning 與數學必備知識",
+      "status": "Scorable text-complete quantitative items and detailed solutions were imported. Figure-dependent or formula-damaged scans and the reference-only DOCX remain audit-only."
+    },
+    {
+      "collection": "Official Super Power Pack／Official Guide／Practicing to Take／For Dummies",
+      "status": "Current-format, nonduplicate scored items and Issue prompts were imported. Superseded analogies, antonyms, and obsolete Argument tasks were excluded from the current GRE simulation."
+    },
+    {
+      "collection": "北美 GRE 範文與 Issue 論證素材",
+      "status": "Current Issue numbers were cross-checked against the supplied index. Complete quoted prompts were imported; essay/reference prose remains study-source audit material."
+    },
+    {
+      "collection": "myPrep ZIP archive",
+      "status": "Audited as the compressed mirror of the expanded 資料 directory; duplicate files were not imported twice."
+    }
+  ]
+}

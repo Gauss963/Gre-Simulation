@@ -10,12 +10,12 @@ A native Swift + SwiftUI GRE® practice simulator for macOS and iPadOS.
 - Test-style navigation with Back, Next, Mark, Review, hidden/visible time, and automatic section submission when time expires
 - Text Completion, Sentence Equivalence, Reading Comprehension, Quantitative Comparison, single-answer, multiple-answer, and Numeric Entry interfaces
 - Basic on-screen Quant calculator with memory operations
-- 392-question offline bank: 166 Verbal and 226 Quant questions, with 20 new Data Analysis items at each difficulty level
+- 1,855-item offline bank: 1,602 Verbal, 245 Quantitative, and 8 newly imported Analytical Writing prompts, plus the app's original Issue prompt
 - 62 source-derived questions from the user's authorized ETS Official Guide and Peterson's book, each labeled in post-test review
 - 240 additional deterministic vocabulary-synthesis and ETS-aligned original Quant questions, plus the original 90-question bank
-- 98 Data Analysis and statistics questions in the runtime pool, including 45 questions built around 15 structured data displays
+- 103 Data Analysis and statistics questions in the runtime pool, including 45 questions built around 15 structured data displays
 - Native, accessible tables, bar and grouped-bar charts, line charts, pie charts, histograms, scatterplots, box plots, normal curves, and Venn diagrams that adapt to macOS, iPadOS, and system appearance
-- 4,560 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, and Magoosh sources; every entry includes a Taiwan Traditional Chinese definition and an English example
+- 4,613 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, Magoosh, and 2026-07-20 contextual-vocabulary sources; every entry includes a Taiwan Traditional Chinese definition and an English example
 - Vocabulary search and filtering by source or high-frequency list
 - Practice score report, answer explanations, adaptive route details, and persistent on-device score history
 - A transparent 130–170 practice score estimator and a clearly labeled local writing-structure signal
@@ -31,11 +31,11 @@ Open [`Gre Simulation.xcodeproj`](Gre%20Simulation.xcodeproj) and run the `Gre S
 
 ## Content provenance and scoring
 
-This build includes source-derived items from the user's locally supplied, fully authorized copies of *The Official Guide to the GRE General Test* and *Peterson's Master the GRE General Test*. It also contains original items aligned to the official content outline. The score-report review identifies the source and location of every sourced item and distinguishes it from generated practice.
+This build includes source-derived items from the user's locally supplied, fully authorized GRE library, including *The Official Guide to the GRE General Test*, *Peterson's Master the GRE General Test*, the 2026-07-20 Verbal/Quant/Writing collection, and the licensed vocabulary files. It also contains original items aligned to the official content outline. The score-report review identifies the source and location of every sourced item and distinguishes it from generated practice.
 
 ETS reports Verbal and Quant scores on a 130–170 scale and uses proprietary equating to account for edition difficulty and the adaptive second-section route. Since the conversion table is not public, this app maps raw accuracy linearly onto 130–170 and labels the result as an estimate. The writing signal is a local heuristic, not an official score or e-rater® result.
 
-The vocabulary bank is generated from the user's authorized [`liurui39660/3000`](https://github.com/liurui39660/3000) workbook, Gauss high-frequency list and workbook, and Magoosh vocabulary eBook. Unmatched valid terms receive definitions and synonyms from [Open English WordNet 2025](https://en-word.net/), licensed CC BY 4.0. Missing Chinese glosses are supplemented by the MIT-licensed [ECDICT](https://github.com/skywind3000/ECDICT) database and localized to Taiwan Traditional Chinese. Missing examples are selected from the [Tatoeba Corpus](https://tatoeba.org/en/downloads) under CC0 1.0 or CC BY 2.0 FR, with definition-grounded original examples used only when the corpus has no suitable complete sentence. Source workbooks and PDFs are not copied into the app bundle; normalized JSON resources are bundled for offline use.
+The vocabulary bank is generated from the user's authorized [`liurui39660/3000`](https://github.com/liurui39660/3000) workbook, Gauss high-frequency list and workbook, Magoosh vocabulary eBook, and contextual-vocabulary collection. Unmatched valid terms receive definitions and synonyms from [Open English WordNet 2025](https://en-word.net/), licensed CC BY 4.0. Missing Chinese glosses are supplemented by the MIT-licensed [ECDICT](https://github.com/skywind3000/ECDICT) database and localized to Taiwan Traditional Chinese. Missing examples are selected from the [Tatoeba Corpus](https://tatoeba.org/en/downloads) under CC0 1.0 or CC BY 2.0 FR, with definition-grounded original examples used only when the corpus has no suitable complete sentence. Source workbooks and PDFs are not copied into the app bundle; normalized JSON resources are bundled for offline use.
 
 The reproducible import pipeline is in [`Tools`](Tools): the workbook exporter uses `@oai/artifact-tool`, and the deterministic Python generator validates IDs, answer keys, duplicate choices, and difficulty coverage before writing app resources.
 

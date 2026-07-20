@@ -20,7 +20,14 @@ enum QuestionBank {
     static let expandedQuestions: [GREQuestion] =
         BundledResource.decode([GREQuestion].self, named: "ExpandedQuestions") ?? []
 
-    static let all: [GREQuestion] = verbalQuestions + quantitativeQuestions + expandedQuestions
+    static let authorized20260720Questions: [GREQuestion] =
+        BundledResource.decode([GREQuestion].self, named: "Authorized20260720Questions") ?? []
+
+    static let all: [GREQuestion] =
+        verbalQuestions + quantitativeQuestions + expandedQuestions + authorized20260720Questions
+
+    static let writingQuestions: [GREQuestion] =
+        [writingQuestion] + authorized20260720Questions.filter { $0.measure == .analyticalWriting }
 
     static var sourceSummary: [(title: String, count: Int)] {
         let grouped = Dictionary(grouping: all) { question in
@@ -79,7 +86,9 @@ enum QuestionBank {
             if question.prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 issues.append("\(question.id) has an empty prompt.")
             }
-            if question.format == .numericEntry {
+            if question.format == .essay {
+                continue
+            } else if question.format == .numericEntry {
                 if question.acceptedNumericAnswers.isEmpty { issues.append("\(question.id) has no numeric answer.") }
             } else {
                 let optionIDs = Set(question.groups.flatMap { $0.options.map(\.id) })

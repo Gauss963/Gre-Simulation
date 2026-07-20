@@ -40,19 +40,17 @@ _UNSUITABLE_PATTERN = re.compile(
     r"masturbat(?:e|ed|es|ing|ion)|rapist|racial\s+slur)\b",
     re.IGNORECASE,
 )
-_SENSITIVE_OR_CURRENT_PATTERN = re.compile(
+_SENSITIVE_PATTERN = re.compile(
     r"\b(?:sex(?:ual|ually|uality)?|same-sex|rape(?:d|s)?|rapist|prostitut(?:e|ed|es|ion)|"
     r"genital(?:s)?|nazi(?:s)?|hitler|antisemit(?:e|ic|ism)|kill(?:ed|ing|s)?|"
     r"murder(?:ed|er|ers|ing|s)?|suicid(?:e|al)|gun(?:s)?|weapon(?:s)?|tortur(?:e|ed|es|ing)|"
-    r"slav(?:e|ery|es)|netanyahu|putin|hamas|trump|obama|republican|democrat(?:ic)?|"
+    r"slav(?:e|ery|es)|"
     r"transgender|\btrans\b|\bcis\b|homosexual(?:ity)?|same-sex|\bgay\b|lgbt|hijab|"
-    r"apartheid|west\s+bank|qanon|cannabis|rectum|bomb(?:s|ed|ing|ardment)?|"
-    r"human\s+trafficking|palestin(?:e|ian)|israel(?:i)?|elon\s+musk|twitter|"
-    r"khmer\s+rouge|bastard|damn|hell|death|die[sd]?|dying|violent|violence|blood|"
-    r"crime(?:s)?|criminal(?:s)?|prison|police|war(?:s|fare)?|military|terror(?:ism|ist)?|"
+    r"cannabis|rectum|bomb(?:s|ed|ing|ardment)?|human\s+trafficking|"
+    r"bastard|damn|hell|death|die[sd]?|dying|violent|violence|blood|"
+    r"crime(?:s)?|criminal(?:s)?|prison|police|"
     r"racis(?:m|t)|xenophobia|anti-?semit(?:e|es|ic|ism)|drug(?:s)?|coronavirus|"
-    r"religion|religious|muslim(?:s)?|islam(?:ic)?|christian(?:s|ity)?|jew(?:s|ish)?|"
-    r"\bgod(?:s)?\b|cult(?:s)?|women|woman|men|man|girls?|boys?|vagina|penis|"
+    r"women|woman|men|man|girls?|boys?|vagina|penis|"
     r"orgasm(?:s)?|erect(?:ed|ion|ions)?|naked|nude)\b",
     re.IGNORECASE,
 )
@@ -270,7 +268,7 @@ def sentence_score(sentence: str, target: str, is_cc0: bool) -> float | None:
         return None
     if (
         _UNSUITABLE_PATTERN.search(stripped)
-        or _SENSITIVE_OR_CURRENT_PATTERN.search(stripped)
+        or _SENSITIVE_PATTERN.search(stripped)
         or _META_EXAMPLE_PATTERN.search(stripped)
     ):
         return None
@@ -287,11 +285,6 @@ def sentence_score(sentence: str, target: str, is_cc0: bool) -> float | None:
 
     score = abs(word_count - 14) * 1.5
     score -= len(token_set & _ACADEMIC_WORDS) * 2
-    current_affairs_tokens = {
-        "candidate", "congress", "election", "government", "minister", "parliament",
-        "party", "politician", "president", "referendum", "senate", "war",
-    }
-    score += len((token_set - {target}) & current_affairs_tokens) * 5
     score += stripped.count("!") * 4 + stripped.count("?") * 2
     score += stripped.count('"') * 2
     score += sum(character.isdigit() for character in stripped) * 0.5

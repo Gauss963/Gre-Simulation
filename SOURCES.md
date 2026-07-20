@@ -22,6 +22,9 @@ The user explicitly confirmed full rights to incorporate and remix the following
 - `Gauss-HF-words.txt`: 1,923 valid high-frequency entries survive normalization and authoritative-definition matching.
 - `Gauss-GRE單字.xlsx`: all 12 sheets were inspected and the valid terms/synonym groupings were merged and tagged.
 - [liurui39660/3000](https://github.com/liurui39660/3000): all 3,032 valid rows from the authorized workbook are normalized into the app resource.
+- The `20260720` authorized collection: the 1,250-item Text Completion/Sentence Equivalence superset and answer workbook, 麟渡兮 fill-in collection, 老肖 250 Reading collection, 猴哥 Quant collection, Official Super Power Pack, *The GRE Test For Dummies*, North American Issue materials, and contextual-vocabulary book were audited together. The importer added 1,436 Verbal questions, 19 fully recoverable Quantitative questions with detailed explanations, 8 current-format Issue prompts, and 129 vocabulary records. Overlapping 1,000/1,100 fill-in files and the mirrored ZIP were deduplicated.
+
+The 2026-07-20 importer is deliberately conservative. It rejects items whose scanned columns, figures, formulas, choices, or answer keys cannot be paired unambiguously; obsolete analogy/antonym and Analyze-an-Argument formats are not placed into the current GRE simulator. Reference-only prose, order confirmations, and purchase details are not bundled. [`Authorized20260720Manifest.json`](Gre%20Simulation/Resources/Authorized20260720Manifest.json) records the detected, imported, duplicate, and rejected counts for each collection.
 
 The source PDFs and workbooks remain outside the application repository. The app bundles compact JSON records only. Source-derived questions may be normalized or condensed for computer display; the review screen identifies them as authorized source items, not necessarily verbatim facsimiles.
 
@@ -31,13 +34,15 @@ The source PDFs and workbooks remain outside the application repository. The app
 - [ECDICT](https://github.com/skywind3000/ECDICT), commit `bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b`: MIT-licensed English-Chinese database used to fill 1,525 missing Chinese glosses. The imported general gloss is converted with OpenCC `s2twp` so the bundled text uses Taiwan Traditional Chinese and Taiwan-localized terminology.
 - [Tatoeba English sentence exports](https://tatoeba.org/en/downloads), generated 2026-07-18: 358 missing examples come from the English CC0 export, and 2,428 come from the English corpus under [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/). Every attributed record stores its Tatoeba sentence URL. Another 638 rare terms use definition-grounded original examples because no neutral, complete corpus sentence passed the quality filters.
 
-All 4,557 bundled resource records now contain both a Chinese definition and an English example. The 45 curated app entries are also complete; after deduplication, the runtime bank contains 4,560 complete words.
+All 4,686 bundled vocabulary records contain both a Taiwan Traditional Chinese definition and an English example. After merging duplicate source records and the curated app entries, the runtime bank contains 4,613 complete words.
 
 Misspellings, stray worksheet annotations, unsupported phrases, and terms without a reliable 3000 or OEWN entry are excluded. This prevents incorrect column adjacency in the workbook from becoming a false definition. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the redistribution notices.
 
 ## Generated practice and scoring
 
-The 62 source-derived items are supplemented by 330 original questions: the original 90-item bank plus 240 deterministic vocabulary-synthesis and ETS-aligned Quant items. The runtime pool now contains 98 Data Analysis/statistics questions. Of the 60-question 2026-07-20 expansion, 45 questions use 15 original structured data displays and the remaining 15 cover standalone statistics, probability, distributions, and counting. No official question text or numerical scenario was copied for this expansion.
+The earlier 62 source-derived items are supplemented by 330 original questions: the original 90-item bank plus 240 deterministic vocabulary-synthesis and ETS-aligned Quant items. The authorized 2026-07-20 import adds 1,463 unique items after content-level deduplication: 1,009 Text Completion/Sentence Equivalence questions, 427 Reading questions, 19 Quantitative questions, and 8 Issue prompts. The runtime bank therefore contains 1,855 bundled items, with 245 Quantitative questions across Arithmetic, Algebra, Geometry, and Data Analysis.
+
+The runtime pool includes 103 Data Analysis/statistics questions. Of the earlier 60-question original Quant expansion, 45 questions use 15 original structured data displays and the remaining 15 cover standalone statistics, probability, distributions, and counting. No official question text or numerical scenario was copied for that original expansion; authorized source items are labeled separately in review.
 
 The generator checks IDs, keys, duplicate choices, route coverage, and nonempty chart/table data. Structured figures are rendered at runtime with native SwiftUI Charts, Grid, and Canvas rather than bundled screenshots.
 

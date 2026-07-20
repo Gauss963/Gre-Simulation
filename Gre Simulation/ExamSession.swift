@@ -174,7 +174,10 @@ final class ExamSession: ObservableObject {
         phase = .completed
         let verbal = totals(for: .verbal)
         let quant = totals(for: .quantitative)
-        let essay = answers[QuestionBank.writingQuestion.id]?.essayText ?? ""
+        let writingQuestionID = sections
+            .first(where: { $0.measure == .analyticalWriting })?
+            .questions.first?.id
+        let essay = writingQuestionID.flatMap { answers[$0]?.essayText } ?? ""
         let verbalAnswered = sectionSummaries.filter { $0.measure == .verbal }.reduce(0) { $0 + $1.answered }
         let quantAnswered = sectionSummaries.filter { $0.measure == .quantitative }.reduce(0) { $0 + $1.answered }
 
@@ -208,8 +211,9 @@ final class ExamSession: ObservableObject {
         case .fullLength:
             let verbalUsed = Set(verbalOne.map(\.id))
             let quantUsed = Set(quantOne.map(\.id))
+            let writingQuestion = QuestionBank.writingQuestions.randomElement() ?? QuestionBank.writingQuestion
             return [
-                ExamSection(id: "writing-1", measure: .analyticalWriting, ordinal: 1, durationSeconds: 30 * 60, questions: [QuestionBank.writingQuestion], adaptiveDifficulty: nil),
+                ExamSection(id: "writing-1", measure: .analyticalWriting, ordinal: 1, durationSeconds: 30 * 60, questions: [writingQuestion], adaptiveDifficulty: nil),
                 ExamSection(id: "verbal-1", measure: .verbal, ordinal: 1, durationSeconds: 18 * 60, questions: verbalOne, adaptiveDifficulty: nil),
                 ExamSection(id: "quantitative-1", measure: .quantitative, ordinal: 1, durationSeconds: 21 * 60, questions: quantOne, adaptiveDifficulty: nil),
                 ExamSection(id: "verbal-2-medium", measure: .verbal, ordinal: 2, durationSeconds: 23 * 60, questions: QuestionBank.questions(for: .verbal, difficulty: .medium, count: 15, excluding: verbalUsed), adaptiveDifficulty: .medium),

@@ -305,7 +305,7 @@ struct ResourcesView: View {
                         .font(.title3.bold())
                         .foregroundStyle(GRETheme.navy)
                     HStack(spacing: 14) {
-                        resultMetric("Questions", "\(QuestionBank.all.count)", "Verbal + Quant")
+                        resultMetric("Questions", "\(QuestionBank.all.count)", "Verbal + Quant + Writing")
                         resultMetric("Vocabulary", "\(VocabularyBank.words.count)", "deduplicated entries")
                     }
                     ForEach(Array(QuestionBank.sourceSummary.enumerated()), id: \.offset) { _, item in
