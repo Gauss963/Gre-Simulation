@@ -1,0 +1,98 @@
+name: Build macOS app
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-macos-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build Universal app
+    runs-on: macos-26
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Show build environment
+        run: |
+          sw_vers
+          xcodebuild -version
+
+      - name: Build Release app
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project "Gre Simulation.xcodeproj" \
+            -scheme "Gre Simulation" \
+            -configuration Release \
+            -destination "generic/platform=macOS" \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData" \
+            ARCHS="arm64 x86_64" \
+            ONLY_ACTIVE_ARCH=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            clean build
+
+      - name: Sign, verify, and package app
+        env:
+          APP_PATH: ${{ runner.temp }}/DerivedData/Build/Products/Release/Gre Simulation.app
+          ARTIFACT_DIR: ${{ runner.temp }}/Gre-Simulation-macOS
+        run: |
+          set -euo pipefail
+          mkdir -p "$ARTIFACT_DIR"
+
+          xattr -cr "$APP_PATH"
+          codesign \
+            --force \
+            --deep \
+            --options runtime \
+            --entitlements ".github/macos-app.entitlements" \
+            --sign - \
+            "$APP_PATH"
+
+          codesign --verify --deep --strict --verbose=2 "$APP_PATH"
+
+          architectures="$(lipo -archs "$APP_PATH/Contents/MacOS/Gre Simulation")"
+          [[ "$architectures" == *arm64* ]]
+          [[ "$architectures" == *x86_64* ]]
+
+          version="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APP_PATH/Contents/Info.plist")"
+          archive_name="Gre-Simulation-${version}-macOS-Universal.app.zip"
+          archive_path="$ARTIFACT_DIR/$archive_name"
+
+          ditto -c -k --keepParent --norsrc "$APP_PATH" "$archive_path"
+          unzip -t "$archive_path"
+
+          (
+            cd "$ARTIFACT_DIR"
+            shasum -a 256 "$archive_name" > "Gre-Simulation-${version}-SHA256.txt"
+          )
+
+      - name: Upload macOS app
+        id: upload
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: Gre-Simulation-macOS-${{ github.run_number }}
+          path: ${{ runner.temp }}/Gre-Simulation-macOS/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+
+      - name: Add download link to summary
+        env:
+          ARTIFACT_URL: ${{ steps.upload.outputs.artifact-url }}
+        run: |
+          {
+            echo "### macOS build complete"
+            echo
+            echo "[Download the Universal macOS app artifact]($ARTIFACT_URL)"
+          } >> "$GITHUB_STEP_SUMMARY"
