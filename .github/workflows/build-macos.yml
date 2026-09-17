@@ -72,6 +72,20 @@ jobs:
           ditto -c -k --keepParent --norsrc "$APP_PATH" "$archive_path"
           unzip -t "$archive_path"
 
+          verification_dir="$RUNNER_TEMP/PackageVerification"
+          mkdir -p "$verification_dir"
+          ditto -x -k "$archive_path" "$verification_dir"
+          codesign \
+            --verify \
+            --deep \
+            --strict \
+            --verbose=2 \
+            "$verification_dir/Gre Simulation.app"
+
+          packaged_architectures="$(lipo -archs "$verification_dir/Gre Simulation.app/Contents/MacOS/Gre Simulation")"
+          [[ "$packaged_architectures" == *arm64* ]]
+          [[ "$packaged_architectures" == *x86_64* ]]
+
           (
             cd "$ARTIFACT_DIR"
             shasum -a 256 "$archive_name" > "Gre-Simulation-${version}-SHA256.txt"
