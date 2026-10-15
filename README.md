@@ -19,6 +19,7 @@ A native Swift + SwiftUI GRE® practice simulator for macOS and iPadOS.
 - Data charts include high-contrast horizontal grid lines, fine trailing-axis ticks, and exact values above bars so frequencies can be read unambiguously
 - 5,993 deduplicated vocabulary entries assembled from the authorized 3000, Gauss, Magoosh, Gruber, and 2026-07-20 collections; every entry includes a Taiwan Traditional Chinese definition and an English example
 - Vocabulary search and filtering by source or high-frequency list
+- Flash-card study sessions with persistent mastery progress and native US English word pronunciation
 - Practice score report, answer explanations, adaptive route details, and persistent on-device score history with reopenable per-question correct/incorrect review
 - A transparent 130–170 practice score estimator and a clearly labeled local writing-structure signal
 - Direct links to official ETS test format, scoring, POWERPREP, Verbal, Quant, Math Review, and Khan Academy resources

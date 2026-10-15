@@ -1,5 +1,59 @@
 import SwiftUI
 import Combine
+import AVFoundation
+
+@MainActor
+private final class VocabularySpeechController: NSObject, ObservableObject {
+    @Published private(set) var speakingWordID: String?
+
+    private let synthesizer = AVSpeechSynthesizer()
+    private var activeUtterance: AVSpeechUtterance?
+
+    override init() {
+        super.init()
+        synthesizer.delegate = self
+    }
+
+    func toggle(word: VocabularyWord) {
+        if speakingWordID == word.id, synthesizer.isSpeaking {
+            stop()
+            return
+        }
+
+        stop()
+        let utterance = AVSpeechUtterance(string: word.word)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.rate = 0.42
+        utterance.pitchMultiplier = 1.0
+        activeUtterance = utterance
+        speakingWordID = word.id
+        synthesizer.speak(utterance)
+    }
+
+    func stop() {
+        if synthesizer.isSpeaking || synthesizer.isPaused {
+            synthesizer.stopSpeaking(at: .immediate)
+        }
+        activeUtterance = nil
+        speakingWordID = nil
+    }
+
+    private func finish(_ utterance: AVSpeechUtterance) {
+        guard utterance === activeUtterance else { return }
+        activeUtterance = nil
+        speakingWordID = nil
+    }
+}
+
+extension VocabularySpeechController: @preconcurrency AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        finish(utterance)
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        finish(utterance)
+    }
+}
 
 @MainActor
 private final class FlashcardProgressStore: ObservableObject {
@@ -45,6 +99,7 @@ struct FlashcardStudyView: View {
     let words: [VocabularyWord]
 
     @StateObject private var progress = FlashcardProgressStore()
+    @StateObject private var speech = VocabularySpeechController()
     @State private var selectedSource = "All sources"
     @State private var deckSize: FlashcardDeckSize = .twenty
     @State private var unmasteredOnly = true
@@ -111,6 +166,9 @@ struct FlashcardStudyView: View {
                 startNewDeck()
             }
             restoreKeyboardFocus()
+        }
+        .onDisappear {
+            speech.stop()
         }
         .confirmationDialog("Reset all flash-card progress?", isPresented: $confirmReset, titleVisibility: .visible) {
             Button("Reset mastery progress", role: .destructive) {
@@ -242,13 +300,13 @@ struct FlashcardStudyView: View {
                     .font(.title3)
                     .foregroundStyle(.secondary)
             }
+            pronunciationButton(item)
             Label("Tap the card or press Space to reveal", systemImage: "rectangle.on.rectangle.angled")
                 .font(.subheadline)
                 .foregroundStyle(GRETheme.blue)
                 .padding(.top, 18)
         }
         .frame(maxWidth: .infinity)
-        .accessibilityElement(children: .combine)
     }
 
     private func cardBack(_ item: VocabularyWord) -> some View {
@@ -262,6 +320,7 @@ struct FlashcardStudyView: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
+                pronunciationButton(item, compact: true)
                 if item.isHighFrequency {
                     Image(systemName: "flame.fill")
                         .foregroundStyle(GRETheme.warning)
@@ -306,6 +365,29 @@ struct FlashcardStudyView: View {
                 .font(.body.weight(.medium))
                 .foregroundStyle(color ?? Color.primary)
         }
+    }
+
+    @ViewBuilder
+    private func pronunciationButton(_ item: VocabularyWord, compact: Bool = false) -> some View {
+        let isSpeaking = speech.speakingWordID == item.id
+        Button {
+            speech.toggle(word: item)
+            restoreKeyboardFocus()
+        } label: {
+            if compact {
+                Image(systemName: isSpeaking ? "stop.fill" : "speaker.wave.2.fill")
+            } else {
+                Label(
+                    isSpeaking ? "Stop" : "Listen",
+                    systemImage: isSpeaking ? "stop.fill" : "speaker.wave.2.fill"
+                )
+            }
+        }
+        .buttonStyle(.bordered)
+        .tint(GRETheme.blue)
+        .controlSize(compact ? .regular : .large)
+        .accessibilityLabel(isSpeaking ? "Stop pronunciation" : "Listen to \(item.word)")
+        .help(isSpeaking ? "Stop pronunciation" : "Listen to \(item.word)")
     }
 
     @ViewBuilder
@@ -385,6 +467,7 @@ struct FlashcardStudyView: View {
 
     private func rateCurrentCard(asMastered: Bool) {
         guard let currentCard else { return }
+        speech.stop()
         progress.setMastered(currentCard.id, isMastered: asMastered)
         if asMastered {
             masteredThisRound.insert(currentCard.id)
@@ -401,6 +484,7 @@ struct FlashcardStudyView: View {
     }
 
     private func startNewDeck() {
+        speech.stop()
         let shuffled = eligibleWords.shuffled()
         let limit = deckSize.rawValue == 0 ? shuffled.count : min(deckSize.rawValue, shuffled.count)
         deck = Array(shuffled.prefix(limit))
@@ -413,6 +497,7 @@ struct FlashcardStudyView: View {
     }
 
     private func reviewMissedCards() {
+        speech.stop()
         deck = words.filter { missedThisRound.contains($0.id) }.shuffled()
         currentIndex = 0
         isRevealed = false
