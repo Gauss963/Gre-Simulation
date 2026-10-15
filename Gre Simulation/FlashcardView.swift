@@ -151,6 +151,11 @@ struct FlashcardStudyView: View {
             revealCard()
             return .handled
         }
+        .onKeyPress("v") {
+            guard let currentCard else { return .ignored }
+            togglePronunciation(currentCard)
+            return .handled
+        }
         .onKeyPress(.leftArrow) {
             guard currentCard != nil, isRevealed else { return .ignored }
             rateCurrentCard(asMastered: false)
@@ -301,7 +306,7 @@ struct FlashcardStudyView: View {
                     .foregroundStyle(.secondary)
             }
             pronunciationButton(item)
-            Label("Tap the card or press Space to reveal", systemImage: "rectangle.on.rectangle.angled")
+            Label("Tap the card or press Space to reveal · Press V to listen", systemImage: "rectangle.on.rectangle.angled")
                 .font(.subheadline)
                 .foregroundStyle(GRETheme.blue)
                 .padding(.top, 18)
@@ -371,8 +376,7 @@ struct FlashcardStudyView: View {
     private func pronunciationButton(_ item: VocabularyWord, compact: Bool = false) -> some View {
         let isSpeaking = speech.speakingWordID == item.id
         Button {
-            speech.toggle(word: item)
-            restoreKeyboardFocus()
+            togglePronunciation(item)
         } label: {
             if compact {
                 Image(systemName: isSpeaking ? "stop.fill" : "speaker.wave.2.fill")
@@ -387,7 +391,7 @@ struct FlashcardStudyView: View {
         .tint(GRETheme.blue)
         .controlSize(compact ? .regular : .large)
         .accessibilityLabel(isSpeaking ? "Stop pronunciation" : "Listen to \(item.word)")
-        .help(isSpeaking ? "Stop pronunciation" : "Listen to \(item.word)")
+        .help(isSpeaking ? "Stop pronunciation (V)" : "Listen to \(item.word) (V)")
     }
 
     @ViewBuilder
@@ -462,6 +466,11 @@ struct FlashcardStudyView: View {
         withAnimation(.easeInOut(duration: 0.18)) {
             isRevealed = true
         }
+        restoreKeyboardFocus()
+    }
+
+    private func togglePronunciation(_ item: VocabularyWord) {
+        speech.toggle(word: item)
         restoreKeyboardFocus()
     }
 
