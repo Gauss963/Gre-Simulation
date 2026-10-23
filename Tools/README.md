@@ -77,3 +77,16 @@ DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun swift \
 ```
 
 Use `sips` to derive the 16, 32, 64, 128, 256, and 512-pixel macOS slots from that validated source.
+
+## Reviewed glosses
+
+`reviewed_vocabulary_glosses.json` holds the manually reviewed part of speech, English definition, and Taiwan Traditional Chinese senses for every headword. Senses are separated by `；`, ordered from the most to the least GRE-relevant meaning, and prefixed with `n.`, `v.`, or `adj.` when a word has several parts of speech. Run `python3 Tools/apply_reviewed_glosses.py` after regenerating any vocabulary JSON so these corrections are kept.
+
+## Pronunciation clips
+
+`generate_word_pronunciations.py` pre-renders each headword once with the Apache-2.0 Kokoro-82M `af_heart` voice, encodes 32 kbps mono AAC with `afconvert`, and writes `WordPronunciations.pack` plus its byte-range index `WordPronunciations.json` (about 44 MB for all headwords). Kokoro is a build-time dependency only (`pip install kokoro soundfile` in a disposable Python 3.12 virtual environment); the app plays the clips offline with AVFoundation and falls back to the best installed system voice.
+
+```sh
+python Tools/generate_word_pronunciations.py --words words.json \
+  --output-dir "Gre Simulation/Resources" --cache ../tmp/pronunciation-cache
+```

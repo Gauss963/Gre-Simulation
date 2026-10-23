@@ -122,6 +122,11 @@ struct VocabularyView: View {
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
+                    if let partOfSpeech = item.partOfSpeech {
+                        Text(partOfSpeech)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
                     Spacer()
                     Image(systemName: revealed.contains(item.id) ? "eye.fill" : "eye.slash")
                         .foregroundStyle(GRETheme.blue)

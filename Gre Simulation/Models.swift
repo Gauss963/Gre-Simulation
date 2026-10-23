@@ -324,6 +324,7 @@ struct VocabularyWord: Identifiable, Hashable, Codable {
     var exampleSourceURL: String? = nil
     var sources: [String] = []
     var isHighFrequency: Bool = false
+    var partOfSpeech: String? = nil
 
     var id: String { word }
 }

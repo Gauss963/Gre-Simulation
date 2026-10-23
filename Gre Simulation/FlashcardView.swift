@@ -8,21 +8,37 @@ private final class VocabularySpeechController: NSObject, ObservableObject {
 
     private let synthesizer = AVSpeechSynthesizer()
     private var activeUtterance: AVSpeechUtterance?
+    private var audioPlayer: AVAudioPlayer?
 
     override init() {
         super.init()
         synthesizer.delegate = self
     }
 
+    /// Plays the bundled natural clip, falling back to the best installed system voice.
     func toggle(word: VocabularyWord) {
-        if speakingWordID == word.id, synthesizer.isSpeaking {
+        if speakingWordID == word.id, synthesizer.isSpeaking || audioPlayer?.isPlaying == true {
             stop()
             return
         }
 
         stop()
+        #if os(iOS)
+        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
+        try? AVAudioSession.sharedInstance().setActive(true)
+        #endif
+        if let data = WordPronunciationLibrary.shared.clip(for: word.word),
+           let player = try? AVAudioPlayer(data: data, fileTypeHint: AVFileType.m4a.rawValue) {
+            player.delegate = self
+            audioPlayer = player
+            if player.play() {
+                speakingWordID = word.id
+                return
+            }
+            audioPlayer = nil
+        }
         let utterance = AVSpeechUtterance(string: word.word)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.voice = EnglishVoice.best
         utterance.rate = 0.42
         utterance.pitchMultiplier = 1.0
         activeUtterance = utterance
@@ -31,6 +47,8 @@ private final class VocabularySpeechController: NSObject, ObservableObject {
     }
 
     func stop() {
+        audioPlayer?.stop()
+        audioPlayer = nil
         if synthesizer.isSpeaking || synthesizer.isPaused {
             synthesizer.stopSpeaking(at: .immediate)
         }
@@ -41,6 +59,14 @@ private final class VocabularySpeechController: NSObject, ObservableObject {
     private func finish(_ utterance: AVSpeechUtterance) {
         guard utterance === activeUtterance else { return }
         activeUtterance = nil
+        speakingWordID = nil
+    }
+}
+
+extension VocabularySpeechController: @preconcurrency AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        guard player === audioPlayer else { return }
+        audioPlayer = nil
         speakingWordID = nil
     }
 }
@@ -95,11 +121,20 @@ private enum FlashcardDeckSize: Int, CaseIterable, Identifiable {
     }
 }
 
+private enum FlashcardMode: String, CaseIterable, Identifiable {
+    case deck
+    case infinite
+
+    var id: String { rawValue }
+    var title: String { self == .deck ? "Fixed deck" : "Infinite loop" }
+}
+
 struct FlashcardStudyView: View {
     let words: [VocabularyWord]
 
     @StateObject private var progress = FlashcardProgressStore()
     @StateObject private var speech = VocabularySpeechController()
+    @AppStorage("gre-simulation.flashcards.mode") private var studyMode: FlashcardMode = .deck
     @State private var selectedSource = "All sources"
     @State private var deckSize: FlashcardDeckSize = .twenty
     @State private var unmasteredOnly = true
@@ -109,13 +144,15 @@ struct FlashcardStudyView: View {
     @State private var masteredThisRound: Set<String> = []
     @State private var missedThisRound: Set<String> = []
     @State private var hasStarted = false
+    @State private var infiniteTotal = 0
     @State private var confirmReset = false
     @FocusState private var acceptsKeyboardInput: Bool
 
     private var eligibleWords: [VocabularyWord] {
         words.filter { item in
             let matchesSource = selectedSource == "All sources" || item.sources.contains(selectedSource)
-            let matchesProgress = !unmasteredOnly || !progress.mastered.contains(item.id)
+            let skipsMastered = unmasteredOnly || studyMode == .infinite
+            let matchesProgress = !skipsMastered || !progress.mastered.contains(item.id)
             return matchesSource && matchesProgress
         }
     }
@@ -137,6 +174,8 @@ struct FlashcardStudyView: View {
                 sessionProgress
                 flashCard(currentCard)
                 ratingControls
+            } else if hasStarted, studyMode == .infinite, infiniteTotal > 0 {
+                infiniteCompletion
             } else if hasStarted, !deck.isEmpty {
                 completionSummary
             } else if hasStarted {
@@ -175,6 +214,7 @@ struct FlashcardStudyView: View {
         .onDisappear {
             speech.stop()
         }
+        .onChange(of: studyMode) { startNewDeck() }
         .confirmationDialog("Reset all flash-card progress?", isPresented: $confirmReset, titleVisibility: .visible) {
             Button("Reset mastery progress", role: .destructive) {
                 progress.reset()
@@ -219,7 +259,7 @@ struct FlashcardStudyView: View {
                 Spacer()
                 Label("\(overallMasteredCount) mastered", systemImage: "checkmark.seal.fill")
                     .foregroundStyle(GRETheme.teal)
-                Button("New shuffled deck") { startNewDeck() }
+                Button(studyMode == .infinite ? "Restart loop" : "New shuffled deck") { startNewDeck() }
                     .buttonStyle(SecondaryGREButtonStyle())
             }
             .font(.caption.weight(.semibold))
@@ -237,19 +277,56 @@ struct FlashcardStudyView: View {
             }
             .pickerStyle(.menu)
 
-            Picker("Deck size", selection: $deckSize) {
-                ForEach(FlashcardDeckSize.allCases) { size in
-                    Text(size.title).tag(size)
+            Picker("Mode", selection: $studyMode) {
+                ForEach(FlashcardMode.allCases) { mode in
+                    Text(mode.title).tag(mode)
                 }
             }
             .pickerStyle(.menu)
 
-            Toggle("Unmastered only", isOn: $unmasteredOnly)
-                .toggleStyle(.switch)
+            if studyMode == .deck {
+                Picker("Deck size", selection: $deckSize) {
+                    ForEach(FlashcardDeckSize.allCases) { size in
+                        Text(size.title).tag(size)
+                    }
+                }
+                .pickerStyle(.menu)
+
+                Toggle("Unmastered only", isOn: $unmasteredOnly)
+                    .toggleStyle(.switch)
+            }
         }
     }
 
+    @ViewBuilder
     private var sessionProgress: some View {
+        if studyMode == .infinite {
+            infiniteProgress
+        } else {
+            deckProgress
+        }
+    }
+
+    private var infiniteProgress: some View {
+        VStack(spacing: 8) {
+            HStack {
+                Label("Infinite loop", systemImage: "infinity")
+                    .font(.subheadline.weight(.semibold))
+                Spacer()
+                Text("\(masteredThisRound.count) of \(infiniteTotal) mastered · \(deck.count) left")
+                    .font(.caption.monospacedDigit())
+                    .foregroundStyle(.secondary)
+            }
+            ProgressView(value: Double(masteredThisRound.count), total: Double(max(infiniteTotal, 1)))
+                .tint(GRETheme.teal)
+            Text("Cards marked Study again come back a few cards later until you know them.")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
+    private var deckProgress: some View {
         VStack(spacing: 8) {
             HStack {
                 Text("Card \(currentIndex + 1) of \(deck.count)")
@@ -300,11 +377,16 @@ struct FlashcardStudyView: View {
                 .font(.system(size: 48, weight: .bold, design: .serif))
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.7)
-            if !item.pronunciation.isEmpty {
-                Text(item.pronunciation)
-                    .font(.title3)
-                    .foregroundStyle(.secondary)
+            HStack(spacing: 8) {
+                if !item.pronunciation.isEmpty {
+                    Text(item.pronunciation)
+                }
+                if let partOfSpeech = item.partOfSpeech {
+                    Text(partOfSpeech)
+                }
             }
+            .font(.title3)
+            .foregroundStyle(.secondary)
             pronunciationButton(item)
             Label("Tap the card or press Space to reveal · Press V to listen", systemImage: "rectangle.on.rectangle.angled")
                 .font(.subheadline)
@@ -322,6 +404,11 @@ struct FlashcardStudyView: View {
                 if !item.pronunciation.isEmpty {
                     Text(item.pronunciation)
                         .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+                if let partOfSpeech = item.partOfSpeech {
+                    Text(partOfSpeech)
+                        .font(.caption)
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
@@ -450,12 +537,29 @@ struct FlashcardStudyView: View {
         .greCard()
     }
 
+    private var infiniteCompletion: some View {
+        VStack(spacing: 18) {
+            Image(systemName: "checkmark.seal.fill")
+                .font(.system(size: 48))
+                .foregroundStyle(GRETheme.teal)
+            Text("Every card mastered")
+                .font(.largeTitle.bold())
+            Text("You worked through all \(infiniteTotal) cards in this loop until each one was marked Know it.")
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+            Button("Start a fixed deck") { studyMode = .deck }
+                .buttonStyle(PrimaryGREButtonStyle())
+        }
+        .frame(maxWidth: .infinity, minHeight: 360)
+        .greCard()
+    }
+
     private var emptyDeck: some View {
         ContentUnavailableView {
             Label("No matching cards", systemImage: "checkmark.seal")
         } description: {
-            Text(unmasteredOnly
-                 ? "Every matching card is mastered. Turn off Unmastered only or reset mastery progress."
+            Text(unmasteredOnly || studyMode == .infinite
+                 ? "Every matching card is mastered. Switch to a fixed deck with Unmastered only off, or reset mastery progress."
                  : "Choose a different source to build a deck.")
         }
         .frame(maxWidth: .infinity, minHeight: 340)
@@ -486,17 +590,35 @@ struct FlashcardStudyView: View {
             masteredThisRound.remove(currentCard.id)
         }
         withAnimation(.easeInOut(duration: 0.18)) {
-            currentIndex += 1
+            if studyMode == .infinite {
+                advanceInfiniteLoop(requeue: asMastered ? nil : currentCard)
+            } else {
+                currentIndex += 1
+            }
             isRevealed = false
         }
         restoreKeyboardFocus()
     }
 
+    /// Removes the current card; a missed card returns a few cards later.
+    private func advanceInfiniteLoop(requeue missed: VocabularyWord?) {
+        var queue = deck
+        queue.remove(at: currentIndex)
+        if let missed {
+            queue.insert(missed, at: min(queue.count, Int.random(in: 3...7)))
+        }
+        deck = queue
+        currentIndex = 0
+    }
+
     private func startNewDeck() {
         speech.stop()
         let shuffled = eligibleWords.shuffled()
-        let limit = deckSize.rawValue == 0 ? shuffled.count : min(deckSize.rawValue, shuffled.count)
+        let limit = deckSize.rawValue == 0 || studyMode == .infinite
+            ? shuffled.count
+            : min(deckSize.rawValue, shuffled.count)
         deck = Array(shuffled.prefix(limit))
+        infiniteTotal = studyMode == .infinite ? deck.count : 0
         currentIndex = 0
         isRevealed = false
         masteredThisRound.removeAll()
@@ -508,6 +630,7 @@ struct FlashcardStudyView: View {
     private func reviewMissedCards() {
         speech.stop()
         deck = words.filter { missedThisRound.contains($0.id) }.shuffled()
+        infiniteTotal = 0
         currentIndex = 0
         isRevealed = false
         masteredThisRound.removeAll()
