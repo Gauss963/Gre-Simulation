@@ -319,7 +319,7 @@ struct FlashcardStudyView: View {
             }
             ProgressView(value: Double(masteredThisRound.count), total: Double(max(infiniteTotal, 1)))
                 .tint(GRETheme.teal)
-            Text("Cards marked Study again come back a few cards later until you know them.")
+            Text("Cards marked Study again return after about 15–40 other cards, so you can check real recall.")
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -600,15 +600,23 @@ struct FlashcardStudyView: View {
         restoreKeyboardFocus()
     }
 
-    /// Removes the current card; a missed card returns a few cards later.
+    /// Removes the current card; a missed card returns after enough other cards to test real recall.
     private func advanceInfiniteLoop(requeue missed: VocabularyWord?) {
         var queue = deck
         queue.remove(at: currentIndex)
         if let missed {
-            queue.insert(missed, at: min(queue.count, Int.random(in: 3...7)))
+            queue.insert(missed, at: requeueGap(remaining: queue.count))
         }
         deck = queue
         currentIndex = 0
+    }
+
+    /// About a quarter of the remaining queue, kept between 15 and 40 cards with light jitter;
+    /// a short queue sends the card to the end so every other card is seen first.
+    private func requeueGap(remaining: Int) -> Int {
+        let target = min(max(remaining / 4, 15), 40)
+        let jittered = Int.random(in: (target * 4 / 5)...(target * 6 / 5))
+        return min(remaining, jittered)
     }
 
     private func startNewDeck() {
