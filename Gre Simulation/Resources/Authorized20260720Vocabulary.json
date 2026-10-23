@@ -2,8 +2,8 @@
   {
     "word": "abate",
     "pronunciation": "[əˈbet]",
-    "definition": "1. reduce degree intensity; 2. reduce amount or value",
-    "chinese": "減輕(程度或者強度)；減少(數量)，降低(價值)",
+    "definition": "to become or make less intense; to reduce in amount or value; (law) to put an end to",
+    "chinese": "減弱；緩和；減少；降低；（法律）廢除",
     "synonyms": [
       "slake",
       "slack"
@@ -17,13 +17,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "abstained",
     "pronunciation": "əb'steɪn",
-    "definition": "willingly refrained from",
-    "chinese": "戒除；避免；棄權",
+    "definition": "refrained from something by choice; chose not to vote",
+    "chinese": "戒除；避免；（投票）棄權",
     "synonyms": [],
     "example": "Several members abstained from voting because of a conflict of interest.",
     "exampleSource": "Original app examples",
@@ -31,13 +32,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "adversity",
     "pronunciation": "[ədˈvɝsəti]",
-    "definition": "difficulty",
-    "chinese": "厄運，逆境",
+    "definition": "difficulties; misfortune; a state of hardship",
+    "chinese": "逆境；厄運；困境",
     "synonyms": [
       "hardship",
       "hard knocks"
@@ -52,13 +54,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "advocate",
     "pronunciation": "[ˈædvəket]",
-    "definition": "support",
-    "chinese": "支援，提倡",
+    "definition": "to publicly support or recommend; a person who supports a cause; a lawyer who pleads a case",
+    "chinese": "v. 提倡；擁護；主張；n. 擁護者；倡導者；辯護律師",
     "synonyms": [
       "recommend",
       "urge"
@@ -72,13 +75,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v./n."
   },
   {
     "word": "alleviate",
     "pronunciation": "[əˈlivɪˈet]",
-    "definition": "relieve, lessen",
-    "chinese": "緩和，減輕",
+    "definition": "to make suffering or a problem less severe; to relieve",
+    "chinese": "減輕；緩和；舒緩",
     "synonyms": [
       "relieve",
       "palliate",
@@ -93,13 +97,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "apotheosis",
     "pronunciation": "əˌpɑː.θiˈoʊ.sɪs",
-    "definition": "model of excellence or perfection of a kind; one having no equal",
-    "chinese": "尊崇為神、神化、美化",
+    "definition": "the perfect example of something; the highest point of development; elevation to divine status",
+    "chinese": "典範；極致；巔峰；神化",
     "synonyms": [
       "ideal",
       "paragon",
@@ -118,13 +123,14 @@
       "Magoosh vocabulary eBook",
       "Open English WordNet 2025"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "aristocratic",
     "pronunciation": "æristә'krætik",
-    "definition": "noble",
-    "chinese": "貴族的；有貴族氣派的",
+    "definition": "belonging to the nobility; distinguished in manner or bearing; haughty",
+    "chinese": "貴族的；有貴族氣派的；高傲的",
     "synonyms": [],
     "example": "The portrait emphasizes the subject's aristocratic bearing and formal dress.",
     "exampleSource": "Original app examples",
@@ -132,13 +138,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "assiduously",
     "pronunciation": "ə'sidʒuəsli",
-    "definition": "diligently; persistently",
-    "chinese": "勤勉地；專心仔細地",
+    "definition": "with great care and persistent effort; diligently",
+    "chinese": "勤勉地；刻苦地；專心仔細地",
     "synonyms": [],
     "example": "She worked assiduously to verify every citation in the report.",
     "exampleSource": "Original app examples",
@@ -146,13 +153,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adv."
   },
   {
     "word": "assuage",
     "pronunciation": "[əˈswedʒ]",
-    "definition": "lessen intensity",
-    "chinese": "緩和，減輕",
+    "definition": "to make an unpleasant feeling less intense; to calm; to satisfy (an appetite or desire)",
+    "chinese": "緩和；減輕；平息；滿足（慾望）",
     "synonyms": [
       "pacify",
       "lenify",
@@ -171,13 +179,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "atrocious",
     "pronunciation": "[əˈtroʊʃəs]",
-    "definition": "extremely wicked",
-    "chinese": "極壞的，極其殘忍的",
+    "definition": "extremely wicked or cruel; of very poor quality",
+    "chinese": "殘暴的；兇殘的；極惡劣的；糟透的",
     "synonyms": [
       "flagitious",
       "grievous",
@@ -191,13 +200,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "audacious",
     "pronunciation": "[ɔˈdeʃəs]",
-    "definition": "fearlessly recklesssly",
-    "chinese": "大膽的，(但往往)愚勇的",
+    "definition": "showing bold willingness to take risks; recklessly daring; impudent",
+    "chinese": "大膽的；無畏的；魯莽的；厚顏的",
     "synonyms": [
       "brave",
       "dauntless",
@@ -216,13 +226,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "autocratic",
     "pronunciation": ".ɒ:tә'krætik",
-    "definition": "offensively self-assured or given to exercising usually unwarranted power",
-    "chinese": "獨裁的、專制的",
+    "definition": "relating to a ruler with absolute power; domineering and demanding obedience",
+    "chinese": "獨裁的；專制的；專橫的",
     "synonyms": [
       "bossy",
       "dominating",
@@ -239,13 +250,14 @@
       "Gauss workbook",
       "Open English WordNet 2025"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "autonomous",
     "pronunciation": "ɒ:'tɒnәmәs",
-    "definition": "independent; self-governed",
-    "chinese": "自主的；自治的",
+    "definition": "acting independently; self-governing; operating without human control",
+    "chinese": "自主的；自治的；獨立的；自動運作的",
     "synonyms": [],
     "example": "The laboratory remained autonomous despite its partnership with the university.",
     "exampleSource": "Original app examples",
@@ -253,13 +265,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "berate",
     "pronunciation": "[bɪˈret]",
-    "definition": "scold vehemently",
-    "chinese": "(長時間)嚴厲指責",
+    "definition": "to scold or criticize angrily and at length",
+    "chinese": "嚴厲斥責；痛罵",
     "synonyms": [
       "call on the carpet",
       "take to task",
@@ -278,13 +291,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "besotted",
     "pronunciation": "bi'sɒtid",
-    "definition": "very drunk",
-    "chinese": "愚蠢的、糊塗的",
+    "definition": "infatuated to the point of foolishness; intoxicated",
+    "chinese": "迷戀的；痴迷的；醉醺醺的",
     "synonyms": [
       "blind drunk",
       "blotto",
@@ -303,13 +317,14 @@
       "Open English WordNet 2025",
       "Tatoeba Corpus"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "bombastic",
     "pronunciation": "bɑmˈbæs.tʰɪk",
-    "definition": "ostentatiously lofty in style",
-    "chinese": "誇大的、誇誇其談的",
+    "definition": "using high-sounding but empty language; pompous",
+    "chinese": "誇大的；浮誇的；誇誇其談的",
     "synonyms": [
       "declamatory",
       "large",
@@ -328,13 +343,14 @@
     ],
     "isHighFrequency": true,
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
-    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/11598047"
+    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/11598047",
+    "partOfSpeech": "adj."
   },
   {
     "word": "brevity",
     "pronunciation": "[ˈbrɛvəti]",
-    "definition": "shortness",
-    "chinese": "簡短，簡潔",
+    "definition": "concise expression; shortness of duration",
+    "chinese": "簡潔；簡短；（時間）短暫",
     "synonyms": [],
     "example": "When you send a telegram, brevity is essential because you will be charged for every word.",
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
@@ -345,12 +361,13 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "brimming",
     "pronunciation": "",
-    "definition": "overflowing; completely full",
+    "definition": "full to the point of overflowing",
     "chinese": "充滿的；滿溢的",
     "synonyms": [],
     "example": "The archive is brimming with letters that illuminate the author's early career.",
@@ -359,13 +376,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "bulbous",
     "pronunciation": "'bʌlbәs",
-    "definition": "swollen; rounded",
-    "chinese": "球狀的；圓鼓的",
+    "definition": "round or bulging in shape; growing from a bulb",
+    "chinese": "球狀的；圓鼓的；（植物）有球莖的",
     "synonyms": [],
     "example": "The plant stores water in a bulbous stem during the dry season.",
     "exampleSource": "Original app examples",
@@ -373,13 +391,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "canon",
     "pronunciation": "[ˈkænən]",
-    "definition": "1. a standard or criterion; 2. the authentic works of a writer",
-    "chinese": "準則，標準；真經，正典",
+    "definition": "a general rule or standard; an accepted body of great works; the authentic works of a writer; sacred scripture; the official storyline",
+    "chinese": "準則；標準；經典作品；（作家）真作；正典；（作品）正統設定",
     "synonyms": [],
     "example": "I get that this game is a spin-off, but is the story canon?",
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
@@ -389,13 +408,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "chagrin",
     "pronunciation": "[ʃəˈɡrɪn]",
-    "definition": "distress of mind",
-    "chinese": "(因為失敗、出糗而導致的)不安，焦慮",
+    "definition": "annoyance or distress at failure or humiliation; to cause such distress",
+    "chinese": "n. 懊惱；氣惱；v. 使懊惱",
     "synonyms": [
       "humiliate",
       "mortify",
@@ -411,13 +431,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n./v."
   },
   {
     "word": "chastisement",
     "pronunciation": "tʃæ'staizmәnt",
-    "definition": "punishment; scolding",
-    "chinese": "責罵；懲戒",
+    "definition": "severe criticism or scolding; punishment",
+    "chinese": "嚴厲斥責；懲罰",
     "synonyms": [],
     "example": "Public chastisement only made the reluctant employee more defensive.",
     "exampleSource": "Original app examples",
@@ -425,13 +446,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "coerced",
     "pronunciation": "kəʊˈɜ:st",
-    "definition": "forced",
-    "chinese": "被強迫的；受脅迫的",
+    "definition": "forced; obtained by threats or force",
+    "chinese": "被迫的；受脅迫的；以脅迫取得的",
     "synonyms": [],
     "example": "The witness insisted that the confession had been coerced.",
     "exampleSource": "Original app examples",
@@ -439,13 +461,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "cogent",
     "pronunciation": "[ˈkodʒənt]",
-    "definition": "1. convincing; 2. pertinent",
-    "chinese": "令人信服的；相關的",
+    "definition": "clear, logical, and convincing; pertinent",
+    "chinese": "有說服力的；令人信服的；切題的",
     "synonyms": [
       "telling",
       "weighty"
@@ -460,13 +483,14 @@
       "Magoosh vocabulary eBook",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "cognizant",
     "pronunciation": "[ˈkɑːɡnɪzənt]",
-    "definition": "aware",
-    "chinese": "知道的，意識到的",
+    "definition": "having knowledge or awareness; aware",
+    "chinese": "意識到的；知曉的",
     "synonyms": [
       "aware",
       "cognisant"
@@ -479,13 +503,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "conciliate",
     "pronunciation": "[kənˈsɪlɪˌeɪt]",
-    "definition": "lessen the anger",
-    "chinese": "平息，撫慰",
+    "definition": "to placate; to reconcile; to win over by friendly acts",
+    "chinese": "安撫；調解；贏得（好感）",
     "synonyms": [
       "pacify",
       "lenify",
@@ -502,13 +527,14 @@
       "Magoosh vocabulary eBook",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "consummate",
     "pronunciation": "[ˈkɑːnsəmeɪt]",
-    "definition": "1. extremely skilled; 2. perfect",
-    "chinese": "專業的，有造詣的；無紕漏的，完美的",
+    "definition": "showing great skill; complete or perfect; to complete; to make perfect; to complete (a marriage) by sexual intercourse",
+    "chinese": "adj. 技藝高超的；完美的；道地的；v. 完成；使圓滿；完婚",
     "synonyms": [
       "masterful",
       "masterly",
@@ -523,13 +549,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj./v."
   },
   {
     "word": "counterpart",
     "pronunciation": "[ˈkaʊntɚpɑrt]",
-    "definition": "same function or characteristics",
-    "chinese": "(地位、功能)對等的人或物",
+    "definition": "a person or thing with the same function or position as another",
+    "chinese": "對應的人或物；地位相當者",
     "synonyms": [
       "opposite number",
       "vis-a-vis"
@@ -543,13 +570,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "craven",
     "pronunciation": "[ˈkreɪvn]",
-    "definition": "lacking courage",
-    "chinese": "非常懦弱的，因膽小而遭人鄙視的",
+    "definition": "contemptibly lacking in courage; a coward",
+    "chinese": "adj. 怯懦的；膽小的；n. 懦夫",
     "synonyms": [
       "recreant"
     ],
@@ -563,12 +591,13 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj./n."
   },
   {
     "word": "credulousness",
     "pronunciation": "'kredjʊləsnɪs",
-    "definition": "gullibility",
+    "definition": "the quality of believing too readily; gullibility",
     "chinese": "輕信；易受騙",
     "synonyms": [],
     "example": "The scheme succeeded because it exploited the investors' credulousness.",
@@ -577,13 +606,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "derogatory",
     "pronunciation": "di'rɒgәtәri",
-    "definition": "insulting",
-    "chinese": "貶抑的；侮辱的",
+    "definition": "showing a critical or disrespectful attitude; insulting",
+    "chinese": "貶損的；輕蔑的；侮辱的",
     "synonyms": [],
     "example": "The editor removed the derogatory remark from the final article.",
     "exampleSource": "Original app examples",
@@ -591,13 +621,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "descry",
     "pronunciation": "dɪˈskɹaɪ",
-    "definition": "catch sight of",
-    "chinese": "看出、看見、發現",
+    "definition": "to catch sight of; to discern from a distance",
+    "chinese": "看出；遠遠望見；發現",
     "synonyms": [
       "spot",
       "espy",
@@ -613,13 +644,14 @@
       "Open English WordNet 2025",
       "Original app examples"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "despondent",
     "pronunciation": "di'spɒndәnt",
-    "definition": "without hope",
-    "chinese": "沮喪的；失去希望的",
+    "definition": "in low spirits from loss of hope or courage",
+    "chinese": "沮喪的；灰心的；絕望的",
     "synonyms": [],
     "example": "After repeated setbacks, the once-confident team became despondent.",
     "exampleSource": "Original app examples",
@@ -627,13 +659,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "disabuse",
     "pronunciation": "[ˌdɪsəˈbjuːz]",
-    "definition": "free from error, fallacy, misconception",
-    "chinese": "打消錯誤念頭，糾正",
+    "definition": "to free from a mistaken belief",
+    "chinese": "使醒悟；糾正（錯誤觀念）",
     "synonyms": [],
     "example": "Nothing could disabuse them of that preposterous notion.",
     "sources": [
@@ -645,13 +678,14 @@
     ],
     "isHighFrequency": true,
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
-    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/8989367"
+    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/8989367",
+    "partOfSpeech": "v."
   },
   {
     "word": "discern",
     "pronunciation": "[dɪˈsɜːn]",
-    "definition": "perceive; detect",
-    "chinese": "識別，辨別差異",
+    "definition": "to perceive or recognize; to distinguish with difficulty",
+    "chinese": "辨別；察覺；看出；識別",
     "synonyms": [
       "acknowledge",
       "admit",
@@ -670,12 +704,13 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "disconcerting",
     "pronunciation": "ˌdɪskən'sɜ:rtɪŋ",
-    "definition": "troubling; causing uneasiness",
+    "definition": "causing unease or confusion",
     "chinese": "令人不安的；令人困惑的",
     "synonyms": [],
     "example": "The sudden silence was more disconcerting than the earlier argument.",
@@ -684,13 +719,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "dissemble",
     "pronunciation": "[dɪˈsembl]",
-    "definition": "False",
-    "chinese": "用假象隱藏真相，掩飾",
+    "definition": "to conceal one's true motives or feelings; to put on a false appearance",
+    "chinese": "掩飾；假裝；隱藏（真實感情或動機）",
     "synonyms": [
       "feign",
       "sham",
@@ -707,13 +743,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "divulged",
     "pronunciation": "dɪ'vʌldʒd",
-    "definition": "revealed secret or private information",
-    "chinese": "已洩露；已透露",
+    "definition": "revealed (secret or private information)",
+    "chinese": "洩露；透露；公開",
     "synonyms": [],
     "example": "The official divulged the findings only after the review was complete.",
     "exampleSource": "Original app examples",
@@ -721,13 +758,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "eccentricity",
     "pronunciation": ".eksen'trisiti",
-    "definition": "unconventional behavior",
-    "chinese": "古怪之處；反常行為",
+    "definition": "the quality of being unconventional or odd; an odd habit; deviation from a circular path",
+    "chinese": "古怪；怪癖；反常行為；（數學）離心率",
     "synonyms": [],
     "example": "His habit of annotating menus was a harmless eccentricity.",
     "exampleSource": "Original app examples",
@@ -735,13 +773,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "embroiled",
     "pronunciation": "imˈbrɔil",
-    "definition": "deeply involved especially in something complicated",
-    "chinese": "捲入的；糾纏不清的",
+    "definition": "deeply involved in a conflict or difficult situation",
+    "chinese": "捲入（紛爭）的；糾纏不清的",
     "synonyms": [
       "entangled"
     ],
@@ -754,13 +793,14 @@
       "Magoosh vocabulary eBook",
       "Open English WordNet 2025"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "eminent",
     "pronunciation": "[ˈɛmɪnənt]",
-    "definition": "above others",
-    "chinese": "傑出的",
+    "definition": "famous and respected within a particular field; outstanding",
+    "chinese": "傑出的；卓越的；顯著的",
     "synonyms": [
       "high"
     ],
@@ -773,13 +813,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "encomium",
     "pronunciation": "[enˈkoʊmiəm]",
-    "definition": "praise",
-    "chinese": "讚頌之詞",
+    "definition": "a speech or piece of writing that praises someone highly",
+    "chinese": "讚詞；頌詞；讚美",
     "synonyms": [
       "eulogy",
       "panegyric",
@@ -796,12 +837,13 @@
       "Original app examples",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "ensued",
     "pronunciation": "inˈsju:d",
-    "definition": "followed as a result",
+    "definition": "followed afterward or as a result (past tense of ensue)",
     "chinese": "隨後發生；接著出現",
     "synonyms": [],
     "example": "A lengthy debate ensued after the committee announced its proposal.",
@@ -810,13 +852,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "entails",
     "pronunciation": "inˈteilz",
-    "definition": "requires; logically implies",
-    "chinese": "需要；使成為必要",
+    "definition": "requires or involves as a necessary part or consequence (third-person form of entail)",
+    "chinese": "需要；必然包含；使成為必要",
     "synonyms": [],
     "example": "Restoring the bridge entails years of careful engineering work.",
     "exampleSource": "Original app examples",
@@ -824,13 +867,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "entreated",
     "pronunciation": "enˈtri:tid",
-    "definition": "requested urgently",
-    "chinese": "已懇求；已乞求",
+    "definition": "asked earnestly or urgently (past tense of entreat)",
+    "chinese": "懇求；乞求",
     "synonyms": [],
     "example": "Residents entreated the council to preserve the historic market.",
     "exampleSource": "Original app examples",
@@ -838,12 +882,13 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "epitaph",
     "pronunciation": "'epitɑ:f",
-    "definition": "commemorative text on tombstone or monument",
+    "definition": "an inscription on a tombstone; a short text commemorating a person or event",
     "chinese": "墓誌銘；紀念短文",
     "synonyms": [],
     "example": "The brief epitaph captures the poet's wit and humility.",
@@ -852,13 +897,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "equanimity",
     "pronunciation": "ˌɛkwəˈnɪmɪtiː",
-    "definition": "steadiness of mind under stress",
-    "chinese": "平靜、鎮定、沉著",
+    "definition": "mental calmness and composure, especially under stress",
+    "chinese": "沉著；鎮定；平靜",
     "synonyms": [
       "composure",
       "calm",
@@ -874,13 +920,14 @@
       "Gauss workbook",
       "Open English WordNet 2025"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "exonerate",
     "pronunciation": "[ɪɡˈzɑːnəreɪt]",
-    "definition": "free from blame",
-    "chinese": "免除責備",
+    "definition": "to clear from blame or guilt; to free from an obligation",
+    "chinese": "證明無罪；開脫；免除（責任）",
     "synonyms": [
       "acquit",
       "assoil",
@@ -898,13 +945,14 @@
       "Original app examples",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "fatuous",
     "pronunciation": "[ˈfætʃuəs]",
-    "definition": "foolish",
-    "chinese": "愚笨的，昏庸的",
+    "definition": "silly and pointless; foolish in a smug way; inane",
+    "chinese": "愚蠢的；昏庸的；自鳴得意而愚蠢的",
     "synonyms": [
       "asinine",
       "inane"
@@ -918,13 +966,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "fervid",
     "pronunciation": "[ˈfɜːvɪd]",
-    "definition": "1. high temperature; 2. great passion",
-    "chinese": "酷熱的；熱情的",
+    "definition": "intensely enthusiastic or passionate; ardent; (literary) burning hot",
+    "chinese": "熱情的；熱烈的；激情的；酷熱的",
     "synonyms": [
       "ardent",
       "fervent",
@@ -942,13 +991,14 @@
       "Original app examples",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "florid",
     "pronunciation": "[ˈflɔrɪd]",
-    "definition": "full of fancy expressions",
-    "chinese": "辭藻華麗的，花哨的",
+    "definition": "(of style) elaborately ornate; flowery; excessively decorated; (of complexion) ruddy",
+    "chinese": "（文風）華麗的；辭藻浮誇的；過分修飾的；（臉色）紅潤的",
     "synonyms": [
       "aureate",
       "flamboyant"
@@ -963,13 +1013,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "forestall",
     "pronunciation": "[fɔːrˈstɔːl]",
-    "definition": "prevent beforehand",
-    "chinese": "預先阻止",
+    "definition": "to prevent or hinder by acting in advance; to anticipate",
+    "chinese": "預先阻止；搶先；防範",
     "synonyms": [
       "prevent",
       "foreclose",
@@ -986,13 +1037,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "furtively",
     "pronunciation": "'fɜ:tɪvlɪ",
-    "definition": "secretly; evasively",
-    "chinese": "偷偷地；秘密地",
+    "definition": "in a secret, sly manner meant to avoid notice",
+    "chinese": "偷偷地；鬼鬼祟祟地",
     "synonyms": [],
     "example": "The student glanced furtively at the clock during the lecture.",
     "exampleSource": "Original app examples",
@@ -1000,13 +1052,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adv."
   },
   {
     "word": "futile",
     "pronunciation": "[ˈfjʊtaɪl]",
-    "definition": "ineffective",
-    "chinese": "無效的，無用的",
+    "definition": "incapable of producing any useful result; pointless",
+    "chinese": "徒勞的；無效的；無用的",
     "synonyms": [
       "ineffectual",
       "otiose",
@@ -1022,13 +1075,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "garrulous",
     "pronunciation": "[ˈɡærələs]",
-    "definition": "tiresomely talkative",
-    "chinese": "囉嗦的，話多得令人厭煩的",
+    "definition": "excessively talkative, especially about trivial things",
+    "chinese": "喋喋不休的；多話的；饒舌的",
     "synonyms": [
       "chatty",
       "gabby",
@@ -1046,13 +1100,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "gaudy",
     "pronunciation": "[ˈgɔdi]",
-    "definition": "excessively showy",
-    "chinese": "俗麗的",
+    "definition": "extravagantly bright or showy; tastelessly ornate",
+    "chinese": "俗麗的；花俏的；炫耀的",
     "synonyms": [
       "brassy",
       "cheap",
@@ -1069,13 +1124,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "gingerly",
     "pronunciation": "'dʒindʒәli",
-    "definition": "carefully; delicately",
-    "chinese": "小心翼翼地；謹慎地",
+    "definition": "in a careful or cautious manner; cautious",
+    "chinese": "adv. 小心翼翼地；謹慎地；adj. 小心翼翼的",
     "synonyms": [],
     "example": "The conservator gingerly lifted the fragile manuscript from its case.",
     "exampleSource": "Original app examples",
@@ -1083,13 +1139,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adv./adj."
   },
   {
     "word": "goad",
     "pronunciation": "[ɡod]",
-    "definition": "incite; rouse",
-    "chinese": "刺激，驅使，激發",
+    "definition": "to provoke or urge into action; to spur; a stimulus; a pointed stick for driving cattle",
+    "chinese": "v. 刺激；驅使；激勵；n. 刺激物；刺棒",
     "synonyms": [
       "spur"
     ],
@@ -1101,13 +1158,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v./n."
   },
   {
     "word": "gouge",
     "pronunciation": "gaudʒ",
-    "definition": "cheat; extort",
-    "chinese": "敲竹槓；挖出",
+    "definition": "to overcharge or swindle; to scoop out; a chisel with a curved blade; a deep groove",
+    "chinese": "v. 敲竹槓；剝削；挖出；n. 圓鑿；鑿痕",
     "synonyms": [],
     "example": "Reputable vendors do not gouge customers during an emergency.",
     "exampleSource": "Original app examples",
@@ -1115,13 +1173,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v./n."
   },
   {
     "word": "gregarious",
     "pronunciation": "[grɪˈgɛrɪəs]",
-    "definition": "1. enjoy the company; 2. group with others",
-    "chinese": "愛社交的；群居的",
+    "definition": "fond of company; sociable; (of animals) living in groups",
+    "chinese": "愛交際的；合群的；（動物）群居的",
     "synonyms": [],
     "example": "Often we think that great leaders are those who are gregarious, always in the middle of a large group of people; yet, as Mahatma Gandhi and many others have shown us, leaders can often be introverted.",
     "exampleSource": "GRE Contextual Vocabulary · authorized copy",
@@ -1133,13 +1192,14 @@
       "Magoosh vocabulary eBook",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "hereditary",
     "pronunciation": "hi'reditәri",
-    "definition": "inherited; ancestral",
-    "chinese": "遺傳的；世襲的",
+    "definition": "passed on genetically; inherited by succession; handed down from ancestors",
+    "chinese": "遺傳的；世襲的；祖傳的",
     "synonyms": [],
     "example": "Researchers found that the disorder was hereditary rather than contagious.",
     "exampleSource": "Original app examples",
@@ -1147,13 +1207,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "hiatus",
     "pronunciation": "hai'eitәs",
-    "definition": "temporary break; gap",
-    "chinese": "中斷；間隙",
+    "definition": "a break or interruption in continuity; a gap",
+    "chinese": "中斷；暫停；空隙",
     "synonyms": [],
     "example": "The journal returned after a two-year publication hiatus.",
     "exampleSource": "Original app examples",
@@ -1161,13 +1222,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "histrionics",
     "pronunciation": ",histri'ɔniks",
-    "definition": "overly dramatic and emotional behavior",
-    "chinese": "誇張的情緒表現；裝腔作勢",
+    "definition": "exaggerated dramatic behavior meant to draw attention; theatrical performances",
+    "chinese": "誇張做作的舉止；裝腔作勢；戲劇表演",
     "synonyms": [],
     "example": "Her calm rebuttal ended the debate without unnecessary histrionics.",
     "exampleSource": "Original app examples",
@@ -1175,13 +1237,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "hortatory",
     "pronunciation": "ˈhɔɹtətɔɹi",
-    "definition": "giving strong encouragement",
-    "chinese": "激勵的",
+    "definition": "giving strong encouragement; exhorting",
+    "chinese": "勸誡的；激勵的；鼓勵的",
     "synonyms": [
       "exhortative",
       "exhortatory",
@@ -1197,13 +1260,14 @@
       "Open English WordNet 2025",
       "Original app examples"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "hyperbole",
     "pronunciation": "[haɪˈpɜːbəli]",
-    "definition": "exaggeration used for emphasis",
-    "chinese": "誇張",
+    "definition": "deliberate exaggeration used for emphasis",
+    "chinese": "誇飾；誇張法；誇大其詞",
     "synonyms": [
       "exaggeration"
     ],
@@ -1216,13 +1280,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "imminent",
     "pronunciation": "ˈɪmɪnənt",
-    "definition": "close in time; about to occur",
-    "chinese": "即將來臨的、逼近的",
+    "definition": "about to happen; impending",
+    "chinese": "即將發生的；迫近的",
     "synonyms": [
       "at hand",
       "close at hand",
@@ -1239,13 +1304,14 @@
     ],
     "isHighFrequency": true,
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
-    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/2946075"
+    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/2946075",
+    "partOfSpeech": "adj."
   },
   {
     "word": "impugn",
     "pronunciation": "[ɪmˈpjuːn]",
-    "definition": "attack as false",
-    "chinese": "責難，抨擊",
+    "definition": "to call into question; to attack as false or wrong",
+    "chinese": "質疑；抨擊；責難（動機或誠信）",
     "synonyms": [],
     "example": "The father does not impugn her ability to be a good mother.",
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
@@ -1256,13 +1322,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "incisively",
     "pronunciation": "ɪn'saɪsɪvlɪ",
-    "definition": "analytically; intelligently",
-    "chinese": "敏銳而有力地",
+    "definition": "in a keenly perceptive and direct way",
+    "chinese": "敏銳地；一針見血地；犀利地",
     "synonyms": [],
     "example": "The reviewer incisively identified the argument's central weakness.",
     "exampleSource": "Original app examples",
@@ -1270,12 +1337,13 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adv."
   },
   {
     "word": "inconspicuous",
     "pronunciation": ".inkәn'spikjuәs",
-    "definition": "not readily noticed",
+    "definition": "not readily noticed; not attracting attention",
     "chinese": "不顯眼的；不引人注意的",
     "synonyms": [],
     "example": "The sensor is small enough to remain inconspicuous on the wall.",
@@ -1284,13 +1352,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "indigenous",
     "pronunciation": "[ɪnˈdɪdʒənəs]",
-    "definition": "1. originating; 2. innermost nature",
-    "chinese": "土產的，本地的；與生俱來的，先天的",
+    "definition": "originating naturally in a region; native; of the original inhabitants; inherent",
+    "chinese": "本土的；原生的；原住民的；固有的",
     "synonyms": [
       "autochthonal",
       "autochthonic",
@@ -1306,12 +1375,13 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "indignation",
     "pronunciation": ".indig'neiʃәn",
-    "definition": "anger over injustice",
+    "definition": "anger provoked by something unjust or wrong",
     "chinese": "憤慨；義憤",
     "synonyms": [],
     "example": "The unfair accusation provoked widespread indignation among the researchers.",
@@ -1320,13 +1390,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "inept",
     "pronunciation": "[ɪˈnept]",
-    "definition": "1. lack of judgment; 2. incompetent",
-    "chinese": "愚笨的，荒謬的；不稱職的，無能力的",
+    "definition": "lacking skill or competence; clumsy; inappropriate; absurd",
+    "chinese": "無能的；笨拙的；不得當的；荒謬的",
     "synonyms": [
       "awkward",
       "clumsy",
@@ -1344,13 +1415,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "infamy",
     "pronunciation": "'infәmi",
-    "definition": "reputation for evil",
-    "chinese": "惡名；聲名狼藉",
+    "definition": "evil reputation; the state of being notorious; a shameful act",
+    "chinese": "惡名；聲名狼藉；醜行",
     "synonyms": [],
     "example": "The failed expedition passed into infamy because its leaders ignored repeated warnings.",
     "exampleSource": "Original app examples",
@@ -1358,13 +1430,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "iniquity",
     "pronunciation": "[ɪˈnɪkwəti]",
-    "definition": "immorality injustice",
-    "chinese": "邪惡，不公正",
+    "definition": "gross injustice; immoral behavior; a wicked act",
+    "chinese": "極不公正；邪惡；罪行",
     "synonyms": [
       "evil",
       "immorality",
@@ -1378,13 +1451,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "insensible",
     "pronunciation": "[ɪnˈsɛnsəbl]",
-    "definition": "lost consciousness",
-    "chinese": "無知覺的",
+    "definition": "unaware (of); lacking sensation; unconscious; indifferent; too slight to be perceived",
+    "chinese": "未察覺的；無知覺的；不省人事的；麻木的；難以察覺的",
     "synonyms": [],
     "example": "Lucy lay senseless on the ground, insensible of the wonderful deliverance which she had experienced.",
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
@@ -1394,13 +1468,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "intransigent",
     "pronunciation": "[ɪnˈtrænzɪdʒənt]",
-    "definition": "refusal to compromise",
-    "chinese": "不妥協的，固執的",
+    "definition": "unwilling to change one's views or to compromise; uncompromising",
+    "chinese": "不妥協的；固執的；不讓步的",
     "synonyms": [
       "contumacious",
       "intractable",
@@ -1417,13 +1492,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "jovially",
     "pronunciation": "'dʒəʊvɪəlɪ",
-    "definition": "in a jolly way",
-    "chinese": "愉快地；快活地",
+    "definition": "in a cheerful, friendly, good-humored way",
+    "chinese": "快活地；愉快地",
     "synonyms": [],
     "example": "The host jovially welcomed every guest at the door.",
     "exampleSource": "Original app examples",
@@ -1431,13 +1507,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adv."
   },
   {
     "word": "lacerate",
     "pronunciation": "[ˈlæsəret]",
-    "definition": "cause pain",
-    "chinese": "使非常痛苦",
+    "definition": "to tear or deeply cut (flesh or skin); to wound the feelings of; to criticize harshly",
+    "chinese": "撕裂；割傷；使痛苦；嚴厲抨擊",
     "synonyms": [
       "lacerated"
     ],
@@ -1449,13 +1526,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "liberty",
     "pronunciation": "'libәli",
-    "definition": "freedom",
-    "chinese": "自由；自主權",
+    "definition": "freedom; the right to act as one chooses; presumptuous or overly familiar behavior",
+    "chinese": "自由；自主權；冒昧；放肆",
     "synonyms": [],
     "example": "The constitution protects individual liberty while permitting reasonable regulation.",
     "exampleSource": "Original app examples",
@@ -1463,13 +1541,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "licentious",
     "pronunciation": "[laɪˈsenʃəs]",
-    "definition": "lacking restraint",
-    "chinese": "放蕩的，性慾強的",
+    "definition": "sexually unrestrained; lacking moral restraint; disregarding rules",
+    "chinese": "放蕩的；淫亂的；放肆的；不守規範的",
     "synonyms": [],
     "example": "He was converted from his licentious living.",
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
@@ -1479,13 +1558,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "loquacious",
     "pronunciation": "[ləˈkweɪʃəs]",
-    "definition": "excessive talk",
-    "chinese": "話多的",
+    "definition": "very talkative; garrulous",
+    "chinese": "多話的；健談的；喋喋不休的",
     "synonyms": [
       "chatty",
       "gabby",
@@ -1503,13 +1583,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "lucidity",
     "pronunciation": "lu:'siditi",
-    "definition": "clarity",
-    "chinese": "清晰；明澈",
+    "definition": "clarity of expression; clearness of thought; sanity; transparency",
+    "chinese": "清晰；明晰；神智清醒；清澈",
     "synonyms": [],
     "example": "The essay's lucidity makes a difficult theory accessible.",
     "exampleSource": "Original app examples",
@@ -1517,13 +1598,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "ludicrous",
     "pronunciation": "[ˈludɪkrəs]",
-    "definition": "meriting derisive laughter",
-    "chinese": "荒唐的，可笑的",
+    "definition": "so absurd as to be laughable; ridiculous",
+    "chinese": "荒謬的；可笑的；荒唐的",
     "synonyms": [
       "farcical",
       "ridiculous"
@@ -1538,13 +1620,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "magnanimous",
     "pronunciation": "mæɡˈnæn.ɪ.məs",
-    "definition": "noble and generous in spirit",
-    "chinese": "寬宏大量的、有雅量的",
+    "definition": "noble and generous in spirit, esp. toward a rival or offender",
+    "chinese": "寬宏大量的；有雅量的；慷慨的",
     "synonyms": [
       "greathearted"
     ],
@@ -1558,13 +1641,14 @@
     ],
     "isHighFrequency": true,
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
-    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/13169235"
+    "exampleSourceURL": "https://tatoeba.org/en/sentences/show/13169235",
+    "partOfSpeech": "adj."
   },
   {
     "word": "minatory",
     "pronunciation": "[ˈmɪnətɔːri]",
-    "definition": "a sign of evil",
-    "chinese": "帶來威脅的，有凶兆的",
+    "definition": "expressing a threat; menacing; ominous",
+    "chinese": "威脅的；恐嚇的；有凶兆的",
     "synonyms": [
       "baleful",
       "forbidding",
@@ -1583,13 +1667,14 @@
       "Original app examples",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "mollify",
     "pronunciation": "[ˈmɑːlɪfaɪ]",
-    "definition": "calm",
-    "chinese": "平息，撫慰，緩和",
+    "definition": "to calm or soothe the anger of; to appease; to lessen in intensity",
+    "chinese": "安撫；平息（怒氣）；緩和",
     "synonyms": [
       "pacify",
       "lenify",
@@ -1608,13 +1693,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "morass",
     "pronunciation": "mә'ræs",
-    "definition": "swamp; complicated, confusing or troublesome situation",
-    "chinese": "困境；泥淖",
+    "definition": "a complicated or confusing situation; a swamp or bog",
+    "chinese": "困境；亂局；泥淖；沼澤",
     "synonyms": [],
     "example": "The simple dispute became a legal morass after several appeals.",
     "exampleSource": "Original app examples",
@@ -1622,13 +1708,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "obviate",
     "pronunciation": "[ˈɑːbvieɪt]",
-    "definition": "unnecessary",
-    "chinese": "排除，使不必要",
+    "definition": "to remove (a need or difficulty); to make unnecessary; to prevent",
+    "chinese": "排除；消除；使不必要；預防",
     "synonyms": [
       "rid of",
       "eliminate"
@@ -1643,13 +1730,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "pageant",
     "pronunciation": "ˈpædʒənt",
-    "definition": "an elaborate representation of scenes from history etc.; usually involves a parade with rich costumes",
-    "chinese": "盛會、遊行、虛飾、露天表演",
+    "definition": "a public spectacle with elaborate costumes, often depicting history; an impressive display; a beauty contest; empty or showy display",
+    "chinese": "盛大遊行；露天歷史劇；壯觀場面；選美比賽；虛飾",
     "synonyms": [
       "pageantry"
     ],
@@ -1663,13 +1751,14 @@
       "Open English WordNet 2025",
       "Tatoeba Corpus"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "pecuniary",
     "pronunciation": "[pɪˈkjuːnieri]",
-    "definition": "money",
-    "chinese": "金錢上的",
+    "definition": "relating to or consisting of money",
+    "chinese": "金錢的；金錢上的；財務的",
     "synonyms": [
       "monetary"
     ],
@@ -1682,13 +1771,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "perilous",
     "pronunciation": "[ˈpɛrələs]",
-    "definition": "involving potential loss",
-    "chinese": "危險的",
+    "definition": "full of danger or risk; hazardous; precarious",
+    "chinese": "危險的；冒險的；岌岌可危的",
     "synonyms": [
       "parlous",
       "precarious",
@@ -1703,13 +1793,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "petulant",
     "pronunciation": "[ˈpɛtʃələnt]",
-    "definition": "easily irritated",
-    "chinese": "易怒的，愛發脾氣的",
+    "definition": "childishly sulky or bad-tempered; easily irritated",
+    "chinese": "任性易怒的；愛發脾氣的；耍性子的",
     "synonyms": [
       "cranky",
       "fractious",
@@ -1728,13 +1819,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "preclude",
     "pronunciation": "[prɪˈklud]",
-    "definition": "make impossible in advance",
-    "chinese": "預先阻止",
+    "definition": "to prevent from happening; to make impossible in advance; to rule out",
+    "chinese": "排除；阻止；使不可能；預先防止",
     "synonyms": [
       "prevent",
       "forestall",
@@ -1751,13 +1843,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "prevarication",
     "pronunciation": "pri.væri'keiʃәn",
-    "definition": "lying",
-    "chinese": "支吾其詞；閃爍其辭",
+    "definition": "evasive speech or action; deliberate deviation from the truth; lying",
+    "chinese": "支吾其詞；推諉；搪塞；說謊",
     "synonyms": [],
     "example": "Repeated prevarication damaged the spokesperson's credibility.",
     "exampleSource": "Original app examples",
@@ -1765,13 +1858,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "proclaimed",
     "pronunciation": "prəˈkleimd",
-    "definition": "announced; formally declared",
-    "chinese": "已宣告；已正式宣佈",
+    "definition": "announced or declared officially (past of proclaim); openly declared or acknowledged",
+    "chinese": "v. 宣告；宣布；正式宣稱；adj. 公開宣稱的；公認的",
     "synonyms": [],
     "example": "The panel proclaimed the experiment a success after reviewing the data.",
     "exampleSource": "Original app examples",
@@ -1779,13 +1873,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v./adj."
   },
   {
     "word": "prolific",
     "pronunciation": "ˌpɹəˈlɪf.ɪk",
-    "definition": "intellectually productive",
-    "chinese": "有生殖力的、多產的、豐富的",
+    "definition": "producing much work or many results; plentiful; producing many offspring",
+    "chinese": "多產的；豐富的；繁殖力強的；大量的",
     "synonyms": [
       "fecund",
       "fertile"
@@ -1800,13 +1895,14 @@
       "Gauss workbook",
       "Open English WordNet 2025"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "prone",
     "pronunciation": "prәun",
-    "definition": "likely to",
-    "chinese": "容易有某種傾向的；俯臥的",
+    "definition": "likely to suffer or do something; inclined to; lying face downward",
+    "chinese": "易於……的；有……傾向的；俯臥的；趴著的",
     "synonyms": [],
     "example": "Coastal roads are prone to flooding during severe storms.",
     "exampleSource": "Original app examples",
@@ -1814,13 +1910,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "propensity",
     "pronunciation": "[prəˈpɛnsəti]",
-    "definition": "a natural inclination",
-    "chinese": "傾向，癖好",
+    "definition": "a natural inclination or tendency",
+    "chinese": "傾向；癖好；習性",
     "synonyms": [
       "leaning",
       "tendency"
@@ -1835,13 +1932,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "protracting",
     "pronunciation": "prəʊˈtræktɪŋ",
-    "definition": "lengthening",
-    "chinese": "拖延；延長",
+    "definition": "prolonging; drawing out in time (present participle of protract)",
+    "chinese": "拖延；延長；使拖長",
     "synonyms": [],
     "example": "Further procedural objections were merely protracting the negotiations.",
     "exampleSource": "Original app examples",
@@ -1849,13 +1947,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "querulous",
     "pronunciation": "[ˈkwerələs]",
-    "definition": "complaining",
-    "chinese": "抱怨的，愛發牢騷的",
+    "definition": "complaining in a whining or petulant way; peevish",
+    "chinese": "愛抱怨的；發牢騷的；易怒的",
     "synonyms": [
       "fretful",
       "whiney",
@@ -1870,13 +1969,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "quibbles",
     "pronunciation": "ˈkwɪbəlz",
-    "definition": "trivial complaints or objections",
-    "chinese": "吹毛求疵的異議；遁詞",
+    "definition": "trivial complaints or objections; evasive arguments",
+    "chinese": "小異議；吹毛求疵的批評；遁詞",
     "synonyms": [],
     "example": "Minor quibbles should not obscure the proposal's broad merits.",
     "exampleSource": "Original app examples",
@@ -1884,13 +1984,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "refractory",
     "pronunciation": "[rɪˈfræktəri]",
-    "definition": "resisting control",
-    "chinese": "倔強的，不順從的",
+    "definition": "stubbornly resistant to authority or control; (of a disease) not responsive to treatment; (of a material) heat-resistant",
+    "chinese": "倔強的；難駕馭的；（疾病）難治的；耐高溫的；難熔的",
     "synonyms": [
       "contumacious",
       "intractable",
@@ -1907,13 +2008,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "rejoinder",
     "pronunciation": "ri'dʒɒindә",
-    "definition": "quick reply",
-    "chinese": "機敏的回答；反駁",
+    "definition": "a quick, sharp, or witty reply; a retort; (law) a defendant's answer to a plaintiff's reply",
+    "chinese": "機敏的回答；反駁；（法律）被告第二次答辯",
     "synonyms": [],
     "example": "Her concise rejoinder exposed the weakness of the criticism.",
     "exampleSource": "Original app examples",
@@ -1921,13 +2023,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "resilient",
     "pronunciation": "ri'ziliәnt",
-    "definition": "capable of recovering easily",
-    "chinese": "有韌性的；能迅速復原的",
+    "definition": "able to withstand or recover quickly from difficult conditions; (of a material) springing back into shape",
+    "chinese": "有韌性的；能迅速復原的；有彈性的",
     "synonyms": [],
     "example": "The resilient ecosystem recovered quickly after the drought.",
     "exampleSource": "Original app examples",
@@ -1935,13 +2038,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "reverberate",
     "pronunciation": "[rɪˈvɜːbəˈret]",
-    "definition": "continue to be repeated",
-    "chinese": "迴盪，迴響",
+    "definition": "(of a sound) to be repeated as an echo; to have continuing and serious effects",
+    "chinese": "迴盪；迴響；產生持續影響",
     "synonyms": [
       "resound",
       "echo",
@@ -1955,13 +2059,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "saturate",
     "pronunciation": "[ˈsætʃərɪt]",
-    "definition": "wet thoroughly",
-    "chinese": "使飽和，浸透",
+    "definition": "to soak thoroughly; to fill completely; to cause to reach saturation; to supply a market beyond demand",
+    "chinese": "浸透；使充滿；使飽和；（市場）飽和",
     "synonyms": [],
     "example": "Kaleidoscopic prints saturate my blank mind, creating vital memories and burning thoughts.",
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
@@ -1971,13 +2076,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "sentient",
     "pronunciation": "'senʃәnt",
-    "definition": "conscious; able to perceive",
-    "chinese": "有知覺的；能感受的",
+    "definition": "able to perceive or feel things; conscious",
+    "chinese": "有知覺的；有意識的；能感受的",
     "synonyms": [],
     "example": "The novel asks whether an artificial intelligence could become sentient.",
     "exampleSource": "Original app examples",
@@ -1985,13 +2091,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "soporific",
     "pronunciation": "[ˌsɑpəˈrɪfɪk]",
-    "definition": "1. induces sleep; 2. cause sleep",
-    "chinese": "催眠的藥劑，安眠藥；催眠的",
+    "definition": "tending to induce sleep; tediously boring; a drug or thing that induces sleep",
+    "chinese": "adj. 催眠的；令人昏昏欲睡的；n. 安眠藥；催眠物",
     "synonyms": [
       "lethargic",
       "sluggish",
@@ -2008,13 +2115,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj./n."
   },
   {
     "word": "spurious",
     "pronunciation": "[ˈspjʊriəs]",
-    "definition": "lacking authenticity",
-    "chinese": "假的，偽造的",
+    "definition": "not genuine; fake; based on false reasoning",
+    "chinese": "虛假的；偽造的；謬誤的；似是而非的",
     "synonyms": [
       "meretricious",
       "specious"
@@ -2029,13 +2137,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "stammered",
     "pronunciation": "ˈstæməd",
-    "definition": "spoke haltingly, with unintended pauses and repetitions",
-    "chinese": "已結巴地說；已口吃",
+    "definition": "spoke haltingly, with involuntary pauses and repetitions (past tense of stammer)",
+    "chinese": "結巴地說；口吃",
     "synonyms": [],
     "example": "Surprised by the accusation, he stammered an incomplete reply.",
     "exampleSource": "Original app examples",
@@ -2043,13 +2152,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "stolidity",
     "pronunciation": "stә'liditi",
-    "definition": "emotionlessness",
-    "chinese": "冷漠；遲鈍；不動聲色",
+    "definition": "the quality of showing little emotion; impassiveness",
+    "chinese": "冷漠；無動於衷；遲鈍",
     "synonyms": [],
     "example": "The guard's stolidity concealed considerable anxiety.",
     "exampleSource": "Original app examples",
@@ -2057,7 +2167,8 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "stymied",
@@ -2071,13 +2182,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "subsided",
     "pronunciation": "səbˈsaidid",
-    "definition": "diminished; abated",
-    "chinese": "已減弱；已平息",
+    "definition": "diminished or abated (past tense of subside)",
+    "chinese": "減弱；平息；消退",
     "synonyms": [],
     "example": "The crowd resumed its discussion after the noise subsided.",
     "exampleSource": "Original app examples",
@@ -2085,13 +2197,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "taciturn",
     "pronunciation": "[ˈtæsɪtɜːrn]",
-    "definition": "disinclined to talk",
-    "chinese": "沉默寡言的，話少的",
+    "definition": "reserved and uncommunicative in speech",
+    "chinese": "沉默寡言的；不愛說話的",
     "synonyms": [],
     "example": "Jason was a taciturn individual, so it was always a real surprise when he said anything.",
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
@@ -2103,13 +2216,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "tirade",
     "pronunciation": "[ˈtaɪred]",
-    "definition": "angry, of censorious or denunciatory",
-    "chinese": "長篇抨擊性演講",
+    "definition": "a long, angry speech of criticism or accusation",
+    "chinese": "長篇激烈的抨擊；激烈的長篇演說",
     "synonyms": [
       "philippic",
       "broadside"
@@ -2123,12 +2237,13 @@
       "Magoosh vocabulary eBook",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "tome",
     "pronunciation": "tәum",
-    "definition": "scholarly book",
+    "definition": "a large, heavy, scholarly book",
     "chinese": "厚重的大書；學術鉅著",
     "synonyms": [],
     "example": "The historian's new tome examines three centuries of regional trade.",
@@ -2137,13 +2252,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "torpor",
     "pronunciation": "[ˈtɔrpɚ]",
-    "definition": "1. lack of interest; 2. inertness",
-    "chinese": "缺乏興趣；(肉體或精神上的)遲鈍，懶散",
+    "definition": "a state of physical or mental inactivity; lethargy; apathy; dormancy",
+    "chinese": "遲鈍；麻木；懶散；冷漠；蟄伏",
     "synonyms": [
       "torpidity"
     ],
@@ -2156,13 +2272,14 @@
       "Original app examples",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n."
   },
   {
     "word": "tractable",
     "pronunciation": "[ˈtræktəbl]",
-    "definition": "giving in",
-    "chinese": "易駕馭的，溫順的",
+    "definition": "easy to deal with or control; docile; manageable",
+    "chinese": "易處理的；易駕馭的；溫順的",
     "synonyms": [
       "manipulable"
     ],
@@ -2175,12 +2292,13 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "unabated",
     "pronunciation": ".ʌnә'beitid",
-    "definition": "continued at full strength",
+    "definition": "continuing without any reduction in intensity",
     "chinese": "未減弱的；持續強烈的",
     "synonyms": [],
     "example": "Public interest in the discovery continued unabated for months.",
@@ -2189,13 +2307,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "unassailable",
     "pronunciation": "[ˌʌnəˈseɪləbl]",
-    "definition": "not to be violated",
-    "chinese": "無可爭辯的，無法否認的，不可褻瀆的",
+    "definition": "unable to be challenged or questioned; impossible to attack or defeat",
+    "chinese": "無可辯駁的；無可置疑的；攻不破的",
     "synonyms": [
       "impregnable",
       "inviolable",
@@ -2212,13 +2331,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "unassuming",
     "pronunciation": "'ʌnә'sju:miŋ",
-    "definition": "modest",
-    "chinese": "謙遜的；不張揚的",
+    "definition": "not pretentious or arrogant; modest",
+    "chinese": "謙遜的；不張揚的；不擺架子的",
     "synonyms": [],
     "example": "The unassuming scientist rarely mentioned her many awards.",
     "exampleSource": "Original app examples",
@@ -2226,13 +2346,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "undaunted",
     "pronunciation": ".ʌn'dɒ:ntid",
-    "definition": "not discouraged; resolute",
-    "chinese": "不畏懼的；勇敢堅定的",
+    "definition": "not intimidated or discouraged by difficulty; resolute",
+    "chinese": "無畏的；不屈不撓的；勇敢堅定的",
     "synonyms": [],
     "example": "Undaunted by the initial rejection, the team revised its proposal.",
     "exampleSource": "Original app examples",
@@ -2240,13 +2361,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "vacated",
     "pronunciation": "ˈveɪˌkeɪtid",
-    "definition": "left; emptied",
-    "chinese": "已離開；已空出",
+    "definition": "left or emptied (a place); gave up (a position); annulled (a ruling)",
+    "chinese": "空出；騰出；離開；（法律）撤銷",
     "synonyms": [],
     "example": "The tenants vacated the building before repairs began.",
     "exampleSource": "Original app examples",
@@ -2254,13 +2376,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "vacillated",
     "pronunciation": "ˈvæsəˌleɪtid",
-    "definition": "shifted indecisively",
-    "chinese": "已猶豫不決；已搖擺",
+    "definition": "wavered indecisively between options; swayed back and forth",
+    "chinese": "猶豫不決；搖擺不定",
     "synonyms": [],
     "example": "The committee vacillated between caution and rapid reform.",
     "exampleSource": "Original app examples",
@@ -2268,7 +2391,8 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "venerated",
@@ -2282,13 +2406,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   },
   {
     "word": "vicariously",
     "pronunciation": "",
-    "definition": "secondhand; indirectly",
-    "chinese": "間接地；設身處地地",
+    "definition": "through the experiences of another person; secondhand; in place of another",
+    "chinese": "間接地；感同身受地；代替地",
     "synonyms": [],
     "example": "Readers experience the explorer's discoveries vicariously through her journals.",
     "exampleSource": "Original app examples",
@@ -2296,13 +2421,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adv."
   },
   {
     "word": "vying",
     "pronunciation": "'vaiiŋ",
-    "definition": "competing with",
-    "chinese": "競爭中的；爭取中的",
+    "definition": "competing eagerly with others for something",
+    "chinese": "競爭；爭奪",
     "synonyms": [],
     "example": "Several laboratories are vying to reproduce the surprising result.",
     "exampleSource": "Original app examples",
@@ -2310,13 +2436,14 @@
     "sources": [
       "GRE Contextual Vocabulary · authorized copy"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "v."
   },
   {
     "word": "welter",
     "pronunciation": "[ˈweltər]",
-    "definition": "disorder",
-    "chinese": "混亂，動亂",
+    "definition": "a confused mass; turmoil; to roll or wallow; to be deeply involved",
+    "chinese": "n. 混亂；雜亂的一團；v. 翻滾；沉溺",
     "synonyms": [],
     "example": "Without a word, he had disappeared into the welter of the noonday crowd.",
     "exampleSource": "Tatoeba Corpus · CC BY 2.0 FR",
@@ -2328,13 +2455,14 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "n./v."
   },
   {
     "word": "whimsical",
     "pronunciation": "[ˈwɪmzɪkl]",
-    "definition": "sudden illogical changes",
-    "chinese": "反覆無常的",
+    "definition": "playfully quaint or fanciful; odd; acting on whim; capricious",
+    "chinese": "古怪的；異想天開的；奇特有趣的；反覆無常的",
     "synonyms": [
       "capricious",
       "impulsive"
@@ -2348,6 +2476,7 @@
       "Tatoeba Corpus",
       "liurui39660/3000"
     ],
-    "isHighFrequency": true
+    "isHighFrequency": true,
+    "partOfSpeech": "adj."
   }
 ]

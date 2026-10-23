@@ -22,3 +22,7 @@ Some bundled English example sentences come from the [Tatoeba Corpus](https://ta
 - Other Tatoeba records are used under [Creative Commons Attribution 2.0 France](https://creativecommons.org/licenses/by/2.0/fr/).
 
 No Tatoeba audio is included.
+
+## Kokoro-82M pronunciation clips
+
+The bundled `WordPronunciations.pack` contains one pre-rendered pronunciation clip per headword, synthesized at build time with the [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) model and its `af_heart` voice. The model weights and voices are released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Neither the model nor any Python, PyTorch, or phonemizer library is bundled or linked; the app only plays the generated AAC audio with AVFoundation.
