@@ -1,0 +1,698 @@
+[
+ {
+  "id": "sp2-01",
+  "difficulty": "easy",
+  "passage": "In the earliest years of cinema, most films consisted of a single shot recorded by a stationary camera, and audiences were content simply to watch movement reproduced on a screen. Within little more than a decade, however, filmmakers had developed a set of editing conventions that allowed stories to unfold across many shots without confusing viewers. Chief among these was the principle of continuity, according to which each cut should preserve the spatial and temporal logic of the action. A character who exits the frame on the right, for instance, should enter the next shot from the left, so that the viewer perceives a single uninterrupted movement. Such conventions were not inevitable discoveries but choices, and some later directors deliberately violated them to unsettle audiences. Nevertheless, continuity editing proved so effective that it remains the default grammar of narrative film. Its very success, ironically, has made it nearly invisible: most viewers notice editing only when a filmmaker breaks the rules.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that the author uses to illustrate the principle of continuity.",
+    "sentence": "A character who exits the frame on the right, for instance, should enter the next shot from the left, so that the viewer perceives a single uninterrupted movement.",
+    "explanation": "This sentence gives a concrete case (a character exiting right and entering from the left) of how a cut preserves the spatial logic of the action, which is what the principle of continuity requires. The other sentences define, evaluate, or comment on the convention without illustrating it."
+   },
+   {
+    "type": "single",
+    "prompt": "The primary purpose of the passage is to",
+    "options": [
+     "describe the origin and lasting influence of a filmmaking convention",
+     "argue that early single-shot films were artistically superior to edited films",
+     "explain why some directors chose to violate the rules of continuity editing",
+     "compare the editing practices of early filmmakers with those of later directors",
+     "criticize audiences for failing to notice how films are edited"
+    ],
+    "answer": 0,
+    "explanation": "The passage traces how continuity editing developed and explains why it remains the default grammar of narrative film. Directors who break the rules are mentioned only briefly, and the passage neither ranks early films above later ones nor faults audiences."
+   },
+   {
+    "type": "multiple",
+    "prompt": "It can be inferred from the passage that continuity editing Consider each of the choices separately and select all that apply.",
+    "options": [
+     "was not the only possible way of organizing a sequence of shots",
+     "was developed chiefly to reduce the cost of making films",
+     "is generally not consciously noticed by viewers"
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "The first choice follows from the statement that the conventions were choices rather than inevitable discoveries. The third follows from the final sentence, which says the convention is nearly invisible. Cost is never mentioned, so the second choice is unsupported."
+   }
+  ]
+ },
+ {
+  "id": "sp2-02",
+  "difficulty": "easy",
+  "passage": "The French Impressionists are often celebrated for painting outdoors, directly before their subjects, but this practice depended on a modest technological innovation. Before the middle of the nineteenth century, painters typically ground their own pigments and mixed them with oil in the studio, storing the results in pig bladders that were difficult to transport and prone to bursting. The invention of the collapsible metal paint tube changed this situation considerably. Tubes kept paint fresh for long periods and could be carried easily into fields, forests, and city streets. Manufacturers also began to offer new synthetic pigments, giving artists brighter colors than earlier painters had possessed. It would be a mistake, however, to conclude that the tube alone produced Impressionism, since many painters with access to the same materials continued to work in traditional ways. The innovation made outdoor painting practical; it did not make it inevitable.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that offers evidence against the view that the paint tube by itself gave rise to Impressionism.",
+    "sentence": "It would be a mistake, however, to conclude that the tube alone produced Impressionism, since many painters with access to the same materials continued to work in traditional ways.",
+    "explanation": "This sentence cites evidence: many painters who had the same materials kept working traditionally, so the tube cannot by itself explain the new movement. The final sentence states the author's conclusion but gives no evidence for it."
+   },
+   {
+    "type": "single",
+    "prompt": "According to the passage, one drawback of the way paint was stored before the invention of the tube was that the containers",
+    "options": [
+     "changed the color of the pigments over time",
+     "were difficult to carry and could break open",
+     "could be purchased only from a few suppliers",
+     "held too little paint for large canvases",
+     "required painters to work in brightly lit studios"
+    ],
+    "answer": 1,
+    "explanation": "The second sentence says pig bladders were difficult to transport and prone to bursting. None of the other drawbacks is mentioned."
+   },
+   {
+    "type": "single",
+    "prompt": "The final sentence of the passage primarily serves to",
+    "options": [
+     "introduce a new topic that the author will go on to discuss",
+     "summarize the author's view of the relationship between an invention and an artistic practice",
+     "concede that the paint tube had little effect on painting",
+     "reject the claim that the Impressionists painted outdoors",
+     "suggest that synthetic pigments mattered more than paint tubes"
+    ],
+    "answer": 1,
+    "explanation": "The final sentence briefly restates the author's position: the tube made outdoor painting possible but did not cause it. It neither dismisses the tube's effect nor introduces anything new."
+   }
+  ]
+ },
+ {
+  "id": "sp2-03",
+  "difficulty": "easy",
+  "passage": "The harpsichord, which dominated keyboard music for much of the seventeenth and early eighteenth centuries, produces sound by plucking its strings with small quills. Because the force of the plucking is the same no matter how hard the player strikes the key, a harpsichordist cannot make individual notes louder or softer. Composers for the instrument therefore created contrast by other means, such as adding ornaments, changing the number of voices, or switching between keyboards set to different registers. The early piano, by contrast, struck its strings with small hammers whose force varied with the player's touch. This seemingly simple mechanical difference allowed performers to shape a melody through gradual swells and fades. Over the following decades, composers increasingly wrote music that assumed such control, marking their scores with instructions for crescendos and sudden accents. By the end of the eighteenth century, the harpsichord had largely fallen out of use, its expressive limits having come to seem a defect rather than a convention.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that describes how composers worked around a mechanical limitation of an instrument.",
+    "sentence": "Composers for the instrument therefore created contrast by other means, such as adding ornaments, changing the number of voices, or switching between keyboards set to different registers.",
+    "explanation": "The limitation, that a harpsichordist cannot vary the loudness of individual notes, is stated in the second sentence. The third sentence then lists the other means (ornaments, number of voices, changes of register) that composers used to create contrast."
+   },
+   {
+    "type": "single",
+    "prompt": "The passage suggests that the decline of the harpsichord resulted in part from",
+    "options": [
+     "the high cost of maintaining its quills",
+     "changing expectations about a performer's control over loudness",
+     "a shortage of skilled harpsichord builders",
+     "the inability of the harpsichord to play ornaments",
+     "composers' preference for music with fewer voices"
+    ],
+    "answer": 1,
+    "explanation": "Once composers began writing music that assumed control over loudness, the harpsichord's inability to provide it came to seem a defect. The passage says the harpsichord could play ornaments, and it does not mention cost or builders."
+   }
+  ]
+ },
+ {
+  "id": "sp2-04",
+  "difficulty": "easy",
+  "passage": "Gothic cathedrals are admired for their soaring interiors and vast windows of stained glass, features that seem to defy the weight of stone. Earlier Romanesque churches had relied on thick walls to support their heavy vaults, which left little room for openings and produced relatively dim interiors. Gothic builders addressed this problem in part by using the flying buttress, an external arch that carries the outward thrust of the vault away from the wall and down to a pier standing some distance from the building. With much of the load transferred outside, the walls themselves could be thinner and pierced by large windows. Pointed arches and ribbed vaults contributed as well, since they directed forces more efficiently than the rounded arches of earlier churches. The resulting buildings were not merely feats of engineering, however, for medieval writers often praised their luminous interiors as the chief glory of the structure.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that describes a feature of earlier buildings that Gothic builders sought to overcome.",
+    "sentence": "Earlier Romanesque churches had relied on thick walls to support their heavy vaults, which left little room for openings and produced relatively dim interiors.",
+    "explanation": "This sentence describes the thick load-bearing walls and dim interiors of Romanesque churches, the problem that the flying buttress and other Gothic techniques addressed."
+   },
+   {
+    "type": "multiple",
+    "prompt": "According to the passage, which of the following helped make the large windows of Gothic cathedrals possible? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "Flying buttresses that carried the thrust of the vault away from the walls",
+     "Pointed arches and ribbed vaults that directed forces efficiently",
+     "Walls made thicker than those of Romanesque churches"
+    ],
+    "answers": [
+     0,
+     1
+    ],
+    "explanation": "The passage credits both the flying buttress and the pointed arches with ribbed vaults. The walls became thinner, not thicker, so the third choice contradicts the passage."
+   },
+   {
+    "type": "single",
+    "prompt": "The last sentence of the passage primarily serves to",
+    "options": [
+     "suggest that Gothic cathedrals were valued for more than their technical achievement",
+     "question whether Gothic builders understood the forces in their buildings",
+     "argue that medieval writers misunderstood Gothic engineering",
+     "contrast Gothic interiors unfavorably with Romanesque ones",
+     "explain how stained glass was manufactured"
+    ],
+    "answer": 0,
+    "explanation": "The words not merely feats of engineering signal that the buildings were also valued for their luminous interiors, so the sentence adds an aesthetic point to the technical account."
+   }
+  ]
+ },
+ {
+  "id": "sp2-05",
+  "difficulty": "easy",
+  "passage": "Before the nineteenth century, most towns kept their own local time, setting their clocks by the position of the sun at noon. Because the sun reaches its highest point at slightly different moments in different places, a town a few dozen miles to the west might run several minutes behind its neighbor. For most of history this discrepancy mattered little, since few people traveled quickly enough to notice it. The spread of railroads changed that situation dramatically. Railway companies needed reliable timetables, and a schedule that relied on dozens of local times invited confusion and even collisions. Many companies therefore adopted a single standard time for their entire network, and governments eventually followed by dividing nations into broad time zones. What had begun as a practical convenience for a single industry thus reshaped the way ordinary people understood the hours of the day.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that explains why differences in local time were long considered unimportant.",
+    "sentence": "For most of history this discrepancy mattered little, since few people traveled quickly enough to notice it.",
+    "explanation": "This sentence says the discrepancy mattered little because few people traveled fast enough to notice it. The other sentences explain why the differences existed or why they later became a problem."
+   },
+   {
+    "type": "single",
+    "prompt": "The primary purpose of the passage is to",
+    "options": [
+     "explain how a development in transportation led to a change in timekeeping",
+     "argue that local solar time was more accurate than standard time",
+     "describe the engineering challenges of early railroads",
+     "criticize governments for adopting time zones too slowly",
+     "compare timekeeping practices in different nations"
+    ],
+    "answer": 0,
+    "explanation": "The passage shows how railroads made local times impractical, which led first to railway standard time and then to national time zones."
+   },
+   {
+    "type": "single",
+    "prompt": "In the context in which it appears, “invited” most nearly means",
+    "options": [
+     "requested",
+     "welcomed",
+     "made likely",
+     "summoned",
+     "tempted"
+    ],
+    "answer": 2,
+    "explanation": "A schedule built on dozens of local times made confusion and collisions likely. It did not request or welcome them."
+   }
+  ]
+ },
+ {
+  "id": "sp2-06",
+  "difficulty": "easy",
+  "passage": "The Stoic philosophers of the ancient Mediterranean world built much of their ethics on a single distinction: some things are within our control, and others are not. Our judgments, desires, and choices belong to the first category, whereas our health, reputation, and possessions belong to the second. According to the Stoics, unhappiness arises chiefly when people attach their sense of well-being to things in the second category, which can be lost at any moment. A person who values only virtue, which depends entirely on how one chooses to act, cannot be harmed by misfortune in the deepest sense. Critics have objected that this view asks too much of human nature, since few people can remain indifferent to illness or the loss of a friend. The Stoics themselves acknowledged the difficulty, however, and described their ideal as a goal toward which one might progress rather than a state most people would ever fully achieve.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that presents an objection to the Stoic position.",
+    "sentence": "Critics have objected that this view asks too much of human nature, since few people can remain indifferent to illness or the loss of a friend.",
+    "explanation": "This sentence reports the critics' objection that the Stoic view asks too much of human nature. The final sentence gives the Stoics' response, not the objection."
+   },
+   {
+    "type": "multiple",
+    "prompt": "According to the passage, the Stoics regarded which of the following as within a person's control? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "Judgments",
+     "Reputation",
+     "Choices"
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "The second sentence places judgments, desires, and choices in the first category (within our control) and health, reputation, and possessions in the second."
+   },
+   {
+    "type": "single",
+    "prompt": "The final sentence of the passage primarily serves to",
+    "options": [
+     "show that the Stoics abandoned their central distinction",
+     "indicate that the Stoics anticipated a criticism by presenting their ideal as something to work toward",
+     "provide an example of a person who achieved the Stoic ideal",
+     "argue that the critics' objection is entirely without merit",
+     "explain why the Stoics valued reputation"
+    ],
+    "answer": 1,
+    "explanation": "The Stoics acknowledged the difficulty and presented their ideal as a goal to progress toward. This responds to the critics' objection without claiming that the objection has no merit."
+   }
+  ]
+ },
+ {
+  "id": "sp2-07",
+  "difficulty": "medium",
+  "passage": "In the middle of the twentieth century, a group of critics known as the New Critics argued that a poem should be interpreted on the basis of its words alone rather than its author's stated intentions or biography. To consult a poet's letters in order to settle the meaning of a line, they maintained, was to confuse the origin of a work with its achievement. This position had the virtue of directing attention to the formal properties of texts, such as imagery, irony, and structure, which earlier scholarship had sometimes neglected in favor of anecdote. Yet the doctrine was never as self-sufficient as its proponents claimed. Even the most disciplined close reading depends on knowledge external to the poem, including the meanings words carried at the time of composition and the conventions of the genre in which the poet wrote. Later historicist critics seized on this dependence, arguing that a text could not be read responsibly without reconstructing the culture that produced it. The New Critics' legacy, then, is less a self-contained method than a habit of attentive reading that their successors absorbed even while rejecting its premises.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that provides support for the author's claim that the New Critics' doctrine was not self-sufficient.",
+    "sentence": "Even the most disciplined close reading depends on knowledge external to the poem, including the meanings words carried at the time of composition and the conventions of the genre in which the poet wrote.",
+    "explanation": "The claim is made in the fourth sentence. The fifth sentence supports it by showing that close reading relies on outside knowledge such as historical word meanings and genre conventions."
+   },
+   {
+    "type": "single",
+    "prompt": "The author's attitude toward New Criticism can best be described as",
+    "options": [
+     "unqualified admiration",
+     "dismissive contempt",
+     "qualified appreciation",
+     "studied neutrality",
+     "nostalgic regret"
+    ],
+    "answer": 2,
+    "explanation": "The author praises the movement's focus on formal properties and its lasting habit of attentive reading, but argues that its doctrine was not self-sufficient. That combination is qualified appreciation."
+   },
+   {
+    "type": "multiple",
+    "prompt": "It can be inferred from the passage that Consider each of the choices separately and select all that apply.",
+    "options": [
+     "the New Critics believed that biographical information could not settle the meaning of a poem",
+     "historicist critics rejected the practice of close reading altogether",
+     "some earlier scholarship emphasized anecdote at the expense of formal analysis"
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "The first choice is supported by the second sentence and the third by the third sentence. The last sentence says later critics absorbed the habit of attentive reading, so the second choice is contradicted."
+   }
+  ]
+ },
+ {
+  "id": "sp2-08",
+  "difficulty": "medium",
+  "passage": "For much of the twentieth century, art historians read seventeenth-century Dutch still lifes as moral allegories. A peeled lemon, a toppled goblet, or a guttering candle was taken to signify the transience of earthly pleasures, and the lavish display of food and silver was interpreted as an implicit warning against excess. More recently, some scholars have questioned how consistently such meanings would have been recognized by the paintings' original owners. They point out that many still lifes were produced in large numbers for an open market and that inventories of the period typically describe them simply by subject, as a breakfast piece or a banquet piece, with no mention of moral content. On this view, the paintings appealed primarily to the pleasure buyers took in skillful imitation and in images of prosperity. Neither interpretation need exclude the other, however. A merchant could admire the gleam of a painted pewter plate while also recognizing, at least intermittently, a conventional reminder that such possessions do not endure.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that the author uses to illustrate how the two interpretations might coexist.",
+    "sentence": "A merchant could admire the gleam of a painted pewter plate while also recognizing, at least intermittently, a conventional reminder that such possessions do not endure.",
+    "explanation": "The sixth sentence states that the interpretations are compatible. The seventh illustrates this with a merchant who enjoys the painted plate while also seeing it as a reminder of transience."
+   },
+   {
+    "type": "single",
+    "prompt": "The scholars mentioned in the third sentence refer to period inventories primarily in order to",
+    "options": [
+     "show that still lifes were more expensive than other kinds of paintings",
+     "suggest that original owners may not have regarded the paintings chiefly as moral lessons",
+     "demonstrate that Dutch painters rejected allegory",
+     "identify the artists who produced the most popular still lifes",
+     "prove that buyers were indifferent to the skill of the painters"
+    ],
+    "answer": 1,
+    "explanation": "The inventories describe the paintings only by subject and never mention moral content, which suggests that their owners did not chiefly see them as allegories."
+   },
+   {
+    "type": "single",
+    "prompt": "Which of the following best describes the organization of the passage?",
+    "options": [
+     "A traditional interpretation is presented, challenged, and then partially reconciled with the challenge.",
+     "Two interpretations are presented, and the earlier one is shown to be correct.",
+     "A historical development is described in chronological order.",
+     "A theory is proposed and then supported with a series of examples.",
+     "A question is raised and left explicitly unresolved."
+    ],
+    "answer": 0,
+    "explanation": "The passage presents the allegorical reading, then the market-based challenge to it, and finally argues that the two readings can coexist."
+   }
+  ]
+ },
+ {
+  "id": "sp2-09",
+  "difficulty": "medium",
+  "passage": "Histories of Western music often describe the eighteenth century as a period in which composers gradually escaped the patronage of courts and churches and entered a commercial marketplace. The account is broadly accurate but easily overstated. Public concerts, for which audiences purchased tickets, did flourish in cities such as London and Paris, and music publishing grew into a profitable trade. Yet many composers who took advantage of these opportunities continued to hold salaried positions, and the income from a single aristocratic employer often remained more dependable than the uncertain proceeds of a subscription series. Haydn, frequently cited as the model of the newly independent composer, spent nearly three decades in the service of a princely family before his celebrated visits to London. Even then, his success with English audiences rested partly on a reputation established under aristocratic sponsorship. The transition from patronage to market, in other words, was less a clean break than a long period in which the two systems coexisted and reinforced each other.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that introduces a specific case the author uses to qualify a widely held account.",
+    "sentence": "Haydn, frequently cited as the model of the newly independent composer, spent nearly three decades in the service of a princely family before his celebrated visits to London.",
+    "explanation": "The widely held account appears in the first sentence. The fifth sentence introduces Haydn, the composer usually cited as its model, and shows that he spent decades under aristocratic patronage, which qualifies the account."
+   },
+   {
+    "type": "single",
+    "prompt": "The author's attitude toward the account described in the first sentence is best described as",
+    "options": [
+     "complete rejection",
+     "acceptance of its general outline combined with concern that it exaggerates",
+     "enthusiastic endorsement",
+     "indifference to its accuracy",
+     "suspicion that it was invented to promote public concerts"
+    ],
+    "answer": 1,
+    "explanation": "The author calls the account broadly accurate but easily overstated, then shows that patronage and market coexisted."
+   },
+   {
+    "type": "single",
+    "prompt": "According to the passage, composers might have retained salaried positions because",
+    "options": [
+     "public concerts were forbidden in many cities",
+     "music publishers refused to deal with independent composers",
+     "income from an aristocratic employer was often steadier than income from concerts",
+     "subscription series were open only to aristocrats",
+     "salaried positions allowed them more time to travel"
+    ],
+    "answer": 2,
+    "explanation": "The fourth sentence says income from an aristocratic employer often remained more dependable than the uncertain proceeds of a subscription series."
+   }
+  ]
+ },
+ {
+  "id": "sp2-10",
+  "difficulty": "medium",
+  "passage": "Eighteenth-century philosophers of taste confronted an apparent dilemma. If beauty is simply a feeling of pleasure in the observer, then every judgment of beauty seems equally valid, and disputes about art become pointless. If, on the other hand, beauty is a property of objects themselves, then it is hard to explain why careful and sensitive observers so often disagree. Hume's response was to locate the standard of taste not in objects or in individual feelings but in the verdicts of qualified critics, persons distinguished by delicacy of perception, practice, freedom from prejudice, and good sense. Works that please such critics across ages and nations, he argued, possess a durable claim to excellence. The proposal is ingenious, but it risks circularity, for the qualified critic seems to be identified largely by the soundness of the very judgments the standard is meant to validate. Defenders reply that the critic's qualities can be described independently, even if they are rarely found together in a single person.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage in which the author identifies a potential weakness in a proposed solution.",
+    "sentence": "The proposal is ingenious, but it risks circularity, for the qualified critic seems to be identified largely by the soundness of the very judgments the standard is meant to validate.",
+    "explanation": "This sentence says Hume's proposal risks circularity because qualified critics seem to be identified by the very judgments the standard is meant to validate. The last sentence gives the defenders' reply."
+   },
+   {
+    "type": "multiple",
+    "prompt": "According to the passage, Hume attributed which of the following qualities to the qualified critic? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "Delicacy of perception",
+     "Freedom from prejudice",
+     "Formal training in philosophy"
+    ],
+    "answers": [
+     0,
+     1
+    ],
+    "explanation": "The fourth sentence lists delicacy of perception, practice, freedom from prejudice, and good sense. Formal philosophical training is not mentioned."
+   },
+   {
+    "type": "single",
+    "prompt": "The dilemma described in the first three sentences arises because",
+    "options": [
+     "philosophers could not agree on which works of art were beautiful",
+     "each of two accounts of beauty seems to lead to an unwelcome consequence",
+     "critics refused to explain the reasons for their judgments",
+     "beauty was thought to be a property of objects and of feelings at once",
+     "disputes about art had become increasingly common"
+    ],
+    "answer": 1,
+    "explanation": "If beauty is a feeling, disputes become pointless. If beauty is a property of objects, persistent disagreement among careful observers is hard to explain. Each option therefore has a cost."
+   }
+  ]
+ },
+ {
+  "id": "sp2-11",
+  "difficulty": "medium",
+  "passage": "The tall office buildings that rose in Chicago during the 1880s and 1890s are often presented as the direct product of new technology. Steel framing relieved walls of their load-bearing role, and the passenger elevator made upper floors as commercially valuable as lower ones. These innovations were necessary conditions for the skyscraper, but they do not fully explain its appearance. Equally decisive were economic circumstances peculiar to the city, which had been rebuilt rapidly after a great fire and where land prices in the compact business district had climbed sharply. Investors seeking a return on expensive lots had strong reason to build upward, and architects were pressed to design structures that could be erected quickly and leased efficiently. Seen in this light, the plain, gridded facades of many Chicago buildings reflect not only an aesthetic preference for structural honesty but also the demands of speculative development.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that distinguishes between factors that made a building type possible and factors that fully account for it.",
+    "sentence": "These innovations were necessary conditions for the skyscraper, but they do not fully explain its appearance.",
+    "explanation": "This sentence calls the technological innovations necessary conditions while saying they do not fully explain the skyscraper. That sets up the economic explanation that follows."
+   },
+   {
+    "type": "single",
+    "prompt": "The author mentions land prices in the business district primarily in order to",
+    "options": [
+     "support the claim that economic conditions helped shape the skyscraper",
+     "explain why the elevator was invented in Chicago",
+     "show that architects disliked speculative development",
+     "argue that technology played no role in the skyscraper's development",
+     "suggest that the fire destroyed the city's most valuable buildings"
+    ],
+    "answer": 0,
+    "explanation": "High land prices gave investors a reason to build upward, which illustrates the economic factors the author calls equally decisive."
+   },
+   {
+    "type": "multiple",
+    "prompt": "The passage suggests that the plain facades of many Chicago buildings Consider each of the choices separately and select all that apply.",
+    "options": [
+     "partly reflect economic pressures on their design",
+     "were designed in deliberate opposition to ornamented European buildings",
+     "may have been favored in part because such buildings could be erected quickly"
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "The last sentence links the facades to speculative development, and the previous sentence says architects were pressed to build quickly and lease efficiently. European buildings are never mentioned."
+   }
+  ]
+ },
+ {
+  "id": "sp2-12",
+  "difficulty": "medium",
+  "passage": "Early film theorists disagreed sharply about where the expressive power of cinema lay. Some, impressed by the experiments of Soviet directors in the 1920s, located it in montage, the juxtaposition of separate shots to produce meanings that neither shot contained alone. A close-up of a face followed by an image of a bowl of soup might suggest hunger; the same face followed by a child at play might suggest tenderness. Others, most notably the French critic André Bazin, argued that cinema's distinctive capacity was its ability to record the continuity of the physical world. For Bazin, the long take and deep focus respected the ambiguity of reality, allowing viewers to choose where to direct their attention rather than having meaning imposed by the editor. The dispute is sometimes framed as a simple opposition between manipulation and realism. Yet even a long take involves choices of framing, duration, and camera position, so the difference between the two positions concerns degrees of authorial control rather than its presence or absence.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage in which the author offers a revised account of what distinguishes two theoretical views.",
+    "sentence": "Yet even a long take involves choices of framing, duration, and camera position, so the difference between the two positions concerns degrees of authorial control rather than its presence or absence.",
+    "explanation": "The sixth sentence reports the usual framing (manipulation versus realism). The final sentence revises it: because long takes also involve choices, the views differ in how much authorial control they allow, not in whether they allow any."
+   },
+   {
+    "type": "single",
+    "prompt": "The passage suggests that Bazin would most likely object to editing that",
+    "options": [
+     "preserves the continuity of physical space",
+     "uses deep focus to show several planes of action",
+     "steers viewers toward a single predetermined meaning",
+     "allows viewers to notice ambiguous details",
+     "relies on long takes"
+    ],
+    "answer": 2,
+    "explanation": "Bazin valued techniques that let viewers choose where to look rather than having meaning imposed by the editor, so he would object to editing that imposes a single meaning."
+   },
+   {
+    "type": "single",
+    "prompt": "The example of the face and the bowl of soup serves primarily to",
+    "options": [
+     "show that montage produces meaning that no individual shot contains",
+     "demonstrate that close-ups were rare in early cinema",
+     "support Bazin's preference for the long take",
+     "suggest that early audiences misunderstood montage",
+     "illustrate the ambiguity of reality"
+    ],
+    "answer": 0,
+    "explanation": "The example shows that the same face takes on different meanings depending on the shot that follows, which is the defining property of montage given in the second sentence."
+   }
+  ]
+ },
+ {
+  "id": "sp2-13",
+  "difficulty": "hard",
+  "passage": "Bakhtin's claim that Dostoevsky invented the polyphonic novel has proved more durable as a provocation than as a literary-historical thesis. In Bakhtin's account, the characters in Dostoevsky's fiction are not vehicles for an authorial worldview but independent consciousnesses whose arguments the narrative refuses to adjudicate. The difficulty is that the very features Bakhtin cites as evidence of this refusal, such as the narrator's self-effacement and the characters' extended, unanswered monologues, can be found, if less systematically, in writers whom he treats as monologic. One might therefore conclude that polyphony is a matter of degree rather than a distinct generic achievement. But such a conclusion concedes less than it seems to, for Bakhtin's interest was never primarily taxonomic. What he sought to describe was a stance toward the represented voices, an ethical as much as a formal orientation, and stances are not readily established by tallying devices. The concept's persistence in criticism suggests that readers have found this orientation recognizable even where its boundaries remain disputed.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that presents evidence that might be used to challenge the uniqueness of Dostoevsky's achievement as Bakhtin describes it.",
+    "sentence": "The difficulty is that the very features Bakhtin cites as evidence of this refusal, such as the narrator's self-effacement and the characters' extended, unanswered monologues, can be found, if less systematically, in writers whom he treats as monologic.",
+    "explanation": "This sentence notes that the features Bakhtin treats as marks of polyphony also appear in writers he calls monologic, which undercuts the claim that Dostoevsky's achievement was unique. The next sentence draws a conclusion from this evidence but presents no evidence of its own."
+   },
+   {
+    "type": "single",
+    "prompt": "The author's attitude toward Bakhtin's claim is best described as",
+    "options": [
+     "dismissive of both its historical accuracy and its critical usefulness",
+     "skeptical of it as literary history but appreciative of its conceptual value",
+     "persuaded that it is historically accurate but of little interpretive use",
+     "uncertain whether Bakhtin ever made such a claim",
+     "entirely uncritical"
+    ],
+    "answer": 1,
+    "explanation": "The author says the claim lasts better as a provocation than as a historical thesis, which signals skepticism. The author then defends the concept as describing a recognizable ethical and formal stance."
+   },
+   {
+    "type": "multiple",
+    "prompt": "The author implies which of the following? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "Bakhtin's division of writers into polyphonic and monologic may be drawn too sharply.",
+     "Bakhtin regarded polyphony as purely a matter of narrative technique.",
+     "A critical concept can capture something real even if its boundaries are imprecise."
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "The first choice follows from the observation that polyphonic features appear in monologic writers. The third follows from the final sentence. The second contradicts the statement that Bakhtin described an ethical as much as a formal orientation."
+   }
+  ]
+ },
+ {
+  "id": "sp2-14",
+  "difficulty": "hard",
+  "passage": "That linear perspective, as codified in fifteenth-century Florence, reproduces the way the eye actually sees was long treated as self-evident. Panofsky's influential objection was that the system presupposes a single, unmoving, one-eyed observer and an infinite, homogeneous space, conditions that correspond neither to binocular vision nor to the curved retinal image. Perspective, he concluded, is not a discovery of how vision works but a symbolic form, a historically specific construction of space comparable to a worldview. Subsequent critics pressed his argument further, treating perspective as the pictorial expression of an emerging individualism. Perceptual psychologists, however, have complicated the picture from the opposite direction. Experiments indicate that viewers readily interpret perspectival images as depicting depth even when viewing them from oblique angles that ought to distort the projected geometry, which suggests that the system exploits robust features of visual processing rather than merely encoding a cultural convention. If so, perspective may be both conventional and natural: conventional in its rigorous geometric codification, natural in the perceptual capacities on which its persuasiveness depends.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that reports findings that cut against the view that perspective is purely a cultural convention.",
+    "sentence": "Experiments indicate that viewers readily interpret perspectival images as depicting depth even when viewing them from oblique angles that ought to distort the projected geometry, which suggests that the system exploits robust features of visual processing rather than merely encoding a cultural convention.",
+    "explanation": "This sentence reports experiments showing that viewers see depth in perspectival images even from oblique angles, which suggests that the system draws on robust features of vision. The fifth sentence only announces that psychologists complicated the picture and reports no findings."
+   },
+   {
+    "type": "single",
+    "prompt": "The final sentence of the passage primarily serves to",
+    "options": [
+     "reaffirm Panofsky's conclusion without qualification",
+     "propose a position that accommodates elements of both the cultural and the perceptual accounts",
+     "reject the experimental findings described in the previous sentence",
+     "argue that perspective was not codified in Florence",
+     "suggest that perspective has no effect on viewers"
+    ],
+    "answer": 1,
+    "explanation": "The final sentence calls perspective conventional in its codification and natural in the perceptual capacities it relies on, which combines both accounts."
+   },
+   {
+    "type": "single",
+    "prompt": "According to the passage, Panofsky's objection rests on the observation that linear perspective",
+    "options": [
+     "was unknown before the fifteenth century",
+     "assumes viewing conditions unlike those of actual human vision",
+     "produces images that viewers cannot interpret as depicting depth",
+     "was invented to express individualism",
+     "is identical to the image formed on the retina"
+    ],
+    "answer": 1,
+    "explanation": "Panofsky argued that perspective presupposes a single, unmoving, one-eyed observer and a homogeneous space, conditions that match neither binocular vision nor the curved retinal image."
+   }
+  ]
+ },
+ {
+  "id": "sp2-15",
+  "difficulty": "hard",
+  "passage": "The historically informed performance movement began with a seemingly modest aim: to play early music on the instruments, and in the styles, that its composers would have expected. Its practitioners recovered gut strings, valveless horns, and treatises on ornamentation, and in doing so they made familiar works sound strikingly unfamiliar. Critics soon objected, however, that the movement's characteristic appeal to authenticity was conceptually confused. Even if one could reconstruct an eighteenth-century orchestra in every particular, one could not reconstruct an eighteenth-century audience, whose ears had been shaped by music the modern listener has never heard and whose sense of what counted as novel or dissonant has been irretrievably overlaid by later styles. On this view, the sounds of a period performance may be historical, but their effect cannot be. Some performers accepted the criticism and recast their project, describing it not as a restoration of the past but as a contemporary style that happens to draw on historical evidence. Paradoxically, this concession may have secured the movement's influence, since a style, unlike a claim to authenticity, need not be correct in order to be compelling.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that explains why any reconstruction of the historical conditions of performance must remain incomplete.",
+    "sentence": "Even if one could reconstruct an eighteenth-century orchestra in every particular, one could not reconstruct an eighteenth-century audience, whose ears had been shaped by music the modern listener has never heard and whose sense of what counted as novel or dissonant has been irretrievably overlaid by later styles.",
+    "explanation": "This sentence gives the reason: even a perfectly reconstructed orchestra cannot recreate a period audience, whose hearing was shaped by music and expectations now lost. The next sentence states the consequence without explaining it."
+   },
+   {
+    "type": "single",
+    "prompt": "The author regards it as paradoxical that",
+    "options": [
+     "early music sounded unfamiliar when played on period instruments",
+     "giving up a central claim may have strengthened the movement",
+     "critics objected to the use of gut strings",
+     "modern audiences prefer contemporary styles to historical ones",
+     "the movement relied on historical treatises"
+    ],
+    "answer": 1,
+    "explanation": "The paradox is that the concession, abandoning the claim to authenticity, may have secured the movement's influence."
+   },
+   {
+    "type": "multiple",
+    "prompt": "It can be inferred from the passage that Consider each of the choices separately and select all that apply.",
+    "options": [
+     "period performances sometimes made well-known works sound new to listeners",
+     "critics objected chiefly to inaccuracies in the reconstructed instruments",
+     "every practitioner of the movement stopped appealing to authenticity"
+    ],
+    "answers": [
+     0
+    ],
+    "explanation": "The second sentence says practitioners made familiar works sound strikingly unfamiliar. The critics' objection was conceptual and concerned audiences, not the instruments, and only some performers recast their project."
+   }
+  ]
+ },
+ {
+  "id": "sp2-16",
+  "difficulty": "hard",
+  "passage": "Collingwood maintained that the historian's proper object is not the outward event but the thought that animated it, and that this thought can be known only by being re-enacted in the historian's own mind. To understand why a general crossed a river, on this account, one must reconstruct the problem the general faced and the reasoning by which he resolved it. The doctrine has been charged with intellectualism, since it seems to leave no room for the habits, moods, and unreflective routines that make up so much of human conduct. A subtler objection concerns the status of the re-enacted thought. If the historian's act and the general's act share a content but differ in context, it is unclear what makes the former knowledge of the latter rather than a plausible invention. Collingwood's defenders answer that re-enactment is constrained by evidence: the historian must rethink a thought that accounts for the documents, not merely one that is coherent. This reply narrows the gap without closing it, because several distinct reconstructions may fit the same evidence equally well.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that explains why, in the author's view, the defenders' response is insufficient.",
+    "sentence": "This reply narrows the gap without closing it, because several distinct reconstructions may fit the same evidence equally well.",
+    "explanation": "The defenders' reply appears in the sixth sentence. The seventh says the reply narrows the gap without closing it, because several reconstructions may fit the same evidence."
+   },
+   {
+    "type": "single",
+    "prompt": "The objection described in the third sentence differs from the one developed in the fourth and fifth sentences in that the former",
+    "options": [
+     "concerns what the doctrine leaves out of human conduct, whereas the latter concerns whether re-enactment can yield knowledge",
+     "is endorsed by the author, whereas the latter is rejected",
+     "concerns evidence, whereas the latter concerns habits and moods",
+     "was raised by Collingwood himself, whereas the latter was raised by his defenders",
+     "applies only to military history, whereas the latter applies to all history"
+    ],
+    "answer": 0,
+    "explanation": "The charge of intellectualism says the doctrine ignores unreflective conduct. The subtler objection asks what makes a re-enacted thought knowledge of the original rather than an invention."
+   },
+   {
+    "type": "single",
+    "prompt": "The example of the general crossing a river serves primarily to",
+    "options": [
+     "illustrate what it means, on Collingwood's account, to grasp the thought behind an event",
+     "show that historians should focus on outward events",
+     "demonstrate that military decisions are governed by habit",
+     "provide evidence against Collingwood's doctrine",
+     "suggest that historical documents are unreliable"
+    ],
+    "answer": 0,
+    "explanation": "The example shows Collingwood's method in practice: reconstructing the problem the agent faced and the reasoning used to resolve it."
+   }
+  ]
+ },
+ {
+  "id": "sp2-17",
+  "difficulty": "hard",
+  "passage": "The historians associated with the French journal Annales rejected what they regarded as the superficial drama of political narrative, the succession of reigns, treaties, and ministerial crises that had dominated nineteenth-century scholarship. Braudel's tripartite scheme distinguished the nearly motionless time of geography and climate, the slower rhythms of economies and social structures, and the brief time of events, which he likened to surface foam on the deep currents of history. The scheme was liberating, since it legitimized the study of prices, harvests, and demographic patterns that earlier historians had disdained. Yet it also carried an implicit hierarchy of significance, in which whatever changed slowly was presumed to be more fundamental than whatever changed quickly. Critics have observed that this presumption is a methodological choice rather than an empirical finding, and that it makes certain questions difficult to pose. A sudden decision can redirect structures that had seemed immovable, and an approach that treats events as foam will be poorly equipped to explain such ruptures. Later historians have sought to reintegrate the event, not by abandoning the long view but by asking how structures are sustained or transformed through particular occurrences.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that identifies an assumption implicit in Braudel's scheme.",
+    "sentence": "Yet it also carried an implicit hierarchy of significance, in which whatever changed slowly was presumed to be more fundamental than whatever changed quickly.",
+    "explanation": "This sentence names the implicit hierarchy: whatever changes slowly is presumed more fundamental than whatever changes quickly. The next sentence comments on this presumption without first identifying it."
+   },
+   {
+    "type": "single",
+    "prompt": "Braudel's comparison of events to surface foam suggests that he regarded events as",
+    "options": [
+     "the most important objects of historical study",
+     "visible but relatively insignificant expressions of deeper forces",
+     "impossible to document reliably",
+     "the primary causes of changes in climate",
+     "identical to the slower rhythms of economies"
+    ],
+    "answer": 1,
+    "explanation": "Foam is visible on the surface but is carried by deeper currents, so the image presents events as conspicuous yet secondary."
+   },
+   {
+    "type": "multiple",
+    "prompt": "According to the passage, later historians Consider each of the choices separately and select all that apply.",
+    "options": [
+     "abandoned the long-term perspective of the Annales historians",
+     "examine how particular occurrences help sustain or transform structures",
+     "regard the study of prices and harvests as illegitimate"
+    ],
+    "answers": [
+     1
+    ],
+    "explanation": "The last sentence says later historians reintegrated the event by asking how occurrences sustain or transform structures, without abandoning the long view. Nothing suggests they rejected economic history."
+   }
+  ]
+ },
+ {
+  "id": "sp2-18",
+  "difficulty": "hard",
+  "passage": "Nineteenth-century debates over the restoration of medieval buildings turned on incompatible conceptions of what a monument is. Viollet-le-Duc, who directed the restoration of many French churches, defined restoration as reestablishing a building in a finished state that may never have existed at any given time. His interventions, guided by a rationalist reconstruction of how Gothic builders ought to have solved a given structural problem, frequently replaced authentic but irregular fabric with idealized forms. Ruskin regarded such work as the most total destruction a building could suffer, since the value of an old building lay precisely in the marks left on it by successive generations. For Ruskin, a monument was a document of its own history; for Viollet-le-Duc, it was the imperfect realization of a design. Modern conservation practice is usually said to descend from Ruskin, and its preference for minimal, reversible, and legible intervention bears this out. Yet the very need to decide which historical layers merit preservation reintroduces a judgment about what the building essentially is, the question Viollet-le-Duc answered too confidently but did not invent.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage in which the author most directly distinguishes between the two conceptions of what a monument is.",
+    "sentence": "For Ruskin, a monument was a document of its own history; for Viollet-le-Duc, it was the imperfect realization of a design.",
+    "explanation": "This sentence sets the two conceptions side by side in parallel form: a document of its own history for Ruskin, the imperfect realization of a design for Viollet-le-Duc. The other sentences describe only one figure's view or practice at a time."
+   },
+   {
+    "type": "single",
+    "prompt": "The author suggests that modern conservation practice",
+    "options": [
+     "has fully resolved the debate between Ruskin and Viollet-le-Duc",
+     "does not entirely escape the problem that Viollet-le-Duc confronted",
+     "rejects Ruskin's emphasis on the marks of successive generations",
+     "favors the replacement of irregular fabric with idealized forms",
+     "regards restoration as unnecessary"
+    ],
+    "answer": 1,
+    "explanation": "The last sentence says that choosing which layers to preserve reintroduces a judgment about what the building essentially is, the same question Viollet-le-Duc faced."
+   },
+   {
+    "type": "single",
+    "prompt": "The author's view of Viollet-le-Duc, as expressed in the final sentence, is best described as",
+    "options": [
+     "wholly approving of his methods",
+     "critical of his answer but acknowledging that his question was legitimate",
+     "indifferent to his influence on later practice",
+     "convinced that he was the first to raise the question of a building's essence",
+     "persuaded that his restorations were historically accurate"
+    ],
+    "answer": 1,
+    "explanation": "The author says Viollet-le-Duc answered the question too confidently, which is a criticism, but did not invent it, which acknowledges that the question is real and unavoidable."
+   }
+  ]
+ }
+]

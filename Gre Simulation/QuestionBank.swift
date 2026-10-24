@@ -29,15 +29,20 @@ enum QuestionBank {
     static let balancedQuantQuestions: [GREQuestion] =
         BundledResource.decode([GREQuestion].self, named: "BalancedQuantQuestions") ?? []
 
+    /// Issue topics with official instruction types and Select-in-Passage reading sets.
+    static let additions2026: [GREQuestion] =
+        BundledResource.decode([GREQuestion].self, named: "GRE2026Additions") ?? []
+
     static let all: [GREQuestion] =
         verbalQuestions + quantitativeQuestions + expandedQuestions
             + authorized20260720Questions + authorized20260720Part2Questions
-            + balancedQuantQuestions
+            + balancedQuantQuestions + additions2026.filter { $0.measure != .analyticalWriting }
 
     static let writingQuestions: [GREQuestion] =
         [writingQuestion]
             + authorized20260720Questions.filter { $0.measure == .analyticalWriting }
             + authorized20260720Part2Questions.filter { $0.measure == .analyticalWriting }
+            + additions2026.filter { $0.measure == .analyticalWriting }
 
     static var sourceSummary: [(title: String, count: Int)] {
         let grouped = Dictionary(grouping: all) { question in
@@ -176,8 +181,12 @@ enum QuestionBank {
                 if levelCount < 15 { issues.append("\(measure.title) \(difficulty.title) pool needs 15 questions; found \(levelCount).") }
             }
         }
-        let verbalCount = all.lazy.filter { $0.measure == .verbal }.count
-        let quantitativeCount = all.lazy.filter { $0.measure == .quantitative }.count
+        // The 1:1 balance applies to the core bank; the 2026 format additions supply Reading
+        // Comprehension sets (including Select-in-Passage) that the core bank lacked.
+        let formatAdditionIDs = Set(additions2026.map(\.id))
+        let core = all.lazy.filter { !formatAdditionIDs.contains($0.id) }
+        let verbalCount = core.filter { $0.measure == .verbal }.count
+        let quantitativeCount = core.filter { $0.measure == .quantitative }.count
         if quantitativeCount < verbalCount {
             issues.append("Quantitative pool must match or exceed Verbal; found \(quantitativeCount) versus \(verbalCount).")
         }
@@ -189,11 +198,11 @@ enum QuestionBank {
         return abs((order[lhs] ?? 0) - (order[rhs] ?? 0))
     }
 
-    private static func recentQuestionIDs(for measure: GREMeasure) -> Set<String> {
+    static func recentQuestionIDs(for measure: GREMeasure) -> Set<String> {
         Set(UserDefaults.standard.stringArray(forKey: exposureKey(for: measure)) ?? [])
     }
 
-    private static func rememberExposure(_ questions: [GREQuestion], for measure: GREMeasure) {
+    static func rememberExposure(_ questions: [GREQuestion], for measure: GREMeasure) {
         guard !questions.isEmpty else { return }
         let key = exposureKey(for: measure)
         let selectedIDs = questions.map(\.id)
@@ -219,7 +228,7 @@ enum QuestionBank {
         "gre-simulation.question-exposure.v1.\(measure.rawValue)"
     }
 
-    private static func recentQuestionFamilies(for measure: GREMeasure) -> Set<String> {
+    static func recentQuestionFamilies(for measure: GREMeasure) -> Set<String> {
         guard measure == .quantitative else { return [] }
         return Set(UserDefaults.standard.stringArray(forKey: familyExposureKey(for: measure)) ?? [])
     }
@@ -228,7 +237,7 @@ enum QuestionBank {
         "gre-simulation.question-family-exposure.v1.\(measure.rawValue)"
     }
 
-    private static func selectionFamily(_ question: GREQuestion) -> String {
+    static func selectionFamily(_ question: GREQuestion) -> String {
         let components = question.id.split(separator: "-").map(String.init)
         if components.count == 4, components[0] == "bq" {
             return [components[0], components[1], components[3]].joined(separator: "-")
@@ -236,7 +245,7 @@ enum QuestionBank {
         return question.id
     }
 
-    private static func scenarioFamily(_ question: GREQuestion) -> String {
+    static func scenarioFamily(_ question: GREQuestion) -> String {
         let components = question.id.split(separator: "-").map(String.init)
         if components.count == 4, components[0] == "bq" {
             return [components[0], components[1]].joined(separator: "-")
@@ -244,7 +253,7 @@ enum QuestionBank {
         return question.id
     }
 
-    private static func diversifiedExposureOrder(
+    static func diversifiedExposureOrder(
         _ candidates: [GREQuestion],
         recentIDs: Set<String>,
         recentFamilies: Set<String>

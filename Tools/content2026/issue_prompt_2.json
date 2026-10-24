@@ -1,0 +1,52 @@
+[
+ {
+  "id": "ip-01",
+  "instruction": 7,
+  "statement": "Universities should require every undergraduate, regardless of major, to complete at least one full year of coursework in a discipline far removed from his or her chosen field of study."
+ },
+ {
+  "id": "ip-02",
+  "instruction": 7,
+  "statement": "City governments should ban private cars from the central districts of large cities and devote the reclaimed street space to pedestrians, cyclists, and public transit."
+ },
+ {
+  "id": "ip-03",
+  "instruction": 7,
+  "statement": "Governments should allocate the majority of their scientific research funding to projects that promise practical applications within a decade rather than to open-ended basic research."
+ },
+ {
+  "id": "ip-04",
+  "instruction": 7,
+  "statement": "Public funds that support the arts should be distributed primarily to small, emerging artists and local community programs rather than to large, well-established museums and orchestras."
+ },
+ {
+  "id": "ip-05",
+  "instruction": 7,
+  "statement": "Schools should prohibit students from using personal smartphones anywhere on campus during the school day, including during lunch and breaks."
+ },
+ {
+  "id": "ip-06",
+  "instruction": 7,
+  "statement": "Large employers should be required to offer all employees the option of a four-day workweek, provided that total working hours and productivity targets remain the same."
+ },
+ {
+  "id": "ip-07",
+  "instruction": 7,
+  "statement": "Governments should impose substantial taxes on foods and beverages that contain high levels of added sugar and use the revenue to fund public health programs."
+ },
+ {
+  "id": "ip-08",
+  "instruction": 7,
+  "statement": "Communities should be required to obtain a fixed percentage of their electricity from renewable sources within ten years, even if doing so raises energy prices for residents in the short term."
+ },
+ {
+  "id": "ip-09",
+  "instruction": 7,
+  "statement": "News organizations that receive any public funding should be required to clearly label all opinion and commentary pieces and keep them physically and visually separate from factual reporting."
+ },
+ {
+  "id": "ip-10",
+  "instruction": 7,
+  "statement": "Schools and universities should stop funding competitive sports teams and instead redirect those resources toward fitness and recreation programs open to all students."
+ }
+]

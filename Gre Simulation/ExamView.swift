@@ -55,11 +55,11 @@ struct ExamContainerView: View {
         } message: {
             Text("Your current test progress will be discarded.")
         }
-        .confirmationDialog("End this section?", isPresented: $confirmFinish, titleVisibility: .visible) {
-            Button("End section") { session.finishSection() }
-            Button("Keep working", role: .cancel) {}
+        .confirmationDialog("Exit this section?", isPresented: $confirmFinish, titleVisibility: .visible) {
+            Button("Exit Section") { session.isCalculatorPresented = false; session.finishSection() }
+            Button("Return", role: .cancel) {}
         } message: {
-            Text("You have answered \(session.answeredCount) of \(session.currentSection.questions.count) questions. You cannot return after ending the section.")
+            Text("You have answered \(session.answeredCount) of \(session.currentSection.questions.count) questions. Once you exit this section, you cannot return to it.")
         }
         .sheet(isPresented: $showReview) {
             ReviewView(session: session, dismiss: { showReview = false }, finish: {
@@ -67,8 +67,10 @@ struct ExamContainerView: View {
                 confirmFinish = true
             })
         }
-        .sheet(isPresented: $session.isCalculatorPresented) {
-            CalculatorView()
+        .overlay(alignment: .topTrailing) {
+            if session.isCalculatorPresented, session.phase == .testing, session.currentSection.measure == .quantitative {
+                FloatingCalculator(session: session)
+            }
         }
         .sheet(isPresented: $showHelp) {
             HelpView(question: session.currentQuestion)
@@ -82,7 +84,7 @@ private struct SectionDirectionsView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            examHeader(title: "General Test", exit: exit)
+            examHeader(title: "\(session.sectionPosition) · General Test", exit: exit)
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     Text(session.currentSection.displayTitle)
@@ -96,9 +98,9 @@ private struct SectionDirectionsView: View {
                         .lineSpacing(6)
                     if session.currentSection.measure != .analyticalWriting {
                         VStack(alignment: .leading, spacing: 10) {
-                            Label("You may skip questions and return to them within this section.", systemImage: "arrow.uturn.backward.circle")
+                            Label("You may skip questions, go back, and change answers within this section; you cannot return to a section after you exit it.", systemImage: "arrow.uturn.backward.circle")
                             Label("Use Mark and Review to track questions you want to revisit.", systemImage: "bookmark")
-                            Label("Answers left blank are counted as incorrect; there is no penalty for guessing.", systemImage: "checkmark.circle")
+                            Label("Your score is the number of questions answered correctly; nothing is subtracted for incorrect answers, and questions with more than one answer give no partial credit.", systemImage: "checkmark.circle")
                         }
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
@@ -131,7 +133,7 @@ private struct SectionDirectionsView: View {
     private var directions: String {
         switch session.currentSection.measure {
         case .analyticalWriting:
-            "Present your perspective on the issue below. Support your position with relevant reasons and examples. You may use Backspace, Delete, Cut, Paste, and Undo while composing. This simulator does not provide grammar or content feedback during the timed section."
+            "You will have 30 minutes to plan and compose a response to the issue presented. A response to any other issue will receive a score of zero. Make sure that you respond according to the specific instructions and support your position on the issue with reasons and examples drawn from such areas as your reading, experience, observations, and/or academic studies. Trained readers will evaluate how well you respond to the specific task directions, consider the complexities of the issue, organize, develop, and express your ideas, support your ideas with relevant reasons and/or examples, and control the elements of standard written English. The word processor lets you insert and delete text, cut and paste, and undo; spell check and grammar check are not available."
         case .verbal:
             "This measure evaluates your ability to analyze written material, understand relationships among words and concepts, and reason from the information provided. Read each question's specific instruction carefully; some questions require more than one answer."
         case .quantitative:
@@ -149,7 +151,7 @@ private struct TestInterfaceView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            examHeader(title: session.currentSection.displayTitle, exit: exit)
+            examHeader(title: "\(session.sectionPosition) · \(session.currentSection.displayTitle)", exit: exit)
             testToolbar
             ProgressView(value: session.progress)
                 .tint(GRETheme.brightBlue)
@@ -173,9 +175,9 @@ private struct TestInterfaceView: View {
                 .monospacedDigit()
             Spacer()
             if session.currentSection.measure == .quantitative {
-                toolbarButton("Calculator", "plus.forwardslash.minus") { session.isCalculatorPresented = true }
+                toolbarButton("Calculator", "plus.forwardslash.minus") { session.isCalculatorPresented.toggle() }
             }
-            toolbarButton(session.isTimeVisible ? timeText : "Show Time", "clock") {
+            toolbarButton(session.isTimeVisible || session.isClockForcedVisible ? timeText : "Show Time", "clock") {
                 session.isTimeVisible.toggle()
             }
             toolbarButton(session.isCurrentMarked ? "Marked" : "Mark", session.isCurrentMarked ? "bookmark.fill" : "bookmark") {
@@ -183,6 +185,7 @@ private struct TestInterfaceView: View {
             }
             toolbarButton("Review", "square.grid.3x3") { review() }
             toolbarButton("Help", "questionmark.circle") { help() }
+            toolbarButton("Exit Section", "rectangle.portrait.and.arrow.right") { finish() }
         }
         .padding(.horizontal, 18)
         .padding(.vertical, 9)
@@ -233,6 +236,7 @@ private struct TestInterfaceView: View {
 
 private struct QuestionView: View {
     @ObservedObject var session: ExamSession
+    @StateObject private var essayController = EssayEditorController()
 
     var body: some View {
         VStack(alignment: .leading, spacing: 19) {
@@ -268,7 +272,13 @@ private struct QuestionView: View {
 
     private var supportingPanel: some View {
         VStack(alignment: .leading, spacing: 14) {
-            if let stimulus = session.currentQuestion.stimulus {
+            if session.currentQuestion.format == .selectInPassage, let group = session.currentQuestion.groups.first {
+                SelectablePassage(
+                    sentences: group.options,
+                    selected: session.currentAnswer.selections[group.id]?.first,
+                    select: { session.toggleSelection(groupID: group.id, optionID: $0, maximum: 1) }
+                )
+            } else if let stimulus = session.currentQuestion.stimulus {
                 Text(stimulus)
                     .font(.system(size: 17, design: .serif))
                     .lineSpacing(7)
@@ -295,7 +305,7 @@ private struct QuestionView: View {
 
             if session.currentQuestion.format == .numericEntry {
                 numericEntry
-            } else {
+            } else if session.currentQuestion.format != .selectInPassage {
                 choiceGroups
             }
         }
@@ -374,22 +384,68 @@ private struct QuestionView: View {
         .buttonStyle(.plain)
     }
 
+    /// Fraction answers use two boxes (numerator over denominator); others use one box.
+    private var isFractionEntry: Bool {
+        let answers = session.currentQuestion.acceptedNumericAnswers
+        return !answers.isEmpty && answers.allSatisfy { $0.contains("/") }
+    }
+
     private var numericEntry: some View {
         VStack(alignment: .leading, spacing: 7) {
-            Text("Numeric answer")
+            Text(isFractionEntry ? "Enter your answer as a fraction. Fractions do not need to be reduced to lowest terms." : "Enter your answer as an integer or a decimal.")
                 .font(.caption.bold())
                 .foregroundStyle(.secondary)
-            TextField("Enter value", text: Binding(
-                get: { session.currentAnswer.numericEntry },
-                set: { session.updateNumericEntry($0) }
-            ))
+            if isFractionEntry {
+                VStack(spacing: 6) {
+                    numericBox(placeholder: "", text: fractionPart(0))
+                    Rectangle().fill(GRETheme.navy).frame(width: 120, height: 2)
+                    numericBox(placeholder: "", text: fractionPart(1))
+                }
+                .frame(width: 140)
+            } else {
+                numericBox(placeholder: "", text: Binding(
+                    get: { session.currentAnswer.numericEntry },
+                    set: { session.updateNumericEntry(Self.cleanNumber($0, allowDecimal: true)) }
+                ))
+            }
+        }
+    }
+
+    private func numericBox(placeholder: String, text: Binding<String>) -> some View {
+        TextField(placeholder, text: text)
             .textFieldStyle(.plain)
             .font(.title3.monospacedDigit())
-            .padding(12)
-            .frame(maxWidth: 260)
+            .multilineTextAlignment(.center)
+            .padding(10)
+            .frame(width: isFractionEntry ? 120 : 220)
             .background(GRETheme.input)
-            .overlay(RoundedRectangle(cornerRadius: 5).stroke(GRETheme.navy, lineWidth: 1.5))
+            .overlay(RoundedRectangle(cornerRadius: 3).stroke(GRETheme.navy, lineWidth: 1.5))
+    }
+
+    private func fractionPart(_ index: Int) -> Binding<String> {
+        Binding(
+            get: {
+                let parts = session.currentAnswer.numericEntry.split(separator: "/", omittingEmptySubsequences: false).map(String.init)
+                return parts.indices.contains(index) ? parts[index] : ""
+            },
+            set: { value in
+                var parts = session.currentAnswer.numericEntry.split(separator: "/", omittingEmptySubsequences: false).map(String.init)
+                while parts.count < 2 { parts.append("") }
+                parts[index] = Self.cleanNumber(value, allowDecimal: false)
+                session.updateNumericEntry(parts.allSatisfy(\.isEmpty) ? "" : parts.joined(separator: "/"))
+            }
+        )
+    }
+
+    /// Digits, a leading minus sign, and (outside fraction boxes) one decimal point.
+    static func cleanNumber(_ value: String, allowDecimal: Bool) -> String {
+        var result = ""
+        for character in value {
+            if character.isNumber { result.append(character) }
+            else if (character == "-" || character == "−"), result.isEmpty { result.append("-") }
+            else if allowDecimal, character == ".", !result.contains(".") { result.append(".") }
         }
+        return String(result.prefix(10))
     }
 
     private var essayView: some View {
@@ -397,7 +453,7 @@ private struct QuestionView: View {
             Text(session.currentQuestion.prompt)
                 .font(.system(size: 19, weight: .semibold, design: .serif))
                 .lineSpacing(6)
-            Text("Write a response in which you discuss the extent to which you agree or disagree with the statement. In developing your position, address the most compelling reasons or examples that could be used to challenge it.")
+            Text(session.currentQuestion.instructions ?? "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.")
                 .font(.system(size: 16, design: .serif))
                 .lineSpacing(5)
                 .foregroundStyle(.secondary)
@@ -410,17 +466,13 @@ private struct QuestionView: View {
                     .font(.caption.monospacedDigit())
                     .foregroundStyle(.secondary)
             }
-            TextEditor(text: Binding(
-                get: { session.currentAnswer.essayText },
-                set: { session.updateEssay($0) }
-            ))
-            .font(.system(size: 16, design: .serif))
-            .autocorrectionDisabled()
-            .padding(8)
-            .frame(minHeight: 360)
-            .scrollContentBackground(.hidden)
-            .background(GRETheme.input)
-            .overlay(RoundedRectangle(cornerRadius: 4).stroke(GRETheme.navy, lineWidth: 1.5))
+            EssayEditor(
+                text: Binding(
+                    get: { session.currentAnswer.essayText },
+                    set: { session.updateEssay($0) }
+                ),
+                controller: essayController
+            )
         }
     }
 
@@ -433,65 +485,133 @@ private struct ReviewView: View {
     @ObservedObject var session: ExamSession
     let dismiss: () -> Void
     let finish: () -> Void
+    @State private var selection: Int?
 
     var body: some View {
         VStack(spacing: 0) {
             HStack {
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("Review Section").font(.title2.bold())
-                    Text("Answered \(session.answeredCount) of \(session.currentSection.questions.count) · Marked \(session.markedCount)")
+                    Text("Review").font(.title2.bold())
+                    Text("\(session.sectionPosition) · \(session.currentSection.displayTitle)")
                         .font(.subheadline).foregroundStyle(.secondary)
                 }
                 Spacer()
+                Button("Go to Question") {
+                    if let selection { session.goToQuestion(selection) }
+                    dismiss()
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled(selection.map { session.status(for: session.currentSection.questions[$0]) == .notEncountered } ?? true)
                 Button("Return") { dismiss() }.buttonStyle(.bordered)
             }
             .padding(20)
-            Divider()
-
+            Text("Select a question and choose Go to Question. You cannot go to questions that are Not Encountered.")
+                .font(.caption).foregroundStyle(.secondary).padding(.horizontal, 20)
+            Divider().padding(.top, 8)
+            Grid(alignment: .leading, horizontalSpacing: 24, verticalSpacing: 0) {
+                GridRow {
+                    Text("Number").bold(); Text("Status").bold(); Text("Marked").bold()
+                }
+                .padding(.vertical, 8)
+                Divider()
+            }
+            .padding(.horizontal, 20)
             ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 130), spacing: 12)], spacing: 12) {
+                Grid(alignment: .leading, horizontalSpacing: 24, verticalSpacing: 0) {
                     ForEach(Array(session.currentSection.questions.enumerated()), id: \.element.id) { index, question in
-                        Button {
-                            session.goToQuestion(index)
-                            dismiss()
-                        } label: {
-                            HStack {
-                                Text("Question \(index + 1)").fontWeight(.semibold)
-                                Spacer()
-                                statusIcon(session.status(for: question))
-                            }
-                            .padding(13)
-                            .background(index == session.currentQuestionIndex ? GRETheme.brightBlue.opacity(0.12) : GRETheme.canvas)
-                            .overlay(RoundedRectangle(cornerRadius: 7).stroke(index == session.currentQuestionIndex ? GRETheme.blue : GRETheme.border))
-                            .clipShape(RoundedRectangle(cornerRadius: 7))
+                        let status = session.status(for: question)
+                        GridRow {
+                            Text("\(index + 1)").monospacedDigit().frame(width: 60, alignment: .leading)
+                            Text(status.title).foregroundStyle(status == .notEncountered ? .secondary : .primary)
+                                .frame(width: 160, alignment: .leading)
+                            Image(systemName: session.markedQuestionIDs.contains(question.id) ? "checkmark" : "")
+                                .frame(width: 60, alignment: .leading)
                         }
-                        .buttonStyle(.plain)
+                        .padding(.vertical, 7)
+                        .padding(.horizontal, 6)
+                        .background(rowBackground(index))
+                        .contentShape(Rectangle())
+                        .onTapGesture { selection = index }
                     }
                 }
-                .padding(20)
+                .padding(.horizontal, 14)
             }
             Divider()
             HStack {
-                Label("Answered", systemImage: "checkmark.circle.fill").foregroundStyle(GRETheme.teal)
-                Label("Marked", systemImage: "bookmark.fill").foregroundStyle(GRETheme.warning)
+                Text("Answered \(session.answeredCount) of \(session.currentSection.questions.count) · Marked \(session.markedCount)")
+                    .font(.caption).foregroundStyle(.secondary)
                 Spacer()
-                Button("End Section", action: finish)
+                Button("Exit Section", action: finish)
                     .buttonStyle(PrimaryGREButtonStyle())
             }
-            .font(.caption)
             .padding(18)
         }
-        .frame(minWidth: 600, minHeight: 500)
+        .frame(minWidth: 600, minHeight: 520)
         .background(GRETheme.surface)
+        .onAppear { selection = session.currentQuestionIndex }
     }
 
-    @ViewBuilder
-    private func statusIcon(_ status: QuestionStatus) -> some View {
-        switch status {
-        case .unanswered: Image(systemName: "circle").foregroundStyle(.secondary)
-        case .answered: Image(systemName: "checkmark.circle.fill").foregroundStyle(GRETheme.teal)
-        case .marked: Image(systemName: "bookmark.fill").foregroundStyle(GRETheme.warning)
+    private func rowBackground(_ index: Int) -> Color {
+        if index == selection { return GRETheme.brightBlue.opacity(0.22) }
+        if index == session.currentQuestionIndex { return GRETheme.brightBlue.opacity(0.1) }
+        return .clear
+    }
+}
+
+/// A passage whose sentences can be selected for Select-in-Passage questions.
+private struct SelectablePassage: View {
+    let sentences: [ChoiceOption]
+    let selected: String?
+    let select: (String) -> Void
+
+    var body: some View {
+        FlowText(sentences: sentences, selected: selected, select: select)
+    }
+
+    private struct FlowText: View {
+        let sentences: [ChoiceOption]
+        let selected: String?
+        let select: (String) -> Void
+
+        var body: some View {
+            VStack(alignment: .leading, spacing: 6) {
+                ForEach(sentences) { sentence in
+                    Text(sentence.text)
+                        .font(.system(size: 17, design: .serif))
+                        .lineSpacing(6)
+                        .padding(.horizontal, 4).padding(.vertical, 2)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(sentence.id == selected ? GRETheme.brightBlue.opacity(0.28) : Color.clear, in: RoundedRectangle(cornerRadius: 3))
+                        .contentShape(Rectangle())
+                        .onTapGesture { select(sentence.id) }
+                        .accessibilityAddTraits(.isButton)
+                }
+                Text("Click a sentence to select it.").font(.caption).foregroundStyle(.secondary)
+            }
         }
+    }
+}
+
+/// The calculator floats over the question and can be dragged out of the way.
+private struct FloatingCalculator: View {
+    @ObservedObject var session: ExamSession
+    @State private var offset: CGSize = .zero
+    @GestureState private var drag: CGSize = .zero
+
+    var body: some View {
+        let question = session.currentQuestion
+        let canTransfer = question.format == .numericEntry && !question.acceptedNumericAnswers.allSatisfy { $0.contains("/") }
+        CalculatorView(
+            model: session.calculator,
+            canTransfer: canTransfer,
+            transfer: { value in if canTransfer, !value.isEmpty { session.updateNumericEntry(value) } },
+            close: { session.isCalculatorPresented = false }
+        )
+        .offset(x: offset.width + drag.width, y: offset.height + drag.height)
+        .gesture(DragGesture().updating($drag) { value, state, _ in state = value.translation }
+            .onEnded { value in offset.width += value.translation.width; offset.height += value.translation.height })
+        .padding(.top, 120)
+        .padding(.trailing, 24)
     }
 }
 

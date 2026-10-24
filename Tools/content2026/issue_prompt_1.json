@@ -1,0 +1,242 @@
+[
+ {
+  "id": "is-01",
+  "instruction": 1,
+  "statement": "Students who are taught to memorize facts are poorly prepared for the problems they will face as adults."
+ },
+ {
+  "id": "is-02",
+  "instruction": 2,
+  "statement": "Universities should require every student to complete a substantial period of community service before graduating."
+ },
+ {
+  "id": "is-03",
+  "instruction": 3,
+  "statement": "Honest criticism, even when it is unwelcome, is far more useful to a person's development than praise."
+ },
+ {
+  "id": "is-04",
+  "instruction": 4,
+  "statement": "Some people believe that college students should choose their courses primarily according to their intellectual interests. Others believe that students should choose courses primarily according to their usefulness in a future career."
+ },
+ {
+  "id": "is-05",
+  "instruction": 5,
+  "statement": "Many of the most important discoveries in science have resulted from accident rather than from careful planning."
+ },
+ {
+  "id": "is-06",
+  "instruction": 6,
+  "statement": "Claim: Universities should reward excellent teaching as highly as they reward excellent research. Reason: Most students benefit more directly from good instruction than from the research their professors publish."
+ },
+ {
+  "id": "is-07",
+  "instruction": 1,
+  "statement": "The more people rely on technology to perform everyday tasks, the less capable they become of solving problems on their own."
+ },
+ {
+  "id": "is-08",
+  "instruction": 2,
+  "statement": "Governments should fund scientific research only when it promises clear practical applications for the public that pays for it."
+ },
+ {
+  "id": "is-09",
+  "instruction": 3,
+  "statement": "In most professions, being a broadly knowledgeable generalist is more valuable than being a highly trained specialist."
+ },
+ {
+  "id": "is-10",
+  "instruction": 4,
+  "statement": "Some people believe that scientists are responsible for how the results of their research are eventually used. Others believe that scientists' responsibility ends with the pursuit of accurate knowledge."
+ },
+ {
+  "id": "is-11",
+  "instruction": 5,
+  "statement": "Success in any demanding field, whether in the arts, the sciences, or business, depends more on persistence than on natural talent."
+ },
+ {
+  "id": "is-12",
+  "instruction": 6,
+  "statement": "Claim: Communities gain more from small, locally owned businesses than from large national chains. Reason: Local business owners have a personal stake in the long-term well-being of the places where they operate."
+ },
+ {
+  "id": "is-13",
+  "instruction": 1,
+  "statement": "The character of a great city is created by its ordinary residents rather than by its planners and architects."
+ },
+ {
+  "id": "is-14",
+  "instruction": 2,
+  "statement": "Large cities should prohibit private automobiles from their central business districts and rely instead on public transportation, cycling, and walking."
+ },
+ {
+  "id": "is-15",
+  "instruction": 3,
+  "statement": "Long-term planning is largely futile, because circumstances change too quickly for detailed plans to remain useful."
+ },
+ {
+  "id": "is-16",
+  "instruction": 4,
+  "statement": "Some people believe that historic buildings should be preserved even at considerable cost. Others believe that communities should replace old structures whenever new construction would better serve current needs."
+ },
+ {
+  "id": "is-17",
+  "instruction": 5,
+  "statement": "Decisions based on systematic analysis of data are almost always better than decisions based on experience and intuition."
+ },
+ {
+  "id": "is-18",
+  "instruction": 6,
+  "statement": "Claim: Children should begin studying a second language in their earliest years of school. Reason: Young children acquire new languages more easily than adolescents or adults do."
+ },
+ {
+  "id": "is-19",
+  "instruction": 1,
+  "statement": "The value of a work of art cannot be measured by how many people admire it."
+ },
+ {
+  "id": "is-20",
+  "instruction": 2,
+  "statement": "Schools should replace traditional letter grades with detailed written evaluations of each student's strengths, weaknesses, and progress."
+ },
+ {
+  "id": "is-21",
+  "instruction": 3,
+  "statement": "People generally learn more from their failures than from their successes, because failure forces them to reexamine their assumptions."
+ },
+ {
+  "id": "is-22",
+  "instruction": 4,
+  "statement": "Some people believe that leaders should consult widely before making important decisions. Others believe that effective leaders must be willing to act decisively without waiting for consensus."
+ },
+ {
+  "id": "is-23",
+  "instruction": 5,
+  "statement": "No translation can fully capture the meaning of a great work of literature, so readers should study important works in their original languages."
+ },
+ {
+  "id": "is-24",
+  "instruction": 6,
+  "statement": "Claim: Fame is an unreliable measure of a person's accomplishments. Reason: Public attention is often driven more by novelty and visibility than by the quality of a person's work."
+ },
+ {
+  "id": "is-25",
+  "instruction": 1,
+  "statement": "Effective leaders rarely change their minds once they have announced a decision, because frequent reversals undermine the confidence of their followers."
+ },
+ {
+  "id": "is-26",
+  "instruction": 2,
+  "statement": "Public museums should offer free admission to all visitors, even if doing so requires reducing their collections or programs."
+ },
+ {
+  "id": "is-27",
+  "instruction": 3,
+  "statement": "As a field of study becomes more established and its methods more standardized, it inevitably becomes less creative."
+ },
+ {
+  "id": "is-28",
+  "instruction": 4,
+  "statement": "Some people believe that the arts should receive substantial public funding. Others believe that artists and arts organizations should depend on audiences and private supporters for their survival."
+ },
+ {
+  "id": "is-29",
+  "instruction": 5,
+  "statement": "When solving difficult problems, groups working together generally produce better ideas than talented individuals working alone."
+ },
+ {
+  "id": "is-30",
+  "instruction": 6,
+  "statement": "Claim: The results of publicly funded research should be freely available to everyone. Reason: Knowledge produced with public money belongs to the public that paid for it."
+ },
+ {
+  "id": "is-31",
+  "instruction": 1,
+  "statement": "The most significant advances in a field usually come from people who were trained outside of it."
+ },
+ {
+  "id": "is-32",
+  "instruction": 2,
+  "statement": "Organizations should fill leadership positions by promoting current employees rather than by hiring from outside."
+ },
+ {
+  "id": "is-33",
+  "instruction": 3,
+  "statement": "The architecture of a city reveals more about the values of its people than its official documents do."
+ },
+ {
+  "id": "is-34",
+  "instruction": 4,
+  "statement": "Some people believe that schools should emphasize teaching young people to cooperate. Others believe that schools should emphasize teaching young people to compete."
+ },
+ {
+  "id": "is-35",
+  "instruction": 5,
+  "statement": "Humor is an undervalued tool for examining serious subjects, often revealing truths that solemn discussion tends to obscure."
+ },
+ {
+  "id": "is-36",
+  "instruction": 6,
+  "statement": "Claim: Governments should protect wilderness areas even when those areas have no apparent economic use. Reason: The value of unspoiled nature cannot be fully expressed in economic terms."
+ },
+ {
+  "id": "is-37",
+  "instruction": 1,
+  "statement": "A society that places too much value on tradition will find it difficult to make meaningful progress."
+ },
+ {
+  "id": "is-38",
+  "instruction": 2,
+  "statement": "Parents should limit the amount of time their children spend in organized competitive activities such as sports leagues and academic contests."
+ },
+ {
+  "id": "is-39",
+  "instruction": 3,
+  "statement": "The popular entertainment of a period tells us more about a society than its formal institutions do."
+ },
+ {
+  "id": "is-40",
+  "instruction": 4,
+  "statement": "Some people believe that learning online can be just as effective as learning in a classroom. Others believe that face-to-face instruction offers benefits that no technology can replace."
+ },
+ {
+  "id": "is-41",
+  "instruction": 5,
+  "statement": "The easy availability of information through digital devices has made people less knowledgeable rather than more."
+ },
+ {
+  "id": "is-42",
+  "instruction": 6,
+  "statement": "Claim: All students, not only those planning technical careers, should study advanced mathematics. Reason: Mathematical study develops habits of rigorous reasoning that are useful in every field."
+ },
+ {
+  "id": "is-43",
+  "instruction": 1,
+  "statement": "A person's true character is revealed more clearly by small daily choices than by dramatic decisions made in moments of crisis."
+ },
+ {
+  "id": "is-44",
+  "instruction": 2,
+  "statement": "Public libraries should devote most of their budgets to digital resources rather than to printed books."
+ },
+ {
+  "id": "is-45",
+  "instruction": 3,
+  "statement": "Most people would be happier and more productive if they owned fewer possessions and spent more of their resources on experiences."
+ },
+ {
+  "id": "is-46",
+  "instruction": 4,
+  "statement": "Some people believe that complex public decisions are best left to experts. Others believe that ordinary citizens should have a direct role in making such decisions."
+ },
+ {
+  "id": "is-47",
+  "instruction": 5,
+  "statement": "Truly original ideas are extremely rare; nearly all innovation consists of combining existing ideas in new ways."
+ },
+ {
+  "id": "is-48",
+  "instruction": 6,
+  "statement": "Claim: The best way to understand a culture is to examine the objects its people use in everyday life. Reason: Ordinary objects reflect values and habits that people seldom state openly."
+ }
+]

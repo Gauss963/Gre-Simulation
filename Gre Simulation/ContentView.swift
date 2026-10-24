@@ -45,6 +45,8 @@ struct ContentView: View {
             _activeExamMode = State(initialValue: .verbalPractice)
         } else if arguments.contains("-startQuantPractice") {
             _activeExamMode = State(initialValue: .quantitativePractice)
+        } else if arguments.contains("-startWritingPractice") {
+            _activeExamMode = State(initialValue: .writingPractice)
         }
         #endif
     }
