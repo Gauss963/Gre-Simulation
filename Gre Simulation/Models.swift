@@ -46,6 +46,7 @@ enum QuestionFormat: String, Codable {
     case sentenceEquivalence
     case numericEntry
     case quantitativeComparison
+    case selectInPassage
     case essay
 
     var directions: String {
@@ -56,6 +57,7 @@ enum QuestionFormat: String, Codable {
         case .sentenceEquivalence: "Select the two answer choices that, when used to complete the sentence, fit the meaning of the sentence as a whole and produce completed sentences that are alike in meaning."
         case .numericEntry: "Enter your answer as an integer or a decimal."
         case .quantitativeComparison: "Compare Quantity A and Quantity B, using additional information centered above the two quantities if it is given."
+        case .selectInPassage: "Click on the sentence in the passage that meets the requirements stated in the question."
         case .essay: "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning."
         }
     }
@@ -147,8 +149,15 @@ struct GREQuestion: Identifiable, Codable, Equatable {
     let contentArea: String
     var source: QuestionSource? = nil
     var figure: QuantFigure? = nil
+    /// Questions that share a passage or data display; they are delivered together.
+    var setID: String? = nil
+    /// Analytical Writing: the task-specific instructions printed under the issue statement.
+    var instructions: String? = nil
 
     var isScored: Bool { format != .essay }
+
+    /// Reading passages and data displays shared by several questions form one set.
+    var setKey: String { setID ?? stimulus.map { "stim:" + $0 } ?? id }
 }
 
 struct GREAnswer: Codable, Equatable {
@@ -167,22 +176,25 @@ enum ExamMode: String, Codable, CaseIterable, Identifiable {
     case fullLength
     case verbalPractice
     case quantitativePractice
+    case writingPractice
 
     var id: String { rawValue }
 
     var title: String {
         switch self {
         case .fullLength: "Full-length Practice Test"
-        case .verbalPractice: "Verbal Timed Practice"
-        case .quantitativePractice: "Quant Timed Practice"
+        case .verbalPractice: "Verbal Reasoning Measure"
+        case .quantitativePractice: "Quantitative Reasoning Measure"
+        case .writingPractice: "Analytical Writing"
         }
     }
 
     var subtitle: String {
         switch self {
-        case .fullLength: "5 sections · approximately 1 hr 58 min"
-        case .verbalPractice: "12 questions · 18 minutes"
-        case .quantitativePractice: "12 questions · 21 minutes"
+        case .fullLength: "5 sections · 1 hr 58 min · Writing first, then Verbal and Quant in any order"
+        case .verbalPractice: "2 adaptive sections · 27 questions · 41 minutes"
+        case .quantitativePractice: "2 adaptive sections · 27 questions · 47 minutes"
+        case .writingPractice: "Analyze an Issue · 30 minutes"
         }
     }
 }
@@ -236,6 +248,7 @@ struct ExamResult: Identifiable, Codable, Equatable {
     let elapsedSeconds: Int
     let sections: [SectionSummary]
     let questionReviews: [QuestionReviewRecord]?
+    var writingSummary: String? = nil
 
     init(
         id: UUID,
@@ -282,6 +295,7 @@ struct ExamResult: Identifiable, Codable, Equatable {
         elapsedSeconds = try container.decode(Int.self, forKey: .elapsedSeconds)
         sections = try container.decode([SectionSummary].self, forKey: .sections)
         questionReviews = try container.decodeIfPresent([QuestionReviewRecord].self, forKey: .questionReviews)
+        writingSummary = try container.decodeIfPresent(String.self, forKey: .writingSummary)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -299,12 +313,13 @@ struct ExamResult: Identifiable, Codable, Equatable {
         try container.encode(elapsedSeconds, forKey: .elapsedSeconds)
         try container.encode(sections, forKey: .sections)
         try container.encodeIfPresent(questionReviews, forKey: .questionReviews)
+        try container.encodeIfPresent(writingSummary, forKey: .writingSummary)
     }
 
     private enum CodingKeys: String, CodingKey {
         case id, completedAt, mode, verbalScore, quantitativeScore, writingEstimate
         case verbalCorrect, verbalTotal, quantitativeCorrect, quantitativeTotal
-        case elapsedSeconds, sections, questionReviews
+        case elapsedSeconds, sections, questionReviews, writingSummary
     }
 
     var combinedScore: Int? {

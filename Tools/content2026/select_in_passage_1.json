@@ -1,0 +1,635 @@
+[
+ {
+  "id": "sp1-01",
+  "difficulty": "easy",
+  "passage": "For decades, biologists assumed that migratory songbirds navigated chiefly by the positions of the stars, since caged birds oriented themselves correctly beneath a planetarium sky. That assumption was complicated when researchers found that the same birds could orient under overcast skies, where no celestial cues were available. Experiments with artificial magnetic fields soon showed that rotating the field around a cage caused the birds to shift their preferred direction by a corresponding angle. Curiously, the birds responded to the inclination of the field lines rather than to their polarity, distinguishing poleward from equatorward rather than north from south. This finding suggested that the avian compass works differently from a human-made one. Later studies located a likely mechanism in light-sensitive proteins of the retina, which may allow birds to perceive the magnetic field as a pattern superimposed on their vision. Most researchers now regard stellar and magnetic cues not as rivals but as complementary systems, with young birds using the stars to calibrate their magnetic sense.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that describes the observation that first cast doubt on the assumption stated in the opening sentence.",
+    "sentence": "That assumption was complicated when researchers found that the same birds could orient under overcast skies, where no celestial cues were available.",
+    "explanation": "The opening sentence reports the assumption that songbirds navigate chiefly by the stars. The second sentence is the first to challenge it: birds oriented correctly even when no stars were visible, so some other cue must be available. The magnetic experiments in the third sentence come later ('soon') and identify the alternative cue rather than first raising the doubt."
+   },
+   {
+    "type": "single",
+    "prompt": "The passage suggests that the birds' sensitivity to the inclination of field lines implies that their compass",
+    "options": [
+     "is more accurate than any human-made compass",
+     "does not register the difference between magnetic north and magnetic south in the way a conventional compass does",
+     "functions only when stellar cues are also available",
+     "depends on the polarity of the magnetic field",
+     "was acquired only recently in the evolutionary history of songbirds"
+    ],
+    "answer": 1,
+    "explanation": "Because the birds respond to the angle of the field lines rather than their polarity, they distinguish poleward from equatorward, 'rather than north from south.' This is why the author says the avian compass differs from a human-made one, which points by polarity. Choice D states the opposite, and nothing supports claims about accuracy, dependence on stars, or evolutionary history."
+   }
+  ]
+ },
+ {
+  "id": "sp1-02",
+  "difficulty": "easy",
+  "passage": "When the first planet orbiting a sunlike star was detected in 1995, astronomers were startled by its properties. The planet was roughly half as massive as Jupiter, yet it circled its star in just over four days, far closer than Mercury orbits the Sun. Prevailing models held that giant planets could form only in the cold outer regions of a planetary system, where ices are abundant enough to build massive cores quickly. The discovery therefore forced theorists to consider that such planets might form far out and then migrate inward through interactions with the disk of gas from which they formed. Some researchers objected that migration on this scale should be rare, but subsequent surveys found many similar planets, now called hot Jupiters. Part of their apparent abundance, however, reflects a bias in detection methods, because massive planets on tight orbits produce the largest and most frequent signals. Even after this bias is corrected for, hot Jupiters remain common enough that migration is now considered a routine part of planetary evolution.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that identifies the theoretical expectation that the 1995 discovery contradicted.",
+    "sentence": "Prevailing models held that giant planets could form only in the cold outer regions of a planetary system, where ices are abundant enough to build massive cores quickly.",
+    "explanation": "The third sentence states what theory predicted: giant planets form only far from their stars. A giant planet in a four-day orbit violated that expectation. The second sentence describes the planet's properties but not the expectation, and the fourth sentence describes theorists' response to the conflict."
+   },
+   {
+    "type": "single",
+    "prompt": "The author mentions a bias in detection methods primarily in order to",
+    "options": [
+     "argue that hot Jupiters are in fact extremely rare",
+     "explain why the first planet discovered was so massive",
+     "qualify the impression created by the number of hot Jupiters found in surveys",
+     "cast doubt on the accuracy of the 1995 measurement",
+     "support the objection that large-scale migration should be rare"
+    ],
+    "answer": 2,
+    "explanation": "The sixth sentence says that 'part of' the apparent abundance of hot Jupiters reflects how easily they are detected, which tempers the raw survey counts. The final sentence then says they remain common even after correction, so the author is not claiming they are rare (A) or endorsing the objection (E)."
+   }
+  ]
+ },
+ {
+  "id": "sp1-03",
+  "difficulty": "easy",
+  "passage": "Scattered across the plains of northern Europe and North America are boulders whose composition differs sharply from that of the bedrock beneath them. Early naturalists, unable to explain how such massive stones had traveled, often attributed them to a great flood or to icebergs drifting across a submerged continent. In the nineteenth century, geologists familiar with Alpine glaciers proposed a different explanation: that vast ice sheets had once covered these regions and carried the boulders far from their sources. The glacial hypothesis initially met resistance, largely because the required volume of ice seemed implausibly large. Its acceptance grew as researchers documented parallel scratches on exposed bedrock, aligned in the same direction in which the boulders appeared to have moved. Such scratches are difficult to explain by floating ice, which would not have maintained steady contact with the ground over long distances. Today the boulders, known as erratics, are routinely used to trace the flow paths of ancient ice sheets.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that explains why a particular piece of evidence is inconsistent with one of the earlier explanations.",
+    "sentence": "Such scratches are difficult to explain by floating ice, which would not have maintained steady contact with the ground over long distances.",
+    "explanation": "The sixth sentence explains why the bedrock scratches count against the iceberg explanation: drifting ice would not grind steadily against the ground. The fifth sentence presents the scratches but does not say why they conflict with an earlier view."
+   },
+   {
+    "type": "single",
+    "prompt": "According to the passage, the glacial hypothesis was at first resisted mainly because",
+    "options": [
+     "no glaciers were known to exist anywhere in Europe",
+     "it could not account for the composition of the boulders",
+     "the scratches on bedrock pointed in inconsistent directions",
+     "the quantity of ice it required seemed unbelievably great",
+     "it conflicted with evidence of a submerged continent"
+    ],
+    "answer": 3,
+    "explanation": "The fourth sentence says the hypothesis 'initially met resistance, largely because the required volume of ice seemed implausibly large.' The scratches were aligned, not inconsistent (C), and the geologists were familiar with Alpine glaciers (A)."
+   }
+  ]
+ },
+ {
+  "id": "sp1-04",
+  "difficulty": "easy",
+  "passage": "Gresham's law, often summarized as the claim that bad money drives out good, describes what happens when two forms of currency share an official value but differ in intrinsic worth. If a full-weight silver coin and a debased coin containing less silver are both legally worth one unit, people tend to spend the debased coins and to hoard or melt down the full-weight ones. As a result, only the inferior coins remain in everyday circulation. Historians have found many episodes consistent with this pattern, from ancient Rome to early modern England. Yet the law holds only under specific conditions, chiefly that merchants be legally required to accept both coins at the same value. Where traders are free to reject debased coins or to discount them, the reverse can occur, as people come to prefer transacting in the more reliable currency. Some economists therefore argue that the principle is better understood as a consequence of legal price fixing than as a general law of monetary behavior.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that identifies a condition that must be met for the principle described in the first sentence to apply.",
+    "sentence": "Yet the law holds only under specific conditions, chiefly that merchants be legally required to accept both coins at the same value.",
+    "explanation": "The fifth sentence names the necessary condition: a legal requirement that both coins be accepted at equal value. The sixth sentence describes what happens when that condition is absent, and the second sentence describes the mechanism rather than a condition for it."
+   },
+   {
+    "type": "multiple",
+    "prompt": "Which of the following can be inferred from the passage? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "When merchants may refuse or discount debased coins, a more reliable currency may come to dominate trade.",
+     "Debased coins were typically introduced by governments seeking to deceive merchants.",
+     "Hoarding full-weight coins can be a sensible choice for individuals when both coins have the same legal value."
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "A is supported by the sixth sentence, which says the reverse of Gresham's law can occur when traders may reject or discount debased coins. C follows from the second sentence: if a full-weight coin buys no more than a debased one, it makes sense to spend the debased coin and keep the more valuable one. B is not supported because the passage says nothing about why debased coins were issued."
+   }
+  ]
+ },
+ {
+  "id": "sp1-05",
+  "difficulty": "easy",
+  "passage": "Among the most robust findings in the psychology of memory is the spacing effect: information studied in several sessions separated by intervals is retained longer than the same information studied in a single concentrated session. The effect was first documented in the late nineteenth century and has since been replicated with materials ranging from vocabulary lists to surgical skills. Despite this record, many students continue to prefer cramming, in part because massed study produces a strong feeling of fluency during the session itself. That feeling is misleading, since performance immediately after study is a poor predictor of performance weeks later. One explanation for the effect holds that spaced repetitions force learners to retrieve partially forgotten material, and that the effort of retrieval strengthens memory traces. Another proposes that spaced sessions encode the material in more varied contexts, providing additional cues for later recall. These accounts are not mutually exclusive, and both may contribute to the advantage.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that offers a reason that learners may persist in a less effective study strategy.",
+    "sentence": "Despite this record, many students continue to prefer cramming, in part because massed study produces a strong feeling of fluency during the session itself.",
+    "explanation": "The third sentence explains why students keep cramming: massed study feels fluent while it happens. The fourth sentence explains why that feeling misleads, but it does not give a reason for the students' preference."
+   },
+   {
+    "type": "single",
+    "prompt": "The two explanations presented in the fifth and sixth sentences are characterized by the author as",
+    "options": [
+     "contradictory, so that evidence for one counts against the other",
+     "equally discredited by recent research",
+     "possibly operating together to produce the effect",
+     "applicable only to verbal material",
+     "the source of students' preference for cramming"
+    ],
+    "answer": 2,
+    "explanation": "The final sentence says the accounts are 'not mutually exclusive' and that 'both may contribute,' so they may work together. Nothing in the passage discredits them or limits them to verbal material."
+   },
+   {
+    "type": "multiple",
+    "prompt": "According to the passage, which of the following is true of the spacing effect? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "It has been observed in the learning of both verbal material and practical skills.",
+     "It is most pronounced when memory is tested immediately after study.",
+     "More than one mechanism has been proposed to account for it."
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "A: the effect has been replicated with 'vocabulary lists' and 'surgical skills.' C: the passage presents two explanations. B is not supported. The passage says immediate performance poorly predicts later retention, and spacing pays off over longer intervals."
+   }
+  ]
+ },
+ {
+  "id": "sp1-06",
+  "difficulty": "easy",
+  "passage": "When speakers of mutually unintelligible languages are brought into sustained contact, they often develop a pidgin, a simplified contact language with a limited vocabulary and few grammatical markers. A pidgin has no native speakers; it serves as a practical tool for trade or labor. If children grow up acquiring a pidgin as their first language, however, it may develop into a creole, a full language with a stable grammar. Some linguists have observed that creoles arising in widely separated parts of the world share striking structural features, such as marking tense and aspect with separate particles placed before the verb. They have taken these similarities as evidence of an innate linguistic blueprint that children impose on impoverished input. Critics counter that many shared features can be traced to the languages spoken by the original adult populations, which were often typologically similar. On this view, creole grammar reflects inheritance and contact rather than a universal default.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that presents an interpretation of a set of observations that is subsequently disputed.",
+    "sentence": "They have taken these similarities as evidence of an innate linguistic blueprint that children impose on impoverished input.",
+    "explanation": "The fifth sentence interprets the shared features of creoles as evidence of an innate blueprint, and the critics in the sixth sentence dispute that reading. The fourth sentence reports the observations. The critics do not deny the similarities; they explain them differently."
+   },
+   {
+    "type": "single",
+    "prompt": "According to the passage, critics of the view described in the fifth sentence attribute the shared features of creoles to",
+    "options": [
+     "the tendency of children to simplify their input",
+     "the influence of the languages originally spoken by adults in the contact situation",
+     "the limited vocabulary of pidgins",
+     "the demands of trade and labor",
+     "a universal default grammar"
+    ],
+    "answer": 1,
+    "explanation": "The sixth sentence says critics trace the features 'to the languages spoken by the original adult populations.' Choice E is the view the critics reject."
+   }
+  ]
+ },
+ {
+  "id": "sp1-07",
+  "difficulty": "medium",
+  "passage": "In an influential essay of the 1960s, one anthropologist described hunter-gatherers as the original affluent society, arguing that foragers met their material needs with only a few hours of work each day. The argument drew on time-allocation studies of groups in southern Africa and northern Australia, which seemed to show that subsistence tasks occupied far less time than industrial labor. This portrait overturned an older image of foragers as perpetually on the brink of starvation. Subsequent researchers, however, noted that the original studies counted only time spent hunting and gathering, omitting the processing of food, the making of tools, and the hauling of water and firewood. When these activities were included, foragers' working hours approached those of many agricultural populations. Defenders of the thesis replied that its central point concerned wants rather than hours: foragers were affluent because they desired little, not because they labored little. The debate thus turned partly on what counts as work and partly on whether affluence is a measure of effort or of satisfaction.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that identifies a methodological shortcoming in the evidence originally offered for the thesis.",
+    "sentence": "Subsequent researchers, however, noted that the original studies counted only time spent hunting and gathering, omitting the processing of food, the making of tools, and the hauling of water and firewood.",
+    "explanation": "The fourth sentence points to a flaw in how the time-allocation studies measured work: they left out several kinds of subsistence labor. The fifth sentence reports the result of correcting that flaw rather than identifying it."
+   },
+   {
+    "type": "single",
+    "prompt": "The reply of the thesis's defenders, as described in the passage, serves to",
+    "options": [
+     "concede that foragers were in fact perpetually near starvation",
+     "provide new time-allocation data that contradict the later researchers",
+     "recast the thesis so that it no longer depends on the disputed measurement of working hours",
+     "argue that agricultural populations work fewer hours than foragers",
+     "dismiss the distinction between work and leisure as meaningless"
+    ],
+    "answer": 2,
+    "explanation": "The defenders argue that affluence concerned limited wants, not few hours. Recasting the thesis this way protects it from the correction to working-hour estimates. They offer no new data (B) and concede nothing about starvation (A)."
+   },
+   {
+    "type": "multiple",
+    "prompt": "Which of the following can be inferred from the passage? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "The older image of foragers held that their food supply was insecure.",
+     "Counting food processing and toolmaking as work raised estimates of foragers' working time.",
+     "Foragers have been shown to work considerably longer hours than agricultural populations."
+    ],
+    "answers": [
+     0,
+     1
+    ],
+    "explanation": "A: the older image portrayed foragers as 'perpetually on the brink of starvation.' B: once those activities were included, working hours 'approached' agricultural levels, so the estimates went up. C overstates the passage, which says only that foragers' hours approached agricultural levels, not that they exceeded them."
+   }
+  ]
+ },
+ {
+  "id": "sp1-08",
+  "difficulty": "medium",
+  "passage": "The relationship between cleaner wrasses and the larger reef fish that visit them is often presented as a textbook mutualism: the cleaners obtain food by removing parasites, and their clients are rid of harmful pests. Field observations reveal a more complicated arrangement. Cleaners actually prefer to eat the protective mucus that coats their clients' skin, and removing it imposes a cost on the client. When a cleaner bites mucus rather than parasites, the client often jolts, and it may chase the cleaner or swim off to a rival cleaning station. Cleaners appear sensitive to such sanctions, behaving more cooperatively when their interactions are watched by other fish waiting nearby to be cleaned. This responsiveness has led some researchers to describe the interaction as a market in which client choice disciplines cleaner behavior. Notably, predatory clients, which could simply eat an uncooperative cleaner, receive gentler treatment than do harmless species.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that describes evidence that cleaners' conduct depends on whether it can be witnessed by others.",
+    "sentence": "Cleaners appear sensitive to such sanctions, behaving more cooperatively when their interactions are watched by other fish waiting nearby to be cleaned.",
+    "explanation": "Only the fifth sentence concerns an audience: cleaners cooperate more when waiting clients are watching. The final sentence also describes cleaners adjusting their behavior, but in response to the client's own threat, not to onlookers."
+   },
+   {
+    "type": "single",
+    "prompt": "The final sentence of the passage primarily serves to",
+    "options": [
+     "challenge the view that the interaction is a mutualism of any kind",
+     "offer further support for the idea that cleaner behavior is shaped by what clients can do in response",
+     "show that predatory fish do not benefit from cleaning",
+     "explain why cleaners prefer mucus to parasites",
+     "introduce an exception that undermines the market analogy"
+    ],
+    "answer": 1,
+    "explanation": "Predators can impose the harshest sanction, eating the cleaner, and they receive the gentlest treatment. This fits the idea that cleaners adjust to clients' capacity to retaliate or leave. It supports the market view rather than undermining it (E)."
+   }
+  ]
+ },
+ {
+  "id": "sp1-09",
+  "difficulty": "medium",
+  "passage": "If the visible matter in a spiral galaxy accounted for all of its mass, the orbital speeds of stars and gas should decline with increasing distance from the galactic center, much as the outer planets of the solar system move more slowly than the inner ones. Measurements made in the 1970s instead showed that rotation speeds remain roughly constant far beyond the luminous disk. The most widely accepted interpretation is that each galaxy is embedded in a massive halo of dark matter that neither emits nor absorbs light. A minority of physicists have proposed instead that the law of gravity itself departs from its familiar form at very low accelerations. This alternative reproduces the rotation curves of individual galaxies with remarkable economy, requiring no invisible material. It fares poorly, however, in explaining the motions of galaxies within large clusters, where a substantial gap between visible and inferred mass persists even after gravity is modified. For this reason, most astronomers regard modified gravity as at best an incomplete account.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that identifies an observation the alternative account cannot fully accommodate.",
+    "sentence": "It fares poorly, however, in explaining the motions of galaxies within large clusters, where a substantial gap between visible and inferred mass persists even after gravity is modified.",
+    "explanation": "The sixth sentence names galaxy-cluster dynamics as a case where modified gravity still leaves a mass discrepancy. The fifth sentence describes the alternative's success, and the final sentence states the conclusion drawn from the failure without identifying the observation."
+   },
+   {
+    "type": "single",
+    "prompt": "The reference to the outer planets of the solar system serves primarily to",
+    "options": [
+     "illustrate the pattern that would be expected if visible matter made up all of a galaxy's mass",
+     "suggest that the solar system contains dark matter",
+     "show that the law of gravity fails at low accelerations",
+     "provide an example of a flat rotation curve",
+     "explain why the measurements of the 1970s were initially doubted"
+    ],
+    "answer": 0,
+    "explanation": "The comparison illustrates declining orbital speed with distance, which is the expected pattern that the galaxy measurements contradicted. It is an example of a declining curve, not a flat one (D)."
+   },
+   {
+    "type": "multiple",
+    "prompt": "According to the passage, the proposal to modify the law of gravity Consider each of the choices separately and select all that apply.",
+    "options": [
+     "can account for the rotation of individual galaxies without positing unseen matter",
+     "is regarded by most astronomers as the better explanation of cluster dynamics",
+     "was put forward before the rotation measurements of the 1970s"
+    ],
+    "answers": [
+     0
+    ],
+    "explanation": "A restates the fifth sentence. B contradicts the passage, which says the proposal fares poorly with clusters. C cannot be determined, because the passage gives no date for the proposal."
+   }
+  ]
+ },
+ {
+  "id": "sp1-10",
+  "difficulty": "medium",
+  "passage": "Standard models of the labor market predict that, when unemployment is high, firms will lower wages until the number of workers seeking jobs matches the number of positions available. Yet wages often prove remarkably resistant to cuts, even during prolonged downturns. The theory of efficiency wages offers one explanation: firms may deliberately pay more than the market-clearing rate because higher pay raises productivity. Well-paid workers have more to lose if dismissed and therefore shirk less and quit less often, and they may feel obliged to reciprocate their employer's generosity with greater effort. A frequently cited illustration is an automobile manufacturer's decision in 1914 to double its workers' daily pay, after which turnover and absenteeism fell sharply. Critics note that the episode is consistent with other explanations, since the firm introduced stricter supervision at about the same time. Even so, surveys of managers frequently cite concerns about morale as the chief reason they avoid cutting pay.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that presents a consideration weakening the support provided by a historical example.",
+    "sentence": "Critics note that the episode is consistent with other explanations, since the firm introduced stricter supervision at about the same time.",
+    "explanation": "The sixth sentence points out a confounding change, stricter supervision, that could explain the drop in turnover and absenteeism after the 1914 pay increase. That weakens the example as evidence for efficiency wages. The final sentence offers separate support for the theory."
+   },
+   {
+    "type": "single",
+    "prompt": "The passage presents the theory of efficiency wages primarily as an attempt to account for",
+    "options": [
+     "the tendency of unemployment to fall during downturns",
+     "the reluctance of firms to reduce wages even when many workers are seeking jobs",
+     "the decline of supervision in modern firms",
+     "differences in productivity between industries",
+     "the effects of surveys on managerial decisions"
+    ],
+    "answer": 1,
+    "explanation": "The second sentence sets up the puzzle that wages resist cuts despite high unemployment, and the third sentence introduces efficiency wages as 'one explanation' of that puzzle."
+   },
+   {
+    "type": "multiple",
+    "prompt": "The passage mentions which of the following as ways in which higher pay may raise productivity? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "Reduced turnover among employees",
+     "Attraction of more highly skilled applicants",
+     "A sense of obligation among workers toward their employer"
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "The fourth sentence mentions quitting less often (A) and reciprocating the employer's generosity (C). Attracting better applicants (B) is a common argument for efficiency wages, but the passage does not mention it."
+   }
+  ]
+ },
+ {
+  "id": "sp1-11",
+  "difficulty": "medium",
+  "passage": "The idea that self-control draws on a limited resource, so that exerting willpower on one task leaves less available for the next, gained wide acceptance in the 1990s. In a typical experiment, participants who first resisted tempting food gave up sooner on an unsolvable puzzle than participants who had been allowed to eat freely. Hundreds of subsequent studies reported similar effects, and a meta-analysis concluded that the phenomenon, termed ego depletion, was robust. That conclusion has since been called into question. Analyses correcting for the tendency of journals to publish positive results suggested that the true effect might be close to zero, and a large coordinated replication involving more than twenty laboratories found only a negligible effect. Some proponents argue that the replication used a depletion task too mild to exhaust participants. Others have suggested that depletion depends on people's beliefs about willpower, appearing mainly in those who regard it as a scarce resource.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that provides evidence undermining the conclusion of the meta-analysis.",
+    "sentence": "Analyses correcting for the tendency of journals to publish positive results suggested that the true effect might be close to zero, and a large coordinated replication involving more than twenty laboratories found only a negligible effect.",
+    "explanation": "The fifth sentence supplies the evidence: bias-corrected analyses and a large multi-laboratory replication both point to a negligible effect. The fourth sentence only announces that the conclusion has been questioned, and the last two sentences present responses by proponents."
+   },
+   {
+    "type": "single",
+    "prompt": "The argument of the proponents described in the sixth sentence implies that the replication's result",
+    "options": [
+     "proves that self-control does not draw on any resource",
+     "may reflect a weak experimental manipulation rather than the absence of the effect",
+     "was distorted by the tendency of journals to publish positive results",
+     "confirms the findings of the original meta-analysis",
+     "depends on participants' beliefs about willpower"
+    ],
+    "answer": 1,
+    "explanation": "If the depletion task was 'too mild to exhaust participants,' the null result could come from an ineffective manipulation rather than from the absence of the phenomenon. Choice E describes the other group's suggestion in the seventh sentence."
+   },
+   {
+    "type": "single",
+    "prompt": "The final sentence suggests that ego depletion, if real, might be",
+    "options": [
+     "a universal feature of human cognition",
+     "more pronounced in people who believe willpower is unlimited",
+     "contingent on the beliefs that individuals hold about self-control",
+     "detectable only with mild depletion tasks",
+     "unrelated to the ability to persist at difficult tasks"
+    ],
+    "answer": 2,
+    "explanation": "The final sentence says depletion may appear mainly in people who regard willpower as scarce. That makes the effect contingent on belief rather than universal (A), and B reverses the claim."
+   }
+  ]
+ },
+ {
+  "id": "sp1-12",
+  "difficulty": "medium",
+  "passage": "The Snowball Earth hypothesis holds that, roughly 700 million years ago, ice sheets extended all the way to the equator, encasing the planet for millions of years. The idea originated with the discovery of glacial deposits in rocks that, according to magnetic evidence, formed at tropical latitudes. A global freeze would seem self-perpetuating, since ice reflects most incoming sunlight and would keep the surface cold. Proponents argue, however, that volcanoes would have continued to release carbon dioxide, which, with the frozen surface unable to remove it through rock weathering, would accumulate until the greenhouse effect melted the ice. This scenario helps explain an otherwise puzzling observation: the glacial deposits are directly overlain by thick layers of carbonate rock, which typically form in warm water. Skeptics have proposed a slushball alternative, in which a band of open ocean persisted near the equator. Such refuges would help account for the survival of photosynthetic organisms, which a fully frozen ocean would seem to preclude.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that explains how the condition described in the third sentence could have come to an end.",
+    "sentence": "Proponents argue, however, that volcanoes would have continued to release carbon dioxide, which, with the frozen surface unable to remove it through rock weathering, would accumulate until the greenhouse effect melted the ice.",
+    "explanation": "The third sentence describes a freeze that would seem to sustain itself. The fourth sentence explains how it could end: volcanic carbon dioxide would build up and eventually melt the ice. The fifth sentence cites evidence consistent with that ending but does not explain the mechanism."
+   },
+   {
+    "type": "single",
+    "prompt": "The carbonate rock mentioned in the passage is presented as",
+    "options": [
+     "evidence that the glaciers never reached tropical latitudes",
+     "an observation that the Snowball Earth hypothesis can account for",
+     "the source of the carbon dioxide released by volcanoes",
+     "evidence favoring the slushball alternative over the original hypothesis",
+     "a feature that shows the freeze was self-perpetuating"
+    ],
+    "answer": 1,
+    "explanation": "The fifth sentence says the Snowball Earth scenario 'helps explain' the otherwise puzzling carbonate layers. Rocks that form in warm water, lying directly on glacial deposits, fit an abrupt greenhouse-driven melt."
+   },
+   {
+    "type": "multiple",
+    "prompt": "It can be inferred that the slushball alternative Consider each of the choices separately and select all that apply.",
+    "options": [
+     "would be more consistent than a fully frozen Earth with the survival of photosynthetic life",
+     "denies that any glacial deposits formed at tropical latitudes",
+     "holds that part of the ocean remained free of ice"
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "C restates the sixth sentence, and A follows from the seventh, which says open-water refuges would explain the survival of photosynthetic organisms. B is unsupported: the alternative keeps a frozen world and only adds an open equatorial band."
+   }
+  ]
+ },
+ {
+  "id": "sp1-13",
+  "difficulty": "hard",
+  "passage": "Whether the language one speaks shapes how one perceives the world has long divided scholars, and color has served as the principal testing ground. A landmark cross-linguistic survey in the late 1960s argued that, although languages differ in how many basic color terms they possess, those terms emerge in a largely fixed order and cluster around the same focal hues, a pattern that seemed to vindicate universalism. Later work complicated this picture without simply reversing it. Speakers of languages that lexically distinguish light from dark blue discriminate between such shades slightly faster than speakers of languages that do not, but the advantage vanishes when participants must simultaneously rehearse a string of digits, a task that occupies verbal working memory. This dependence on concurrent verbal processing suggests that language influences color judgment online, by supplying categories during the task, rather than by permanently restructuring perception. Such a finding is awkward for strong relativists and universalists alike: the former expected deeper effects, the latter none at all.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that describes the experimental manipulation on which the author's conclusion about the timing of linguistic influence depends.",
+    "sentence": "Speakers of languages that lexically distinguish light from dark blue discriminate between such shades slightly faster than speakers of languages that do not, but the advantage vanishes when participants must simultaneously rehearse a string of digits, a task that occupies verbal working memory.",
+    "explanation": "The conclusion that language acts 'online' during the task rests on the digit-rehearsal manipulation described in the fourth sentence: occupying verbal working memory removes the advantage. The fifth sentence draws the conclusion but does not describe the manipulation."
+   },
+   {
+    "type": "single",
+    "prompt": "It can be inferred that strong relativists, as characterized in the passage, would have predicted that the discrimination advantage",
+    "options": [
+     "would appear only in speakers of languages with few basic color terms",
+     "would persist even when participants' verbal working memory was occupied",
+     "would vanish entirely under all experimental conditions",
+     "would be confined to focal hues shared across languages",
+     "would be larger for digits than for colors"
+    ],
+    "answer": 1,
+    "explanation": "Strong relativists 'expected deeper effects,' meaning that language permanently restructures perception. If so, the advantage should not depend on concurrent verbal processing and would survive the digit task. The observed disappearance is why the finding is awkward for them."
+   },
+   {
+    "type": "multiple",
+    "prompt": "The passage suggests which of the following about the survey of the late 1960s? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "It found that languages vary in the number of basic color terms they contain.",
+     "Its conclusions were entirely overturned by later research.",
+     "It was taken to support the view that color categorization has a universal basis."
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "A: the survey acknowledged that languages 'differ in how many basic color terms they possess.' C: its findings 'seemed to vindicate universalism.' B is contradicted by the statement that later work complicated the picture 'without simply reversing it.'"
+   }
+  ]
+ },
+ {
+  "id": "sp1-14",
+  "difficulty": "hard",
+  "passage": "Skeletal remains from populations that adopted agriculture often show more signs of disease and nutritional stress than those of their foraging predecessors, including enamel defects, porous lesions of the skull, and reduced adult stature. Many researchers have concluded that the transition to farming, whatever its long-term consequences for population size, initially worsened human health. The inference is less straightforward than it appears. A skeleton bears visible lesions only if the individual survived an illness long enough for bone to respond; a person who died quickly of the same disease leaves no trace. A population whose skeletons display many lesions might therefore be one in which people were robust enough to survive chronic stress, rather than one in which they were sicker. Cemetery samples, moreover, consist of those who died, and the dead are not a random sample of the living. None of these problems invalidates the conventional interpretation, but they imply that skeletal markers must be read alongside independent evidence, such as mortality profiles and dietary isotopes, before conclusions about health are drawn.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that presents a conclusion the author later qualifies without rejecting.",
+    "sentence": "Many researchers have concluded that the transition to farming, whatever its long-term consequences for population size, initially worsened human health.",
+    "explanation": "The second sentence states the conventional conclusion. The author complicates it in the following sentences, and the last sentence says these problems do not 'invalidate' it but require corroboration, so it is qualified rather than rejected. The first sentence reports evidence, not a conclusion."
+   },
+   {
+    "type": "single",
+    "prompt": "The author mentions a person who died quickly of a disease primarily in order to",
+    "options": [
+     "show that agricultural populations suffered from more acute illnesses than foragers",
+     "illustrate why the absence of skeletal lesions need not indicate the absence of illness",
+     "argue that cemetery samples overrepresent the healthy",
+     "suggest that mortality profiles are unreliable",
+     "explain why enamel defects are more common than skull lesions"
+    ],
+    "answer": 1,
+    "explanation": "The example shows that a fatal illness can leave no mark on bone, so a skeleton without lesions is not proof of good health. This supports the point that more lesions could indicate greater resilience."
+   },
+   {
+    "type": "multiple",
+    "prompt": "The author would most likely agree with which of the following statements? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "Skeletal markers alone are insufficient grounds for firm conclusions about a population's health.",
+     "Early farmers were in fact healthier than the foragers who preceded them.",
+     "The individuals represented in a cemetery may differ systematically from the living population."
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "A matches the final sentence's call for independent evidence. C restates the sixth sentence. B goes too far, because the author raises the possibility without asserting it and explicitly does not invalidate the conventional view."
+   }
+  ]
+ },
+ {
+  "id": "sp1-15",
+  "difficulty": "hard",
+  "passage": "Why do males of many species bear ornaments, such as the peacock's train, that appear to impair survival? One influential answer, the handicap principle, holds that such traits are attractive precisely because they are costly: only a male in excellent condition can afford an extravagant ornament, so the ornament is an honest signal of quality that weaker rivals cannot fake. Early mathematical treatments suggested that the principle could not work, since genes for the handicap would burden offspring as heavily as they advertised the father's quality. Later models rescued the idea by making the cost condition-dependent, so that the burden of the ornament falls more heavily on individuals in poor condition. More recently, some theorists have argued that cost per se is not what keeps signals honest; what matters is that the marginal cost of signaling more intensely differs among individuals, a requirement that can be met even when the signals observed at equilibrium are cheap. If so, the conspicuous waste the principle was invoked to explain may be an incidental feature of some honest signals rather than the essence of all of them.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that presents an objection that was subsequently answered by a modification of the theory.",
+    "sentence": "Early mathematical treatments suggested that the principle could not work, since genes for the handicap would burden offspring as heavily as they advertised the father's quality.",
+    "explanation": "The third sentence raises the objection that handicap genes would burden offspring. The fourth sentence answers it by making the cost condition-dependent. The fifth sentence is a later reinterpretation of what keeps signals honest, not an objection that was answered by modifying the theory."
+   },
+   {
+    "type": "single",
+    "prompt": "According to the theorists described in the fifth sentence, a signal remains honest provided that",
+    "options": [
+     "it is extremely costly for every individual that displays it",
+     "it is displayed only by males in excellent condition",
+     "individuals differ in the additional cost they would bear by signaling more intensely",
+     "its cost falls equally on all individuals",
+     "it is inherited by offspring"
+    ],
+    "answer": 2,
+    "explanation": "These theorists hold that what matters is that 'the marginal cost of signaling more intensely differs among individuals,' even if the signals actually observed are cheap. A and D contradict this view."
+   },
+   {
+    "type": "single",
+    "prompt": "The final sentence suggests that conspicuous costliness is",
+    "options": [
+     "a necessary feature of every honest signal",
+     "evidence that a signal is dishonest",
+     "not essential to honest signaling, though it may accompany some honest signals",
+     "found only in ornaments that impair survival",
+     "irrelevant to the evolution of the peacock's train"
+    ],
+    "answer": 2,
+    "explanation": "The final sentence calls conspicuous waste possibly 'an incidental feature of some honest signals rather than the essence of all of them.' That means it is not necessary but may occur. E goes too far, since waste may still feature in some signals."
+   }
+  ]
+ },
+ {
+  "id": "sp1-16",
+  "difficulty": "hard",
+  "passage": "The observation that countries rich in natural resources have, on average, grown more slowly than resource-poor countries has come to be known as the resource curse. One proposed mechanism is the so-called Dutch disease, in which export earnings from a resource raise the value of the national currency and thereby make manufacturing and agriculture less competitive abroad. Another emphasizes institutions: governments that can finance themselves from resource rents need not tax their citizens and may consequently face weaker demands for accountability. The empirical foundation of the curse has nonetheless been questioned. Many early studies measured resource abundance by the share of primary commodities in exports, a figure that will be high in any country whose other sectors are underdeveloped, regardless of how much natural wealth it actually possesses. When abundance is instead measured by reserves per person, the negative association weakens considerably and in some samples reverses. Such findings do not refute the institutional argument, but they suggest that dependence on resources may be as much a symptom of slow growth as its cause.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that explains why a commonly used measure may have produced a misleading correlation.",
+    "sentence": "Many early studies measured resource abundance by the share of primary commodities in exports, a figure that will be high in any country whose other sectors are underdeveloped, regardless of how much natural wealth it actually possesses.",
+    "explanation": "The fifth sentence explains the problem: an export-share measure is high wherever other sectors are weak, so it may track underdevelopment rather than resource wealth. The sixth sentence reports what happens under an alternative measure but does not explain why the original one misleads."
+   },
+   {
+    "type": "single",
+    "prompt": "The final sentence suggests that the relationship between resource dependence and slow growth",
+    "options": [
+     "has been shown to be entirely spurious",
+     "may partly reflect causation running from slow growth to dependence",
+     "is fully explained by the Dutch disease",
+     "disappears when institutional quality is measured",
+     "is stronger when reserves per person are used as the measure"
+    ],
+    "answer": 1,
+    "explanation": "Calling dependence 'as much a symptom of slow growth as its cause' raises the possibility of reverse causation. A is too strong, because the author says the findings do not refute the institutional argument. E contradicts the sixth sentence."
+   },
+   {
+    "type": "multiple",
+    "prompt": "Which of the following can be inferred from the passage? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "The Dutch disease operates through a change in the exchange value of a country's currency.",
+     "The institutional argument depends on the export-share measure used in early studies.",
+     "A country with modest natural wealth could nonetheless appear resource-abundant under the measure used in many early studies."
+    ],
+    "answers": [
+     0,
+     2
+    ],
+    "explanation": "A: the Dutch disease works because resource earnings 'raise the value of the national currency.' C: the export-share figure is high in any country with underdeveloped other sectors, 'regardless of how much natural wealth it actually possesses.' B is contradicted by the final sentence, which says the measurement findings do not refute the institutional argument."
+   }
+  ]
+ },
+ {
+  "id": "sp1-17",
+  "difficulty": "hard",
+  "passage": "Models of stellar evolution indicate that the young Sun, some four billion years ago, shone about 25 to 30 percent less brightly than it does today. With so little sunlight, Earth's oceans should have been frozen solid, yet sedimentary rocks of that age show clear signs of liquid water and even of life. The most frequently proposed resolution invokes a stronger greenhouse effect, supplied by concentrations of atmospheric carbon dioxide far higher than at present. This explanation, though plausible, faces a constraint from ancient soils and weathered pebbles, whose mineral composition implies carbon dioxide levels too low, by themselves, to have offset the dimmer Sun. Methane produced by early microbes may have supplied the remaining warming, though its abundance in the early atmosphere is even less certain. Other researchers have attacked the paradox from the opposite direction, arguing that a smaller area of continents and fewer cloud-forming particles would have made the early Earth darker and therefore better at absorbing sunlight. No single mechanism appears sufficient, and most current accounts combine several partial solutions.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that presents evidence indicating that the most commonly offered explanation is insufficient on its own.",
+    "sentence": "This explanation, though plausible, faces a constraint from ancient soils and weathered pebbles, whose mineral composition implies carbon dioxide levels too low, by themselves, to have offset the dimmer Sun.",
+    "explanation": "The fourth sentence cites geological evidence (the mineral composition of ancient soils and pebbles) showing that carbon dioxide alone could not have made up for the fainter Sun. The final sentence states a general conclusion but presents no evidence."
+   },
+   {
+    "type": "single",
+    "prompt": "Attacking the paradox 'from the opposite direction,' as described in the passage, involves",
+    "options": [
+     "questioning the models that predict a fainter young Sun",
+     "increasing the estimated concentration of greenhouse gases",
+     "proposing that Earth absorbed a larger share of the sunlight it received rather than retaining more heat",
+     "arguing that the early oceans were in fact frozen",
+     "attributing the warming to heat from Earth's interior"
+    ],
+    "answer": 2,
+    "explanation": "Greenhouse explanations work by trapping more heat. The alternative proposes that a darker early Earth, with less continental area and fewer clouds, absorbed more of the incoming sunlight. Nothing in the passage questions the solar models (A) or invokes internal heat (E)."
+   },
+   {
+    "type": "multiple",
+    "prompt": "It can be inferred from the passage that the author Consider each of the choices separately and select all that apply.",
+    "options": [
+     "regards the paradox as arising from a conflict between theoretical models and geological evidence",
+     "doubts that life existed on Earth four billion years ago",
+     "considers the methane hypothesis better constrained by evidence than the carbon dioxide hypothesis"
+    ],
+    "answers": [
+     0
+    ],
+    "explanation": "A: the paradox sets stellar-evolution models against rocks showing liquid water. B contradicts the passage's acceptance of signs of early life. C reverses the passage, which says methane's early abundance is 'even less certain.'"
+   }
+  ]
+ },
+ {
+  "id": "sp1-18",
+  "difficulty": "hard",
+  "passage": "In the classic free-choice paradigm, participants rate a set of items, choose between two they rated similarly, and then rate the items again. Typically the chosen item rises in their estimation and the rejected one falls, a pattern long interpreted as evidence that people ease the discomfort of a difficult decision by revaluing the alternatives. Decades after the paradigm was introduced, a methodological critique showed that this spreading of alternatives could arise even if choosing had no effect on preferences at all. Because initial ratings are noisy estimates of underlying preference, a participant's choice reveals information about which item was truly preferred, and later ratings will tend to drift toward those true values. Studies with corrected designs, in which some participants rate both items twice before choosing, have nonetheless continued to find a spreading effect, though usually a smaller one. The original conclusion has thus survived, but its evidential basis has changed: what was once regarded as a decisive demonstration is now recognized as partly artifact.",
+  "questions": [
+   {
+    "type": "select_sentence",
+    "prompt": "Select the sentence in the passage that explains the statistical reasoning behind an alternative account of a well-known finding.",
+    "sentence": "Because initial ratings are noisy estimates of underlying preference, a participant's choice reveals information about which item was truly preferred, and later ratings will tend to drift toward those true values.",
+    "explanation": "The third sentence announces that a critique showed the effect could arise without any change in preference. The fourth sentence gives the reasoning: noisy initial ratings, combined with the information revealed by the choice, produce an apparent spread as ratings regress toward true values."
+   },
+   {
+    "type": "single",
+    "prompt": "The primary purpose of the passage is to",
+    "options": [
+     "argue that decisions have no effect on preferences",
+     "describe how a methodological critique altered the standing of an established finding",
+     "propose a new experimental paradigm for studying choice",
+     "defend the original interpretation of the free-choice paradigm against all criticism",
+     "explain why participants' initial ratings are unreliable"
+    ],
+    "answer": 1,
+    "explanation": "The passage traces a finding, its critique, and its partial survival. The conclusion stands but on a changed evidential basis. A is too strong, D ignores the concession that the effect is partly artifact, and E describes only one detail."
+   },
+   {
+    "type": "multiple",
+    "prompt": "Which of the following can be inferred from the passage? Consider each of the choices separately and select all that apply.",
+    "options": [
+     "Corrected designs typically yield a larger spreading effect than the original paradigm did.",
+     "The critique's account of spreading does not require that choosing alter preferences.",
+     "Noise in participants' initial ratings is central to the methodological critique."
+    ],
+    "answers": [
+     1,
+     2
+    ],
+    "explanation": "B: the critique showed spreading could arise 'even if choosing had no effect on preferences.' C: the fourth sentence builds the critique on noisy initial ratings. A contradicts the fifth sentence, which says the corrected effect is 'usually a smaller one.'"
+   }
+  ]
+ }
+]

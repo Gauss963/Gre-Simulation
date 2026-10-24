@@ -51,4 +51,16 @@ To reduce perceived repetition in actual sessions, Quant selection first rotates
 
 The generators check IDs, keys, duplicate choices, content uniqueness, route coverage, and nonempty chart/table data. [`BalancedQuantManifest.json`](Gre%20Simulation/Resources/BalancedQuantManifest.json) records the exact area, difficulty, format, and normalized-family counts. Structured figures are rendered at runtime with native SwiftUI Charts, Grid, and Canvas rather than bundled screenshots.
 
+## 2026 test-format alignment (1.5.0)
+
+Format details follow ETS's public GRE General Test pages (test structure, test content, scores, interpretive data) and *The Official Guide to the GRE General Test*:
+
+- Analytical Writing (one 30-minute Issue task) is always first; the two Verbal (12 questions/18 minutes, 15/23) and two Quant (12/21, 15/26) sections follow in any order, with no unscored section and no scheduled break.
+- Section-level adaptation: the first section of each measure is of average difficulty, and the second is chosen from first-section performance. ETS does not publish its routing thresholds; this app uses below 40% Easy, 40–66% Medium, and 67%+ Hard.
+- Question-type mix and order within a section are not published as fixed rules. The form builder follows the official practice-test pattern: Verbal opens with Text Completion (1→3 blanks), keeps Reading Comprehension passages together for about half the section, and includes Sentence Equivalence; Quant opens with Quantitative Comparison (about a third) and includes one Data Interpretation set of multiple-choice or Numeric Entry questions.
+- Calculator, Mark/Review, Review status labels, Hide Time (with the clock shown for the last five minutes), and the word processor (Cut/Paste/Undo; no spelling or grammar check) follow the descriptions in ETS's test-preview materials.
+- Scaled scores interpolate conversion tables modeled on ETS's published paper-based conversion tables after weighting second-section answers by route; percentiles use ETS's published interpretive data. Analytical Writing averages two local ratings on the 0–6 half-point scale, mirroring the human + e-rater design.
+
+`Tools/build_gre_2026_additions.py` adds 159 original items (`GRE2026Additions.json`): 58 Issue prompts written for the six official instruction variants, plus Reading Comprehension sets that include Select-in-Passage questions. No official prompt or passage text is copied; these items are labeled as generated practice in review.
+
 The resulting score is a simulation. It must not be described as an official or predictive ETS score because the operational item parameters and equating tables are not public.

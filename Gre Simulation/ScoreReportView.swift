@@ -38,6 +38,14 @@ struct ScoreReportView: View {
                 VStack(alignment: .leading, spacing: 22) {
                     header
                     scoreCards
+                    if let summary = result.writingSummary {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("Analytical Writing feedback").font(.title2.bold())
+                            Text(summary).font(.subheadline).foregroundStyle(.secondary)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .greCard()
+                    }
                     sectionPerformance
                     answerReview
                     methodology
@@ -66,18 +74,21 @@ struct ScoreReportView: View {
     private var scoreCards: some View {
         HStack(spacing: 14) {
             if result.verbalTotal > 0 {
-                scoreCard("Verbal Reasoning", result.verbalScore, raw: "\(result.verbalCorrect) of \(result.verbalTotal) correct", range: "130–170")
+                scoreCard("Verbal Reasoning", result.verbalScore, raw: "\(result.verbalCorrect) of \(result.verbalTotal) correct", range: "130–170",
+                          percentile: result.verbalScore.flatMap { ScoreEstimator.percentile($0, measure: .verbal) })
             }
             if result.quantitativeTotal > 0 {
-                scoreCard("Quantitative Reasoning", result.quantitativeScore, raw: "\(result.quantitativeCorrect) of \(result.quantitativeTotal) correct", range: "130–170")
+                scoreCard("Quantitative Reasoning", result.quantitativeScore, raw: "\(result.quantitativeCorrect) of \(result.quantitativeTotal) correct", range: "130–170",
+                          percentile: result.quantitativeScore.flatMap { ScoreEstimator.percentile($0, measure: .quantitative) })
             }
             if let writing = result.writingEstimate {
-                scoreCard("Analytical Writing", nil, customScore: String(format: "%.1f", writing), raw: "local structure signal", range: "0–6")
+                scoreCard("Analytical Writing", nil, customScore: String(format: "%.1f", writing), raw: "Two ratings averaged, half-point scale", range: "0–6",
+                          percentile: ScoreEstimator.writingPercentile(writing))
             }
         }
     }
 
-    private func scoreCard(_ title: String, _ score: Int?, customScore: String? = nil, raw: String, range: String) -> some View {
+    private func scoreCard(_ title: String, _ score: Int?, customScore: String? = nil, raw: String, range: String, percentile: Int? = nil) -> some View {
         VStack(alignment: .leading, spacing: 9) {
             HStack {
                 Text(title).font(.subheadline.weight(.semibold))
@@ -89,6 +100,9 @@ struct ScoreReportView: View {
                 .monospacedDigit()
                 .foregroundStyle(GRETheme.blue)
             Text(raw).font(.caption).foregroundStyle(.secondary)
+            if let percentile {
+                Text("\(percentile)th percentile").font(.caption.bold()).foregroundStyle(GRETheme.teal)
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .greCard()
@@ -219,6 +233,10 @@ struct ScoreReportView: View {
         if question.format == .numericEntry {
             return answer.numericEntry.isEmpty ? "Not answered" : answer.numericEntry
         }
+        if question.format == .essay {
+            let words = answer.essayText.split(whereSeparator: \.isWhitespace).count
+            return words == 0 ? "Not answered" : "\(words)-word response"
+        }
         let values = question.groups.flatMap { group in
             let selected = answer.selections[group.id] ?? []
             return group.options.filter { selected.contains($0.id) }.map(\.text)
@@ -242,10 +260,10 @@ struct ScoreReportView: View {
             Label("How this estimate works", systemImage: "function")
                 .font(.headline)
                 .foregroundStyle(GRETheme.navy)
-            Text("Verbal and Quant scores map raw accuracy linearly onto 130–170. The real GRE converts raw scores through proprietary equating and accounts for the selected second-section difficulty, so an official score may differ. The adaptive route in this simulator uses first-section accuracy: below 40% selects Easy, 40–66% Medium, and 67% or above Hard.")
+            Text("As on the real GRE, the second section of each measure is chosen by first-section performance (below 40% Easy, 40–66% Medium, 67% or above Hard). Correct answers on a harder second section count for more, and the weighted raw score is converted to 130–170 with conversion tables modeled on ETS's published paper-test tables. ETS's actual equating is proprietary, so an official score may differ. A measure with no answered questions reports NS, as ETS does. Percentiles use ETS's published interpretive data.")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
-            Text("The writing signal uses response length, organization, transition cues, and lexical variety. It cannot judge factual relevance, logical quality, or style as a trained reader can.")
+            Text("ETS scores the Issue essay 0–6 by averaging a trained reader and the e-rater engine. This simulator likewise averages two ratings: a rubric reading (position, development, examples, counterarguments, organization) and a feature model (length, vocabulary, sentence variety, cohesion, mechanics). Off-topic, copied, or blank responses score 0. It cannot judge reasoning quality as a trained reader can.")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }

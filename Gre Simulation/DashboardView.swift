@@ -90,6 +90,7 @@ struct DashboardView: View {
                 sessionCard(.fullLength, icon: "timer", accent: GRETheme.blue)
                 sessionCard(.verbalPractice, icon: "text.quote", accent: GRETheme.teal)
                 sessionCard(.quantitativePractice, icon: "function", accent: .indigo)
+                sessionCard(.writingPractice, icon: "square.and.pencil", accent: .orange)
             }
         }
     }

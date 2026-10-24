@@ -11,7 +11,9 @@ import SwiftUI
 struct Gre_SimulationApp: App {
     init() {
         #if DEBUG
-        let issues = QuestionBank.validate() + VocabularyBank.validate()
+        if ProcessInfo.processInfo.arguments.contains("-selfTest") { SelfTest.run() }
+        let issues = QuestionBank.validate() + VocabularyBank.validate() + FormBuilder.validate()
+        issues.forEach { print("Validation:", $0) }
         assert(issues.isEmpty, issues.joined(separator: "\n"))
         assert(NumericAnswerMatcher.matches("2.50", "5/2"))
         assert(!NumericAnswerMatcher.matches("2.51", "5/2"))
