@@ -13,6 +13,12 @@ enum SelfTest {
         let validation = QuestionBank.validate() + VocabularyBank.validate() + FormBuilder.validate()
         validation.forEach { failures.append("Validation: " + $0) }
 
+        // Retired imported items must load and never be delivered.
+        let retired = Set(QuestionBank.retiredQuestionReasons.keys)
+        check(!retired.isEmpty, "Retired-question list did not load")
+        check(QuestionBank.all.allSatisfy { !retired.contains($0.id) }, "A retired question is still in the bank")
+        log("Retired questions: \(retired.count); Verbal pool \(QuestionBank.all.filter { $0.measure == .verbal }.count)")
+
         for run in 0..<12 {
             let session = ExamSession(mode: .fullLength)
             let layout = session.sections.map { "\($0.measure.shortTitle)\($0.ordinal)[\($0.questions.count)q/\($0.durationSeconds / 60)m]" }

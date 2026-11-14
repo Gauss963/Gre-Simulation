@@ -33,10 +33,17 @@ enum QuestionBank {
     static let additions2026: [GREQuestion] =
         BundledResource.decode([GREQuestion].self, named: "GRE2026Additions") ?? []
 
+    /// Imported items found broken while their explanations were written (a doubtful key, a
+    /// garbled stem or option, or options that belong to another passage), with the reason. They
+    /// are kept in the source files but never delivered.
+    static let retiredQuestionReasons: [String: String] =
+        BundledResource.decode([String: String].self, named: "RetiredQuestions") ?? [:]
+
     static let all: [GREQuestion] =
-        verbalQuestions + quantitativeQuestions + expandedQuestions
+        (verbalQuestions + quantitativeQuestions + expandedQuestions
             + authorized20260720Questions + authorized20260720Part2Questions
-            + balancedQuantQuestions + additions2026.filter { $0.measure != .analyticalWriting }
+            + balancedQuantQuestions + additions2026.filter { $0.measure != .analyticalWriting })
+            .filter { retiredQuestionReasons[$0.id] == nil }
 
     static let writingQuestions: [GREQuestion] =
         [writingQuestion]
@@ -117,9 +124,14 @@ enum QuestionBank {
         let ids = [writingQuestion.id] + all.map(\.id)
         if Set(ids).count != ids.count { issues.append("Question IDs must be unique.") }
 
+        // Boilerplate that only restated the answer; every Verbal item now has a real explanation.
+        let boilerplate = ["請依文章中的明示資訊、語意關係", "能使句子的轉折、因果與語氣關係一致", "代入後，句子的文法、轉折、因果與語氣關係一致"]
         for question in all {
             if question.prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 issues.append("\(question.id) has an empty prompt.")
+            }
+            if question.measure == .verbal, boilerplate.contains(where: question.explanation.contains) {
+                issues.append("\(question.id) has only a boilerplate explanation.")
             }
             if question.format == .essay {
                 continue

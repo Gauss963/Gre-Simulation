@@ -64,3 +64,10 @@ Format details follow ETS's public GRE General Test pages (test structure, test 
 `Tools/build_gre_2026_additions.py` adds 159 original items (`GRE2026Additions.json`): 58 Issue prompts written for the six official instruction variants, plus Reading Comprehension sets that include Select-in-Passage questions. No official prompt or passage text is copied; these items are labeled as generated practice in review.
 
 The resulting score is a simulation. It must not be described as an official or predictive ETS score because the operational item parameters and equating tables are not public.
+
+## Verbal explanations and gloss review (1.6.0, November 2026)
+
+2,209 imported Verbal items (68%) had only a boilerplate explanation that restated the answer. Each now has an explanation written for that item in Taiwan Traditional Chinese, kept in `Tools/reviewed_verbal_explanations.json` and applied with `Tools/apply_verbal_explanations.py` so that re-importing the source files does not lose them; debug validation rejects any remaining boilerplate. While writing them, 31 items were found to have a doubtful key, a garbled stem or option, or options that belong to another passage; they stay in the source files but are listed with reasons in `Resources/RetiredQuestions.json` and never delivered.
+
+All 5,995 vocabulary glosses were checked again for accuracy, missing GRE-tested senses, sense order, Taiwan usage and characters, and consistency with the part of speech and English definition. 65 entries were corrected (recorded with reasons in `Tools/review_2026_11/gloss_changes.json`) and applied through `Tools/apply_reviewed_glosses.py`.
+

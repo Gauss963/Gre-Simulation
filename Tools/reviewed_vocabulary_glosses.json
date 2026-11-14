@@ -95,7 +95,7 @@
     "partOfSpeech": "v."
   },
   "ablution": {
-    "chinese": "沐浴；淨身；（宗教）洗禮儀式",
+    "chinese": "淨身；沐浴；（宗教）淨禮；洗滌儀式",
     "definition": "the act of washing oneself; a ritual cleansing",
     "partOfSpeech": "n."
   },
@@ -1635,7 +1635,7 @@
     "partOfSpeech": "adj."
   },
   "apiary": {
-    "chinese": "養蜂場；蜂房",
+    "chinese": "養蜂場；蜂園",
     "definition": "a place where bees are kept",
     "partOfSpeech": "n."
   },
@@ -2240,7 +2240,7 @@
     "partOfSpeech": "adj."
   },
   "astral": {
-    "chinese": "星的；星狀的；（生物）星體的；靈體的",
+    "chinese": "星的；星狀的；（生物）星狀體的；靈體的",
     "definition": "of or relating to the stars; star-shaped; (biology) of the aster in cell division; of a spirit world",
     "partOfSpeech": "adj."
   },
@@ -4420,7 +4420,7 @@
     "partOfSpeech": "n./v./adj."
   },
   "centimeter": {
-    "chinese": "公分；釐米",
+    "chinese": "公分",
     "definition": "a metric unit of length equal to one hundredth of a meter",
     "partOfSpeech": "n."
   },
@@ -4585,7 +4585,7 @@
     "partOfSpeech": "v./n."
   },
   "checkered": {
-    "chinese": "（經歷）坎坷的；有污點的；盛衰無常的；有方格圖案的",
+    "chinese": "（經歷）坎坷的；有汙點的；盛衰無常的；有方格圖案的",
     "definition": "marked by ups and downs or by disreputable episodes; patterned with alternating squares",
     "partOfSpeech": "adj."
   },
@@ -5220,7 +5220,7 @@
     "partOfSpeech": "adj."
   },
   "commodious": {
-    "chinese": "寬敞的；寬敞舒適的",
+    "chinese": "寬敞舒適的；寬廣的",
     "definition": "roomy and comfortable; spacious",
     "partOfSpeech": "adj."
   },
@@ -5300,7 +5300,7 @@
     "partOfSpeech": "adj."
   },
   "complacency": {
-    "chinese": "自滿；得意自滿；缺乏憂患意識",
+    "chinese": "自滿；自鳴得意；安於現狀",
     "definition": "smug self-satisfaction, often unaware of dangers or deficiencies",
     "partOfSpeech": "n."
   },
@@ -5600,7 +5600,7 @@
     "partOfSpeech": "v./n."
   },
   "conduit": {
-    "chinese": "管道；導管；（傳遞資訊等的）渠道；中間人",
+    "chinese": "管道；導管；（傳遞資訊等的）途徑；中間人",
     "definition": "a pipe or channel for fluid or wires; a means of transmitting something; an intermediary",
     "partOfSpeech": "n."
   },
@@ -5770,7 +5770,7 @@
     "partOfSpeech": "v."
   },
   "conniving": {
-    "chinese": "詭計多端的；搞陰謀的；縱容的",
+    "chinese": "詭計多端的；暗中策劃陰謀的；縱容的",
     "definition": "given to scheming in secret toward a dishonest end; secretly permitting wrongdoing",
     "partOfSpeech": "adj."
   },
@@ -6150,7 +6150,7 @@
     "partOfSpeech": "n."
   },
   "conventional": {
-    "chinese": "傳統的；慣例的；保守的；常規的",
+    "chinese": "傳統的；慣例的；保守的；常規的；（武器）非核的",
     "definition": "following accepted customs; lacking originality; (of weapons) non-nuclear",
     "partOfSpeech": "adj."
   },
@@ -6685,7 +6685,7 @@
     "partOfSpeech": "n."
   },
   "cult": {
-    "chinese": "異教團體；邪教；崇拜；狂熱",
+    "chinese": "崇拜；狂熱追捧；邪教；膜拜團體",
     "definition": "a religious group regarded as extreme; devotion to a person or thing; a fad",
     "partOfSpeech": "n."
   },
@@ -6755,7 +6755,7 @@
     "partOfSpeech": "adj."
   },
   "curt": {
-    "chinese": "簡短無禮的；草率的",
+    "chinese": "簡短無禮的；唐突的；生硬的",
     "definition": "rudely brief",
     "partOfSpeech": "adj."
   },
@@ -7050,7 +7050,7 @@
     "partOfSpeech": "v."
   },
   "declaim": {
-    "chinese": "慷慨陳詞；激昂地演說；朗誦",
+    "chinese": "慷慨陳詞；激昂地演說；大聲抨擊；朗誦",
     "definition": "to speak or recite rhetorically; to protest loudly",
     "partOfSpeech": "v."
   },
@@ -7390,7 +7390,7 @@
     "partOfSpeech": "n."
   },
   "demise": {
-    "chinese": "死亡；終結；倒閉；（法律）遺贈",
+    "chinese": "死亡；終結；倒閉；（法律）（財產）讓渡",
     "definition": "a person's death; the end or failure of something; the transfer of property",
     "partOfSpeech": "n."
   },
@@ -7955,7 +7955,7 @@
     "partOfSpeech": "n."
   },
   "dichotomy": {
-    "chinese": "二分法；對立；截然對立",
+    "chinese": "二分法；一分為二；截然對立",
     "definition": "a division into two contrasting or opposed parts",
     "partOfSpeech": "n."
   },
@@ -8805,7 +8805,7 @@
     "partOfSpeech": "adj."
   },
   "doctor": {
-    "chinese": "v. 竄改；篡改；摻雜；治療；n. 醫生；博士",
+    "chinese": "v. 竄改；偽造；摻雜；治療；n. 醫生；博士",
     "definition": "to falsify or tamper with; to adulterate; to treat medically; a physician; a holder of a doctorate",
     "partOfSpeech": "v./n."
   },
@@ -8935,7 +8935,7 @@
     "partOfSpeech": "n."
   },
   "donor": {
-    "chinese": "捐贈者；捐款人；（器官或血液）捐贈者",
+    "chinese": "捐贈者；捐款人；捐血者；（器官）捐贈人",
     "definition": "a person who gives money or goods; a person who gives blood or an organ",
     "partOfSpeech": "n."
   },
@@ -9735,7 +9735,7 @@
     "partOfSpeech": "adj."
   },
   "empiricism": {
-    "chinese": "經驗主義；經驗論；（醫學）庸醫術",
+    "chinese": "經驗主義；經驗論；重視實證（而非理論）",
     "definition": "the theory that all knowledge derives from sense experience; reliance on experience rather than theory",
     "partOfSpeech": "n."
   },
@@ -10000,7 +10000,7 @@
     "partOfSpeech": "v."
   },
   "entity": {
-    "chinese": "實體；存在物；獨立存在",
+    "chinese": "實體；存在物；組織；機構",
     "definition": "a thing with distinct and independent existence; an organization or body",
     "partOfSpeech": "n."
   },
@@ -10305,7 +10305,7 @@
     "partOfSpeech": "v."
   },
   "escalator": {
-    "chinese": "手扶梯；電扶梯；（合約）伸縮條款",
+    "chinese": "電扶梯；（合約）伸縮條款",
     "definition": "a moving staircase; a contract clause allowing adjustments in wages or prices",
     "partOfSpeech": "n."
   },
@@ -10680,7 +10680,7 @@
     "partOfSpeech": "v."
   },
   "exhume": {
-    "chinese": "（屍體）掘出；發掘；使重見天日",
+    "chinese": "掘出（屍體）；發掘；使重見天日",
     "definition": "to dig up (a buried body); to bring back from neglect or obscurity",
     "partOfSpeech": "v."
   },
@@ -10745,7 +10745,7 @@
     "partOfSpeech": "v."
   },
   "expediency": {
-    "chinese": "權宜之計；私利考量；方便；得當",
+    "chinese": "權宜；私利考量；方便；得當",
     "definition": "the quality of being convenient and practical though perhaps improper; self-interest; advantageousness",
     "partOfSpeech": "n."
   },
@@ -11170,7 +11170,7 @@
     "partOfSpeech": "adj./adv./v./n."
   },
   "fastidious": {
-    "chinese": "一絲不苟的；挑剔的；過分講究的；潔癖的",
+    "chinese": "一絲不苟的；挑剔的；過分講究的；有潔癖的",
     "definition": "very attentive to accuracy and detail; hard to please; excessively particular; very concerned about cleanliness",
     "partOfSpeech": "adj."
   },
@@ -11290,7 +11290,7 @@
     "partOfSpeech": "n./v."
   },
   "feisty": {
-    "chinese": "好鬥的；精力充沛的；有活力的；暴躁的",
+    "chinese": "精力充沛的；有幹勁的；好鬥的；易怒的",
     "definition": "spirited and determined; lively; aggressive; touchy",
     "partOfSpeech": "adj."
   },
@@ -12015,7 +12015,7 @@
     "partOfSpeech": "n./adj."
   },
   "foster": {
-    "chinese": "v. 促進；培養；鼓勵；收養；adj. 寄養的",
+    "chinese": "v. 促進；培養；鼓勵；撫養（他人子女）；adj. 寄養的",
     "definition": "to promote the growth of; to encourage; to bring up a child not one's own; giving parental care without legal adoption",
     "partOfSpeech": "v./adj."
   },
@@ -12305,7 +12305,7 @@
     "partOfSpeech": "n."
   },
   "gaff": {
-    "chinese": "魚叉；斜桁；大錯；（俚）住處",
+    "chinese": "（捕魚用）手鉤；（船）斜桁；大錯；（俚）住處",
     "definition": "a hooked pole for landing fish; a spar on a ship; a blunder; (slang) one's home",
     "partOfSpeech": "n."
   },
@@ -12505,7 +12505,7 @@
     "partOfSpeech": "n."
   },
   "genome": {
-    "chinese": "基因組；基因體",
+    "chinese": "基因體；基因組",
     "definition": "the complete set of genes or genetic material of an organism",
     "partOfSpeech": "n."
   },
@@ -12725,7 +12725,7 @@
     "partOfSpeech": "adj."
   },
   "glut": {
-    "chinese": "n. 過剩；供過於求；v. 使過量；充斥；吃飽",
+    "chinese": "n. 過剩；供過於求；v. 使過量；充斥；暴食",
     "definition": "an excessive supply; to oversupply; to fill to excess; to overeat",
     "partOfSpeech": "n./v."
   },
@@ -12855,7 +12855,7 @@
     "partOfSpeech": "adj."
   },
   "grandstand": {
-    "chinese": "v. 譁眾取寵；作秀；n. 正面看臺",
+    "chinese": "v. 譁眾取寵；作秀；n. （體育場）主看臺",
     "definition": "to behave ostentatiously to impress onlookers; the main seating area at a stadium",
     "partOfSpeech": "v./n."
   },
@@ -13005,7 +13005,7 @@
     "partOfSpeech": "v."
   },
   "grudge": {
-    "chinese": "n. 怨恨；積怨；v. 不情願給；嫉妒",
+    "chinese": "n. 怨恨；積怨；v. 不情願給；怨恨",
     "definition": "a persistent feeling of resentment; to give reluctantly; to resent",
     "partOfSpeech": "n./v."
   },
@@ -13755,7 +13755,7 @@
     "partOfSpeech": "n."
   },
   "hostility": {
-    "chinese": "敵意；敵對；戰鬥行為",
+    "chinese": "敵意；敵對；（複數）戰事",
     "definition": "unfriendliness or opposition; acts of warfare",
     "partOfSpeech": "n."
   },
@@ -13880,7 +13880,7 @@
     "partOfSpeech": "n."
   },
   "husk": {
-    "chinese": "n. 外殼；（穀物）莢；空殼；v. 剝去外殼",
+    "chinese": "n. 外殼；穀殼；空殼；v. 剝去外殼",
     "definition": "the dry outer covering of a seed or fruit; a worthless shell; to remove the husk from",
     "partOfSpeech": "n./v."
   },
@@ -15620,8 +15620,8 @@
     "partOfSpeech": "v."
   },
   "intersection": {
-    "chinese": "十字路口；交叉點；（數學）交集；交會",
-    "definition": "a place where roads meet; a point where lines cross; (mathematics) the set of shared elements; the meeting of two things",
+    "chinese": "交會；交叉點；十字路口；（數學）交集",
+    "definition": "the meeting or overlap of two things; a point where lines cross; a place where roads meet; (mathematics) the set of shared elements",
     "partOfSpeech": "n."
   },
   "interstellar": {
@@ -15810,7 +15810,7 @@
     "partOfSpeech": "adj."
   },
   "invoke": {
-    "chinese": "援引（法律或權威）；訴諸；祈求；喚起；調用（程式）",
+    "chinese": "援引（法律或權威）；訴諸；祈求；喚起；（程式）呼叫",
     "definition": "to cite (a law or authority) in support; to appeal to; to call on (a deity) in prayer; to evoke; (computing) to call (a program)",
     "partOfSpeech": "v."
   },
@@ -16310,7 +16310,7 @@
     "partOfSpeech": "n."
   },
   "labile": {
-    "chinese": "不穩定的；易變的；（情緒）起伏不定的",
+    "chinese": "不穩定的；易變的；（情緒）起伏不定的；（化學）易分解的",
     "definition": "liable to change; unstable; (of emotions) easily altered; (chemistry) readily breaking down",
     "partOfSpeech": "adj."
   },
@@ -17215,7 +17215,7 @@
     "partOfSpeech": "v./n."
   },
   "mandarin": {
-    "chinese": "n. 權威官員；官僚；（清朝）官吏；國語；橘子；adj. （文體）雕琢的",
+    "chinese": "n. 有權勢的官員；官僚；（中國古代）官吏；國語；橘子；adj. （文體）雕琢的",
     "definition": "an influential official, esp. a bureaucrat; a high official of imperial China; standard Chinese; a mandarin orange; (of style) ornate and elaborate",
     "partOfSpeech": "n./adj."
   },
@@ -17926,7 +17926,7 @@
   },
   "mishap": {
     "chinese": "不幸事故；小意外；災禍",
-    "definition": "an unlucky accident; a minor mishap or misfortune",
+    "definition": "an unlucky accident; a minor misfortune",
     "partOfSpeech": "n."
   },
   "misnomer": {
@@ -18990,7 +18990,7 @@
     "partOfSpeech": "n."
   },
   "obligate": {
-    "chinese": "v. 使負義務；強制；使感激；adj. （生物）專性的；必然的",
+    "chinese": "v. 使負義務；強制；使感激；adj. （生物）專性的",
     "definition": "to bind legally or morally; to compel; to make grateful; (biology) restricted to a particular way of life",
     "partOfSpeech": "v./adj."
   },
@@ -19076,7 +19076,7 @@
   },
   "obsolescent": {
     "chinese": "逐漸過時的；即將淘汰的；（生物）退化中的",
-    "definition": "becoming obsolete; going out of use",
+    "definition": "becoming obsolete; going out of use; (biology) gradually becoming vestigial",
     "partOfSpeech": "adj."
   },
   "obsolete": {
@@ -19180,7 +19180,7 @@
     "partOfSpeech": "adj."
   },
   "offal": {
-    "chinese": "內臟；下水；殘渣；廢物",
+    "chinese": "內臟；殘渣；廢物",
     "definition": "the edible internal organs of an animal; refuse or waste",
     "partOfSpeech": "n."
   },
@@ -19280,7 +19280,7 @@
     "partOfSpeech": "adj."
   },
   "onset": {
-    "chinese": "開始；發作；（疾病）初期；攻擊",
+    "chinese": "開始；發作；（疾病）初期；（古）攻擊",
     "definition": "the beginning of something, especially something unpleasant; (archaic) an attack",
     "partOfSpeech": "n."
   },
@@ -22030,7 +22030,7 @@
     "partOfSpeech": "adj."
   },
   "proscribe": {
-    "chinese": "禁止；排斥；放逐；剝奪法律保護",
+    "chinese": "禁止；（公開）譴責；放逐；剝奪法律保護",
     "definition": "to forbid, especially by law; to denounce or condemn; to banish or outlaw",
     "partOfSpeech": "v."
   },
@@ -22060,7 +22060,7 @@
     "partOfSpeech": "n./v."
   },
   "prospectus": {
-    "chinese": "簡介；說明書；招生簡章；招股說明書；計畫書",
+    "chinese": "簡介；說明書；招生簡章；公開說明書；計畫書",
     "definition": "a printed document describing a school, business, or investment offer; a plan for a forthcoming project",
     "partOfSpeech": "n."
   },
@@ -22390,7 +22390,7 @@
     "partOfSpeech": "adj."
   },
   "putative": {
-    "chinese": "推定的；假定的；公認的；所謂的",
+    "chinese": "一般認為的；推定的；假定的；所謂的",
     "definition": "generally considered or reputed to be; supposed or assumed",
     "partOfSpeech": "adj."
   },
@@ -22560,7 +22560,7 @@
     "partOfSpeech": "n."
   },
   "quidnunc": {
-    "chinese": "好管閒事的人；愛打聽消息的人；愛說長道短的人",
+    "chinese": "愛打聽消息的人；愛說長道短的人；好管閒事的人",
     "definition": "a person eager to know the latest news or gossip; a busybody",
     "partOfSpeech": "n."
   },
@@ -22650,7 +22650,7 @@
     "partOfSpeech": "n."
   },
   "racy": {
-    "chinese": "猥褻的；有點色情的；生動活潑的；（味道）濃郁的",
+    "chinese": "略帶色情的；不太正經的；生動活潑的；（味道）濃郁獨特的",
     "definition": "slightly indecent or risqué; lively and spirited; having a strong distinctive flavor",
     "partOfSpeech": "adj."
   },
@@ -22710,7 +22710,7 @@
     "partOfSpeech": "adj./n."
   },
   "rambunctious": {
-    "chinese": "喧鬧的；精力旺盛而難管束的；狂暴的",
+    "chinese": "喧鬧的；精力旺盛而難管束的；吵吵嚷嚷的",
     "definition": "uncontrollably exuberant; boisterous and noisy",
     "partOfSpeech": "adj."
   },
@@ -23045,7 +23045,7 @@
     "partOfSpeech": "adj."
   },
   "recognize": {
-    "chinese": "認出；認可；承認；（正式）承認；賞識；表彰",
+    "chinese": "認出；承認；（正式）認可；賞識；表彰",
     "definition": "to identify from previous encounters; to acknowledge the existence, validity, or legality of; to show official appreciation of",
     "partOfSpeech": "v."
   },
@@ -23595,7 +23595,7 @@
     "partOfSpeech": "adj."
   },
   "replicate": {
-    "chinese": "複製；重複（實驗並得到相同結果）；（細胞）自我複製",
+    "chinese": "複製；重複（實驗並得到相同結果）；（遺傳物質）自我複製",
     "definition": "to make an exact copy of; to repeat a study or experiment to obtain consistent results; (of genetic material) to reproduce itself",
     "partOfSpeech": "v."
   },
@@ -23605,7 +23605,7 @@
     "partOfSpeech": "n./v."
   },
   "repository": {
-    "chinese": "儲藏處；寶庫；知識庫；（軟體）儲存庫；知己",
+    "chinese": "儲藏處；寶庫；知識庫；（軟體）儲存庫；（祕密的）託付對象",
     "definition": "a place where things are stored; a rich source of information; a person entrusted with secrets",
     "partOfSpeech": "n."
   },
@@ -24170,7 +24170,7 @@
     "partOfSpeech": "adj."
   },
   "robust": {
-    "chinese": "強健的；穩健的；健全的；（酒味）濃郁的",
+    "chinese": "強健的；穩健的；健全的；（味道）濃郁的",
     "definition": "strong and healthy; sturdy and able to withstand problems; (of flavor) full and rich",
     "partOfSpeech": "adj."
   },
@@ -24395,7 +24395,7 @@
     "partOfSpeech": "adj./n."
   },
   "sallow": {
-    "chinese": "adj. （臉色）蠟黃的；氣色差的；n. （植）黃華柳",
+    "chinese": "adj. （臉色）蠟黃的；氣色差的；n. （植）黃花柳",
     "definition": "(of complexion) of an unhealthy yellowish color; a willow tree",
     "partOfSpeech": "adj./n."
   },
@@ -24555,7 +24555,7 @@
     "partOfSpeech": "adj."
   },
   "saturnine": {
-    "chinese": "陰沉的；憂鬱的；冷漠的",
+    "chinese": "陰沉的；憂鬱的；鬱鬱寡歡的",
     "definition": "gloomy, morose, or sullen in temperament",
     "partOfSpeech": "adj."
   },
@@ -24800,7 +24800,7 @@
     "partOfSpeech": "v./n."
   },
   "seamy": {
-    "chinese": "污穢的；醜惡的；墮落的",
+    "chinese": "汙穢的；醜惡的；墮落的",
     "definition": "sordid and disreputable; showing the unpleasant side of life",
     "partOfSpeech": "adj."
   },
@@ -25155,7 +25155,7 @@
     "partOfSpeech": "n."
   },
   "shaver": {
-    "chinese": "電動刮鬍刀；剃刀；（口）小伙子",
+    "chinese": "電動刮鬍刀；剃刀；（口）小夥子",
     "definition": "an electric razor; a person who shaves; a young boy",
     "partOfSpeech": "n."
   },
@@ -25250,7 +25250,7 @@
     "partOfSpeech": "v."
   },
   "sibilant": {
-    "chinese": "adj. 嘶嘶作響的；發嘶音的；n. 嘶擦音",
+    "chinese": "adj. 嘶嘶作響的；發嘶音的；n. （語音）齒擦音",
     "definition": "making a hissing sound; a speech sound such as s or sh",
     "partOfSpeech": "adj./n."
   },
@@ -26335,7 +26335,7 @@
     "partOfSpeech": "n."
   },
   "stigmatize": {
-    "chinese": "使蒙上汙名；指責；污衊",
+    "chinese": "使蒙上汙名；視為可恥；指責；譴責",
     "definition": "to brand as disgraceful; to describe or regard with strong disapproval",
     "partOfSpeech": "v."
   },
@@ -26385,7 +26385,7 @@
     "partOfSpeech": "adj./n./v."
   },
   "stodgy": {
-    "chinese": "乏味的；古板的；（食物）油膩難消化的",
+    "chinese": "乏味的；古板的；（食物）厚重難消化的",
     "definition": "dull and old-fashioned; (of food) heavy and filling",
     "partOfSpeech": "adj."
   },
@@ -26540,7 +26540,7 @@
     "partOfSpeech": "v./n."
   },
   "stupefy": {
-    "chinese": "使驚呆；使昏迷；使麻木",
+    "chinese": "使驚呆；使茫然；使麻木；使昏沉",
     "definition": "to astonish; to make unable to think or feel properly",
     "partOfSpeech": "v."
   },
@@ -26700,7 +26700,7 @@
     "partOfSpeech": "n./v."
   },
   "subterfuge": {
-    "chinese": "詭計；托詞；欺騙手段",
+    "chinese": "詭計；託詞；欺騙手段",
     "definition": "deceit used to achieve one's goal or conceal something",
     "partOfSpeech": "n."
   },
@@ -27030,8 +27030,8 @@
     "partOfSpeech": "v./n."
   },
   "swear": {
-    "chinese": "咒罵；說髒話；宣誓；發誓；斷言",
-    "definition": "to use profane language; to take an oath; to promise solemnly; to assert emphatically",
+    "chinese": "發誓；宣誓；斷言；咒罵；說髒話",
+    "definition": "to take an oath; to promise solemnly; to assert emphatically; to use profane language",
     "partOfSpeech": "v."
   },
   "sweltering": {
@@ -27810,7 +27810,7 @@
     "partOfSpeech": "adj."
   },
   "toy": {
-    "chinese": "v. 不認真考慮；玩弄；擺弄；n. 玩具",
+    "chinese": "v. 隨便想想；姑且考慮；擺弄；玩弄；n. 玩具",
     "definition": "to consider idly or casually; to handle or play with absent-mindedly; an object for a child to play with",
     "partOfSpeech": "v./n."
   },
@@ -28285,7 +28285,7 @@
     "partOfSpeech": "n."
   },
   "ultrasonic": {
-    "chinese": "超音波的；超聲的",
+    "chinese": "超音波的；超出人耳聽覺範圍的",
     "definition": "having frequencies above the range of human hearing",
     "partOfSpeech": "adj."
   },
@@ -28370,7 +28370,7 @@
     "partOfSpeech": "v."
   },
   "underline": {
-    "chinese": "v. 強調；突顯；在…下劃線；n. 底線",
+    "chinese": "v. 強調；突顯；在…下畫線；n. 底線",
     "definition": "to emphasize; to draw a line under; a line drawn under text",
     "partOfSpeech": "v./n."
   },
@@ -28385,7 +28385,7 @@
     "partOfSpeech": "v."
   },
   "underscore": {
-    "chinese": "v. 強調；突顯；在…下劃線；n. 底線",
+    "chinese": "v. 強調；突顯；在…下畫線；n. 底線",
     "definition": "to emphasize; to underline; a line drawn under text",
     "partOfSpeech": "v./n."
   },

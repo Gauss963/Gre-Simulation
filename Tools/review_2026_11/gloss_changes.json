@@ -1,0 +1,392 @@
+{
+ "ablution": {
+  "partOfSpeech": "n.",
+  "definition": "the act of washing oneself; a ritual cleansing",
+  "chinese": "淨身；沐浴；（宗教）淨禮；洗滌儀式",
+  "reason": "「洗禮」是 baptism，ablution 為宗教性的洗淨禮，誤譯修正"
+ },
+ "astral": {
+  "partOfSpeech": "adj.",
+  "definition": "of or relating to the stars; star-shaped; (biology) of the aster in cell division; of a spirit world",
+  "chinese": "星的；星狀的；（生物）星狀體的；靈體的",
+  "reason": "細胞分裂的 aster 應譯「星狀體」，「星體」易誤解為天體"
+ },
+ "apiary": {
+  "partOfSpeech": "n.",
+  "definition": "a place where bees are kept",
+  "chinese": "養蜂場；蜂園",
+  "reason": "「蜂房」多指蜂巢，與「養蜂場所」不符"
+ },
+ "centimeter": {
+  "partOfSpeech": "n.",
+  "definition": "a metric unit of length equal to one hundredth of a meter",
+  "chinese": "公分",
+  "reason": "「釐米」為中國大陸用語，台灣用「公分」"
+ },
+ "checkered": {
+  "partOfSpeech": "adj.",
+  "definition": "marked by ups and downs or by disreputable episodes; patterned with alternating squares",
+  "chinese": "（經歷）坎坷的；有汙點的；盛衰無常的；有方格圖案的",
+  "reason": "「污」統一為台灣標準字「汙」（與其他詞條一致）"
+ },
+ "cult": {
+  "partOfSpeech": "n.",
+  "definition": "a religious group regarded as extreme; devotion to a person or thing; a fad",
+  "chinese": "崇拜；狂熱追捧；邪教；膜拜團體",
+  "reason": "「異教團體」誤譯（異教指非主流宗教），改為邪教／膜拜團體並以崇拜義居首"
+ },
+ "demise": {
+  "partOfSpeech": "n.",
+  "definition": "a person's death; the end or failure of something; the transfer of property",
+  "chinese": "死亡；終結；倒閉；（法律）（財產）讓渡",
+  "reason": "法律義為財產讓渡／轉讓，非「遺贈」"
+ },
+ "curt": {
+  "partOfSpeech": "adj.",
+  "definition": "rudely brief",
+  "chinese": "簡短無禮的；唐突的；生硬的",
+  "reason": "「草率的」意為馬虎，與 curt（說話簡短無禮）不符"
+ },
+ "conduit": {
+  "partOfSpeech": "n.",
+  "definition": "a pipe or channel for fluid or wires; a means of transmitting something; an intermediary",
+  "chinese": "管道；導管；（傳遞資訊等的）途徑；中間人",
+  "reason": "「渠道」為中國大陸用語，改用臺灣用語"
+ },
+ "conniving": {
+  "partOfSpeech": "adj.",
+  "definition": "given to scheming in secret toward a dishonest end; secretly permitting wrongdoing",
+  "chinese": "詭計多端的；暗中策劃陰謀的；縱容的",
+  "reason": "「搞陰謀」為大陸口語用法，改為臺灣慣用說法"
+ },
+ "declaim": {
+  "partOfSpeech": "v.",
+  "definition": "to speak or recite rhetorically; to protest loudly",
+  "chinese": "慷慨陳詞；激昂地演說；大聲抨擊；朗誦",
+  "reason": "定義有 protest loudly，補上「抨擊」義"
+ },
+ "conventional": {
+  "partOfSpeech": "adj.",
+  "definition": "following accepted customs; lacking originality; (of weapons) non-nuclear",
+  "chinese": "傳統的；慣例的；保守的；常規的；（武器）非核的",
+  "reason": "定義有 non-nuclear，中文缺此義"
+ },
+ "empiricism": {
+  "partOfSpeech": "n.",
+  "definition": "the theory that all knowledge derives from sense experience; reliance on experience rather than theory",
+  "chinese": "經驗主義；經驗論；重視實證（而非理論）",
+  "reason": "「庸醫術」為罕見古義且與定義不符，改為定義中的依賴經驗義"
+ },
+ "doctor": {
+  "partOfSpeech": "v./n.",
+  "definition": "to falsify or tamper with; to adulterate; to treat medically; a physician; a holder of a doctorate",
+  "chinese": "v. 竄改；偽造；摻雜；治療；n. 醫生；博士",
+  "reason": "「竄改；篡改」重複，改為偽造"
+ },
+ "dichotomy": {
+  "partOfSpeech": "n.",
+  "definition": "a division into two contrasting or opposed parts",
+  "chinese": "二分法；一分為二；截然對立",
+  "reason": "「對立；截然對立」重複"
+ },
+ "commodious": {
+  "partOfSpeech": "adj.",
+  "definition": "roomy and comfortable; spacious",
+  "chinese": "寬敞舒適的；寬廣的",
+  "reason": "「寬敞的；寬敞舒適的」重複"
+ },
+ "complacency": {
+  "partOfSpeech": "n.",
+  "definition": "smug self-satisfaction, often unaware of dangers or deficiencies",
+  "chinese": "自滿；自鳴得意；安於現狀",
+  "reason": "「自滿；得意自滿」重複"
+ },
+ "donor": {
+  "partOfSpeech": "n.",
+  "definition": "a person who gives money or goods; a person who gives blood or an organ",
+  "chinese": "捐贈者；捐款人；捐血者；（器官）捐贈人",
+  "reason": "「捐贈者」重複出現"
+ },
+ "escalator": {
+  "partOfSpeech": "n.",
+  "definition": "a moving staircase; a contract clause allowing adjustments in wages or prices",
+  "chinese": "電扶梯；（合約）伸縮條款",
+  "reason": "「手扶梯」與「電扶梯」重複，臺灣通用電扶梯"
+ },
+ "exhume": {
+  "partOfSpeech": "v.",
+  "definition": "to dig up (a buried body); to bring back from neglect or obscurity",
+  "chinese": "掘出（屍體）；發掘；使重見天日",
+  "reason": "括號位置不當，改為動詞＋受詞的自然寫法"
+ },
+ "fastidious": {
+  "partOfSpeech": "adj.",
+  "definition": "very attentive to accuracy and detail; hard to please; excessively particular; very concerned about cleanliness",
+  "chinese": "一絲不苟的；挑剔的；過分講究的；有潔癖的",
+  "reason": "「潔癖的」不通順，改為「有潔癖的」"
+ },
+ "feisty": {
+  "partOfSpeech": "adj.",
+  "definition": "spirited and determined; lively; aggressive; touchy",
+  "chinese": "精力充沛的；有幹勁的；好鬥的；易怒的",
+  "reason": "GRE 多取「活潑堅定」義，調整順序"
+ },
+ "foster": {
+  "partOfSpeech": "v./adj.",
+  "definition": "to promote the growth of; to encourage; to bring up a child not one's own; giving parental care without legal adoption",
+  "chinese": "v. 促進；培養；鼓勵；撫養（他人子女）；adj. 寄養的",
+  "reason": "「收養」為 adopt 的誤譯，foster 指非法定收養的撫養"
+ },
+ "gaff": {
+  "partOfSpeech": "n.",
+  "definition": "a hooked pole for landing fish; a spar on a ship; a blunder; (slang) one's home",
+  "chinese": "（捕魚用）手鉤；（船）斜桁；大錯；（俚）住處",
+  "reason": "gaff 是鉤竿而非魚叉（harpoon）"
+ },
+ "glut": {
+  "partOfSpeech": "n./v.",
+  "definition": "an excessive supply; to oversupply; to fill to excess; to overeat",
+  "chinese": "n. 過剩；供過於求；v. 使過量；充斥；暴食",
+  "reason": "「吃飽」與 overeat 不符，改為「暴食」"
+ },
+ "grudge": {
+  "partOfSpeech": "n./v.",
+  "definition": "a persistent feeling of resentment; to give reluctantly; to resent",
+  "chinese": "n. 怨恨；積怨；v. 不情願給；怨恨",
+  "reason": "v. 義為 resent（怨恨），「嫉妒」不準確"
+ },
+ "husk": {
+  "partOfSpeech": "n./v.",
+  "definition": "the dry outer covering of a seed or fruit; a worthless shell; to remove the husk from",
+  "chinese": "n. 外殼；穀殼；空殼；v. 剝去外殼",
+  "reason": "「莢」指豆莢（pod），husk 為殼"
+ },
+ "entity": {
+  "partOfSpeech": "n.",
+  "definition": "a thing with distinct and independent existence; an organization or body",
+  "chinese": "實體；存在物；組織；機構",
+  "reason": "「獨立存在」與「實體」重複；補上英文定義中的組織、機構義"
+ },
+ "expediency": {
+  "partOfSpeech": "n.",
+  "definition": "the quality of being convenient and practical though perhaps improper; self-interest; advantageousness",
+  "chinese": "權宜；私利考量；方便；得當",
+  "reason": "「權宜之計」是 expedient 的名詞義（手段），expediency 指權宜性質"
+ },
+ "hostility": {
+  "partOfSpeech": "n.",
+  "definition": "unfriendliness or opposition; acts of warfare",
+  "chinese": "敵意；敵對；（複數）戰事",
+  "reason": "「戰鬥行為」不自然；hostilities 指戰事"
+ },
+ "genome": {
+  "partOfSpeech": "n.",
+  "definition": "the complete set of genes or genetic material of an organism",
+  "chinese": "基因體；基因組",
+  "reason": "臺灣慣用「基因體」，調整順序"
+ },
+ "grandstand": {
+  "partOfSpeech": "v./n.",
+  "definition": "to behave ostentatiously to impress onlookers; the main seating area at a stadium",
+  "chinese": "v. 譁眾取寵；作秀；n. （體育場）主看臺",
+  "reason": "「正面看臺」不是臺灣常用說法"
+ },
+ "invoke": {
+  "partOfSpeech": "v.",
+  "definition": "to cite (a law or authority) in support; to appeal to; to call on (a deity) in prayer; to evoke; (computing) to call (a program)",
+  "chinese": "援引（法律或權威）；訴諸；祈求；喚起；（程式）呼叫",
+  "reason": "「調用」為大陸用語，改台灣用法「呼叫」"
+ },
+ "offal": {
+  "partOfSpeech": "n.",
+  "definition": "the edible internal organs of an animal; refuse or waste",
+  "chinese": "內臟；殘渣；廢物",
+  "reason": "「下水」為大陸用語，台灣不用，刪除"
+ },
+ "mandarin": {
+  "partOfSpeech": "n./adj.",
+  "definition": "an influential official, esp. a bureaucrat; a high official of imperial China; standard Chinese; a mandarin orange; (of style) ornate and elaborate",
+  "chinese": "n. 有權勢的官員；官僚；（中國古代）官吏；國語；橘子；adj. （文體）雕琢的",
+  "reason": "「權威官員」措辭不當；imperial China 不限清朝"
+ },
+ "intersection": {
+  "partOfSpeech": "n.",
+  "definition": "the meeting or overlap of two things; a point where lines cross; a place where roads meet; (mathematics) the set of shared elements",
+  "chinese": "交會；交叉點；十字路口；（數學）交集",
+  "reason": "GRE 閱讀多用「交會」義，調整順序"
+ },
+ "labile": {
+  "partOfSpeech": "adj.",
+  "definition": "liable to change; unstable; (of emotions) easily altered; (chemistry) readily breaking down",
+  "chinese": "不穩定的；易變的；（情緒）起伏不定的；（化學）易分解的",
+  "reason": "補上英文釋義中的化學義"
+ },
+ "obligate": {
+  "partOfSpeech": "v./adj.",
+  "definition": "to bind legally or morally; to compel; to make grateful; (biology) restricted to a particular way of life",
+  "chinese": "v. 使負義務；強制；使感激；adj. （生物）專性的",
+  "reason": "「必然的」與英文釋義不符，刪除"
+ },
+ "mishap": {
+  "partOfSpeech": "n.",
+  "definition": "an unlucky accident; a minor misfortune",
+  "chinese": "不幸事故；小意外；災禍",
+  "reason": "英文釋義自我循環（a minor mishap），修正"
+ },
+ "obsolescent": {
+  "partOfSpeech": "adj.",
+  "definition": "becoming obsolete; going out of use; (biology) gradually becoming vestigial",
+  "chinese": "逐漸過時的；即將淘汰的；（生物）退化中的",
+  "reason": "英文釋義補上中文已有的生物義"
+ },
+ "onset": {
+  "partOfSpeech": "n.",
+  "definition": "the beginning of something, especially something unpleasant; (archaic) an attack",
+  "chinese": "開始；發作；（疾病）初期；（古）攻擊",
+  "reason": "「攻擊」為古義，比照英文釋義加註"
+ },
+ "proscribe": {
+  "partOfSpeech": "v.",
+  "definition": "to forbid, especially by law; to denounce or condemn; to banish or outlaw",
+  "chinese": "禁止；（公開）譴責；放逐；剝奪法律保護",
+  "reason": "「排斥」不符 denounce or condemn，改為「譴責」"
+ },
+ "putative": {
+  "partOfSpeech": "adj.",
+  "definition": "generally considered or reputed to be; supposed or assumed",
+  "chinese": "一般認為的；推定的；假定的；所謂的",
+  "reason": "「公認的」誤導（putative 指「被認為、未經證實」），改為「一般認為的」"
+ },
+ "racy": {
+  "partOfSpeech": "adj.",
+  "definition": "slightly indecent or risqué; lively and spirited; having a strong distinctive flavor",
+  "chinese": "略帶色情的；不太正經的；生動活潑的；（味道）濃郁獨特的",
+  "reason": "「猥褻的」語氣過重且與「有點色情的」重複，改為較貼切的「略帶色情的」"
+ },
+ "rambunctious": {
+  "partOfSpeech": "adj.",
+  "definition": "uncontrollably exuberant; boisterous and noisy",
+  "chinese": "喧鬧的；精力旺盛而難管束的；吵吵嚷嚷的",
+  "reason": "「狂暴的」語意過重，與 boisterous 不符"
+ },
+ "repository": {
+  "partOfSpeech": "n.",
+  "definition": "a place where things are stored; a rich source of information; a person entrusted with secrets",
+  "chinese": "儲藏處；寶庫；知識庫；（軟體）儲存庫；（祕密的）託付對象",
+  "reason": "「知己」誤導，定義為「被託付秘密的人」"
+ },
+ "seamy": {
+  "partOfSpeech": "adj.",
+  "definition": "sordid and disreputable; showing the unpleasant side of life",
+  "chinese": "汙穢的；醜惡的；墮落的",
+  "reason": "用字統一為臺灣教育部標準字「汙」"
+ },
+ "robust": {
+  "partOfSpeech": "adj.",
+  "definition": "strong and healthy; sturdy and able to withstand problems; (of flavor) full and rich",
+  "chinese": "強健的；穩健的；健全的；（味道）濃郁的",
+  "reason": "定義為 flavor，「（酒味）」過窄，改為「（味道）」"
+ },
+ "quidnunc": {
+  "partOfSpeech": "n.",
+  "definition": "a person eager to know the latest news or gossip; a busybody",
+  "chinese": "愛打聽消息的人；愛說長道短的人；好管閒事的人",
+  "reason": "排序：定義主義為「愛打聽新聞八卦者」，應列第一"
+ },
+ "saturnine": {
+  "partOfSpeech": "adj.",
+  "definition": "gloomy, morose, or sullen in temperament",
+  "chinese": "陰沉的；憂鬱的；鬱鬱寡歡的",
+  "reason": "「冷漠的」不符 sullen／morose，改為「鬱鬱寡歡的」"
+ },
+ "prospectus": {
+  "partOfSpeech": "n.",
+  "definition": "a printed document describing a school, business, or investment offer; a plan for a forthcoming project",
+  "chinese": "簡介；說明書；招生簡章；公開說明書；計畫書",
+  "reason": "「招股說明書」為中國用語，臺灣稱「公開說明書」"
+ },
+ "recognize": {
+  "partOfSpeech": "v.",
+  "definition": "to identify from previous encounters; to acknowledge the existence, validity, or legality of; to show official appreciation of",
+  "chinese": "認出；承認；（正式）認可；賞識；表彰",
+  "reason": "「承認」與「（正式）承認」重複，整併"
+ },
+ "replicate": {
+  "partOfSpeech": "v.",
+  "definition": "to make an exact copy of; to repeat a study or experiment to obtain consistent results; (of genetic material) to reproduce itself",
+  "chinese": "複製；重複（實驗並得到相同結果）；（遺傳物質）自我複製",
+  "reason": "定義為 genetic material，「（細胞）」不準確"
+ },
+ "stigmatize": {
+  "partOfSpeech": "v.",
+  "definition": "to brand as disgraceful; to describe or regard with strong disapproval",
+  "chinese": "使蒙上汙名；視為可恥；指責；譴責",
+  "reason": "「污衊」指捏造事實誹謗，與原義不符，改為指責／譴責並統一用字"
+ },
+ "swear": {
+  "partOfSpeech": "v.",
+  "definition": "to take an oath; to promise solemnly; to assert emphatically; to use profane language",
+  "chinese": "發誓；宣誓；斷言；咒罵；說髒話",
+  "reason": "調整順序，常考的發誓／斷言義置前"
+ },
+ "toy": {
+  "partOfSpeech": "v./n.",
+  "definition": "to consider idly or casually; to handle or play with absent-mindedly; an object for a child to play with",
+  "chinese": "v. 隨便想想；姑且考慮；擺弄；玩弄；n. 玩具",
+  "reason": "「不認真考慮」易誤解為不考慮，改為 toy with an idea 的「姑且考慮」"
+ },
+ "stodgy": {
+  "partOfSpeech": "adj.",
+  "definition": "dull and old-fashioned; (of food) heavy and filling",
+  "chinese": "乏味的；古板的；（食物）厚重難消化的",
+  "reason": "stodgy 食物是厚重飽脹，非「油膩」"
+ },
+ "stupefy": {
+  "partOfSpeech": "v.",
+  "definition": "to astonish; to make unable to think or feel properly",
+  "chinese": "使驚呆；使茫然；使麻木；使昏沉",
+  "reason": "「使昏迷」過重，改為使茫然／使昏沉以符定義"
+ },
+ "subterfuge": {
+  "partOfSpeech": "n.",
+  "definition": "deceit used to achieve one's goal or conceal something",
+  "chinese": "詭計；託詞；欺騙手段",
+  "reason": "「托詞」為大陸合併字，臺灣用「託詞」"
+ },
+ "shaver": {
+  "partOfSpeech": "n.",
+  "definition": "an electric razor; a person who shaves; a young boy",
+  "chinese": "電動刮鬍刀；剃刀；（口）小夥子",
+  "reason": "「小伙子」臺灣寫作「小夥子」"
+ },
+ "ultrasonic": {
+  "partOfSpeech": "adj.",
+  "definition": "having frequencies above the range of human hearing",
+  "chinese": "超音波的；超出人耳聽覺範圍的",
+  "reason": "「超聲」為大陸用語，臺灣用「超音波」"
+ },
+ "sibilant": {
+  "partOfSpeech": "adj./n.",
+  "definition": "making a hissing sound; a speech sound such as s or sh",
+  "chinese": "adj. 嘶嘶作響的；發嘶音的；n. （語音）齒擦音",
+  "reason": "「嘶擦音」非通用術語，臺灣語音學稱「齒擦音」"
+ },
+ "underline": {
+  "partOfSpeech": "v./n.",
+  "definition": "to emphasize; to draw a line under; a line drawn under text",
+  "chinese": "v. 強調；突顯；在…下畫線；n. 底線",
+  "reason": "臺灣用「畫線」而非「劃線」"
+ },
+ "underscore": {
+  "partOfSpeech": "v./n.",
+  "definition": "to emphasize; to underline; a line drawn under text",
+  "chinese": "v. 強調；突顯；在…下畫線；n. 底線",
+  "reason": "臺灣用「畫線」而非「劃線」"
+ },
+ "sallow": {
+  "chinese": "adj. （臉色）蠟黃的；氣色差的；n. （植）黃花柳",
+  "definition": "(of complexion) of an unhealthy yellowish color; a willow tree",
+  "partOfSpeech": "adj./n.",
+  "reason": "（植）黃華柳為誤字，應為黃花柳（goat willow）"
+ }
+}
