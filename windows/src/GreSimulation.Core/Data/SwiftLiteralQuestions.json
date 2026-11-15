@@ -1,0 +1,3444 @@
+[
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Analyze an Issue",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "A strong response defines the limits of the claim, develops a clear position, and supports it with relevant reasons and examples while addressing meaningful counterarguments.",
+    "format" : "essay",
+    "groups" : [
+
+    ],
+    "id" : "aw-001",
+    "measure" : "analyticalWriting",
+    "prompt" : "Educational institutions should encourage students to question established ideas rather than simply master them."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o1"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "The contrast after “Although” and the candid discussion of failures show that the author was not uncritical.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "obsequious"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "uncritical"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "indifferent"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-001",
+    "measure" : "verbal",
+    "prompt" : "Although the biographer admired her subject, she was not _____; the book discusses his failures as candidly as his triumphs."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "A two-page report without unnecessary detail is concise.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "concise"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "ambiguous"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "derivative"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-002",
+    "measure" : "verbal",
+    "prompt" : "The committee's final report was surprisingly _____: it stated its recommendation in two pages and omitted every unnecessary detail."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Weak anecdotal evidence warrants skepticism.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "skepticism"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "reverence"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "complacency"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-003",
+    "measure" : "verbal",
+    "prompt" : "Because the evidence was merely anecdotal, the researcher treated the striking claim with _____."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "The residents remained angry, so the apology failed to appease, or calm, them.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "appease"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "provoke"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "bewilder"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-004",
+    "measure" : "verbal",
+    "prompt" : "The mayor's apology did little to _____ the residents, who remained angry about the sudden closure."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Welcoming objections is the opposite of being dogmatic.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "dogmatic"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "lucid"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "amiable"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-005",
+    "measure" : "verbal",
+    "prompt" : "Far from being _____, the lecturer welcomed interruptions and adjusted the discussion whenever students raised an objection."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Clear labels make a specialized collection easier to understand, or accessible.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "accessible"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "esoteric"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "redundant"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-006",
+    "measure" : "verbal",
+    "prompt" : "The museum's new labels make the collection more _____ to visitors who lack specialized training."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o0",
+        "o2"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Retract and withdraw both mean to take back a claim.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "retract"
+          },
+          {
+            "id" : "o1",
+            "text" : "circulate"
+          },
+          {
+            "id" : "o2",
+            "text" : "withdraw"
+          },
+          {
+            "id" : "o3",
+            "text" : "embellish"
+          },
+          {
+            "id" : "o4",
+            "text" : "catalog"
+          },
+          {
+            "id" : "o5",
+            "text" : "vindicate"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-007",
+    "measure" : "verbal",
+    "prompt" : "The editor asked the author to _____ several claims that rested on outdated data."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o0",
+        "o2"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Vigorous and energetic both fit her readiness for another trail.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "vigorous"
+          },
+          {
+            "id" : "o1",
+            "text" : "weary"
+          },
+          {
+            "id" : "o2",
+            "text" : "energetic"
+          },
+          {
+            "id" : "o3",
+            "text" : "sullen"
+          },
+          {
+            "id" : "o4",
+            "text" : "cautious"
+          },
+          {
+            "id" : "o5",
+            "text" : "perplexed"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-008",
+    "measure" : "verbal",
+    "prompt" : "Even after the long hike, Mira remained remarkably _____ and proposed exploring another trail."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o2",
+        "o0"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Lucid and clear explain why nobody needed clarification.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "lucid"
+          },
+          {
+            "id" : "o1",
+            "text" : "terse"
+          },
+          {
+            "id" : "o2",
+            "text" : "clear"
+          },
+          {
+            "id" : "o3",
+            "text" : "novel"
+          },
+          {
+            "id" : "o4",
+            "text" : "rigid"
+          },
+          {
+            "id" : "o5",
+            "text" : "subtle"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-009",
+    "measure" : "verbal",
+    "prompt" : "The instructions were so _____ that every participant completed the task without asking a question."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o2",
+        "o1"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Predictable and conventional both support the ability to foresee the ending.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "credible"
+          },
+          {
+            "id" : "o1",
+            "text" : "predictable"
+          },
+          {
+            "id" : "o2",
+            "text" : "conventional"
+          },
+          {
+            "id" : "o3",
+            "text" : "absorbing"
+          },
+          {
+            "id" : "o4",
+            "text" : "erratic"
+          },
+          {
+            "id" : "o5",
+            "text" : "intricate"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-010",
+    "measure" : "verbal",
+    "prompt" : "The critic found the plot utterly _____; she predicted the ending after the opening scene."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o1",
+        "o2"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Prolong and extend are equivalent and contrast with settling the disagreement.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "resolve"
+          },
+          {
+            "id" : "o1",
+            "text" : "prolong"
+          },
+          {
+            "id" : "o2",
+            "text" : "extend"
+          },
+          {
+            "id" : "o3",
+            "text" : "expose"
+          },
+          {
+            "id" : "o4",
+            "text" : "clarify"
+          },
+          {
+            "id" : "o5",
+            "text" : "conceal"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-011",
+    "measure" : "verbal",
+    "prompt" : "Rather than _____ the disagreement, the new evidence settled it decisively."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o2"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "The passage distinguishes nominal variety from diversity that actually changes disease susceptibility.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "Urban streets should contain exactly three tree species."
+          },
+          {
+            "id" : "o1",
+            "text" : "The number of tree varieties matters more than their disease resistance."
+          },
+          {
+            "id" : "o2",
+            "text" : "Effective biological diversity depends on meaningful differences, not labels alone."
+          },
+          {
+            "id" : "o3",
+            "text" : "Most cultivars are more resistant than naturally occurring species."
+          },
+          {
+            "id" : "o4",
+            "text" : "City planners should avoid planting trees along a single street."
+          }
+        ]
+      }
+    ],
+    "id" : "ve-012",
+    "measure" : "verbal",
+    "prompt" : "Which choice best states the main point of the passage?",
+    "stimulus" : "City planners often plant many species along a single street, assuming that variety protects the urban canopy from disease. Variety helps only when the selected trees differ in susceptibility. Ten cultivars that share the same vulnerability provide less protection than three genuinely resistant species."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o0"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "The numerical contrast illustrates that labels or counts do not guarantee functional resistance.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "illustrate the difference between nominal and functional diversity"
+          },
+          {
+            "id" : "o1",
+            "text" : "prove that cultivars are never useful"
+          },
+          {
+            "id" : "o2",
+            "text" : "show that urban diseases attack only common trees"
+          },
+          {
+            "id" : "o3",
+            "text" : "question whether resistance can be measured"
+          },
+          {
+            "id" : "o4",
+            "text" : "recommend a universal planting ratio"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-013",
+    "measure" : "verbal",
+    "prompt" : "The comparison in the final sentence primarily serves to",
+    "stimulus" : "City planners often plant many species along a single street, assuming that variety protects the urban canopy from disease. Variety helps only when the selected trees differ in susceptibility. Ten cultivars that share the same vulnerability provide less protection than three genuinely resistant species."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o1"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "The imperfections may redirect attention toward the performance and heighten the historical experience.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "prevent audiences from identifying the performer"
+          },
+          {
+            "id" : "o1",
+            "text" : "increase appreciation by shaping how listeners attend"
+          },
+          {
+            "id" : "o2",
+            "text" : "reproduce a wider range of sound than modern equipment"
+          },
+          {
+            "id" : "o3",
+            "text" : "make fidelity the listener's only concern"
+          },
+          {
+            "id" : "o4",
+            "text" : "eliminate evidence of historical distance"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-014",
+    "measure" : "verbal",
+    "prompt" : "The passage suggests that imperfections in early recordings can",
+    "stimulus" : "Early recordings captured only a narrow range of sound, yet listeners do not always judge them as inferior. The hiss and distortion can signal historical distance, leading audiences to attend to performance rather than fidelity."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o0"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "The recordings are technically limited, but listeners may still value them.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "technical limitation and perceived value"
+          },
+          {
+            "id" : "o1",
+            "text" : "historical distance and modern equipment"
+          },
+          {
+            "id" : "o2",
+            "text" : "performance and the identity of a performer"
+          },
+          {
+            "id" : "o3",
+            "text" : "hiss and distortion"
+          },
+          {
+            "id" : "o4",
+            "text" : "audiences and recording engineers"
+          }
+        ]
+      }
+    ],
+    "id" : "ve-015",
+    "measure" : "verbal",
+    "prompt" : "The word “yet” signals a contrast between",
+    "stimulus" : "Early recordings captured only a narrow range of sound, yet listeners do not always judge them as inferior. The hiss and distortion can signal historical distance, leading audiences to attend to performance rather than fidelity."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o1"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "“But” contrasts an unassuming public manner with intense private intellectual ambition.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "combative"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "unassuming"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "theatrical"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-001",
+    "measure" : "verbal",
+    "prompt" : "The scientist's public manner was _____, but her laboratory notes reveal a mind impatient with easy answers."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o1"
+      ],
+      "blank1" : [
+        "b1o0"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "One unusual year makes the proposal premature and its conclusion weak, or tenuous.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "costly"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "premature"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "orthodox"
+          }
+        ],
+        "title" : "Blank (i)"
+      },
+      {
+        "id" : "blank1",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b1o0",
+            "text" : "tenuous"
+          },
+          {
+            "id" : "b1o1",
+            "text" : "inevitable"
+          },
+          {
+            "id" : "b1o2",
+            "text" : "comprehensive"
+          }
+        ],
+        "title" : "Blank (ii)"
+      }
+    ],
+    "id" : "vm-002",
+    "measure" : "verbal",
+    "prompt" : "The proposal is not merely _____; because it relies on data from a single unusual year, its conclusion is also _____."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o1"
+      ],
+      "blank1" : [
+        "b1o1"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Conflicting documents make the task arduous; “Paradoxically” marks why more evidence does not make it easier.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "straightforward"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "arduous"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "peripheral"
+          }
+        ],
+        "title" : "Blank (i)"
+      },
+      {
+        "id" : "blank1",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b1o0",
+            "text" : "corroborate"
+          },
+          {
+            "id" : "b1o1",
+            "text" : "contradict"
+          },
+          {
+            "id" : "b1o2",
+            "text" : "duplicate"
+          }
+        ],
+        "title" : "Blank (ii)"
+      }
+    ],
+    "id" : "vm-003",
+    "measure" : "verbal",
+    "prompt" : "Paradoxically, the abundance of surviving letters has made the historian's task more _____, for the documents frequently _____ one another."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Incisive means penetrating or sharply analytical, consistent with strong but fair criticism.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "incisive"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "evasive"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "laudatory"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-004",
+    "measure" : "verbal",
+    "prompt" : "Her review was _____ without being malicious: each criticism was sharp, but none attacked the author's character."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ],
+      "blank1" : [
+        "b1o1"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Avoiding stiff, stilted diction in favor of natural language forms a coherent contrast.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "stilted"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "precise"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "colloquial"
+          }
+        ],
+        "title" : "Blank (i)"
+      },
+      {
+        "id" : "blank1",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b1o0",
+            "text" : "archaic"
+          },
+          {
+            "id" : "b1o1",
+            "text" : "natural"
+          },
+          {
+            "id" : "b1o2",
+            "text" : "ornate"
+          }
+        ],
+        "title" : "Blank (ii)"
+      }
+    ],
+    "id" : "vm-005",
+    "measure" : "verbal",
+    "prompt" : "The new translation avoids the _____ diction of its predecessor and instead uses language that sounds deliberately _____."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Many exceptions make the regulation less simple than it appears, so the simplicity is deceptive.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "deceptive"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "commendable"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "immutable"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-006",
+    "measure" : "verbal",
+    "prompt" : "Since the regulation contains numerous exceptions, its apparent simplicity is _____."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o0",
+        "o2"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Mediate and arbitrate both mean to intervene to settle a dispute.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "mediate"
+          },
+          {
+            "id" : "o1",
+            "text" : "intensify"
+          },
+          {
+            "id" : "o2",
+            "text" : "arbitrate"
+          },
+          {
+            "id" : "o3",
+            "text" : "document"
+          },
+          {
+            "id" : "o4",
+            "text" : "evade"
+          },
+          {
+            "id" : "o5",
+            "text" : "publicize"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-007",
+    "measure" : "verbal",
+    "prompt" : "The chair's attempt to _____ the dispute failed when both sides interpreted her neutral statement as an insult."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o2",
+        "o0"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Conjectural and speculative both describe a claim not supported by evidence.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "conjectural"
+          },
+          {
+            "id" : "o1",
+            "text" : "methodical"
+          },
+          {
+            "id" : "o2",
+            "text" : "speculative"
+          },
+          {
+            "id" : "o3",
+            "text" : "orthodox"
+          },
+          {
+            "id" : "o4",
+            "text" : "lucid"
+          },
+          {
+            "id" : "o5",
+            "text" : "exhaustive"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-008",
+    "measure" : "verbal",
+    "prompt" : "Because the manuscript offered no evidence for its most dramatic assertion, reviewers called that assertion _____."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o1",
+        "o3"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Meticulous and calculated capture the monologue's carefully planned character.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "spontaneous"
+          },
+          {
+            "id" : "o1",
+            "text" : "meticulous"
+          },
+          {
+            "id" : "o2",
+            "text" : "improvised"
+          },
+          {
+            "id" : "o3",
+            "text" : "calculated"
+          },
+          {
+            "id" : "o4",
+            "text" : "rambling"
+          },
+          {
+            "id" : "o5",
+            "text" : "opaque"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-009",
+    "measure" : "verbal",
+    "prompt" : "The comedian's seemingly casual monologue was actually _____, with every pause rehearsed."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o2",
+        "o1"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Ambiguous and equivocal both allow more than one interpretation.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "unequivocal"
+          },
+          {
+            "id" : "o1",
+            "text" : "ambiguous"
+          },
+          {
+            "id" : "o2",
+            "text" : "equivocal"
+          },
+          {
+            "id" : "o3",
+            "text" : "conciliatory"
+          },
+          {
+            "id" : "o4",
+            "text" : "blunt"
+          },
+          {
+            "id" : "o5",
+            "text" : "inflammatory"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-010",
+    "measure" : "verbal",
+    "prompt" : "The ambassador's response was deliberately _____, permitting both governments to claim that she supported their position."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o2",
+        "o0"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Hackneyed and trite both mean overused and no longer fresh.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "hackneyed"
+          },
+          {
+            "id" : "o1",
+            "text" : "subversive"
+          },
+          {
+            "id" : "o2",
+            "text" : "trite"
+          },
+          {
+            "id" : "o3",
+            "text" : "cryptic"
+          },
+          {
+            "id" : "o4",
+            "text" : "prescient"
+          },
+          {
+            "id" : "o5",
+            "text" : "volatile"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-011",
+    "measure" : "verbal",
+    "prompt" : "Years of repetition had made the once-radical slogan seem _____."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o1"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "The example exposes a limitation of a convention that otherwise supports comparability.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "argue that residents repair homes better than contractors"
+          },
+          {
+            "id" : "o1",
+            "text" : "illustrate a distortion created by a useful accounting convention"
+          },
+          {
+            "id" : "o2",
+            "text" : "show that national accounts cannot be compared"
+          },
+          {
+            "id" : "o3",
+            "text" : "explain why all unpaid work should receive a fixed price"
+          },
+          {
+            "id" : "o4",
+            "text" : "deny that household repairs have economic value"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-012",
+    "measure" : "verbal",
+    "prompt" : "The author mentions two households primarily to",
+    "stimulus" : "Some economists treat household repairs performed by residents as invisible because no money changes hands. This convention keeps national accounts comparable, but it also means that two households performing the same repair can appear to produce different amounts if one hires a contractor and the other does not."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o0",
+        "o2"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Unpaid repairs are omitted, and the same convention both aids comparison and creates an apparent difference.",
+    "format" : "multipleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 3,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "National accounting conventions can omit economically useful activity."
+          },
+          {
+            "id" : "o1",
+            "text" : "Hiring a contractor always increases a household's actual productivity."
+          },
+          {
+            "id" : "o2",
+            "text" : "A rule can aid comparison while introducing a misleading difference."
+          }
+        ]
+      }
+    ],
+    "id" : "vm-013",
+    "measure" : "verbal",
+    "prompt" : "Which statements are supported by the passage? Select all that apply.",
+    "stimulus" : "Some economists treat household repairs performed by residents as invisible because no money changes hands. This convention keeps national accounts comparable, but it also means that two households performing the same repair can appear to produce different amounts if one hires a contractor and the other does not."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o1"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Large eyes were correctly observed but incorrectly treated as uniquely indicating nocturnal activity.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "museum specimens had been mislabeled"
+          },
+          {
+            "id" : "o1",
+            "text" : "large eyes can be adaptive in more than one lighting context"
+          },
+          {
+            "id" : "o2",
+            "text" : "the forest canopy was brighter at night"
+          },
+          {
+            "id" : "o3",
+            "text" : "the bird's eye size varied seasonally"
+          },
+          {
+            "id" : "o4",
+            "text" : "nocturnal birds generally have small eyes"
+          }
+        ]
+      }
+    ],
+    "id" : "vm-014",
+    "measure" : "verbal",
+    "prompt" : "The field observations challenged the earlier inference by showing that",
+    "stimulus" : "Biologists once inferred that an island bird was nocturnal because museum specimens had unusually large eyes. Field observations later showed daytime activity. The large eyes, it turned out, helped the bird forage beneath a dim forest canopy rather than after sunset."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o2"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "A specimen-based inference is corrected by field observation and reinterpreted.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "A disputed theory is defended with new laboratory data."
+          },
+          {
+            "id" : "o1",
+            "text" : "A general rule is stated and then applied to two species."
+          },
+          {
+            "id" : "o2",
+            "text" : "An initial interpretation is revised after a new kind of evidence appears."
+          },
+          {
+            "id" : "o3",
+            "text" : "Two equally plausible explanations remain unresolved."
+          },
+          {
+            "id" : "o4",
+            "text" : "A field observation is rejected because of a specimen."
+          }
+        ]
+      }
+    ],
+    "id" : "vm-015",
+    "measure" : "verbal",
+    "prompt" : "Which description best characterizes the passage's structure?",
+    "stimulus" : "Biologists once inferred that an island bird was nocturnal because museum specimens had unusually large eyes. Field observations later showed daytime activity. The large eyes, it turned out, helped the bird forage beneath a dim forest canopy rather than after sunset."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Dense prose may create a reputation for obscurity, but unambiguous arguments make that reputation puzzling.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "obscurity"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "equivocation"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "precision"
+          }
+        ]
+      }
+    ],
+    "id" : "vh-001",
+    "measure" : "verbal",
+    "prompt" : "The philosopher's reputation for _____ is puzzling: although her prose is dense, her arguments rarely permit more than one interpretation."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ],
+      "blank1" : [
+        "b1o1"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "“Far from” sets up the contrast: a result that could undermine the theory appeared to vindicate it.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "undermining"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "clarifying"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "anticipating"
+          }
+        ],
+        "title" : "Blank (i)"
+      },
+      {
+        "id" : "blank1",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b1o0",
+            "text" : "repudiate"
+          },
+          {
+            "id" : "b1o1",
+            "text" : "vindicate"
+          },
+          {
+            "id" : "b1o2",
+            "text" : "complicate"
+          }
+        ],
+        "title" : "Blank (ii)"
+      }
+    ],
+    "id" : "vh-002",
+    "measure" : "verbal",
+    "prompt" : "Far from _____ the prevailing theory, the anomalous result initially seemed to _____ it, since researchers mistook a measurement error for confirmation."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ],
+      "blank1" : [
+        "b1o1"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "An exemplary catalog makes it orderly; severe restrictions make it intractable for researchers.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "orderly"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "negligible"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "derivative"
+          }
+        ],
+        "title" : "Blank (i)"
+      },
+      {
+        "id" : "blank1",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b1o0",
+            "text" : "invaluable"
+          },
+          {
+            "id" : "b1o1",
+            "text" : "intractable"
+          },
+          {
+            "id" : "b1o2",
+            "text" : "comprehensive"
+          }
+        ],
+        "title" : "Blank (ii)"
+      }
+    ],
+    "id" : "vh-003",
+    "measure" : "verbal",
+    "prompt" : "The archive is simultaneously _____ and _____: its catalog is exemplary, but access restrictions make much of the collection unusable."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ],
+      "blank1" : [
+        "b1o1"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Apparent diffidence can be deliberate understatement that makes criticism especially telling.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "diffidence"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "vehemence"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "caprice"
+          }
+        ],
+        "title" : "Blank (i)"
+      },
+      {
+        "id" : "blank1",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b1o0",
+            "text" : "diffuse"
+          },
+          {
+            "id" : "b1o1",
+            "text" : "telling"
+          },
+          {
+            "id" : "b1o2",
+            "text" : "orthodox"
+          }
+        ],
+        "title" : "Blank (ii)"
+      }
+    ],
+    "id" : "vh-004",
+    "measure" : "verbal",
+    "prompt" : "What appears to be the critic's _____ is actually a calculated restraint; by understating her objections, she makes them more _____."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o0"
+      ],
+      "blank1" : [
+        "b1o1"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Methodological limits circumscribe the claim, making it provisional.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "provisional"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "redundant"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "incontrovertible"
+          }
+        ],
+        "title" : "Blank (i)"
+      },
+      {
+        "id" : "blank1",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b1o0",
+            "text" : "bolstered"
+          },
+          {
+            "id" : "b1o1",
+            "text" : "circumscribed"
+          },
+          {
+            "id" : "b1o2",
+            "text" : "disseminated"
+          }
+        ],
+        "title" : "Blank (ii)"
+      }
+    ],
+    "id" : "vh-005",
+    "measure" : "verbal",
+    "prompt" : "The study's conclusion is _____ rather than definitive: it is _____ by a small sample and by the absence of a control group."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Text Completion",
+    "correctSelections" : {
+      "blank0" : [
+        "b0o2"
+      ],
+      "blank1" : [
+        "b1o0"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Refusing to teach a fixed meaning rejects didacticism and sustains productive ambiguity.",
+    "format" : "textCompletion",
+    "groups" : [
+      {
+        "id" : "blank0",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b0o0",
+            "text" : "reticence"
+          },
+          {
+            "id" : "b0o1",
+            "text" : "candor"
+          },
+          {
+            "id" : "b0o2",
+            "text" : "didacticism"
+          }
+        ],
+        "title" : "Blank (i)"
+      },
+      {
+        "id" : "blank1",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "b1o0",
+            "text" : "ambiguity"
+          },
+          {
+            "id" : "b1o1",
+            "text" : "consensus"
+          },
+          {
+            "id" : "b1o2",
+            "text" : "banality"
+          }
+        ],
+        "title" : "Blank (ii)"
+      }
+    ],
+    "id" : "vh-006",
+    "measure" : "verbal",
+    "prompt" : "Because the novelist refuses to explain her symbols, interpretations proliferate; her silence is less an act of _____ than a source of productive _____."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o1",
+        "o2"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Illusory and specious both indicate that the apparent agreement was not genuine.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "durable"
+          },
+          {
+            "id" : "o1",
+            "text" : "illusory"
+          },
+          {
+            "id" : "o2",
+            "text" : "specious"
+          },
+          {
+            "id" : "o3",
+            "text" : "unanimous"
+          },
+          {
+            "id" : "o4",
+            "text" : "pragmatic"
+          },
+          {
+            "id" : "o5",
+            "text" : "fortuitous"
+          }
+        ]
+      }
+    ],
+    "id" : "vh-007",
+    "measure" : "verbal",
+    "prompt" : "The apparent consensus was _____: once the chair requested specific commitments, the coalition immediately dissolved."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o1",
+        "o3"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Obscure and camouflage both mean to conceal the proposal's radical implications.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "accentuate"
+          },
+          {
+            "id" : "o1",
+            "text" : "obscure"
+          },
+          {
+            "id" : "o2",
+            "text" : "vindicate"
+          },
+          {
+            "id" : "o3",
+            "text" : "camouflage"
+          },
+          {
+            "id" : "o4",
+            "text" : "enumerate"
+          },
+          {
+            "id" : "o5",
+            "text" : "repudiate"
+          }
+        ]
+      }
+    ],
+    "id" : "vh-008",
+    "measure" : "verbal",
+    "prompt" : "By presenting a radical proposal in the language of routine maintenance, the report sought to _____ its implications."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o1",
+        "o2"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Tenacity and obstinacy both denote persistence, which the scholar does not display toward disproven ideas.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "probity"
+          },
+          {
+            "id" : "o1",
+            "text" : "tenacity"
+          },
+          {
+            "id" : "o2",
+            "text" : "obstinacy"
+          },
+          {
+            "id" : "o3",
+            "text" : "acuity"
+          },
+          {
+            "id" : "o4",
+            "text" : "diffidence"
+          },
+          {
+            "id" : "o5",
+            "text" : "caprice"
+          }
+        ]
+      }
+    ],
+    "id" : "vh-009",
+    "measure" : "verbal",
+    "prompt" : "The scholar is not known for intellectual _____; she abandons even cherished hypotheses when contrary evidence appears."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o1",
+        "o2"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Tendentious and partisan both describe an argument shaped by a particular agenda.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "disinterested"
+          },
+          {
+            "id" : "o1",
+            "text" : "tendentious"
+          },
+          {
+            "id" : "o2",
+            "text" : "partisan"
+          },
+          {
+            "id" : "o3",
+            "text" : "empirical"
+          },
+          {
+            "id" : "o4",
+            "text" : "methodical"
+          },
+          {
+            "id" : "o5",
+            "text" : "inchoate"
+          }
+        ]
+      }
+    ],
+    "id" : "vh-010",
+    "measure" : "verbal",
+    "prompt" : "Although the essay mimics the vocabulary of scientific objectivity, its argument is plainly _____."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Sentence Equivalence",
+    "correctSelections" : {
+      "main" : [
+        "o3",
+        "o1"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Indeterminate and equivocal describe language that leaves the issue unsettled.",
+    "format" : "sentenceEquivalence",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 2,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "perspicuous"
+          },
+          {
+            "id" : "o1",
+            "text" : "indeterminate"
+          },
+          {
+            "id" : "o2",
+            "text" : "categorical"
+          },
+          {
+            "id" : "o3",
+            "text" : "equivocal"
+          },
+          {
+            "id" : "o4",
+            "text" : "prescriptive"
+          },
+          {
+            "id" : "o5",
+            "text" : "trenchant"
+          }
+        ]
+      }
+    ],
+    "id" : "vh-011",
+    "measure" : "verbal",
+    "prompt" : "The treaty's language was intentionally _____, postponing rather than resolving the central dispute."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o1"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "The passage explicitly uses market control to show why lineage can diverge from technical fitness.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "later adoption reliably identifies the technically superior design"
+          },
+          {
+            "id" : "o1",
+            "text" : "market power can affect which designs appear historically successful"
+          },
+          {
+            "id" : "o2",
+            "text" : "technically awkward machines rarely influence later designs"
+          },
+          {
+            "id" : "o3",
+            "text" : "engineering merit has no effect on the diffusion of technology"
+          },
+          {
+            "id" : "o4",
+            "text" : "historians should study only devices with living descendants"
+          }
+        ]
+      }
+    ],
+    "id" : "vh-012",
+    "measure" : "verbal",
+    "prompt" : "The author would most likely agree that",
+    "stimulus" : "Historians of technology often call a device successful when later machines inherit its design. Such genealogical judgments, however, can mistake influence for fitness. A technically awkward machine may become a template because its maker controlled a market, while a more effective rival leaves no descendants. Design lineage therefore records the circumstances of diffusion as much as engineering merit."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o2",
+        "o0"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "The example explains a possible divergence and supports the author's caution; it does not claim this always occurs.",
+    "format" : "multipleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 4,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "It provides a mechanism by which influence and technical merit can diverge."
+          },
+          {
+            "id" : "o1",
+            "text" : "It proves that market control always defeats better engineering."
+          },
+          {
+            "id" : "o2",
+            "text" : "It supports the qualification of genealogical judgments."
+          },
+          {
+            "id" : "o3",
+            "text" : "It establishes that descendants never resemble their templates."
+          }
+        ]
+      }
+    ],
+    "id" : "vh-013",
+    "measure" : "verbal",
+    "prompt" : "Which functions does the example of the awkward machine serve? Select all that apply.",
+    "stimulus" : "Historians of technology often call a device successful when later machines inherit its design. Such genealogical judgments, however, can mistake influence for fitness. A technically awkward machine may become a template because its maker controlled a market, while a more effective rival leaves no descendants. Design lineage therefore records the circumstances of diffusion as much as engineering merit."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o1"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "The author argues that relevance and quality depend on a map's intended use.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "should always preserve physical distance"
+          },
+          {
+            "id" : "o1",
+            "text" : "cannot be evaluated apart from the purposes that determine relevance"
+          },
+          {
+            "id" : "o2",
+            "text" : "is neutral when it removes enough geographic detail"
+          },
+          {
+            "id" : "o3",
+            "text" : "is less useful for navigation than for estimating walking time"
+          },
+          {
+            "id" : "o4",
+            "text" : "becomes accurate only when distortions are clearly labeled"
+          }
+        ]
+      }
+    ],
+    "id" : "vh-014",
+    "measure" : "verbal",
+    "prompt" : "The passage's central claim is that mapmaking",
+    "stimulus" : "A map is conventionally praised for suppressing irrelevant detail. Yet relevance is not inherent in terrain; it is assigned by a map's purpose. A subway diagram that distorts distance may be excellent for navigation and useless for estimating walking time. Calls for a perfectly neutral map therefore conceal a prior choice about what the map should enable its reader to do."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Reading Comprehension",
+    "correctSelections" : {
+      "main" : [
+        "o2"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "It is good for one task and poor for another, showing that evaluation depends on purpose.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "fails by every reasonable standard of accuracy"
+          },
+          {
+            "id" : "o1",
+            "text" : "contains more detail than its users require"
+          },
+          {
+            "id" : "o2",
+            "text" : "can be judged differently under different practical aims"
+          },
+          {
+            "id" : "o3",
+            "text" : "conceals its purpose from readers"
+          },
+          {
+            "id" : "o4",
+            "text" : "represents terrain without assigning relevance"
+          }
+        ]
+      }
+    ],
+    "id" : "vh-015",
+    "measure" : "verbal",
+    "prompt" : "The subway diagram is introduced as an example of an object that",
+    "stimulus" : "A map is conventionally praised for suppressing irrelevant detail. Yet relevance is not inherent in terrain; it is assigned by a map's purpose. A subway diagram that distorts distance may be excellent for navigation and useless for estimating walking time. Calls for a perfectly neutral map therefore conceal a prior choice about what the map should enable its reader to do."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+      "main" : [
+        "o3"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "If 0 < x < 1, then x² < x; if x > 1, then x² > x. The relationship cannot be determined.",
+    "format" : "quantitativeComparison",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "Quantity A is greater."
+          },
+          {
+            "id" : "o1",
+            "text" : "Quantity B is greater."
+          },
+          {
+            "id" : "o2",
+            "text" : "The two quantities are equal."
+          },
+          {
+            "id" : "o3",
+            "text" : "The relationship cannot be determined from the information given."
+          }
+        ]
+      }
+    ],
+    "id" : "qe-001",
+    "measure" : "quantitative",
+    "prompt" : "Compare Quantity A and Quantity B.",
+    "quantityA" : "x²",
+    "quantityB" : "x",
+    "stimulus" : "x > 0"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "24"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "(3/5) × 40 = 24.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-002",
+    "measure" : "quantitative",
+    "prompt" : "What is 3/5 of 40?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+      "main" : [
+        "o1"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "The increase is 20, and 20/80 = 0.25 = 25%.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "20%"
+          },
+          {
+            "id" : "o1",
+            "text" : "25%"
+          },
+          {
+            "id" : "o2",
+            "text" : "40%"
+          },
+          {
+            "id" : "o3",
+            "text" : "80%"
+          },
+          {
+            "id" : "o4",
+            "text" : "125%"
+          }
+        ]
+      }
+    ],
+    "id" : "qe-003",
+    "measure" : "quantitative",
+    "prompt" : "A price increases from $80 to $100. What is the percent increase?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "7"
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "The ordered list has five values, so the middle value is 7.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-004",
+    "measure" : "quantitative",
+    "prompt" : "What is the median of 3, 5, 7, 8, and 12?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "54"
+    ],
+    "contentArea" : "Geometry",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "2(L + 6) = 30, so L = 9 and the area is 9 × 6 = 54.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-005",
+    "measure" : "quantitative",
+    "prompt" : "A rectangle has perimeter 30 and width 6. What is its area?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "3/5",
+      "0.6",
+      ".6"
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "There are 3 favorable outcomes among 5 equally likely outcomes, so the probability is 3/5 = 0.6.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-006",
+    "measure" : "quantitative",
+    "prompt" : "A bag contains 3 red marbles and 2 blue marbles. If one marble is selected at random, what is the probability that it is red? Enter a decimal or fraction."
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "6"
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "Subtract 5 and divide by 2: x = 6.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-007",
+    "measure" : "quantitative",
+    "prompt" : "If 2x + 5 = 17, what is the value of x?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+      "main" : [
+        "o0"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Adding 1 to any number makes it greater.",
+    "format" : "quantitativeComparison",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "Quantity A is greater."
+          },
+          {
+            "id" : "o1",
+            "text" : "Quantity B is greater."
+          },
+          {
+            "id" : "o2",
+            "text" : "The two quantities are equal."
+          },
+          {
+            "id" : "o3",
+            "text" : "The relationship cannot be determined from the information given."
+          }
+        ]
+      }
+    ],
+    "id" : "qe-008",
+    "measure" : "quantitative",
+    "prompt" : "Compare Quantity A and Quantity B.",
+    "quantityA" : "n + 1",
+    "quantityB" : "n",
+    "stimulus" : "n is a positive integer."
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "15"
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "(12 + 15 + 18) / 3 = 45/3 = 15.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-009",
+    "measure" : "quantitative",
+    "prompt" : "What is the arithmetic mean of 12, 15, and 18?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "10"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "The 5 ratio parts represent 25 pens, so each part is 5 and red pens = 2 × 5 = 10.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-010",
+    "measure" : "quantitative",
+    "prompt" : "The ratio of red pens to blue pens is 2 to 3. If there are 25 pens in all, how many are red?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Geometry",
+    "correctSelections" : {
+      "main" : [
+        "o2"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "Area = πr² = π(3²) = 9π.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "3π"
+          },
+          {
+            "id" : "o1",
+            "text" : "6π"
+          },
+          {
+            "id" : "o2",
+            "text" : "9π"
+          },
+          {
+            "id" : "o3",
+            "text" : "12π"
+          },
+          {
+            "id" : "o4",
+            "text" : "18π"
+          }
+        ]
+      }
+    ],
+    "id" : "qe-011",
+    "measure" : "quantitative",
+    "prompt" : "What is the area of a circle with radius 3?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "5"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "They are 4, 8, 12, 16, and 20.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-012",
+    "measure" : "quantitative",
+    "prompt" : "How many positive multiples of 4 are less than or equal to 20?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "2"
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "Slope = (10 − 2)/(5 − 1) = 8/4 = 2.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-013",
+    "measure" : "quantitative",
+    "prompt" : "What is the slope of the line through (1, 2) and (5, 10)?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+      "main" : [
+        "o2"
+      ]
+    },
+    "difficulty" : "easy",
+    "explanation" : "The principal square root of 49 is 7, so the quantities are equal.",
+    "format" : "quantitativeComparison",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "Quantity A is greater."
+          },
+          {
+            "id" : "o1",
+            "text" : "Quantity B is greater."
+          },
+          {
+            "id" : "o2",
+            "text" : "The two quantities are equal."
+          },
+          {
+            "id" : "o3",
+            "text" : "The relationship cannot be determined from the information given."
+          }
+        ]
+      }
+    ],
+    "id" : "qe-014",
+    "measure" : "quantitative",
+    "prompt" : "Compare Quantity A and Quantity B.",
+    "quantityA" : "√49",
+    "quantityB" : "7"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "36"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "easy",
+    "explanation" : "0.15 × 240 = 36.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qe-015",
+    "measure" : "quantitative",
+    "prompt" : "What is 15 percent of 240?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+      "main" : [
+        "o3"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "x can be 4 or −4, so Quantity A may be greater or less than Quantity B.",
+    "format" : "quantitativeComparison",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "Quantity A is greater."
+          },
+          {
+            "id" : "o1",
+            "text" : "Quantity B is greater."
+          },
+          {
+            "id" : "o2",
+            "text" : "The two quantities are equal."
+          },
+          {
+            "id" : "o3",
+            "text" : "The relationship cannot be determined from the information given."
+          }
+        ]
+      }
+    ],
+    "id" : "qm-001",
+    "measure" : "quantitative",
+    "prompt" : "Compare Quantity A and Quantity B.",
+    "quantityA" : "x",
+    "quantityB" : "0",
+    "stimulus" : "x² = 16"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "4"
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "Adding the equations gives 3x = 12, so x = 4.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qm-002",
+    "measure" : "quantitative",
+    "prompt" : "If 2x + y = 11 and x − y = 1, what is the value of x?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      ".25",
+      "1/4",
+      "0.25"
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "The probability is (1/2)(1/2) = 1/4.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qm-003",
+    "measure" : "quantitative",
+    "prompt" : "A fair coin is tossed twice. What is the probability that both tosses are heads? Enter a decimal or fraction."
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "605",
+      "605.0",
+      "605.00"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "Compound growth gives 500(1.10)² = 605.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qm-004",
+    "measure" : "quantitative",
+    "prompt" : "An account containing $500 grows by 10 percent in each of two consecutive years. What is the balance after the second year?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "24"
+    ],
+    "contentArea" : "Geometry",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "Area = (1/2)(6)(8) = 24.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qm-005",
+    "measure" : "quantitative",
+    "prompt" : "A right triangle has legs of lengths 6 and 8. What is its area?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+      "main" : [
+        "o0"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "The sum is 250, so the mean is 50. Ordered values are 38, 42, 55, 55, 60, giving median 55.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "The mean is 50 and the median is 55."
+          },
+          {
+            "id" : "o1",
+            "text" : "The mean is 55 and the median is 50."
+          },
+          {
+            "id" : "o2",
+            "text" : "The mean and median are both 50."
+          },
+          {
+            "id" : "o3",
+            "text" : "The mean and median are both 55."
+          },
+          {
+            "id" : "o4",
+            "text" : "The mean is 52 and the median is 50."
+          }
+        ]
+      }
+    ],
+    "id" : "qm-006",
+    "measure" : "quantitative",
+    "prompt" : "Which statement is true?",
+    "stimulus" : "The five daily customer counts at a shop were 42, 55, 38, 60, and 55."
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "120"
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "There are 5! = 5 × 4 × 3 × 2 × 1 = 120 arrangements.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qm-007",
+    "measure" : "quantitative",
+    "prompt" : "Five distinct books are arranged on a shelf. How many different arrangements are possible?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "84"
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "The weighted mean is (10×78 + 15×88)/25 = 2100/25 = 84.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qm-008",
+    "measure" : "quantitative",
+    "prompt" : "A class of 10 students has an average score of 78. A second class of 15 students has an average score of 88. What is the average score for all 25 students?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+      "main" : [
+        "o2"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Set A has mean 6, and Set B has median 6.",
+    "format" : "quantitativeComparison",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "Quantity A is greater."
+          },
+          {
+            "id" : "o1",
+            "text" : "Quantity B is greater."
+          },
+          {
+            "id" : "o2",
+            "text" : "The two quantities are equal."
+          },
+          {
+            "id" : "o3",
+            "text" : "The relationship cannot be determined from the information given."
+          }
+        ]
+      }
+    ],
+    "id" : "qm-009",
+    "measure" : "quantitative",
+    "prompt" : "Compare Quantity A and Quantity B.",
+    "quantityA" : "The mean of Set A",
+    "quantityB" : "The median of Set B",
+    "stimulus" : "Set A is 2, 4, 6, 8, 10. Set B is 4, 5, 6, 7, 8."
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "7/3",
+      "2.333333",
+      "2.33",
+      "2.3333333333"
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "Set y = 0: 3a − 7 = 0, so a = 7/3.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qm-010",
+    "measure" : "quantitative",
+    "prompt" : "The line y = 3x − 7 crosses the x-axis at (a, 0). What is a? Enter a fraction or decimal."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+      "main" : [
+        "o0",
+        "o1",
+        "o3"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "84 = 2² × 3 × 7, so its prime factors are 2, 3, and 7.",
+    "format" : "multipleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 5,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "2"
+          },
+          {
+            "id" : "o1",
+            "text" : "3"
+          },
+          {
+            "id" : "o2",
+            "text" : "5"
+          },
+          {
+            "id" : "o3",
+            "text" : "7"
+          },
+          {
+            "id" : "o4",
+            "text" : "11"
+          }
+        ]
+      }
+    ],
+    "id" : "qm-011",
+    "measure" : "quantitative",
+    "prompt" : "Which of the following are prime factors of 84? Select all that apply."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+      "main" : [
+        "o2"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "Adding the same constant shifts every value but does not change the spread.",
+    "format" : "quantitativeComparison",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "Quantity A is greater."
+          },
+          {
+            "id" : "o1",
+            "text" : "Quantity B is greater."
+          },
+          {
+            "id" : "o2",
+            "text" : "The two quantities are equal."
+          },
+          {
+            "id" : "o3",
+            "text" : "The relationship cannot be determined from the information given."
+          }
+        ]
+      }
+    ],
+    "id" : "qm-012",
+    "measure" : "quantitative",
+    "prompt" : "Compare Quantity A and Quantity B.",
+    "quantityA" : "The standard deviation of list P",
+    "quantityB" : "The standard deviation of list Q",
+    "stimulus" : "List Q is formed by adding 10 to every number in list P."
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "2.0",
+      "2"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "Their combined rate is 1/6 + 1/3 = 1/2 tank per hour, so they need 2 hours.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qm-013",
+    "measure" : "quantitative",
+    "prompt" : "Pipe A fills a tank in 6 hours and Pipe B fills the same tank in 3 hours. At their constant rates, how many hours do they take working together?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "200",
+      "200.0",
+      "200.00"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "medium",
+    "explanation" : "200(0.80)(1.25) = 200; the percentage changes use different bases but cancel here.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qm-014",
+    "measure" : "quantitative",
+    "prompt" : "A $200 jacket is discounted 20 percent. The discounted price is then increased by 25 percent. What is the final price in dollars?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+      "main" : [
+        "o2",
+        "o3"
+      ]
+    },
+    "difficulty" : "medium",
+    "explanation" : "The interval excludes −2 and includes 3, so 0 and 3 are possible.",
+    "format" : "multipleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 5,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "−3"
+          },
+          {
+            "id" : "o1",
+            "text" : "−2"
+          },
+          {
+            "id" : "o2",
+            "text" : "0"
+          },
+          {
+            "id" : "o3",
+            "text" : "3"
+          },
+          {
+            "id" : "o4",
+            "text" : "4"
+          }
+        ]
+      }
+    ],
+    "id" : "qm-015",
+    "measure" : "quantitative",
+    "prompt" : "If −2 < x ≤ 3, which values could equal x? Select all that apply."
+  },
+  {
+    "acceptedNumericAnswers" : [
+      ".375",
+      "3/8",
+      "0.375"
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "hard",
+    "explanation" : "There are C(3,2) = 3 favorable outcomes among 2³ = 8 equally likely outcomes.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qh-001",
+    "measure" : "quantitative",
+    "prompt" : "Three fair coins are tossed. What is the probability of getting exactly two heads? Enter a decimal or fraction."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+      "main" : [
+        "o2"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "The roots have sum 7 and differ by 1, so they are 3 and 4. Their product k is 12.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "10"
+          },
+          {
+            "id" : "o1",
+            "text" : "11"
+          },
+          {
+            "id" : "o2",
+            "text" : "12"
+          },
+          {
+            "id" : "o3",
+            "text" : "13"
+          },
+          {
+            "id" : "o4",
+            "text" : "14"
+          }
+        ]
+      }
+    ],
+    "id" : "qh-002",
+    "measure" : "quantitative",
+    "prompt" : "If the two roots of x² − 7x + k = 0 differ by 1, what is k?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "22"
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "hard",
+    "explanation" : "68 speak at least one language. By inclusion-exclusion, 52 + 38 − both = 68, so both = 22.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qh-003",
+    "measure" : "quantitative",
+    "prompt" : "In a group of 80 people, 52 speak French, 38 speak Spanish, and 12 speak neither language. How many speak both French and Spanish?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "40.0",
+      "40"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "hard",
+    "explanation" : "The trip takes 2 + 1 = 3 hours and covers 120 miles, so average speed is 40 mph.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qh-004",
+    "measure" : "quantitative",
+    "prompt" : "A car travels 60 miles at 30 miles per hour and then 60 miles at 60 miles per hour. What is its average speed for the entire trip, in miles per hour?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+      "main" : [
+        "o3"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "n must be divisible by 6, but it may be …, −6, 0, 6, 12, …; the relationship varies.",
+    "format" : "quantitativeComparison",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "Quantity A is greater."
+          },
+          {
+            "id" : "o1",
+            "text" : "Quantity B is greater."
+          },
+          {
+            "id" : "o2",
+            "text" : "The two quantities are equal."
+          },
+          {
+            "id" : "o3",
+            "text" : "The relationship cannot be determined from the information given."
+          }
+        ]
+      }
+    ],
+    "id" : "qh-005",
+    "measure" : "quantitative",
+    "prompt" : "Compare Quantity A and Quantity B.",
+    "quantityA" : "n",
+    "quantityB" : "6",
+    "stimulus" : "n is an integer and n² is divisible by 12."
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+      "main" : [
+        "o0",
+        "o1"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Median = (7+8)/2 = 7.5, mode = 8, range = 13, and mean = 56/8 = 7, which is not greater than the median. Therefore only the first two statements are true.",
+    "format" : "multipleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 4,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "The median is 7.5."
+          },
+          {
+            "id" : "o1",
+            "text" : "The mode is 8."
+          },
+          {
+            "id" : "o2",
+            "text" : "The range is 11."
+          },
+          {
+            "id" : "o3",
+            "text" : "The mean is greater than the median."
+          }
+        ]
+      }
+    ],
+    "id" : "qh-006",
+    "measure" : "quantitative",
+    "prompt" : "Which statements are true? Select all that apply.",
+    "stimulus" : "A dataset contains 2, 4, 4, 7, 8, 8, 8, and 15."
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "50"
+    ],
+    "contentArea" : "Geometry",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "hard",
+    "explanation" : "The square's diagonal is the circle's diameter, 10. Since d² = 2s², the area s² = 100/2 = 50.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qh-007",
+    "measure" : "quantitative",
+    "prompt" : "A square is inscribed in a circle of radius 5. What is the area of the square?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "47"
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "hard",
+    "explanation" : "The terms are 2, 5, 11, 23, 47.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qh-008",
+    "measure" : "quantitative",
+    "prompt" : "A sequence is defined by a₁ = 2 and aₙ = 2aₙ₋₁ + 1 for n > 1. What is a₅?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "4"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "hard",
+    "explanation" : "If n ≡ 3 (mod 5), then 3n ≡ 9 ≡ 4 (mod 5).",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qh-009",
+    "measure" : "quantitative",
+    "prompt" : "A positive integer leaves remainder 3 when divided by 5. What remainder does three times the integer leave when divided by 5?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "20"
+    ],
+    "contentArea" : "Arithmetic",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "hard",
+    "explanation" : "The mixture contains 6 liters of salt. For that to be 12%, total volume must be 6/0.12 = 50 liters, requiring 20 liters of water.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qh-010",
+    "measure" : "quantitative",
+    "prompt" : "A mixture contains 30 liters of a 20 percent salt solution. How many liters of pure water must be added to make the mixture 12 percent salt?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+      "main" : [
+        "o3"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "Testing positive y values modulo 3 gives y = 2 and x = 7; larger x would require y < 2 and gives no positive integer solution.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "2"
+          },
+          {
+            "id" : "o1",
+            "text" : "3"
+          },
+          {
+            "id" : "o2",
+            "text" : "4"
+          },
+          {
+            "id" : "o3",
+            "text" : "7"
+          },
+          {
+            "id" : "o4",
+            "text" : "8"
+          }
+        ]
+      }
+    ],
+    "id" : "qh-011",
+    "measure" : "quantitative",
+    "prompt" : "If x and y are positive integers and 3x + 5y = 31, what is the greatest possible value of x?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Algebra",
+    "correctSelections" : {
+      "main" : [
+        "o1"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "f(a+1) = (a+1)² − 2(a+1) = a² − 1. Subtracting a² − 2a gives 2a − 1.",
+    "format" : "singleChoice",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "2a − 3"
+          },
+          {
+            "id" : "o1",
+            "text" : "2a − 1"
+          },
+          {
+            "id" : "o2",
+            "text" : "2a + 1"
+          },
+          {
+            "id" : "o3",
+            "text" : "a² − 1"
+          },
+          {
+            "id" : "o4",
+            "text" : "a² + 2a − 1"
+          }
+        ]
+      }
+    ],
+    "id" : "qh-012",
+    "measure" : "quantitative",
+    "prompt" : "For f(x) = x² − 2x, which expression is equal to f(a + 1) − f(a)?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "2/3",
+      "0.6666666667",
+      ".6666666667",
+      "0.667",
+      ".667"
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "hard",
+    "explanation" : "After a green ball is removed, 6 of the 9 remaining balls are white, so the conditional probability is 6/9 = 2/3.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qh-013",
+    "measure" : "quantitative",
+    "prompt" : "A box contains 4 green and 6 white balls. Two balls are drawn without replacement. Given that the first ball is green, what is the probability that the second is white? Enter a decimal or fraction."
+  },
+  {
+    "acceptedNumericAnswers" : [
+      "75,000",
+      "75000"
+    ],
+    "contentArea" : "Geometry",
+    "correctSelections" : {
+
+    },
+    "difficulty" : "hard",
+    "explanation" : "0.3 kilometer = 300 meters, and 300 × 250 = 75,000 square meters.",
+    "format" : "numericEntry",
+    "groups" : [
+
+    ],
+    "id" : "qh-014",
+    "measure" : "quantitative",
+    "prompt" : "A rectangular field measures 0.3 kilometer by 250 meters. What is its area in square meters?"
+  },
+  {
+    "acceptedNumericAnswers" : [
+
+    ],
+    "contentArea" : "Data Analysis",
+    "correctSelections" : {
+      "main" : [
+        "o3"
+      ]
+    },
+    "difficulty" : "hard",
+    "explanation" : "For {1,2,10,11,12}, the mean is below 10; for {8,9,10,50,60}, it is above 10. The relationship cannot be determined.",
+    "format" : "quantitativeComparison",
+    "groups" : [
+      {
+        "id" : "main",
+        "maximumSelections" : 1,
+        "options" : [
+          {
+            "id" : "o0",
+            "text" : "Quantity A is greater."
+          },
+          {
+            "id" : "o1",
+            "text" : "Quantity B is greater."
+          },
+          {
+            "id" : "o2",
+            "text" : "The two quantities are equal."
+          },
+          {
+            "id" : "o3",
+            "text" : "The relationship cannot be determined from the information given."
+          }
+        ]
+      }
+    ],
+    "id" : "qh-015",
+    "measure" : "quantitative",
+    "prompt" : "Compare Quantity A and Quantity B.",
+    "quantityA" : "The mean of S",
+    "quantityB" : "10",
+    "stimulus" : "Set S consists of five distinct positive integers with median 10."
+  }
+]

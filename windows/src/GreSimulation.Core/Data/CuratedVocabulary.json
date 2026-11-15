@@ -1,0 +1,722 @@
+[
+  {
+    "chinese" : "減弱；緩和；減少；降低；（法律）廢除",
+    "definition" : "to become or make less intense; to reduce in amount or value; (law) to put an end to",
+    "example" : "The wind finally abated near dawn.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "v.",
+    "pronunciation" : "/əˈbeɪt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "subside",
+      "diminish"
+    ],
+    "word" : "abate"
+  },
+  {
+    "chinese" : "深奧的；難以理解的；晦澀的",
+    "definition" : "difficult to understand; recondite; obscure",
+    "example" : "The article made an abstruse theory unusually clear.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/əbˈstruːs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "esoteric",
+      "arcane"
+    ],
+    "word" : "abstruse"
+  },
+  {
+    "chinese" : "敏銳；精明；洞察力；判斷力",
+    "definition" : "the ability to make good judgments and quick decisions; keen insight",
+    "example" : "Her financial acumen helped the small firm survive.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "n.",
+    "pronunciation" : "/ˈækjəmən/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "insight",
+      "shrewdness"
+    ],
+    "word" : "acumen"
+  },
+  {
+    "chinese" : "（情感或態度）矛盾的；搖擺不定的",
+    "definition" : "having mixed or conflicting feelings about something; uncertain",
+    "example" : "He was ambivalent about leaving a secure position.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/æmˈbɪvələnt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "uncertain",
+      "conflicted"
+    ],
+    "word" : "ambivalent"
+  },
+  {
+    "chinese" : "異常；反常現象；異常事物",
+    "definition" : "something that deviates from what is standard or expected; an irregularity",
+    "example" : "Researchers first dismissed the result as an anomaly.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "n.",
+    "pronunciation" : "/əˈnɑːməli/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "irregularity",
+      "aberration"
+    ],
+    "word" : "anomaly"
+  },
+  {
+    "chinese" : "安撫；平息；姑息；綏靖；滿足（慾望）",
+    "definition" : "to pacify or placate by meeting demands; to make concessions to an aggressor; to satisfy or relieve (hunger, thirst)",
+    "example" : "The concession failed to appease the critics.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "v.",
+    "pronunciation" : "/əˈpiːz/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "placate",
+      "pacify"
+    ],
+    "word" : "appease"
+  },
+  {
+    "chinese" : "任意的；武斷的；專斷的；專橫的",
+    "definition" : "based on whim or chance rather than reason; random; using unrestrained power",
+    "example" : "The cutoff date seemed arbitrary.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈɑːrbətreri/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "capricious",
+      "random"
+    ],
+    "word" : "arbitrary"
+  },
+  {
+    "chinese" : "勤勉的；刻苦的；專心仔細的；孜孜不倦的",
+    "definition" : "showing great care, attention, and persistent effort",
+    "example" : "Her assiduous archival work uncovered the missing letters.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/əˈsɪdʒuəs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "diligent",
+      "industrious"
+    ],
+    "word" : "assiduous"
+  },
+  {
+    "chinese" : "樸素的；無裝飾的；嚴厲的；嚴峻的；苦行的",
+    "definition" : "plain and without ornament; severe or strict in manner; without comforts; ascetic",
+    "example" : "The building's austere interior has almost no ornament.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ɔːˈstɪr/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "spartan",
+      "stern"
+    ],
+    "word" : "austere"
+  },
+  {
+    "chinese" : "v. 支持；加強；鼓舞；n. 長枕；支撐物",
+    "definition" : "to support or strengthen; to boost; a long pillow; a support",
+    "example" : "New evidence bolstered the original conclusion.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "v./n.",
+    "pronunciation" : "/ˈboʊlstər/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "reinforce",
+      "fortify"
+    ],
+    "word" : "bolster"
+  },
+  {
+    "chinese" : "反覆無常的；變化莫測的；任性的",
+    "definition" : "given to sudden changes of mood or behavior; unpredictable",
+    "example" : "A capricious policy makes long-term planning difficult.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/kəˈprɪʃəs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "fickle",
+      "whimsical"
+    ],
+    "word" : "capricious"
+  },
+  {
+    "chinese" : "謹慎的；周全的",
+    "definition" : "careful to consider all circumstances and risks; prudent",
+    "example" : "The board was circumspect about making promises.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈsɜːrkəmspekt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "cautious",
+      "wary"
+    ],
+    "word" : "circumspect"
+  },
+  {
+    "chinese" : "有說服力的；令人信服的；切題的",
+    "definition" : "clear, logical, and convincing; pertinent",
+    "example" : "She offered a cogent explanation for the discrepancy.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈkoʊdʒənt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "compelling",
+      "persuasive"
+    ],
+    "word" : "cogent"
+  },
+  {
+    "chinese" : "安撫的；和解的；調和的",
+    "definition" : "intended to placate or restore goodwill; willing to make concessions",
+    "example" : "His conciliatory tone reopened negotiations.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/kənˈsɪliətɔːri/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "placating",
+      "pacific"
+    ],
+    "word" : "conciliatory"
+  },
+  {
+    "chinese" : "推測的；猜測性的",
+    "definition" : "based on guesswork or incomplete evidence",
+    "example" : "Without records, the date remains conjectural.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/kənˈdʒektʃərəl/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "speculative",
+      "hypothetical"
+    ],
+    "word" : "conjectural"
+  },
+  {
+    "chinese" : "有害的；有毒的",
+    "definition" : "causing harm or damage",
+    "example" : "Chronic noise can have deleterious effects on health.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˌdeləˈtɪriəs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "harmful",
+      "detrimental"
+    ],
+    "word" : "deleterious"
+  },
+  {
+    "chinese" : "缺乏自信的；羞怯的；拘謹的",
+    "definition" : "lacking self-confidence; shy and reserved",
+    "example" : "The normally diffident student gave a forceful defense.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈdɪfɪdənt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "self-effacing",
+      "timid"
+    ],
+    "word" : "diffident"
+  },
+  {
+    "chinese" : "武斷的；教條的；自以為是的",
+    "definition" : "asserting opinions as undeniably true",
+    "example" : "A dogmatic approach leaves little room for contrary evidence.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/dɔːɡˈmætɪk/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "doctrinaire",
+      "opinionated"
+    ],
+    "word" : "dogmatic"
+  },
+  {
+    "chinese" : "adj. 兼容並蓄的；多元的；折衷的；n. 折衷主義者",
+    "definition" : "drawing ideas or style from a wide range of sources; a person who selects from various sources",
+    "example" : "The course has an eclectic reading list.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj./n.",
+    "pronunciation" : "/ɪˈklektɪk/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "diverse",
+      "wide-ranging"
+    ],
+    "word" : "eclectic"
+  },
+  {
+    "chinese" : "使衰弱；使無力；削弱",
+    "definition" : "to drain of energy or vitality; to weaken",
+    "example" : "Weeks of uncertainty enervated the team.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "v.",
+    "pronunciation" : "/ˈenərveɪt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "debilitate",
+      "exhaust"
+    ],
+    "word" : "enervate"
+  },
+  {
+    "chinese" : "模稜兩可的；含糊的；可疑的",
+    "definition" : "open to more than one interpretation, often intentionally; of uncertain nature; questionable",
+    "example" : "The minister gave an equivocal response.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ɪˈkwɪvəkəl/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "ambiguous",
+      "noncommittal"
+    ],
+    "word" : "equivocal"
+  },
+  {
+    "chinese" : "博學的；學識淵博的",
+    "definition" : "having or showing great knowledge or learning",
+    "example" : "The lecture was erudite without being inaccessible.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈerudaɪt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "learned",
+      "scholarly"
+    ],
+    "word" : "erudite"
+  },
+  {
+    "chinese" : "使惡化；使加劇",
+    "definition" : "to make a problem, situation, or feeling worse",
+    "example" : "The delay exacerbated an already tense situation.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "v.",
+    "pronunciation" : "/ɪɡˈzæsərbeɪt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "aggravate",
+      "intensify"
+    ],
+    "word" : "exacerbate"
+  },
+  {
+    "chinese" : "一絲不苟的；挑剔的；過分講究的；有潔癖的",
+    "definition" : "very attentive to accuracy and detail; hard to please; excessively particular; very concerned about cleanliness",
+    "example" : "A fastidious editor checked every citation.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/fæˈstɪdiəs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "meticulous",
+      "exacting"
+    ],
+    "word" : "fastidious"
+  },
+  {
+    "chinese" : "偶然的；巧合的；幸運的",
+    "definition" : "happening by chance; lucky or fortunate by coincidence",
+    "example" : "A fortuitous meeting led to the collaboration.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/fɔːrˈtuːɪtəs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "accidental",
+      "serendipitous"
+    ],
+    "word" : "fortuitous"
+  },
+  {
+    "chinese" : "陳腐的；老套的；陳詞濫調的",
+    "definition" : "overused and lacking originality; trite",
+    "example" : "The speaker relied on hackneyed slogans.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈhæknid/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "trite",
+      "banal"
+    ],
+    "word" : "hackneyed"
+  },
+  {
+    "chinese" : "反傳統者；打破舊習的人；（宗教）破壞聖像者",
+    "definition" : "a person who attacks cherished beliefs or institutions; a destroyer of religious images",
+    "example" : "The critic earned a reputation as an iconoclast.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "n.",
+    "pronunciation" : "/aɪˈkɑːnəklæst/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "dissenter",
+      "nonconformist"
+    ],
+    "word" : "iconoclast"
+  },
+  {
+    "chinese" : "初步的；未成形的；剛開始的；雜亂的",
+    "definition" : "just begun; only partly formed or organized; incoherent",
+    "example" : "The committee turned an inchoate idea into a proposal.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ɪnˈkoʊət/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "undeveloped",
+      "nascent"
+    ],
+    "word" : "inchoate"
+  },
+  {
+    "chinese" : "言簡意賅的；簡潔的；寡言的",
+    "definition" : "using very few words; concise to the point of seeming rude or mysterious; terse",
+    "example" : "Her laconic reply ended the discussion.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ləˈkɑːnɪk/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "terse",
+      "succinct"
+    ],
+    "word" : "laconic"
+  },
+  {
+    "chinese" : "清晰易懂的；明晰的；神智清醒的；清澈的",
+    "definition" : "expressed clearly; easy to understand; mentally clear; bright or translucent",
+    "example" : "The diagram makes the process lucid.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈluːsɪd/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "clear",
+      "intelligible"
+    ],
+    "word" : "lucid"
+  },
+  {
+    "chinese" : "減輕；緩和；（法律）從輕",
+    "definition" : "to make less severe or painful; to alleviate; (law) to lessen the gravity of",
+    "example" : "Shade trees can mitigate urban heat.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "v.",
+    "pronunciation" : "/ˈmɪtɪɡeɪt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "alleviate",
+      "moderate"
+    ],
+    "word" : "mitigate"
+  },
+  {
+    "chinese" : "頑固的；固執的；冷酷無情的",
+    "definition" : "stubbornly refusing to change; resistant to persuasion; unmoved by pity",
+    "example" : "The negotiator remained obdurate despite new evidence.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈɑːbdərət/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "intransigent",
+      "unyielding"
+    ],
+    "word" : "obdurate"
+  },
+  {
+    "chinese" : "晦澀的；難懂的；不透明的；不透光的",
+    "definition" : "hard to understand; not open or transparent; not allowing light to pass through",
+    "example" : "The agency's opaque process invited suspicion.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/oʊˈpeɪk/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "obscure",
+      "impenetrable"
+    ],
+    "word" : "opaque"
+  },
+  {
+    "chinese" : "矛盾的；似非而是的；自相矛盾的",
+    "definition" : "seemingly contradictory but possibly true; self-contradictory",
+    "example" : "It is paradoxical that more choice can reduce satisfaction.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˌpærəˈdɑːksɪkəl/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "contradictory",
+      "counterintuitive"
+    ],
+    "word" : "paradoxical"
+  },
+  {
+    "chinese" : "務實的；實用的；實用主義的；（語言學）語用的",
+    "definition" : "dealing with things sensibly and practically; based on practical results; (linguistics) relating to pragmatics",
+    "example" : "They adopted a pragmatic compromise.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/præɡˈmætɪk/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "practical",
+      "realistic"
+    ],
+    "word" : "pragmatic"
+  },
+  {
+    "chinese" : "暫定的；臨時的；暫時的",
+    "definition" : "arranged for the present, possibly to be changed later; temporary",
+    "example" : "The estimate is provisional until more data arrive.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/prəˈvɪʒənəl/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "tentative",
+      "interim"
+    ],
+    "word" : "provisional"
+  },
+  {
+    "chinese" : "沉默寡言的；有所保留的；含蓄的",
+    "definition" : "not revealing one's thoughts or feelings readily; reserved; inclined to be silent",
+    "example" : "Witnesses were reticent about the details.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈretɪsənt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "reserved",
+      "restrained"
+    ],
+    "word" : "reticent"
+  },
+  {
+    "chinese" : "樂觀的；自信的；（臉色）紅潤的",
+    "definition" : "optimistic or confident, especially in a difficult situation; (of complexion) ruddy",
+    "example" : "Analysts were less sanguine about the second quarter.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈsæŋɡwɪn/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "hopeful",
+      "buoyant"
+    ],
+    "word" : "sanguine"
+  },
+  {
+    "chinese" : "一絲不苟的；嚴謹的；有道德原則的；正直的",
+    "definition" : "extremely careful and thorough; concerned to avoid doing wrong; principled",
+    "example" : "The study used scrupulous controls.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈskruːpjələs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "conscientious",
+      "meticulous"
+    ],
+    "word" : "scrupulous"
+  },
+  {
+    "chinese" : "似是而非的；貌似有理的；虛有其表的",
+    "definition" : "superficially plausible but actually wrong; misleadingly attractive",
+    "example" : "The argument is attractive but specious.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈspiːʃəs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "misleading",
+      "fallacious"
+    ],
+    "word" : "specious"
+  },
+  {
+    "chinese" : "薄弱的；牽強的；空洞的；稀薄的；纖細的",
+    "definition" : "very weak or slight; lacking substance; thin or rarefied",
+    "example" : "The conclusion rests on a tenuous analogy.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈtenjuəs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "fragile",
+      "insubstantial"
+    ],
+    "word" : "tenuous"
+  },
+  {
+    "chinese" : "一針見血的；尖銳有力的；鮮明的",
+    "definition" : "sharply incisive and effective; vigorous; clear-cut",
+    "example" : "Her trenchant critique changed the debate.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/ˈtrentʃənt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "incisive",
+      "penetrating"
+    ],
+    "word" : "trenchant"
+  },
+  {
+    "chinese" : "無所不在的；隨處可見的；普遍存在的",
+    "definition" : "present, appearing, or found everywhere",
+    "example" : "Sensors have become ubiquitous in modern devices.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "adj.",
+    "pronunciation" : "/juːˈbɪkwɪtəs/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "omnipresent",
+      "pervasive"
+    ],
+    "word" : "ubiquitous"
+  },
+  {
+    "chinese" : "猶豫不決；搖擺不定；擺動",
+    "definition" : "to alternate between opinions or choices; to waver; to sway back and forth",
+    "example" : "The council continued to vacillate between the two plans.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "v.",
+    "pronunciation" : "/ˈvæsəleɪt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "waver",
+      "fluctuate"
+    ],
+    "word" : "vacillate"
+  },
+  {
+    "chinese" : "證明正確；為…平反；洗清（罪名）；證實",
+    "definition" : "to show to be right or justified; to clear of blame or suspicion; to confirm",
+    "example" : "Later evidence vindicated the researcher's method.",
+    "isHighFrequency" : false,
+    "partOfSpeech" : "v.",
+    "pronunciation" : "/ˈvɪndɪkeɪt/",
+    "sources" : [
+      "Original app notes"
+    ],
+    "synonyms" : [
+      "justify",
+      "exonerate"
+    ],
+    "word" : "vindicate"
+  }
+]

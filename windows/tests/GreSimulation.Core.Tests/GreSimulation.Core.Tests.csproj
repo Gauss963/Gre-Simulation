@@ -15,4 +15,8 @@
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
+  <ItemGroup>
+    <!-- Values produced by the Mac app's own Swift code, for parity checks. -->
+    <None Include="Reference\SwiftReference.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>
