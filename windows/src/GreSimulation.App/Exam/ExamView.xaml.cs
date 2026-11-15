@@ -87,6 +87,12 @@ public sealed partial class ExamView : UserControl
     private void OnLoaded(object sender, RoutedEventArgs e)
     {
         if (_left) return;
+        if (Palette.IsDark(this) != _dark)
+        {
+            // The theme is only known once the view is in the window.
+            _renderedKey = null;
+            Refresh();
+        }
         _timer.Start();
         _session.Tick();
         if (_session.Phase == ExamPhase.Directions) BeginSectionButton.Focus(FocusState.Programmatic);

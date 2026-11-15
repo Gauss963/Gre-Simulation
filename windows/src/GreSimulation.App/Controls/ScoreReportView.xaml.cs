@@ -51,6 +51,11 @@ public sealed partial class ScoreReportView : UserControl
         _reviewHeaderCount = ReviewPanel.Children.Count;
         BuildDynamicContent();
         ActualThemeChanged += (_, _) => BuildDynamicContent();
+        Loaded += (_, _) =>
+        {
+            // The theme is only known once the view is in the window.
+            if (Palette.IsDark(this) != _dark) BuildDynamicContent();
+        };
     }
 
     /// <summary>Raised by the Done / Save &amp; Close button.</summary>
