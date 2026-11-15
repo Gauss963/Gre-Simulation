@@ -21,7 +21,15 @@ public sealed partial class MainWindow : Window
     public MainWindow()
     {
         Current = this;
-        InitializeComponent();
+        try
+        {
+            InitializeComponent();
+        }
+        catch (Exception exception)
+        {
+            CrashLog.Write(new InvalidOperationException($"MainWindow XAML failed: {exception.Message} (0x{exception.HResult:X8}) {exception.InnerException}", exception));
+            throw;
+        }
         ExtendsContentIntoTitleBar = true;
         SetTitleBar(AppTitleBar);
         AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets", "AppIcon.ico"));
