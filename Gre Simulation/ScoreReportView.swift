@@ -199,6 +199,24 @@ struct ScoreReportView: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .padding(.leading, 27)
+            if question.measure == .verbal, let tip = QuestionBank.guessingTips[question.id] {
+                HStack(alignment: .top, spacing: 6) {
+                    Image(systemName: "lightbulb.fill")
+                        .foregroundStyle(.orange)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("猜題法：單字不熟也能縮小範圍")
+                            .font(.caption.weight(.semibold))
+                        Text(tip)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                .padding(8)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color.orange.opacity(0.08), in: RoundedRectangle(cornerRadius: 6))
+                .padding(.leading, 27)
+            }
             if let figure = question.figure {
                 QuantFigureView(figure: figure)
                     .frame(maxWidth: 680)

@@ -12,6 +12,10 @@ struct Gre_SimulationApp: App {
     init() {
         #if DEBUG
         if ProcessInfo.processInfo.arguments.contains("-selfTest") { SelfTest.run() }
+        if let flag = ProcessInfo.processInfo.arguments.firstIndex(of: "-exportVerbal"),
+           ProcessInfo.processInfo.arguments.indices.contains(flag + 1) {
+            SelfTest.exportVerbal(to: ProcessInfo.processInfo.arguments[flag + 1])
+        }
         let issues = QuestionBank.validate() + VocabularyBank.validate() + FormBuilder.validate()
         issues.forEach { print("Validation:", $0) }
         assert(issues.isEmpty, issues.joined(separator: "\n"))

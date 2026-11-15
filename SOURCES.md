@@ -71,3 +71,6 @@ The resulting score is a simulation. It must not be described as an official or 
 
 All 5,995 vocabulary glosses were checked again for accuracy, missing GRE-tested senses, sense order, Taiwan usage and characters, and consistency with the part of speech and English definition. 65 entries were corrected (recorded with reasons in `Tools/review_2026_11/gloss_changes.json`) and applied through `Tools/apply_reviewed_glosses.py`.
 
+## Verbal guessing tips (1.7.0, November 2026)
+
+Every deliverable Verbal question has a guessing tip in Taiwan Traditional Chinese, written for that item, in `Resources/VerbalGuessingTips.json` (question id → tip). The tips are original strategy notes; they quote only words and short phrases from the item they describe. Debug validation rejects any Verbal question without a tip. While the tips were written, 76 more imported items were retired, with reasons, in `Resources/RetiredQuestions.json` (107 in all): 24 whose passage was missing or belonged to another set, 17 with garbled stems or options or mismatched question data, and 35 whose key was disputed or not supported by the passage. Seven explanations that named the wrong letter for a distractor were corrected in `Tools/reviewed_verbal_explanations.json`. The Debug build exports the current Verbal pool with `-exportVerbal <path>` for writing new tips.

@@ -39,6 +39,12 @@ enum QuestionBank {
     static let retiredQuestionReasons: [String: String] =
         BundledResource.decode([String: String].self, named: "RetiredQuestions") ?? [:]
 
+    /// For each Verbal question, how to narrow down or guess the answer without knowing every
+    /// word (signal words, positive or negative charge, Sentence Equivalence pairs, extreme or
+    /// out-of-scope Reading choices), in Taiwan Traditional Chinese. Shown under the explanation.
+    static let guessingTips: [String: String] =
+        BundledResource.decode([String: String].self, named: "VerbalGuessingTips") ?? [:]
+
     static let all: [GREQuestion] =
         (verbalQuestions + quantitativeQuestions + expandedQuestions
             + authorized20260720Questions + authorized20260720Part2Questions
@@ -132,6 +138,9 @@ enum QuestionBank {
             }
             if question.measure == .verbal, boilerplate.contains(where: question.explanation.contains) {
                 issues.append("\(question.id) has only a boilerplate explanation.")
+            }
+            if question.measure == .verbal, (guessingTips[question.id] ?? "").isEmpty {
+                issues.append("\(question.id) has no guessing tip.")
             }
             if question.format == .essay {
                 continue

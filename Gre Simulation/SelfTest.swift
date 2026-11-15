@@ -90,5 +90,21 @@ enum SelfTest {
         log(failures.isEmpty ? "SELF-TEST PASSED" : "SELF-TEST FAILED:\n" + failures.joined(separator: "\n"))
         exit(failures.isEmpty ? 0 : 1)
     }
+
+    /// Writes every deliverable Verbal question as JSON (for writing explanations and guessing
+    /// tips outside the app), then exits. Run the Debug build with `-exportVerbal <path>`.
+    static func exportVerbal(to path: String) -> Never {
+        let verbal = QuestionBank.all.filter { $0.measure == .verbal }
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
+        do {
+            try encoder.encode(verbal).write(to: URL(fileURLWithPath: path))
+            FileHandle.standardError.write(Data("Exported \(verbal.count) Verbal questions to \(path)\n".utf8))
+            exit(0)
+        } catch {
+            FileHandle.standardError.write(Data("Export failed: \(error)\n".utf8))
+            exit(1)
+        }
+    }
 }
 #endif
