@@ -1,0 +1,25 @@
+<Project>
+  <!--
+    The Windows app takes its version from the Mac app's Xcode project, so both always ship
+    the same version number. Do not set a version anywhere else under windows/.
+  -->
+  <PropertyGroup>
+    <MacProjectFile>$(MSBuildThisFileDirectory)..\Gre Simulation.xcodeproj\project.pbxproj</MacProjectFile>
+    <MacProjectText>$([System.IO.File]::ReadAllText('$(MacProjectFile)'))</MacProjectText>
+    <MacMarketingVersion>$([System.Text.RegularExpressions.Regex]::Replace('$(MacProjectText)', '(?s)^.*?MARKETING_VERSION = ([0-9.]+);.*$', '$1'))</MacMarketingVersion>
+    <MacBuildNumber>$([System.Text.RegularExpressions.Regex]::Replace('$(MacProjectText)', '(?s)^.*?CURRENT_PROJECT_VERSION = ([0-9]+);.*$', '$1'))</MacBuildNumber>
+    <Version>$(MacMarketingVersion)</Version>
+    <FileVersion>$(MacMarketingVersion).$(MacBuildNumber)</FileVersion>
+    <AssemblyVersion>$(MacMarketingVersion).0</AssemblyVersion>
+    <InformationalVersion>$(MacMarketingVersion) (build $(MacBuildNumber))</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Product>Gre Simulation</Product>
+    <Company>Gauss963</Company>
+    <Copyright>Independent GRE® practice simulator</Copyright>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- The Mac app's bundled resources (question bank, audio packs) are shared, never copied. -->
+    <MacResourcesDir>$(MSBuildThisFileDirectory)..\Gre Simulation\Resources\</MacResourcesDir>
+  </PropertyGroup>
+</Project>

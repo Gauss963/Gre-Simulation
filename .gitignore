@@ -18,3 +18,9 @@ xcuserdata/
 # Python build tools
 __pycache__/
 *.py[cod]
+
+# Windows app build output
+windows/**/bin/
+windows/**/obj/
+windows/**/*.user
+windows/.vs/

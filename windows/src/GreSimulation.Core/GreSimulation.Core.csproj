@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Platform-neutral logic: models, question bank, exam sessions, scoring, and saved progress.
+       It has no Windows dependency, so its tests also run on macOS. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>GreSimulation.Core</RootNamespace>
+  </PropertyGroup>
+</Project>
