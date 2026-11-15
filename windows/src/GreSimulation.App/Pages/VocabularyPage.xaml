@@ -1,12 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Port of VocabularyView (LibraryViews.swift) and FlashcardStudyView (FlashcardView.swift). -->
 <Page
     x:Class="GreSimulation.App.Pages.VocabularyPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ScrollViewer>
-        <StackPanel Style="{StaticResource PageContentStyle}">
-            <TextBlock Text="Vocabulary" Style="{StaticResource TitleTextBlockStyle}" />
-            <TextBlock Text="This page is being ported from the Mac app." Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GreSimulation.App.Pages"
+    xmlns:controls="using:GreSimulation.App.Controls"
+    KeyDown="OnPageKeyDown">
+
+    <Page.Resources>
+        <!-- One card of the Browse grid (the Mac's vocabularyCard). -->
+        <DataTemplate x:Key="BrowseCardTemplate" x:DataType="local:BrowseCardItem">
+            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top"
+                    MinHeight="165" Padding="20" CornerRadius="12"
+                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                    AutomationProperties.Name="{x:Bind AccessibleName, Mode=OneWay}"
+                    Click="OnBrowseCardClick">
+                <StackPanel Spacing="10">
+                    <Grid ColumnSpacing="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock TextWrapping="Wrap">
+                            <Run Text="{x:Bind Word.Word}" FontSize="22" FontWeight="Bold" Foreground="{ThemeResource NavyBrush}" />
+                            <Run Text="{x:Bind HeaderDetail}" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        </TextBlock>
+                        <FontIcon Grid.Column="1" Glyph="{x:Bind EyeGlyph, Mode=OneWay}" FontSize="16"
+                                  VerticalAlignment="Top" Margin="0,6,0,0"
+                                  Foreground="{ThemeResource BlueBrush}" />
+                    </Grid>
+                    <StackPanel Spacing="10" Visibility="{x:Bind RevealedVisibility, Mode=OneWay}">
+                        <TextBlock Text="{x:Bind Word.Definition}" TextWrapping="Wrap" FontWeight="Medium" />
+                        <TextBlock Text="{x:Bind Word.Chinese}" TextWrapping="Wrap" Foreground="{ThemeResource TealBrush}"
+                                   Visibility="{x:Bind ChineseVisibility}" />
+                        <TextBlock Text="{x:Bind SynonymsText}" TextWrapping="Wrap" FontSize="12" FontWeight="SemiBold"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   Visibility="{x:Bind SynonymsVisibility}" />
+                        <TextBlock Text="{x:Bind Word.Example}" TextWrapping="Wrap" FontSize="13" FontStyle="Italic"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   Visibility="{x:Bind ExampleVisibility}" />
+                        <HyperlinkButton Padding="0" Tag="{x:Bind ExampleSourceUrl}" Click="OnExampleSourceClick"
+                                         Visibility="{x:Bind ExampleLinkVisibility}">
+                            <StackPanel Orientation="Horizontal" Spacing="5">
+                                <FontIcon Glyph="&#xE8A7;" FontSize="11" />
+                                <TextBlock Text="{x:Bind ExampleSourceText}" FontSize="11" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </HyperlinkButton>
+                        <TextBlock Text="{x:Bind ExampleSourceText}" FontSize="11" TextWrapping="Wrap"
+                                   Foreground="{ThemeResource TextFillColorTertiaryBrush}"
+                                   Visibility="{x:Bind ExampleSourceTextVisibility}" />
+                        <TextBlock Text="{x:Bind SourcesText}" FontSize="11" TextWrapping="Wrap"
+                                   Foreground="{ThemeResource TextFillColorTertiaryBrush}"
+                                   Visibility="{x:Bind SourcesVisibility}" />
+                    </StackPanel>
+                    <TextBlock Text="Tap to reveal meaning" FontSize="13"
+                               Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                               Visibility="{x:Bind HiddenVisibility, Mode=OneWay}" />
+                </StackPanel>
+            </Button>
+        </DataTemplate>
+
+        <Style x:Key="CaptionHeadingStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="{ThemeResource TextFillColorSecondaryBrush}" />
+        </Style>
+        <Style x:Key="DefinitionTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Medium" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="IsTextSelectionEnabled" Value="True" />
+        </Style>
+        <Style x:Key="CompletionCardStyle" TargetType="Border" BasedOn="{StaticResource CardStyle}">
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="MinHeight" Value="360" />
+        </Style>
+    </Page.Resources>
+
+    <ScrollViewer x:Name="PageScroller">
+        <StackPanel Style="{StaticResource PageContentStyle}" MaxWidth="1050">
+            <StackPanel Spacing="7">
+                <TextBlock x:Name="HeadingText" FontSize="30" FontWeight="Bold" TextWrapping="Wrap"
+                           Foreground="{ThemeResource NavyBrush}" />
+                <TextBlock x:Name="SubheadingText" TextWrapping="Wrap"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            </StackPanel>
+
+            <SelectorBar x:Name="StudyModeBar" HorizontalAlignment="Left" MaxWidth="360"
+                         AutomationProperties.Name="Study mode"
+                         SelectionChanged="OnStudyModeChanged">
+                <SelectorBarItem x:Name="BrowseItem" Text="Browse" IsSelected="True">
+                    <SelectorBarItem.Icon><FontIcon Glyph="&#xE8FD;" /></SelectorBarItem.Icon>
+                </SelectorBarItem>
+                <SelectorBarItem x:Name="FlashCardsItem" Text="Flash Cards">
+                    <SelectorBarItem.Icon><FontIcon Glyph="&#xE7C3;" /></SelectorBarItem.Icon>
+                </SelectorBarItem>
+            </SelectorBar>
+
+            <ProgressRing x:Name="LoadingRing" IsActive="True" HorizontalAlignment="Left" Width="32" Height="32" />
+
+            <!-- Browse -->
+            <StackPanel x:Name="BrowsePanel" Spacing="18" Visibility="Collapsed">
+                <Grid ColumnSpacing="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <AutoSuggestBox x:Name="SearchBox" QueryIcon="Find" VerticalAlignment="Center"
+                                    AutomationProperties.Name="Search vocabulary"
+                                    TextChanged="OnSearchTextChanged" />
+                    <TextBlock x:Name="WordCountText" Grid.Column="1" VerticalAlignment="Center" FontSize="12"
+                               Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    <ComboBox x:Name="BrowseSourceBox" Grid.Column="2" MinWidth="200" VerticalAlignment="Center"
+                              AutomationProperties.Name="Source"
+                              SelectionChanged="OnBrowseSourceChanged" />
+                </Grid>
+
+                <ItemsRepeater x:Name="WordRows" ElementPrepared="OnWordRowPrepared" SizeChanged="OnWordRowsSizeChanged">
+                    <ItemsRepeater.Layout>
+                        <StackLayout Orientation="Vertical" Spacing="14" />
+                    </ItemsRepeater.Layout>
+                    <ItemsRepeater.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnSpacing="14" />
+                        </DataTemplate>
+                    </ItemsRepeater.ItemTemplate>
+                </ItemsRepeater>
+
+                <TextBlock x:Name="BrowseFootnote" FontSize="12" TextWrapping="Wrap" Margin="0,6,0,0"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            </StackPanel>
+
+            <!-- Flash cards -->
+            <StackPanel x:Name="FlashPanel" Spacing="18" Visibility="Collapsed">
+                <!-- Session controls -->
+                <Border Style="{StaticResource CardStyle}" CornerRadius="12">
+                    <StackPanel Spacing="14">
+                        <Grid>
+                            <StackPanel Spacing="3" Margin="0,0,48,0">
+                                <TextBlock Text="Flash-card session" FontSize="22" FontWeight="Bold" />
+                                <TextBlock Text="Mastery is saved on this device." FontSize="13"
+                                           Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                            </StackPanel>
+                            <Button HorizontalAlignment="Right" VerticalAlignment="Top" Padding="8"
+                                    Background="Transparent" BorderThickness="0"
+                                    AutomationProperties.Name="Flash-card options"
+                                    ToolTipService.ToolTip="Flash-card options">
+                                <FontIcon Glyph="&#xE712;" FontSize="18" />
+                                <Button.Flyout>
+                                    <MenuFlyout Placement="BottomEdgeAlignedRight">
+                                        <MenuFlyoutItem Text="Reset mastery progress" Click="OnResetProgressClick"
+                                                        Foreground="{ThemeResource SystemFillColorCriticalBrush}">
+                                            <MenuFlyoutItem.Icon><FontIcon Glyph="&#xE72C;" /></MenuFlyoutItem.Icon>
+                                        </MenuFlyoutItem>
+                                    </MenuFlyout>
+                                </Button.Flyout>
+                            </Button>
+                        </Grid>
+
+                        <controls:WrapPanel HorizontalSpacing="14" VerticalSpacing="12">
+                            <ComboBox x:Name="FlashSourceBox" Header="Source" MinWidth="200"
+                                      SelectionChanged="OnFlashSourceChanged" />
+                            <ComboBox x:Name="FlashModeBox" Header="Mode" MinWidth="160"
+                                      SelectionChanged="OnFlashModeChanged" />
+                            <ComboBox x:Name="DeckSizeBox" Header="Deck size" MinWidth="140"
+                                      SelectionChanged="OnDeckSizeChanged" />
+                            <ToggleSwitch x:Name="UnmasteredSwitch" Header="Unmastered only" MinWidth="0"
+                                          Toggled="OnUnmasteredToggled" />
+                        </controls:WrapPanel>
+
+                        <Grid ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                                <FontIcon Glyph="&#xE8F1;" FontSize="13" />
+                                <TextBlock x:Name="AvailableText" FontSize="12" FontWeight="SemiBold" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                                <FontIcon Glyph="&#xE930;" FontSize="13" Foreground="{ThemeResource TealBrush}" />
+                                <TextBlock x:Name="MasteredText" FontSize="12" FontWeight="SemiBold"
+                                           Foreground="{ThemeResource TealBrush}" />
+                            </StackPanel>
+                            <Button x:Name="RestartButton" Grid.Column="3" FontWeight="SemiBold" Click="OnRestartClick" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <!-- Fixed-deck progress -->
+                <StackPanel x:Name="DeckProgressPanel" Spacing="8">
+                    <Grid>
+                        <TextBlock x:Name="DeckProgressTitle" FontSize="14" FontWeight="SemiBold" />
+                        <TextBlock x:Name="DeckProgressDetail" HorizontalAlignment="Right" FontSize="12"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    </Grid>
+                    <ProgressBar x:Name="DeckProgressBar" Foreground="{ThemeResource TealBrush}" />
+                </StackPanel>
+
+                <!-- Infinite-loop progress -->
+                <StackPanel x:Name="InfiniteProgressPanel" Spacing="8">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" Spacing="6">
+                            <FontIcon Glyph="&#xE8EE;" FontSize="14" />
+                            <TextBlock Text="Infinite loop" FontSize="14" FontWeight="SemiBold" />
+                        </StackPanel>
+                        <TextBlock x:Name="InfiniteProgressDetail" HorizontalAlignment="Right" FontSize="12"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    </Grid>
+                    <ProgressBar x:Name="InfiniteProgressBar" Foreground="{ThemeResource TealBrush}" />
+                    <TextBlock x:Name="InfiniteHintText" FontSize="12" TextWrapping="Wrap"
+                               Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                </StackPanel>
+
+                <!-- The flash card: tap or Space reveals it. -->
+                <ContentControl x:Name="CardHost" IsTabStop="True" UseSystemFocusVisuals="True"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                                AutomationProperties.Name="Flash card">
+                    <Border x:Name="CardBorder" CornerRadius="18" Padding="32" MinHeight="390"
+                            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1"
+                            Tapped="OnCardTapped">
+                        <Grid>
+                            <!-- Front -->
+                            <StackPanel x:Name="CardFront" Spacing="16" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <StackPanel x:Name="FrontHighFrequency" Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center">
+                                    <FontIcon Glyph="&#xE945;" FontSize="12" Foreground="{ThemeResource WarningBrush}" />
+                                    <TextBlock Text="High frequency" FontSize="12" FontWeight="Bold"
+                                               Foreground="{ThemeResource WarningBrush}" />
+                                </StackPanel>
+                                <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Center">
+                                    <TextBlock x:Name="FrontWord" FontFamily="Georgia" FontSize="48" FontWeight="Bold"
+                                               TextAlignment="Center" />
+                                </Viewbox>
+                                <TextBlock x:Name="FrontDetail" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center"
+                                           TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                <Button x:Name="FrontListenButton" HorizontalAlignment="Center" Padding="16,9"
+                                        Foreground="{ThemeResource BlueBrush}" Click="OnListenClick">
+                                    <StackPanel Orientation="Horizontal" Spacing="8">
+                                        <FontIcon x:Name="FrontListenIcon" Glyph="&#xE767;" FontSize="16" />
+                                        <TextBlock x:Name="FrontListenText" Text="Listen" FontSize="15" FontWeight="SemiBold" />
+                                    </StackPanel>
+                                </Button>
+                                <StackPanel Orientation="Horizontal" Spacing="7" HorizontalAlignment="Center" Margin="0,18,0,0">
+                                    <FontIcon Glyph="&#xE7C3;" FontSize="14" Foreground="{ThemeResource BlueBrush}" />
+                                    <TextBlock Text="Tap the card or press Space to reveal · Press V to listen" FontSize="13"
+                                               TextWrapping="Wrap" Foreground="{ThemeResource BlueBrush}" />
+                                </StackPanel>
+                            </StackPanel>
+
+                            <!-- Back -->
+                            <StackPanel x:Name="CardBack" Spacing="13" Visibility="Collapsed">
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" IsTextSelectionEnabled="True">
+                                        <Run x:Name="BackWord" FontFamily="Georgia" FontSize="32" FontWeight="Bold" />
+                                        <Run x:Name="BackPronunciation" FontSize="14" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                        <Run x:Name="BackPartOfSpeech" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                    </TextBlock>
+                                    <Button x:Name="BackListenButton" Grid.Column="1" VerticalAlignment="Center"
+                                            Foreground="{ThemeResource BlueBrush}" Click="OnListenClick">
+                                        <FontIcon x:Name="BackListenIcon" Glyph="&#xE767;" FontSize="16" />
+                                    </Button>
+                                    <FontIcon x:Name="BackHighFrequency" Grid.Column="2" Glyph="&#xE945;" FontSize="16"
+                                              VerticalAlignment="Center" Foreground="{ThemeResource WarningBrush}"
+                                              AutomationProperties.Name="High frequency"
+                                              ToolTipService.ToolTip="High frequency" />
+                                </Grid>
+                                <Rectangle Height="1" HorizontalAlignment="Stretch" Fill="{ThemeResource DividerStrokeColorDefaultBrush}" />
+                                <StackPanel Spacing="4">
+                                    <TextBlock Text="English definition" Style="{StaticResource CaptionHeadingStyle}" />
+                                    <TextBlock x:Name="BackDefinition" Style="{StaticResource DefinitionTextStyle}" />
+                                </StackPanel>
+                                <StackPanel x:Name="BackChineseBlock" Spacing="4">
+                                    <TextBlock Text="Taiwan Traditional Chinese" Style="{StaticResource CaptionHeadingStyle}" />
+                                    <TextBlock x:Name="BackChinese" Style="{StaticResource DefinitionTextStyle}"
+                                               Foreground="{ThemeResource TealBrush}" />
+                                </StackPanel>
+                                <StackPanel x:Name="BackSynonymsBlock" Spacing="4">
+                                    <TextBlock Text="Synonyms" Style="{StaticResource CaptionHeadingStyle}" />
+                                    <TextBlock x:Name="BackSynonyms" Style="{StaticResource DefinitionTextStyle}" />
+                                </StackPanel>
+                                <StackPanel x:Name="BackExampleBlock" Spacing="13">
+                                    <TextBlock Text="Example" Style="{StaticResource CaptionHeadingStyle}" />
+                                    <TextBlock x:Name="BackExample" FontSize="14" FontStyle="Italic" TextWrapping="Wrap"
+                                               IsTextSelectionEnabled="True" />
+                                    <HyperlinkButton x:Name="BackExampleLink" Padding="0" Click="OnExampleSourceClick">
+                                        <StackPanel Orientation="Horizontal" Spacing="5">
+                                            <FontIcon Glyph="&#xE8A7;" FontSize="11" />
+                                            <TextBlock x:Name="BackExampleLinkText" FontSize="11" TextWrapping="Wrap" />
+                                        </StackPanel>
+                                    </HyperlinkButton>
+                                    <TextBlock x:Name="BackExampleSource" FontSize="11" TextWrapping="Wrap"
+                                               Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                                </StackPanel>
+                                <TextBlock x:Name="BackSources" FontSize="11" TextWrapping="Wrap" Margin="0,3,0,0"
+                                           Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </ContentControl>
+
+                <!-- Rating -->
+                <Grid x:Name="RatingControls">
+                    <Button x:Name="StudyAgainButton" Content="Study again" Padding="18,10" FontWeight="SemiBold"
+                            ToolTipService.ToolTip="Study again (Left arrow)" Click="OnStudyAgainClick" />
+                    <Button x:Name="KnowItButton" Content="Know it" HorizontalAlignment="Right" Padding="22,10"
+                            FontWeight="SemiBold" Style="{StaticResource AccentButtonStyle}"
+                            ToolTipService.ToolTip="Know it (Right arrow)" Click="OnKnowItClick" />
+                    <Button x:Name="RevealButton" Content="Reveal answer" HorizontalAlignment="Right" Padding="22,10"
+                            FontWeight="SemiBold" Style="{StaticResource AccentButtonStyle}"
+                            ToolTipService.ToolTip="Reveal answer (Space)" Click="OnRevealClick" />
+                </Grid>
+
+                <!-- Deck complete -->
+                <Border x:Name="DeckCompletionPanel" Style="{StaticResource CompletionCardStyle}">
+                    <StackPanel Spacing="18" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <FontIcon Glyph="&#xE930;" FontSize="48" Foreground="{ThemeResource TealBrush}" />
+                        <TextBlock Text="Deck complete" FontSize="34" FontWeight="Bold" HorizontalAlignment="Center" />
+                        <TextBlock x:Name="DeckCompletionText" TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        <StackPanel Orientation="Horizontal" Spacing="14" HorizontalAlignment="Center">
+                            <Button x:Name="ReviewMissedButton" Content="Review missed cards" Padding="18,10"
+                                    FontWeight="SemiBold" Click="OnReviewMissedClick" />
+                            <Button Content="Start another deck" Padding="22,10" FontWeight="SemiBold"
+                                    Style="{StaticResource AccentButtonStyle}" Click="OnRestartClick" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Infinite loop complete -->
+                <Border x:Name="InfiniteCompletionPanel" Style="{StaticResource CompletionCardStyle}">
+                    <StackPanel Spacing="18" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <FontIcon Glyph="&#xE930;" FontSize="48" Foreground="{ThemeResource TealBrush}" />
+                        <TextBlock Text="Every card mastered" FontSize="34" FontWeight="Bold" HorizontalAlignment="Center" />
+                        <TextBlock x:Name="InfiniteCompletionText" TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        <Button Content="Start a fixed deck" Padding="22,10" FontWeight="SemiBold" HorizontalAlignment="Center"
+                                Style="{StaticResource AccentButtonStyle}" Click="OnStartFixedDeckClick" />
+                    </StackPanel>
+                </Border>
+
+                <!-- No matching cards -->
+                <Border x:Name="EmptyDeckPanel" Style="{StaticResource CardStyle}" CornerRadius="12" MinHeight="340">
+                    <StackPanel Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="520">
+                        <FontIcon Glyph="&#xE930;" FontSize="40" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        <TextBlock Text="No matching cards" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Center" />
+                        <TextBlock x:Name="EmptyDeckText" TextAlignment="Center" TextWrapping="Wrap"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Page>
