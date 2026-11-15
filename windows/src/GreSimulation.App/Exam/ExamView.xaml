@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Port of ExamView.swift: the full-window test (section directions, the ETS-style test interface,
+    review, help, the calculator, and the score report at the end).
+-->
+<UserControl
+    x:Class="GreSimulation.App.Exam.ExamView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="ExamToolbarButtonStyle" TargetType="AppBarButton" BasedOn="{StaticResource DefaultAppBarButtonStyle}">
+            <Setter Property="FontWeight" Value="SemiBold" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="Root" Background="{ThemeResource SolidBackgroundFillColorBaseBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Navy exam header (examHeader in ExamView.swift). -->
+        <Grid x:Name="ExamHeader" Height="54" Padding="18,0" ColumnSpacing="14" Background="{ThemeResource BrandHeaderBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="GRE" FontFamily="Georgia" FontSize="22" FontWeight="Black" Foreground="White"
+                       VerticalAlignment="Center" AutomationProperties.AccessibilityView="Raw" />
+            <TextBlock Grid.Column="1" Text="SIMULATION" FontSize="12" FontWeight="Bold" CharacterSpacing="150"
+                       Foreground="White" VerticalAlignment="Center" AutomationProperties.AccessibilityView="Raw" />
+            <Rectangle Grid.Column="2" Width="1" Height="24" Fill="White" Opacity="0.35" />
+            <TextBlock x:Name="HeaderTitle" Grid.Column="3" FontSize="15" FontWeight="SemiBold" Foreground="White"
+                       VerticalAlignment="Center" TextTrimming="CharacterEllipsis" AutomationProperties.HeadingLevel="Level1" />
+            <Button x:Name="ExitTestButton" Grid.Column="4" Content="Exit Test" Click="OnExitTestClick"
+                    FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" AccessKey="X">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <SolidColorBrush x:Key="ButtonBackground" Color="#26FFFFFF" />
+                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#40FFFFFF" />
+                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#1AFFFFFF" />
+                        <SolidColorBrush x:Key="ButtonForeground" Color="White" />
+                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White" />
+                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="#D9FFFFFF" />
+                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="#4DFFFFFF" />
+                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#66FFFFFF" />
+                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4DFFFFFF" />
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
+        </Grid>
+
+        <!-- Section directions (SectionDirectionsView). -->
+        <ScrollViewer x:Name="DirectionsView" Grid.Row="1" Visibility="Collapsed">
+            <Border Style="{StaticResource CardStyle}" CornerRadius="12" MaxWidth="820" Margin="30"
+                    HorizontalAlignment="Stretch">
+                <StackPanel Spacing="20">
+                    <TextBlock x:Name="DirectionsSectionTitle" FontSize="28" FontWeight="Bold" TextWrapping="Wrap"
+                               Foreground="{ThemeResource NavyBrush}" AutomationProperties.HeadingLevel="Level2" />
+                    <Rectangle Height="1" Fill="{ThemeResource DividerStrokeColorDefaultBrush}" />
+                    <TextBlock Text="Directions" Style="{StaticResource SubtitleTextBlockStyle}" AutomationProperties.HeadingLevel="Level3" />
+                    <TextBlock x:Name="DirectionsText" TextWrapping="Wrap" LineHeight="24" IsTextSelectionEnabled="True" />
+                    <StackPanel x:Name="RulesPanel" Spacing="10" />
+                    <Grid Padding="16" CornerRadius="8" Background="{ThemeResource SolidBackgroundFillColorBaseBrush}">
+                        <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Left">
+                            <FontIcon Glyph="&#xE8FD;" FontSize="16" />
+                            <TextBlock x:Name="TaskCountText" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+                            <FontIcon Glyph="&#xE823;" FontSize="16" />
+                            <TextBlock x:Name="DurationText" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                        </StackPanel>
+                    </Grid>
+                    <TextBlock x:Name="TimingBeginsText" Style="{StaticResource CaptionTextBlockStyle}"
+                               Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    <Button x:Name="BeginSectionButton" Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Right"
+                            Padding="22,10" FontWeight="SemiBold" Click="OnBeginSectionClick" AccessKey="B" />
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+
+        <!-- Test interface (TestInterfaceView): toolbar, progress, question, navigation footer. -->
+        <Grid x:Name="TestingView" Grid.Row="1" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Padding="18,0,8,0" Background="{ThemeResource LayerFillColorDefaultBrush}"
+                  BorderBrush="{ThemeResource DividerStrokeColorDefaultBrush}" BorderThickness="0,0,0,1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="QuestionPositionText" FontSize="13" FontWeight="SemiBold" VerticalAlignment="Center"
+                           AutomationProperties.LiveSetting="Polite" />
+                <CommandBar x:Name="Toolbar" Grid.Column="1" DefaultLabelPosition="Right" Background="Transparent"
+                            HorizontalAlignment="Right" IsDynamicOverflowEnabled="True" OverflowButtonVisibility="Auto">
+                    <AppBarButton x:Name="CalculatorButton" Label="Calculator" Click="OnCalculatorClick" AccessKey="C"
+                                  Style="{StaticResource ExamToolbarButtonStyle}" ToolTipService.ToolTip="Show or hide the calculator">
+                        <AppBarButton.Icon><FontIcon Glyph="&#xE8EF;" /></AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton x:Name="ClockButton" Click="OnClockClick" AccessKey="T"
+                                  Style="{StaticResource ExamToolbarButtonStyle}" ToolTipService.ToolTip="Show or hide the time remaining">
+                        <AppBarButton.Icon><FontIcon Glyph="&#xE823;" /></AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarToggleButton x:Name="MarkButton" Click="OnMarkClick" AccessKey="M" FontWeight="SemiBold"
+                                        ToolTipService.ToolTip="Mark this question for review">
+                        <AppBarToggleButton.Icon><FontIcon Glyph="&#xE7C1;" /></AppBarToggleButton.Icon>
+                    </AppBarToggleButton>
+                    <AppBarButton Label="Review" Click="OnReviewClick" AccessKey="R" Style="{StaticResource ExamToolbarButtonStyle}"
+                                  ToolTipService.ToolTip="Review the questions in this section">
+                        <AppBarButton.Icon><FontIcon Glyph="&#xE8FD;" /></AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton Label="Help" Click="OnHelpClick" AccessKey="H" Style="{StaticResource ExamToolbarButtonStyle}"
+                                  ToolTipService.ToolTip="Question help">
+                        <AppBarButton.Icon><FontIcon Glyph="&#xE897;" /></AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton Label="Exit Section" Click="OnExitSectionClick" AccessKey="E" Style="{StaticResource ExamToolbarButtonStyle}"
+                                  ToolTipService.ToolTip="Finish this section">
+                        <AppBarButton.Icon><FontIcon Glyph="&#xE89F;" /></AppBarButton.Icon>
+                    </AppBarButton>
+                </CommandBar>
+            </Grid>
+
+            <ProgressBar x:Name="SectionProgress" Grid.Row="1" Minimum="0" Maximum="1" Foreground="{ThemeResource BrightBlueBrush}"
+                         AutomationProperties.Name="Section progress" />
+
+            <ScrollViewer x:Name="QuestionScroller" Grid.Row="2">
+                <Border x:Name="QuestionCard" Style="{StaticResource CardStyle}" CornerRadius="12" Margin="32,24"
+                        MaxWidth="1540" HorizontalAlignment="Stretch">
+                    <StackPanel x:Name="QuestionHost" Spacing="19" />
+                </Border>
+            </ScrollViewer>
+
+            <Grid Grid.Row="3" Padding="20,12" Background="{ThemeResource LayerFillColorDefaultBrush}"
+                  BorderBrush="{ThemeResource DividerStrokeColorDefaultBrush}" BorderThickness="0,1,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BackButton" Click="OnBackClick" Padding="18,8" FontWeight="SemiBold" AccessKey="K"
+                        ToolTipService.ToolTip="Previous question">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon Glyph="&#xE72B;" FontSize="12" />
+                        <TextBlock Text="Back" />
+                    </StackPanel>
+                </Button>
+                <TextBlock x:Name="AnswerStatusText" Grid.Column="1" FontSize="12" HorizontalAlignment="Center"
+                           VerticalAlignment="Center" AutomationProperties.LiveSetting="Polite" />
+                <Button x:Name="NextButton" Grid.Column="2" Style="{StaticResource AccentButtonStyle}" Click="OnNextClick"
+                        Padding="22,8" FontWeight="SemiBold" AccessKey="N" />
+            </Grid>
+        </Grid>
+
+        <!-- The score report replaces everything when the test is complete. -->
+        <ContentControl x:Name="ReportHost" Grid.RowSpan="2" Visibility="Collapsed"
+                        HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" IsTabStop="False" />
+
+        <!-- The calculator floats over the question and can be dragged out of the way. -->
+        <Canvas x:Name="OverlayCanvas" Grid.Row="1" />
+    </Grid>
+</UserControl>

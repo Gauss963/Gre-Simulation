@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Port of CalculatorView.swift: the GRE on-screen calculator as a floating, draggable panel. -->
+<UserControl
+    x:Class="GreSimulation.App.Exam.CalculatorPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Width="330">
+    <UserControl.Resources>
+        <Style x:Key="CalculatorKeyStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="MinHeight" Value="38" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="IsTabStop" Value="False" />
+        </Style>
+        <Style x:Key="CalculatorFunctionKeyStyle" TargetType="Button" BasedOn="{StaticResource CalculatorKeyStyle}">
+            <Setter Property="Background" Value="{ThemeResource ControlAltFillColorSecondaryBrush}" />
+        </Style>
+        <Style x:Key="CalculatorEqualsKeyStyle" TargetType="Button" BasedOn="{StaticResource AccentButtonStyle}">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="MinHeight" Value="38" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="IsTabStop" Value="False" />
+        </Style>
+    </UserControl.Resources>
+
+    <Border x:Name="Frame" Padding="14" CornerRadius="10"
+            Background="{ThemeResource SolidBackgroundFillColorTertiaryBrush}"
+            BorderBrush="{ThemeResource SurfaceStrokeColorDefaultBrush}" BorderThickness="1">
+        <StackPanel Spacing="10">
+            <!-- Title bar: drag here to move the calculator. -->
+            <Grid x:Name="DragHandle" Background="Transparent" ColumnSpacing="8"
+                  PointerPressed="OnDragPressed" PointerMoved="OnDragMoved"
+                  PointerReleased="OnDragReleased" PointerCaptureLost="OnDragCaptureLost">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <FontIcon Glyph="&#xE76F;" FontSize="14" Foreground="{ThemeResource TextFillColorSecondaryBrush}" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="1" Text="Calculator" Style="{StaticResource BodyStrongTextBlockStyle}" VerticalAlignment="Center" />
+                <Button Grid.Column="2" Click="OnCloseClick" Padding="6" Background="Transparent" BorderThickness="0"
+                        AutomationProperties.Name="Close calculator" ToolTipService.ToolTip="Close calculator">
+                    <FontIcon Glyph="&#xE711;" FontSize="12" />
+                </Button>
+            </Grid>
+
+            <!-- Display: pending expression, memory indicator, and the current value. -->
+            <Border Padding="10" CornerRadius="5" BorderThickness="2"
+                    Background="{ThemeResource TextControlBackground}" BorderBrush="{ThemeResource NavyBrush}">
+                <StackPanel Spacing="2">
+                    <TextBlock x:Name="ExpressionText" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Right"
+                               Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextTrimming="CharacterEllipsis" />
+                    <Grid>
+                        <TextBlock x:Name="MemoryBadge" Text="M" FontSize="12" FontWeight="Bold" Foreground="{ThemeResource BlueBrush}"
+                                   VerticalAlignment="Center" Visibility="Collapsed" AutomationProperties.Name="Memory in use" />
+                        <Viewbox HorizontalAlignment="Right" StretchDirection="DownOnly" Height="36" MaxWidth="260">
+                            <TextBlock x:Name="DisplayText" FontFamily="Consolas" FontSize="28" FontWeight="Medium"
+                                       AutomationProperties.LiveSetting="Polite" />
+                        </Viewbox>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Grid x:Name="KeyGrid" RowSpacing="7" ColumnSpacing="7" />
+
+            <Button x:Name="TransferButton" Content="Transfer Display" Click="OnTransferClick"
+                    HorizontalAlignment="Stretch" MinHeight="34" FontWeight="SemiBold" />
+        </StackPanel>
+    </Border>
+</UserControl>
