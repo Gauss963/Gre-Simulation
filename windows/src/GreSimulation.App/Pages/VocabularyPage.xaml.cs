@@ -576,7 +576,7 @@ public sealed class BrowseCardItem : INotifyPropertyChanged
     public Visibility HiddenVisibility => Show(!isRevealed);
     /// <summary>Segoe Fluent "View" (eye) when revealed, "Hide" otherwise.</summary>
     public string EyeGlyph => isRevealed ? "" : "";
-    public string AccessibleName => isRevealed ? $"{Word.Word}: {Word.Definition}" : $"{Word.Word}. Tap to reveal meaning";
+    public string AccessibleName => isRevealed ? $"{Word.Word}: {Word.Definition}" : $"{Word.Word}. Click to reveal meaning";
 
     public event PropertyChangedEventHandler? PropertyChanged;
 

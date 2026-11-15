@@ -56,7 +56,7 @@
                                    Foreground="{ThemeResource TextFillColorTertiaryBrush}"
                                    Visibility="{x:Bind SourcesVisibility}" />
                     </StackPanel>
-                    <TextBlock Text="Tap to reveal meaning" FontSize="13"
+                    <TextBlock Text="Click to reveal meaning" FontSize="13"
                                Foreground="{ThemeResource TextFillColorSecondaryBrush}"
                                Visibility="{x:Bind HiddenVisibility, Mode=OneWay}" />
                 </StackPanel>

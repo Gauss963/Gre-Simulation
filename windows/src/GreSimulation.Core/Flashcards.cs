@@ -331,7 +331,7 @@ public sealed class VocabularyBrowser : ObservableObject
     public const string Subtitle = "Browse the authorized offline word bank or work through shuffled flash-card sessions with persistent mastery progress.";
     public const string SearchPlaceholder = "Search words, meanings, or synonyms";
     public const string Footnote = "Word entries retain source tags after deduplication. Chinese definitions use Taiwan Traditional Chinese. Definitions may be compacted for card display; consult the authorized source material for complete study notes.";
-    public const string RevealHint = "Tap to reveal meaning";
+    public const string RevealHint = "Click to reveal meaning";
 
     /// <summary>"All sources" followed by every source tag.</summary>
     public IReadOnlyList<string> SourceChoices => [VocabularyBank.AllSources, .. _bank.SourceOptions];

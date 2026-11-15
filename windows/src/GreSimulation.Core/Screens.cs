@@ -31,7 +31,7 @@ public static class AppPageText
     };
 
     public const string BrandTitle = "GRE Simulator";
-    public const string BrandSubtitle = "Mac + iPad";
+    public const string BrandSubtitle = "Windows";
     public const string SidebarFootnote = "Independent GRE® practice simulator";
 }
 
@@ -39,7 +39,7 @@ public static class AppPageText
 public static class Dashboard
 {
     public const string HeroTitle = "Practice the current GRE format";
-    public const string HeroText = "Timed sections, section-level adaptation, mark and review, an on-screen calculator, and transparent score estimates — designed for focused rehearsal on Mac and iPad.";
+    public const string HeroText = "Timed sections, section-level adaptation, mark and review, an on-screen calculator, and transparent score estimates — designed for focused rehearsal on Windows.";
     public const string StartFullLength = "Start full-length test";
     public const string HeroClock = "1:58";
     public const string HeroClockCaption = "5 sections";
