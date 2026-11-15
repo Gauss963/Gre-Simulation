@@ -26,3 +26,8 @@ No Tatoeba audio is included.
 ## Kokoro-82M pronunciation clips
 
 The bundled `WordPronunciations.pack` contains one pre-rendered pronunciation clip per headword, synthesized at build time with the [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) model and its `af_heart` voice. The model weights and voices are released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Neither the model nor any Python, PyTorch, or phonemizer library is bundled or linked; the app only plays the generated AAC audio with AVFoundation.
+
+
+## Windows version
+
+The Windows build (in `windows/`) uses these MIT-licensed components: [Windows App SDK / WinUI 3](https://github.com/microsoft/WindowsAppSDK), [CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet), and the .NET runtime.

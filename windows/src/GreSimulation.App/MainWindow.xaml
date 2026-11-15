@@ -8,7 +8,9 @@
         <MicaBackdrop />
     </Window.SystemBackdrop>
 
-    <Grid>
+    <!-- zh-TW makes Windows choose Traditional Chinese fonts (Microsoft JhengHei) for the Chinese explanations;
+         English text still uses Segoe UI. -->
+    <Grid Language="zh-TW">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
