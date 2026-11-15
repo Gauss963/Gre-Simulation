@@ -92,7 +92,9 @@ public sealed partial class HistoryPage : Page
     /// <summary>Shows the saved score report over the page ("Saved score report" / "Close" on the Mac).</summary>
     private void OpenReport(ExamResult result)
     {
-        ReportPresenter.Content = ReportHost.Create(result, CloseReport);
+        var report = new ScoreReportView(result);
+        report.CloseRequested += (_, _) => CloseReport();
+        ReportPresenter.Content = report;
         ReportOverlay.Visibility = Visibility.Visible;
         PageScroller.Visibility = Visibility.Collapsed;
     }
