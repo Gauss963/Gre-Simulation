@@ -10,7 +10,15 @@ public partial class App : Application
     public App()
     {
         InitializeComponent();
-        UnhandledException += (_, e) => CrashLog.Write(e.Exception);
+        UnhandledException += (_, e) =>
+        {
+            CrashLog.Write(e.Exception);
+            if (SmokeTest.Enabled)
+            {
+                SmokeTest.RecordFailure("unhandled", e.Exception);
+                e.Handled = true;
+            }
+        };
     }
 
     protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -19,5 +27,8 @@ public partial class App : Application
         window = new MainWindow();
         window.Closed += (_, _) => AppServices.Shutdown();
         window.Activate();
+
+        SmokeTest.Configure(Environment.GetCommandLineArgs());
+        if (SmokeTest.Enabled) _ = SmokeTest.RunAsync(window);
     }
 }
