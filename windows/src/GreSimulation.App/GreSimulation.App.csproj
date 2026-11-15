@@ -27,6 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- XAML sources, read only by XamlDiagnostics when compiled XAML fails to load. -->
+    <EmbeddedResource Include="**\*.xaml" Exclude="bin\**;obj\**" LogicalName="%(Filename).xaml.src" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Assets\AppIcon.ico" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="Assets\AppIcon-32.png" CopyToOutputDirectory="PreserveNewest" />
     <!-- The Mac app's resources, used in place so the question bank and audio never drift apart. -->
