@@ -459,6 +459,7 @@ public sealed partial class VocabularyPage : Page
         RestoreKeyboardFocus();
     }
 
+    /// <summary>Handled on the way down (PreviewKeyDown) so the page ScrollViewer does not take the arrow keys.</summary>
     private void OnPageKeyDown(object sender, KeyRoutedEventArgs e)
     {
         if (e.Handled || session is null || FlashPanel.Visibility != Visibility.Visible) return;
