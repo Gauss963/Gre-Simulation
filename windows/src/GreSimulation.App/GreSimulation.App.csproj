@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <Content Include="Assets\AppIcon.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\AppIcon-32.png" CopyToOutputDirectory="PreserveNewest" />
     <!-- The Mac app's resources, used in place so the question bank and audio never drift apart. -->
     <Content Include="$(MacResourcesDir)**\*" LinkBase="Resources" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>

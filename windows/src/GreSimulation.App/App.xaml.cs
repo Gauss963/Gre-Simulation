@@ -4,11 +4,12 @@ namespace GreSimulation.App;
 
 public partial class App : Application
 {
-    private Window? window;
+    private MainWindow? window;
 
     public App()
     {
         InitializeComponent();
+        UnhandledException += (_, e) => CrashLog.Write(e.Exception);
     }
 
     protected override void OnLaunched(LaunchActivatedEventArgs args)
