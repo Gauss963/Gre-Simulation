@@ -1,7 +1,8 @@
 name: Build Windows App
 
 # The Windows app lives in windows/ and shares the Mac app's resources and version number.
-# Every push builds and tests it; a version tag also attaches the Windows zips to that
+# Every push builds both architectures, packs them into one Setup.exe, installs it on a Windows
+# runner, and smoke-tests the installed app. A version tag also attaches the Setup.exe to that
 # version's GitHub release (the same release as the Mac app).
 on:
   push:
@@ -21,7 +22,7 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 40
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         arch: [x64, arm64]
 
@@ -40,55 +41,104 @@ jobs:
         run: dotnet test --project tests/GreSimulation.Core.Tests -c Release
 
       - name: Publish self-contained app
-        id: publish
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $platform = if ('${{ matrix.arch }}' -eq 'arm64') { 'ARM64' } else { 'x64' }
+          $out = Join-Path $env:RUNNER_TEMP 'publish'
+          dotnet publish windows/src/GreSimulation.App/GreSimulation.App.csproj `
+            -c Release -r win-${{ matrix.arch }} -p:Platform=$platform -o $out
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          foreach ($file in 'GreSimulation.exe', 'GreSimulation.pri', 'Resources/ExpandedQuestions.json', 'Resources/VerbalGuessingTips.json', 'Resources/WordPronunciations.pack') {
+            if (-not (Test-Path (Join-Path $out $file))) { throw "Missing $file in the published app" }
+          }
+
+      - name: Upload published app
+        uses: actions/upload-artifact@v7
+        with:
+          name: publish-${{ matrix.arch }}
+          path: ${{ runner.temp }}/publish
+          if-no-files-found: error
+          retention-days: 3
+
+  installer:
+    name: Setup.exe, install, and smoke test
+    needs: build
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Download both builds
+        uses: actions/download-artifact@v8
+        with:
+          pattern: publish-*
+          path: ${{ runner.temp }}
+
+      - name: Build Setup.exe
+        id: setup
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
           $pbx = Get-Content -Raw 'Gre Simulation.xcodeproj/project.pbxproj'
           $version = [regex]::Match($pbx, 'MARKETING_VERSION = ([0-9.]+);').Groups[1].Value
-          $platform = if ('${{ matrix.arch }}' -eq 'arm64') { 'ARM64' } else { 'x64' }
-          $out = Join-Path $env:RUNNER_TEMP 'publish/Gre Simulation'
-          dotnet publish windows/src/GreSimulation.App/GreSimulation.App.csproj `
-            -c Release -r win-${{ matrix.arch }} -p:Platform=$platform -o $out
+          Rename-Item (Join-Path $env:RUNNER_TEMP 'publish-x64') 'x64'
+          Rename-Item (Join-Path $env:RUNNER_TEMP 'publish-arm64') 'arm64'
+          $output = Join-Path $env:RUNNER_TEMP 'installer'
+          $iscc = Join-Path ${env:ProgramFiles(x86)} 'Inno Setup 6/ISCC.exe'
+          if (-not (Test-Path $iscc)) { choco install innosetup -y --no-progress; }
+          & $iscc "/DAppVersion=$version" "/DX64Dir=$env:RUNNER_TEMP\x64" "/DArm64Dir=$env:RUNNER_TEMP\arm64" "/DOutputDir=$output" windows/installer/Setup.iss
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          foreach ($file in 'GreSimulation.exe', 'Resources/ExpandedQuestions.json', 'Resources/VerbalGuessingTips.json', 'Resources/WordPronunciations.pack') {
-            if (-not (Test-Path (Join-Path $out $file))) { throw "Missing $file in the published app" }
-          }
-          $zipName = "Gre-Simulation-$version-Windows-${{ matrix.arch }}.zip"
-          $zip = Join-Path $env:RUNNER_TEMP $zipName
-          Compress-Archive -Path $out -DestinationPath $zip
-          $hash = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLower()
-          "$hash  $zipName" | Set-Content -Encoding ascii (Join-Path $env:RUNNER_TEMP "Gre-Simulation-$version-Windows-${{ matrix.arch }}-SHA256.txt")
+          $setupName = "Gre-Simulation-$version-Windows-Setup.exe"
+          $setup = Join-Path $output $setupName
+          $hash = (Get-FileHash $setup -Algorithm SHA256).Hash.ToLower()
+          "$hash  $setupName" | Set-Content -Encoding ascii (Join-Path $output "Gre-Simulation-$version-Windows-Setup-SHA256.txt")
+          "{0:N0} MB  $setupName" -f ((Get-Item $setup).Length / 1MB)
           "version=$version" >> $env:GITHUB_OUTPUT
-          "zip=$zipName" >> $env:GITHUB_OUTPUT
+          "setup=$setup" >> $env:GITHUB_OUTPUT
 
-      - name: Upload artifact
+      - name: Upload Setup.exe
         uses: actions/upload-artifact@v7
         with:
-          name: Gre-Simulation-${{ steps.publish.outputs.version }}-Windows-${{ matrix.arch }}
-          path: |
-            ${{ runner.temp }}/*.zip
-            ${{ runner.temp }}/*-SHA256.txt
+          name: Gre-Simulation-${{ steps.setup.outputs.version }}-Windows-Setup
+          path: ${{ runner.temp }}/installer/*
           if-no-files-found: error
           retention-days: 14
 
-      - name: Smoke test (every page and practice mode, with screenshots)
-        if: matrix.arch == 'x64'
+      - name: Install silently and smoke-test the installed app
         shell: pwsh
         run: |
+          $ErrorActionPreference = 'Stop'
+          $install = Start-Process -FilePath '${{ steps.setup.outputs.setup }}' -ArgumentList '/VERYSILENT', '/SUPPRESSMSGBOXES', '/NORESTART', '/CURRENTUSER' -PassThru -Wait
+          if ($install.ExitCode -ne 0) { throw "Setup exited with $($install.ExitCode)" }
+          $appDir = Join-Path $env:LOCALAPPDATA 'Programs/Gre Simulation'
+          $exe = Join-Path $appDir 'GreSimulation.exe'
+          if (-not (Test-Path $exe)) { throw "Not installed at $exe" }
+          $startMenu = Join-Path $env:APPDATA 'Microsoft/Windows/Start Menu/Programs/Gre Simulation/Gre Simulation.lnk'
+          if (-not (Test-Path $startMenu)) { throw 'Start menu shortcut missing' }
           $out = Join-Path $env:RUNNER_TEMP 'smoke'
-          Get-ChildItem (Join-Path $env:RUNNER_TEMP 'publish') -Recurse -Include *.pri | ForEach-Object { "$($_.FullName) $($_.Length)" }
-          $exe = Join-Path $env:RUNNER_TEMP 'publish/Gre Simulation/GreSimulation.exe'
           $process = Start-Process -FilePath $exe -ArgumentList @('--smoke-test', "`"$out`"") -PassThru
           $null = $process.Handle
-          if (-not $process.WaitForExit(900000)) { $process.Kill(); throw 'Smoke test timed out' }
+          if (-not $process.WaitForExit(1200000)) { $process.Kill(); throw 'Smoke test timed out' }
           Get-Content (Join-Path $out 'smoke.log') -ErrorAction SilentlyContinue | Select-String -Pattern '^(FAIL|SMOKE)' | ForEach-Object { $_.Line }
           $crash = Join-Path $env:LOCALAPPDATA 'Gre Simulation/crash.log'
           if (Test-Path $crash) { Copy-Item $crash $out; Get-Content $crash | Select-Object -First 60 }
           if ($process.ExitCode -ne 0) { throw "Smoke test failed (exit code $($process.ExitCode))" }
 
+      - name: Uninstall check (progress is kept)
+        shell: pwsh
+        run: |
+          $appDir = Join-Path $env:LOCALAPPDATA 'Programs/Gre Simulation'
+          $uninstall = Start-Process -FilePath (Join-Path $appDir 'unins000.exe') -ArgumentList '/VERYSILENT', '/SUPPRESSMSGBOXES', '/NORESTART' -PassThru -Wait
+          Start-Sleep -Seconds 5
+          if (Test-Path (Join-Path $appDir 'GreSimulation.exe')) { throw 'Uninstall left the app behind' }
+          if (-not (Test-Path (Join-Path $env:LOCALAPPDATA 'Gre Simulation'))) { throw 'Uninstall removed saved progress' }
+          'Uninstalled; saved progress kept.'
+
       - name: Upload smoke-test screenshots
-        if: always() && matrix.arch == 'x64'
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: smoke-test-${{ github.run_number }}
@@ -96,7 +146,7 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Attach to the version's release
+      - name: Attach Setup.exe to the version's release
         if: startsWith(github.ref, 'refs/tags/')
         shell: pwsh
         env:
@@ -111,6 +161,4 @@ jobs:
           }
           gh release view $tag --repo '${{ github.repository }}' *> $null
           if ($LASTEXITCODE -ne 0) { throw "Release $tag was not found." }
-          gh release upload $tag --repo '${{ github.repository }}' --clobber `
-            (Join-Path $env:RUNNER_TEMP '${{ steps.publish.outputs.zip }}') `
-            (Get-ChildItem (Join-Path $env:RUNNER_TEMP '*-SHA256.txt')).FullName
+          gh release upload $tag --repo '${{ github.repository }}' --clobber (Get-ChildItem (Join-Path $env:RUNNER_TEMP 'installer/*')).FullName

@@ -35,7 +35,7 @@ A native Swift + SwiftUI GRE® practice simulator for macOS and iPadOS.
 
 - macOS 14+
 - iPadOS 17+
-- Windows 10 (19041)+ / Windows 11: a WinUI 3 version with the same features and releases, in [`windows/`](windows/README.md); download `Gre-Simulation-<version>-Windows-x64.zip` (or `-arm64`) from the release, unzip, and run `GreSimulation.exe`
+- Windows 10 (19041)+ / Windows 11: a WinUI 3 version with the same features and releases, in [`windows/`](windows/README.md); download `Gre-Simulation-<version>-Windows-Setup.exe` from the release and double-click it to install (no administrator rights needed; x64 and ARM PCs)
 - Xcode 26 project using native SwiftUI; no third-party runtime dependencies
 
 Open [`Gre Simulation.xcodeproj`](Gre%20Simulation.xcodeproj) and run the `Gre Simulation` scheme on My Mac or an iPad simulator/device.
