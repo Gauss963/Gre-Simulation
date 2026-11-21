@@ -1,0 +1,1276 @@
+[
+ {
+  "word": "address",
+  "pronunciation": "əˈdrɛs",
+  "definition": "v. to deal with; to speak to; n. a formal speech",
+  "chinese": "v. 處理；應對；致詞；n. 演說；地址",
+  "synonyms": [],
+  "example": "The report raises important questions but fails to address them.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v./n."
+ },
+ {
+  "word": "altruistic",
+  "pronunciation": "ˌæltruˈɪstɪk",
+  "definition": "unselfishly concerned for others",
+  "chinese": "利他的；無私的",
+  "synonyms": [],
+  "example": "Some biologists ask whether seemingly altruistic behavior in animals is truly selfless.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "ambiguity",
+  "pronunciation": "ˌæmbɪˈɡjuəti",
+  "definition": "uncertainty of meaning",
+  "chinese": "模稜兩可；含糊；歧義",
+  "synonyms": [],
+  "example": "The ambiguity of the contract invited competing interpretations.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "baseless",
+  "pronunciation": "ˈbeɪsləs",
+  "definition": "without foundation",
+  "chinese": "毫無根據的",
+  "synonyms": [],
+  "example": "The senator dismissed the accusations as baseless.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "cliché",
+  "pronunciation": "kliˈʃeɪ",
+  "definition": "an overused phrase or idea",
+  "chinese": "陳腔濫調；老套",
+  "synonyms": [],
+  "example": "The screenplay relies on every cliché of the detective genre.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "comprehensiveness",
+  "pronunciation": "ˌkɑmprɪˈhɛnsɪvnəs",
+  "definition": "completeness; inclusion of everything relevant",
+  "chinese": "全面性；廣泛性",
+  "synonyms": [],
+  "example": "The survey's comprehensiveness made it the standard reference for decades.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "concision",
+  "pronunciation": "kənˈsɪʒən",
+  "definition": "the quality of being brief and clear",
+  "chinese": "簡潔；簡明",
+  "synonyms": [],
+  "example": "The editor admired the concision of a writer who never used two words where one sufficed.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "conjectural",
+  "pronunciation": "kənˈdʒɛktʃərəl",
+  "definition": "based on guesswork rather than evidence",
+  "chinese": "推測的；臆測的",
+  "synonyms": [],
+  "example": "Any date for the manuscript remains conjectural until the paper is analyzed.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "considered",
+  "pronunciation": "kənˈsɪdərd",
+  "definition": "carefully thought out",
+  "chinese": "經過深思熟慮的；慎重的",
+  "synonyms": [],
+  "example": "Her considered judgment carried more weight than his hasty objections.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "contradictory",
+  "pronunciation": "ˌkɑntrəˈdɪktəri",
+  "definition": "mutually opposed or inconsistent",
+  "chinese": "相互矛盾的；對立的",
+  "synonyms": [],
+  "example": "Witnesses gave contradictory accounts of the night's events.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "deceptive",
+  "pronunciation": "dɪˈsɛptɪv",
+  "definition": "giving a false impression",
+  "chinese": "欺騙性的；誤導的；虛有其表的",
+  "synonyms": [],
+  "example": "The apparent simplicity of the poem is deceptive.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "deferential",
+  "pronunciation": "ˌdɛfəˈrɛnʃəl",
+  "definition": "showing respectful submission",
+  "chinese": "恭敬的；順從的",
+  "synonyms": [],
+  "example": "The junior researchers were deferential to the point of never questioning her methods.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "didacticism",
+  "pronunciation": "daɪˈdæktəˌsɪzəm",
+  "definition": "excessive tendency to instruct or moralize",
+  "chinese": "說教傾向；說教意味",
+  "synonyms": [],
+  "example": "The novel's heavy didacticism alienated readers seeking entertainment.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "diffidence",
+  "pronunciation": "ˈdɪfɪdəns",
+  "definition": "shyness resulting from a lack of self-confidence",
+  "chinese": "缺乏自信；羞怯；畏縮",
+  "synonyms": [],
+  "example": "Her diffidence in seminars belied the boldness of her written arguments.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "disposed",
+  "pronunciation": "dɪˈspoʊzd",
+  "definition": "inclined or willing",
+  "chinese": "傾向於…的；願意的",
+  "synonyms": [],
+  "example": "Few voters were disposed to trust a candidate who had changed positions so often.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "enduring",
+  "pronunciation": "ɪnˈdʊrɪŋ",
+  "definition": "lasting over a long period",
+  "chinese": "持久的；長久的",
+  "synonyms": [],
+  "example": "The novel's enduring popularity surprised its own author.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "engaging",
+  "pronunciation": "ɪnˈɡeɪdʒɪŋ",
+  "definition": "charming and attractive; holding attention",
+  "chinese": "引人入勝的；迷人的",
+  "synonyms": [],
+  "example": "An engaging lecturer can make even statistics seem exciting.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "enterprising",
+  "pronunciation": "ˈɛntərˌpraɪzɪŋ",
+  "definition": "showing initiative and resourcefulness",
+  "chinese": "有進取心的；有創業精神的",
+  "synonyms": [],
+  "example": "An enterprising graduate student turned the abandoned lab into a thriving workshop.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "erudition",
+  "pronunciation": "ˌɛrjəˈdɪʃən",
+  "definition": "extensive scholarly knowledge",
+  "chinese": "博學；學識淵博",
+  "synonyms": [],
+  "example": "Her erudition was evident in footnotes drawing on six languages.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "exaggerate",
+  "pronunciation": "ɪɡˈzædʒəˌreɪt",
+  "definition": "to represent as greater than is true",
+  "chinese": "誇大；誇張",
+  "synonyms": [],
+  "example": "Early reports exaggerated the damage, causing needless panic.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v."
+ },
+ {
+  "word": "exculpatory",
+  "pronunciation": "ɪkˈskʌlpəˌtɔri",
+  "definition": "tending to clear from blame",
+  "chinese": "開脫罪責的；證明無罪的",
+  "synonyms": [],
+  "example": "The defense uncovered exculpatory evidence the prosecution had overlooked.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "exhaustive",
+  "pronunciation": "ɪɡˈzɔstɪv",
+  "definition": "including all elements; thorough",
+  "chinese": "詳盡的；徹底的",
+  "synonyms": [],
+  "example": "An exhaustive search of the archives turned up no trace of the letter.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "fastidiousness",
+  "pronunciation": "fæˈstɪdiəsnəs",
+  "definition": "excessive concern about accuracy or cleanliness",
+  "chinese": "挑剔；過分講究",
+  "synonyms": [],
+  "example": "His fastidiousness about wording delayed the report by weeks.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "foretell",
+  "pronunciation": "fɔrˈtɛl",
+  "definition": "to predict",
+  "chinese": "預言；預示",
+  "synonyms": [],
+  "example": "No economist foretold how quickly the market would recover.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v."
+ },
+ {
+  "word": "frugality",
+  "pronunciation": "fruˈɡæləti",
+  "definition": "careful economy in spending",
+  "chinese": "節儉；儉樸",
+  "synonyms": [],
+  "example": "The founder's frugality was evident in the company's spartan offices.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "functional",
+  "pronunciation": "ˈfʌŋkʃənəl",
+  "definition": "designed to be practical and useful; working",
+  "chinese": "實用的；功能性的；運作正常的",
+  "synonyms": [],
+  "example": "The architect favored functional design over decorative flourishes.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "hinder",
+  "pronunciation": "ˈhɪndər",
+  "definition": "to create difficulties that slow progress",
+  "chinese": "阻礙；妨礙",
+  "synonyms": [],
+  "example": "A lack of reliable data hindered efforts to model the epidemic.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v."
+ },
+ {
+  "word": "homogeneity",
+  "pronunciation": "ˌhoʊmədʒəˈniəti",
+  "definition": "the quality of being uniform throughout",
+  "chinese": "同質性；均一性",
+  "synonyms": [],
+  "example": "The town's cultural homogeneity began to fade as newcomers arrived.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "idealism",
+  "pronunciation": "aɪˈdiəˌlɪzəm",
+  "definition": "the pursuit of high principles, often unrealistically",
+  "chinese": "理想主義",
+  "synonyms": [],
+  "example": "Youthful idealism gave way to a wary pragmatism after years in government.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "idealistic",
+  "pronunciation": "aɪˌdiəˈlɪstɪk",
+  "definition": "guided by ideals rather than practical concerns",
+  "chinese": "理想主義的；不切實際的",
+  "synonyms": [],
+  "example": "The idealistic reformers underestimated how entrenched the old bureaucracy was.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "idealize",
+  "pronunciation": "aɪˈdiəˌlaɪz",
+  "definition": "to regard as perfect or better than in reality",
+  "chinese": "理想化；美化",
+  "synonyms": [],
+  "example": "Nostalgic accounts tend to idealize rural life, ignoring its hardships.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v."
+ },
+ {
+  "word": "improvisation",
+  "pronunciation": "ɪmˌprɑvəˈzeɪʃən",
+  "definition": "creating or performing without preparation",
+  "chinese": "即興創作；即興表演；臨時拼湊",
+  "synonyms": [],
+  "example": "The jazz trio's improvisation made each performance unique.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "indeterminate",
+  "pronunciation": "ˌɪndɪˈtɝmənət",
+  "definition": "not exactly known or established",
+  "chinese": "不確定的；模糊的；未定的",
+  "synonyms": [],
+  "example": "The fossil's age remains indeterminate.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "indiscernible",
+  "pronunciation": "ˌɪndɪˈsɝnəbəl",
+  "definition": "impossible to see or detect",
+  "chinese": "難以察覺的；無法辨別的",
+  "synonyms": [],
+  "example": "The difference between the two samples was indiscernible to the naked eye.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "indolence",
+  "pronunciation": "ˈɪndələns",
+  "definition": "habitual laziness",
+  "chinese": "懶惰；怠惰",
+  "synonyms": [],
+  "example": "What critics called indolence was in fact a deliberate refusal to rush the work.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "inertia",
+  "pronunciation": "ɪˈnɝʃə",
+  "definition": "tendency to remain unchanged; lack of motivation to act",
+  "chinese": "慣性；惰性；遲滯不前",
+  "synonyms": [],
+  "example": "Institutional inertia kept the outdated policy in place for decades.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "inexpressible",
+  "pronunciation": "ˌɪnɪkˈsprɛsəbəl",
+  "definition": "too strong or subtle to be put into words",
+  "chinese": "無法言喻的；難以表達的",
+  "synonyms": [],
+  "example": "The poem tries to capture an inexpressible sense of loss.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "inflexible",
+  "pronunciation": "ɪnˈflɛksəbəl",
+  "definition": "unwilling to change; rigid",
+  "chinese": "不變通的；死板的；僵硬的",
+  "synonyms": [],
+  "example": "An inflexible schedule left no room for unexpected discoveries.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "ingenuity",
+  "pronunciation": "ˌɪndʒəˈnuəti",
+  "definition": "cleverness and inventiveness",
+  "chinese": "巧思；獨創力；足智多謀",
+  "synonyms": [],
+  "example": "The engineers showed great ingenuity in repairing the probe from millions of miles away.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "intractability",
+  "pronunciation": "ɪnˌtræktəˈbɪləti",
+  "definition": "the quality of being hard to solve or control",
+  "chinese": "棘手；難以處理；倔強",
+  "synonyms": [],
+  "example": "The intractability of the conflict frustrated three generations of diplomats.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "learned",
+  "pronunciation": "ˈlɝnɪd",
+  "definition": "having much knowledge from study",
+  "chinese": "博學的；學術性的",
+  "synonyms": [],
+  "example": "The learned commentary assumes a familiarity with classical texts.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "long-standing",
+  "pronunciation": "ˌlɔŋˈstændɪŋ",
+  "definition": "having existed for a long time",
+  "chinese": "長期存在的；由來已久的",
+  "synonyms": [],
+  "example": "The discovery settled a long-standing dispute among geologists.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "magnanimity",
+  "pronunciation": "ˌmæɡnəˈnɪməti",
+  "definition": "generosity, especially toward a rival",
+  "chinese": "寬宏大量；慷慨",
+  "synonyms": [],
+  "example": "In victory she showed a magnanimity her opponents had not expected.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "meticulousness",
+  "pronunciation": "məˈtɪkjələsnəs",
+  "definition": "extreme care about details",
+  "chinese": "一絲不苟；極度細心",
+  "synonyms": [],
+  "example": "The meticulousness of her footnotes left reviewers little to dispute.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "naiveté",
+  "pronunciation": "ˌnaɪivˈteɪ",
+  "definition": "lack of experience or sophistication",
+  "chinese": "天真；幼稚；缺乏經驗",
+  "synonyms": [],
+  "example": "The novelist mocks the naiveté of travelers who expect every village to be quaint.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "neglect",
+  "pronunciation": "nɪˈɡlɛkt",
+  "definition": "v. to fail to give attention to; n. failure to care for",
+  "chinese": "v. 忽視；疏忽；n. 忽略；疏忽",
+  "synonyms": [],
+  "example": "The theory neglects factors that later proved decisive.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v./n."
+ },
+ {
+  "word": "nonchalance",
+  "pronunciation": "ˌnɑnʃəˈlɑns",
+  "definition": "a casual lack of concern",
+  "chinese": "漫不經心；若無其事；冷淡",
+  "synonyms": [],
+  "example": "He received the alarming news with a nonchalance that unsettled his colleagues.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "objectivity",
+  "pronunciation": "ˌɑbdʒɛkˈtɪvəti",
+  "definition": "freedom from personal bias",
+  "chinese": "客觀性；客觀",
+  "synonyms": [],
+  "example": "The historian's objectivity was questioned once her family ties became known.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "originality",
+  "pronunciation": "əˌrɪdʒəˈnæləti",
+  "definition": "the ability to think independently and creatively",
+  "chinese": "原創性；獨創性",
+  "synonyms": [],
+  "example": "Reviewers praised the originality of a debut that resembled nothing else on the shelf.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "overlook",
+  "pronunciation": "ˌoʊvərˈlʊk",
+  "definition": "to fail to notice; to ignore",
+  "chinese": "忽略；忽視；俯瞰",
+  "synonyms": [],
+  "example": "Earlier historians overlooked the role of women in the movement.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v."
+ },
+ {
+  "word": "overstate",
+  "pronunciation": "ˌoʊvərˈsteɪt",
+  "definition": "to state too strongly",
+  "chinese": "誇大；言過其實",
+  "synonyms": [],
+  "example": "It would be hard to overstate the influence of her early essays.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v."
+ },
+ {
+  "word": "paradigmatic",
+  "pronunciation": "ˌpærədɪɡˈmætɪk",
+  "definition": "serving as a typical example or model",
+  "chinese": "典型的；範例的",
+  "synonyms": [],
+  "example": "Her career is paradigmatic of a generation that moved from labs to startups.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "paradoxical",
+  "pronunciation": "ˌpærəˈdɑksɪkəl",
+  "definition": "seemingly contradictory but possibly true",
+  "chinese": "矛盾的；似非而是的",
+  "synonyms": [],
+  "example": "It is paradoxical that the most isolated island had the most diverse dialects.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "partisanship",
+  "pronunciation": "ˈpɑrtəzənˌʃɪp",
+  "definition": "strong, often biased support for a party",
+  "chinese": "黨派偏見；黨派之爭",
+  "synonyms": [],
+  "example": "Bitter partisanship stalled even uncontroversial legislation.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "pellucidity",
+  "pronunciation": "ˌpɛljuˈsɪdəti",
+  "definition": "clarity of expression",
+  "chinese": "清晰明瞭；文字明晰",
+  "synonyms": [],
+  "example": "The pellucidity of her prose makes difficult ideas seem effortless.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "pragmatism",
+  "pronunciation": "ˈpræɡməˌtɪzəm",
+  "definition": "a practical approach to problems",
+  "chinese": "務實主義；實用主義",
+  "synonyms": [],
+  "example": "The mayor's pragmatism won over voters weary of ideological battles.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "premature",
+  "pronunciation": "ˌpriməˈtʃʊr",
+  "definition": "occurring too early",
+  "chinese": "過早的；不成熟的",
+  "synonyms": [],
+  "example": "Celebrations proved premature when the results were overturned.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "punctiliousness",
+  "pronunciation": "pʌŋkˈtɪliəsnəs",
+  "definition": "strict attention to detail or correct behavior",
+  "chinese": "拘泥細節；一絲不苟",
+  "synonyms": [],
+  "example": "The diplomat's punctiliousness about protocol was legendary.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "refinement",
+  "pronunciation": "rɪˈfaɪnmənt",
+  "definition": "elegance; an improvement through small changes",
+  "chinese": "優雅；精緻；改良",
+  "synonyms": [],
+  "example": "Each refinement of the model brought its predictions closer to observation.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "resolve",
+  "pronunciation": "rɪˈzɑlv",
+  "definition": "v. to settle or find a solution; to decide firmly; n. firm determination",
+  "chinese": "v. 解決；決心；n. 決心；堅定",
+  "synonyms": [],
+  "example": "The new data resolve a paradox that had puzzled astronomers for decades.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v./n."
+ },
+ {
+  "word": "restraint",
+  "pronunciation": "rɪˈstreɪnt",
+  "definition": "self-control; moderation; a limiting measure",
+  "chinese": "克制；節制；約束",
+  "synonyms": [],
+  "example": "The director's restraint makes the film's final scene all the more powerful.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "self-aggrandizing",
+  "pronunciation": "ˌsɛlf əˈɡrændaɪzɪŋ",
+  "definition": "acting to make oneself seem more important",
+  "chinese": "自我吹捧的；自我抬高的",
+  "synonyms": [],
+  "example": "His self-aggrandizing memoir exaggerated his role in events he had barely witnessed.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "self-effacing",
+  "pronunciation": "ˌsɛlf ɪˈfeɪsɪŋ",
+  "definition": "modest; keeping oneself out of the spotlight",
+  "chinese": "謙遜低調的；不愛出風頭的",
+  "synonyms": [],
+  "example": "Despite her fame, the self-effacing scientist credited her students for nearly every discovery.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "self-serving",
+  "pronunciation": "ˌsɛlfˈsɝvɪŋ",
+  "definition": "serving one's own interests",
+  "chinese": "自私自利的；只為自己打算的",
+  "synonyms": [],
+  "example": "The executive's apology seemed self-serving rather than sincere.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "sensationalism",
+  "pronunciation": "sɛnˈseɪʃənəˌlɪzəm",
+  "definition": "use of shocking content to provoke interest",
+  "chinese": "譁眾取寵；聳動報導",
+  "synonyms": [],
+  "example": "The documentary avoided sensationalism, letting quiet testimony speak for itself.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "skeptical",
+  "pronunciation": "ˈskɛptɪkəl",
+  "definition": "inclined to doubt",
+  "chinese": "懷疑的；不輕信的",
+  "synonyms": [],
+  "example": "Reviewers were skeptical of claims that the drug had no side effects.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "skepticism",
+  "pronunciation": "ˈskɛptɪˌsɪzəm",
+  "definition": "a doubting attitude",
+  "chinese": "懷疑態度；懷疑論",
+  "synonyms": [],
+  "example": "Healthy skepticism kept the team from accepting the first plausible explanation.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "spontaneity",
+  "pronunciation": "ˌspɑntəˈneɪəti",
+  "definition": "acting naturally without planning",
+  "chinese": "自發性；隨性；自然流露",
+  "synonyms": [],
+  "example": "The rehearsed speech lacked the spontaneity of her earlier remarks.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "stagnate",
+  "pronunciation": "ˈstæɡneɪt",
+  "definition": "to stop developing or progressing",
+  "chinese": "停滯；不發展",
+  "synonyms": [],
+  "example": "Without new ideas the field began to stagnate.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v."
+ },
+ {
+  "word": "sycophantic",
+  "pronunciation": "ˌsɪkəˈfæntɪk",
+  "definition": "excessively flattering to gain favor",
+  "chinese": "諂媚的；阿諛奉承的",
+  "synonyms": [],
+  "example": "The sycophantic aides told the minister only what he wished to hear.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "thrift",
+  "pronunciation": "θrɪft",
+  "definition": "careful management of money",
+  "chinese": "節儉；節約",
+  "synonyms": [],
+  "example": "Generations of thrift allowed the family to survive the recession.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "timidity",
+  "pronunciation": "tɪˈmɪdəti",
+  "definition": "lack of courage or confidence",
+  "chinese": "膽怯；羞怯",
+  "synonyms": [],
+  "example": "The committee's timidity allowed a minor problem to grow into a crisis.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "transparency",
+  "pronunciation": "trænsˈpɛrənsi",
+  "definition": "openness; the quality of being easily understood",
+  "chinese": "透明度；公開；易懂",
+  "synonyms": [],
+  "example": "Voters demanded greater transparency in campaign financing.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "unambiguous",
+  "pronunciation": "ˌʌnæmˈbɪɡjuəs",
+  "definition": "having only one clear meaning",
+  "chinese": "明確的；毫不含糊的",
+  "synonyms": [],
+  "example": "The data sent an unambiguous message: the policy had failed.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "uncritical",
+  "pronunciation": "ʌnˈkrɪtɪkəl",
+  "definition": "accepting without judgment or analysis",
+  "chinese": "不加批判的；盲目接受的",
+  "synonyms": [],
+  "example": "The biography offers an uncritical portrait that ignores its subject's failures.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "undetectable",
+  "pronunciation": "ˌʌndɪˈtɛktəbəl",
+  "definition": "not able to be noticed or measured",
+  "chinese": "偵測不到的；難以察覺的",
+  "synonyms": [],
+  "example": "The contaminant was present at nearly undetectable levels.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "unexceptional",
+  "pronunciation": "ˌʌnɪkˈsɛpʃənəl",
+  "definition": "ordinary; not outstanding",
+  "chinese": "普通的；平庸的",
+  "synonyms": [],
+  "example": "His early paintings were competent but unexceptional.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "unfeeling",
+  "pronunciation": "ʌnˈfilɪŋ",
+  "definition": "lacking sympathy",
+  "chinese": "冷酷無情的；麻木不仁的",
+  "synonyms": [],
+  "example": "The report's unfeeling tone angered the families it described.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "unfounded",
+  "pronunciation": "ʌnˈfaʊndɪd",
+  "definition": "having no basis in fact",
+  "chinese": "毫無根據的",
+  "synonyms": [],
+  "example": "Fears that the vaccine caused infertility proved unfounded.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "uniformity",
+  "pronunciation": "ˌjunəˈfɔrməti",
+  "definition": "sameness throughout",
+  "chinese": "一致性；均勻；單調",
+  "synonyms": [],
+  "example": "Critics lamented the uniformity of suburban architecture.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "unintelligible",
+  "pronunciation": "ˌʌnɪnˈtɛlədʒəbəl",
+  "definition": "impossible to understand",
+  "chinese": "無法理解的；難以辨認的",
+  "synonyms": [],
+  "example": "Without a glossary the dialect was nearly unintelligible to outsiders.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "unjustified",
+  "pronunciation": "ʌnˈdʒʌstəˌfaɪd",
+  "definition": "not shown to be right or reasonable",
+  "chinese": "不合理的；無正當理由的",
+  "synonyms": [],
+  "example": "Critics called the sudden price increase unjustified.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "unparalleled",
+  "pronunciation": "ʌnˈpærəˌlɛld",
+  "definition": "having no equal",
+  "chinese": "無與倫比的；空前的",
+  "synonyms": [],
+  "example": "The archive offers unparalleled access to medieval trade records.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "unprincipled",
+  "pronunciation": "ʌnˈprɪnsəpəld",
+  "definition": "lacking moral principles",
+  "chinese": "無原則的；不道德的",
+  "synonyms": [],
+  "example": "The unprincipled lobbyist switched sides whenever it paid to do so.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "unqualified",
+  "pronunciation": "ʌnˈkwɑləˌfaɪd",
+  "definition": "without reservation; complete; lacking qualifications",
+  "chinese": "無保留的；完全的；不合格的",
+  "synonyms": [],
+  "example": "The play was an unqualified success, praised by every major critic.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "unremarkable",
+  "pronunciation": "ˌʌnrɪˈmɑrkəbəl",
+  "definition": "not particularly interesting or surprising",
+  "chinese": "平凡的；不起眼的",
+  "synonyms": [],
+  "example": "The site looked unremarkable until excavation revealed an ancient temple.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "unsophisticated",
+  "pronunciation": "ˌʌnsəˈfɪstəˌkeɪtɪd",
+  "definition": "lacking complexity or worldly experience",
+  "chinese": "不精密的；粗淺的；單純的",
+  "synonyms": [],
+  "example": "The study relied on unsophisticated methods that could not detect subtle effects.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "untested",
+  "pronunciation": "ʌnˈtɛstɪd",
+  "definition": "not yet tried or proven",
+  "chinese": "未經檢驗的；未經考驗的",
+  "synonyms": [],
+  "example": "Investors hesitated to back an untested technology.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "vacillation",
+  "pronunciation": "ˌvæsəˈleɪʃən",
+  "definition": "inability to decide between options",
+  "chinese": "猶豫不決；搖擺不定",
+  "synonyms": [],
+  "example": "The government's vacillation on the issue confused allies and rivals alike.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "n."
+ },
+ {
+  "word": "wide-ranging",
+  "pronunciation": "ˌwaɪdˈreɪndʒɪŋ",
+  "definition": "covering many subjects",
+  "chinese": "廣泛的；範圍廣的",
+  "synonyms": [],
+  "example": "The wide-ranging interview touched on art, politics, and physics.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "adj."
+ },
+ {
+  "word": "yield",
+  "pronunciation": "jild",
+  "definition": "v. to give way or surrender; to produce; n. amount produced",
+  "chinese": "v. 讓步；屈服；產生；n. 產量；收益",
+  "synonyms": [],
+  "example": "The negotiators refused to yield on any point of substance.",
+  "exampleSource": "Original app example",
+  "sources": [
+   "GRE answer choices"
+  ],
+  "isHighFrequency": false,
+  "partOfSpeech": "v./n."
+ }
+]

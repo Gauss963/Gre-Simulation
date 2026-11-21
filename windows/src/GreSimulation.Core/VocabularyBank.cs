@@ -4,7 +4,7 @@ namespace GreSimulation.Core;
 
 /// <summary>
 /// Port of VocabularyBank.swift: merges ExpandedVocabulary, Authorized20260720Vocabulary,
-/// Authorized20260720Part2Vocabulary and the curated Swift entries (embedded), in that order, so a
+/// Authorized20260720Part2Vocabulary, AnswerChoiceVocabulary and the curated Swift entries (embedded), in that order, so a
 /// later complete entry (curated last) overrides earlier ones while synonyms and sources are unioned.
 /// </summary>
 public sealed class VocabularyBank
@@ -22,7 +22,7 @@ public sealed class VocabularyBank
         CuratedWords = BundledResource.DecodeEmbedded<List<VocabularyWord>>("CuratedVocabulary.json");
         List<VocabularyWord> Load(string name) => BundledResource.Decode<List<VocabularyWord>>(resourceDirectory, name) ?? [];
         var all = Load("ExpandedVocabulary").Concat(Load("Authorized20260720Vocabulary"))
-            .Concat(Load("Authorized20260720Part2Vocabulary")).Concat(CuratedWords);
+            .Concat(Load("Authorized20260720Part2Vocabulary")).Concat(Load("AnswerChoiceVocabulary")).Concat(CuratedWords);
 
         var merged = new Dictionary<string, VocabularyWord>(StringComparer.Ordinal);
         foreach (var item in all)

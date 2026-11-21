@@ -10,7 +10,7 @@ enum SelfTest {
         func log(_ text: String) { FileHandle.standardError.write(Data((text + "\n").utf8)) }
         func check(_ condition: Bool, _ message: String) { if !condition { failures.append(message) } }
 
-        let validation = QuestionBank.validate() + VocabularyBank.validate() + FormBuilder.validate()
+        let validation = QuestionBank.validate() + VocabularyBank.validate() + AnswerChoiceWords.validate() + FormBuilder.validate()
         validation.forEach { failures.append("Validation: " + $0) }
 
         // Retired imported items must load and never be delivered.

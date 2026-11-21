@@ -58,9 +58,14 @@ enum VocabularyBank {
     private static let authorized20260720Part2Words: [VocabularyWord] =
         BundledResource.decode([VocabularyWord].self, named: "Authorized20260720Part2Vocabulary") ?? []
 
+    /// Words that appear often as Text Completion and Sentence Equivalence answer choices but
+    /// were not in the other word lists.
+    private static let answerChoiceWords: [VocabularyWord] =
+        BundledResource.decode([VocabularyWord].self, named: "AnswerChoiceVocabulary") ?? []
+
     static let words: [VocabularyWord] = {
         var merged: [String: VocabularyWord] = [:]
-        for item in expandedWords + authorized20260720Words + authorized20260720Part2Words + curatedWords {
+        for item in expandedWords + authorized20260720Words + authorized20260720Part2Words + answerChoiceWords + curatedWords {
             let key = item.word.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
             guard !key.isEmpty else { continue }
             if let existing = merged[key] {

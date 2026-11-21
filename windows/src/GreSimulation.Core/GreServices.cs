@@ -21,6 +21,7 @@ public sealed class GreServices : IDisposable
         Questions = new QuestionBank(resourceDirectory, Settings, random);
         Forms = new FormBuilder(Questions);
         Vocabulary = new VocabularyBank(resourceDirectory);
+        AnswerChoices = new AnswerChoiceWords(resourceDirectory, Vocabulary);
         Pronunciations = new WordPronunciationLibrary(resourceDirectory);
         History = new HistoryStore(dataDirectory, Settings);
     }
@@ -37,13 +38,15 @@ public sealed class GreServices : IDisposable
     public QuestionBank Questions { get; }
     public FormBuilder Forms { get; }
     public VocabularyBank Vocabulary { get; }
+    /// <summary>Words that appear most often as TC/SE answer choices, in meaning groups.</summary>
+    public AnswerChoiceWords AnswerChoices { get; }
     public WordPronunciationLibrary Pronunciations { get; }
     public HistoryStore History { get; }
 
     /// <summary>Builds a new form (writes question exposure, like ExamSession(mode:) on the Mac).</summary>
     public ExamSession StartExam(ExamMode mode, TimeProvider? time = null) => new(mode, Forms, time);
 
-    public FlashcardSession CreateFlashcards() => new(Vocabulary.Words, Settings);
+    public FlashcardSession CreateFlashcards() => new(Vocabulary.Words, Settings, answerChoices: AnswerChoices);
 
     public VocabularyBrowser CreateVocabularyBrowser() => new(Vocabulary);
 
@@ -56,7 +59,7 @@ public sealed class GreServices : IDisposable
 
     /// <summary>All validations (Mac Debug-build launch checks): empty when the content is sound.</summary>
     public IReadOnlyList<string> Validate() =>
-        [.. Questions.Validate(), .. Vocabulary.Validate(Pronunciations), .. Forms.Validate()];
+        [.. Questions.Validate(), .. Vocabulary.Validate(Pronunciations), .. AnswerChoices.Validate(), .. Forms.Validate()];
 
     public void Dispose() => Pronunciations.Dispose();
 }

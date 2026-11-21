@@ -16,7 +16,7 @@ struct Gre_SimulationApp: App {
            ProcessInfo.processInfo.arguments.indices.contains(flag + 1) {
             SelfTest.exportVerbal(to: ProcessInfo.processInfo.arguments[flag + 1])
         }
-        let issues = QuestionBank.validate() + VocabularyBank.validate() + FormBuilder.validate()
+        let issues = QuestionBank.validate() + VocabularyBank.validate() + AnswerChoiceWords.validate() + FormBuilder.validate()
         issues.forEach { print("Validation:", $0) }
         assert(issues.isEmpty, issues.joined(separator: "\n"))
         assert(NumericAnswerMatcher.matches("2.50", "5/2"))

@@ -1,0 +1,3462 @@
+{
+ "groups": [
+  {
+   "id": "reticence",
+   "title": "寡言 ↔ 多話",
+   "poles": [
+    {
+     "label": "沉默寡言",
+     "words": [
+      "laconic",
+      "taciturn",
+      "reticent",
+      "reserved"
+     ]
+    },
+    {
+     "label": "多話、大聲嚷嚷",
+     "words": [
+      "garrulous",
+      "loquacious",
+      "vociferous"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "affability",
+   "title": "和藹 ↔ 暴躁",
+   "poles": [
+    {
+     "label": "和藹、友善",
+     "words": [
+      "affable",
+      "amiable"
+     ]
+    },
+    {
+     "label": "暴躁、好鬥",
+     "words": [
+      "irascible",
+      "truculent",
+      "pugnacious"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "modesty",
+   "title": "謙遜 ↔ 傲慢",
+   "poles": [
+    {
+     "label": "謙遜、低調",
+     "words": [
+      "humility",
+      "unassuming",
+      "self-effacing"
+     ]
+    },
+    {
+     "label": "傲慢、專橫",
+     "words": [
+      "hubris",
+      "imperious",
+      "supercilious",
+      "condescending",
+      "pretentious",
+      "self-aggrandizing",
+      "braggart",
+      "despotic"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "timidity",
+   "title": "膽怯 ↔ 大膽",
+   "poles": [
+    {
+     "label": "膽怯、惶恐",
+     "words": [
+      "diffident",
+      "diffidence",
+      "timidity",
+      "trepidation",
+      "apprehensive"
+     ]
+    },
+    {
+     "label": "大膽、無畏",
+     "words": [
+      "audacious",
+      "intrepid",
+      "brash"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "optimism",
+   "title": "樂觀 ↔ 悲觀",
+   "poles": [
+    {
+     "label": "樂觀、有信心",
+     "words": [
+      "sanguine",
+      "buoyant"
+     ]
+    },
+    {
+     "label": "悲觀、陰鬱",
+     "words": [
+      "morose",
+      "dour"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "idealism",
+   "title": "理想 ↔ 務實",
+   "poles": [
+    {
+     "label": "不切實際的理想",
+     "words": [
+      "quixotic",
+      "idealistic",
+      "idealism",
+      "visionary"
+     ]
+    },
+    {
+     "label": "務實",
+     "words": [
+      "pragmatic",
+      "pragmatism"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "apathy",
+   "title": "冷漠 ↔ 熱忱",
+   "poles": [
+    {
+     "label": "冷漠、漫不經心",
+     "words": [
+      "apathy",
+      "apathetic",
+      "indifferent",
+      "nonchalance",
+      "insouciance",
+      "tepid",
+      "blithe"
+     ]
+    },
+    {
+     "label": "熱忱、狂熱",
+     "words": [
+      "fervor",
+      "zealous",
+      "impassioned"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "indolence",
+   "title": "懶散 ↔ 勤奮",
+   "poles": [
+    {
+     "label": "懶散、遲鈍",
+     "words": [
+      "indolent",
+      "indolence",
+      "lethargic",
+      "sluggish",
+      "torpor",
+      "inertia",
+      "passivity"
+     ]
+    },
+    {
+     "label": "勤奮、有活力",
+     "words": [
+      "assiduous",
+      "diligent",
+      "enterprising",
+      "vigorous"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "complacency",
+   "title": "自滿 ↔ 警覺",
+   "poles": [
+    {
+     "label": "自滿、安於現狀",
+     "words": [
+      "complacency",
+      "complacent"
+     ]
+    },
+    {
+     "label": "警覺、戒備",
+     "words": [
+      "vigilant",
+      "wary"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "composure",
+   "title": "鎮定 ↔ 焦躁",
+   "poles": [
+    {
+     "label": "沉著冷靜",
+     "words": [
+      "imperturbable",
+      "placid",
+      "stoicism"
+     ]
+    },
+    {
+     "label": "焦躁不安",
+     "words": [
+      "restive",
+      "agitated",
+      "overwrought"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mirth",
+   "title": "歡樂 ↔ 莊重",
+   "poles": [
+    {
+     "label": "歡樂、興高采烈",
+     "words": [
+      "mirthful",
+      "jovial",
+      "exhilaration"
+     ]
+    },
+    {
+     "label": "莊重、嚴肅",
+     "words": [
+      "somber",
+      "gravity"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "meticulous",
+   "title": "一絲不苟 ↔ 草率",
+   "poles": [
+    {
+     "label": "細心、嚴謹",
+     "words": [
+      "meticulous",
+      "meticulousness",
+      "scrupulous",
+      "fastidious",
+      "fastidiousness",
+      "punctiliousness",
+      "conscientious",
+      "rigorous",
+      "rigor"
+     ]
+    },
+    {
+     "label": "馬虎、敷衍",
+     "words": [
+      "perfunctory",
+      "slipshod",
+      "negligent"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caution",
+   "title": "謹慎 ↔ 輕率",
+   "poles": [
+    {
+     "label": "謹慎、審慎",
+     "words": [
+      "circumspect",
+      "prudent",
+      "judicious"
+     ]
+    },
+    {
+     "label": "輕率、不負責",
+     "words": [
+      "imprudent",
+      "cavalier",
+      "feckless"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "spontaneity",
+   "title": "隨性任意 ↔ 刻意有條理",
+   "poles": [
+    {
+     "label": "即興、任意",
+     "words": [
+      "spontaneous",
+      "spontaneity",
+      "improvise",
+      "improvisation",
+      "arbitrary",
+      "indiscriminate"
+     ]
+    },
+    {
+     "label": "深思熟慮、有條理",
+     "words": [
+      "deliberate",
+      "calculated",
+      "considered",
+      "methodical"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shrewd",
+   "title": "精明 ↔ 天真",
+   "poles": [
+    {
+     "label": "精明、有洞察力",
+     "words": [
+      "acumen",
+      "astute",
+      "shrewd",
+      "sagacious"
+     ]
+    },
+    {
+     "label": "天真、單純",
+     "words": [
+      "ingenuous",
+      "naiveté"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skepticism",
+   "title": "懷疑 ↔ 輕信",
+   "poles": [
+    {
+     "label": "懷疑、不輕信",
+     "words": [
+      "skeptical",
+      "skepticism",
+      "cynical"
+     ]
+    },
+    {
+     "label": "輕信、不加批判",
+     "words": [
+      "credulous",
+      "uncritical",
+      "gullible"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cosmopolitan",
+   "title": "見多識廣 ↔ 狹隘",
+   "poles": [
+    {
+     "label": "見多識廣、文雅",
+     "words": [
+      "cosmopolitan",
+      "urbane",
+      "genteel"
+     ]
+    },
+    {
+     "label": "狹隘、沒文化",
+     "words": [
+      "insular",
+      "philistine",
+      "parochial"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "candor",
+   "title": "坦率 ↔ 虛偽",
+   "poles": [
+    {
+     "label": "坦率、直言",
+     "words": [
+      "candid",
+      "blunt",
+      "forthright"
+     ]
+    },
+    {
+     "label": "虛偽、表裡不一",
+     "words": [
+      "disingenuous",
+      "insincere",
+      "hypocrisy",
+      "duplicity",
+      "sanctimonious",
+      "pretense"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "honesty",
+   "title": "誠實 ↔ 欺騙",
+   "poles": [
+    {
+     "label": "誠實",
+     "words": [
+      "veracity",
+      "veracious"
+     ]
+    },
+    {
+     "label": "欺騙、狡詐",
+     "words": [
+      "mendacity",
+      "deceptive",
+      "devious",
+      "cunning",
+      "beguile"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "integrity",
+   "title": "正直 ↔ 貪腐",
+   "poles": [
+    {
+     "label": "正直、廉潔",
+     "words": [
+      "probity",
+      "integrity",
+      "rectitude"
+     ]
+    },
+    {
+     "label": "貪腐、唯利是圖",
+     "words": [
+      "venal",
+      "mercenary",
+      "unprincipled"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "altruism",
+   "title": "無私關懷 ↔ 自私冷漠",
+   "poles": [
+    {
+     "label": "無私、關懷",
+     "words": [
+      "altruism",
+      "altruistic",
+      "benevolent",
+      "solicitous"
+     ]
+    },
+    {
+     "label": "自私、冷酷",
+     "words": [
+      "self-serving",
+      "unfeeling",
+      "callous"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "greed",
+   "title": "貪得無厭",
+   "poles": [
+    {
+     "label": "貪婪、無法滿足",
+     "words": [
+      "voracious",
+      "insatiable",
+      "rapacious"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "generosity",
+   "title": "慷慨 ↔ 吝嗇",
+   "poles": [
+    {
+     "label": "慷慨大方",
+     "words": [
+      "munificent",
+      "magnanimity",
+      "magnanimous"
+     ]
+    },
+    {
+     "label": "吝嗇小氣",
+     "words": [
+      "parsimonious",
+      "stingy",
+      "miserly"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thrift",
+   "title": "節儉 ↔ 揮霍",
+   "poles": [
+    {
+     "label": "節儉",
+     "words": [
+      "frugality",
+      "thrift",
+      "frugal"
+     ]
+    },
+    {
+     "label": "揮霍、浪費",
+     "words": [
+      "profligate",
+      "extravagant",
+      "prodigal"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "temperance",
+   "title": "節制 ↔ 放縱",
+   "poles": [
+    {
+     "label": "克制、節制",
+     "words": [
+      "temperate",
+      "forbearance",
+      "restrain",
+      "temper"
+     ]
+    },
+    {
+     "label": "放縱、無節制",
+     "words": [
+      "intemperate",
+      "indulgent",
+      "dissolute"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "compliance",
+   "title": "順從 ↔ 反抗",
+   "poles": [
+    {
+     "label": "順從、恭敬諂媚",
+     "words": [
+      "compliant",
+      "deferential",
+      "obsequious",
+      "sycophantic"
+     ]
+    },
+    {
+     "label": "反抗、藐視",
+     "words": [
+      "defy",
+      "flout",
+      "seditious",
+      "subversive"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "obstinacy",
+   "title": "固執 ↔ 讓步",
+   "poles": [
+    {
+     "label": "固執、不妥協",
+     "words": [
+      "obdurate",
+      "intransigent",
+      "adamant",
+      "implacable"
+     ]
+    },
+    {
+     "label": "和解、讓步",
+     "words": [
+      "conciliatory",
+      "compromise",
+      "yield"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "assent",
+   "title": "同意 ↔ 異議",
+   "poles": [
+    {
+     "label": "同意、默許",
+     "words": [
+      "acquiesce",
+      "accede",
+      "concur"
+     ]
+    },
+    {
+     "label": "提出異議",
+     "words": [
+      "demur",
+      "dissent",
+      "cavil"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "appease",
+   "title": "安撫 ↔ 激怒",
+   "poles": [
+    {
+     "label": "安撫、平息",
+     "words": [
+      "appease",
+      "placate",
+      "mollify"
+     ]
+    },
+    {
+     "label": "挑釁、激怒",
+     "words": [
+      "provocative",
+      "inflammatory",
+      "exasperate"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "reluctance",
+   "title": "不情願 ↔ 樂意",
+   "poles": [
+    {
+     "label": "不情願、排斥",
+     "words": [
+      "disinclined",
+      "loath",
+      "averse"
+     ]
+    },
+    {
+     "label": "樂意、渴望",
+     "words": [
+      "disposed",
+      "avid"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "impartial",
+   "title": "公正 ↔ 偏頗",
+   "poles": [
+    {
+     "label": "公正、平等",
+     "words": [
+      "impartial",
+      "disinterested",
+      "equitable",
+      "egalitarian"
+     ]
+    },
+    {
+     "label": "偏頗、黨派之見",
+     "words": [
+      "bias",
+      "partisan",
+      "partisanship",
+      "tendentious",
+      "sectarian"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "objectivity",
+   "title": "客觀 ↔ 主觀",
+   "poles": [
+    {
+     "label": "客觀、不帶感情",
+     "words": [
+      "objective",
+      "objectivity",
+      "dispassionate"
+     ]
+    },
+    {
+     "label": "主觀、個人化",
+     "words": [
+      "subjective",
+      "idiosyncratic"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "brevity",
+   "title": "簡潔 ↔ 冗長",
+   "poles": [
+    {
+     "label": "簡潔、精練",
+     "words": [
+      "concise",
+      "concision",
+      "brevity",
+      "terse"
+     ]
+    },
+    {
+     "label": "冗長、囉嗦",
+     "words": [
+      "prolix",
+      "repetitious",
+      "diffuse"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eloquence",
+   "title": "善於表達 ↔ 難以言喻",
+   "poles": [
+    {
+     "label": "表達清楚、有口才",
+     "words": [
+      "articulate",
+      "eloquence",
+      "eloquent"
+     ]
+    },
+    {
+     "label": "無法言表",
+     "words": [
+      "inexpressible",
+      "ineffable",
+      "inarticulate"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sensational",
+   "title": "聳動誇張 ↔ 低調節制",
+   "poles": [
+    {
+     "label": "聳動、戲劇化",
+     "words": [
+      "sensationalism",
+      "histrionic"
+     ]
+    },
+    {
+     "label": "低調、節制",
+     "words": [
+      "understated",
+      "restraint",
+      "sober"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exaggerate",
+   "title": "誇大 ↔ 淡化",
+   "poles": [
+    {
+     "label": "誇大",
+     "words": [
+      "exaggerate",
+      "overstate",
+      "hyperbole"
+     ]
+    },
+    {
+     "label": "淡化、低估",
+     "words": [
+      "downplay",
+      "discount",
+      "belittle"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "didactic",
+   "title": "說教、教育性",
+   "poles": [
+    {
+     "label": "說教、有教育意義",
+     "words": [
+      "didactic",
+      "didacticism",
+      "edify"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "title": "重述、老調重彈",
+   "poles": [
+    {
+     "label": "重述、重炒冷飯",
+     "words": [
+      "recapitulate",
+      "rehash",
+      "reiterate"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ornate",
+   "title": "華麗 ↔ 樸素",
+   "poles": [
+    {
+     "label": "華麗、繁複",
+     "words": [
+      "ornate",
+      "baroque",
+      "florid"
+     ]
+    },
+    {
+     "label": "樸素、簡樸",
+     "words": [
+      "austere",
+      "spartan",
+      "ascetic"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aesthetic",
+   "title": "美感 ↔ 實用",
+   "poles": [
+    {
+     "label": "美感、裝飾",
+     "words": [
+      "aesthetic",
+      "ornamental"
+     ]
+    },
+    {
+     "label": "實用、功能",
+     "words": [
+      "functional",
+      "utilitarian"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "polemic",
+   "title": "爭議 ↔ 共識",
+   "poles": [
+    {
+     "label": "爭議、對立",
+     "words": [
+      "controversial",
+      "contentious",
+      "polemical",
+      "polarize"
+     ]
+    },
+    {
+     "label": "共識、和睦",
+     "words": [
+      "consensus",
+      "accord",
+      "comity"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cogent",
+   "title": "有說服力 ↔ 站不住腳",
+   "poles": [
+    {
+     "label": "有力、可信",
+     "words": [
+      "cogent",
+      "compelling",
+      "sound",
+      "valid",
+      "plausible"
+     ]
+    },
+    {
+     "label": "薄弱、似是而非",
+     "words": [
+      "tenuous",
+      "untenable",
+      "implausible",
+      "specious",
+      "fallacious"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "unfounded",
+   "title": "有根據 ↔ 無根據",
+   "poles": [
+    {
+     "label": "有根據、正當",
+     "words": [
+      "substantiate",
+      "warrant"
+     ]
+    },
+    {
+     "label": "毫無根據",
+     "words": [
+      "unfounded",
+      "baseless",
+      "unjustified"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "empirical",
+   "title": "實證 ↔ 推測",
+   "poles": [
+    {
+     "label": "實證、可驗證",
+     "words": [
+      "empirical",
+      "replicate",
+      "document"
+     ]
+    },
+    {
+     "label": "推測、未經驗證",
+     "words": [
+      "speculative",
+      "conjectural",
+      "conjecture",
+      "untested"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "verify",
+   "title": "證實 ↔ 駁斥",
+   "poles": [
+    {
+     "label": "證實、平反",
+     "words": [
+      "corroborate",
+      "vindicate"
+     ]
+    },
+    {
+     "label": "駁斥、推翻",
+     "words": [
+      "refute",
+      "debunk",
+      "discredit",
+      "invalidate",
+      "belie",
+      "contradict",
+      "impugn",
+      "dispel"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bolster",
+   "title": "強化 ↔ 削弱",
+   "poles": [
+    {
+     "label": "支撐、強化",
+     "words": [
+      "bolster",
+      "buttress",
+      "fortify"
+     ]
+    },
+    {
+     "label": "削弱、暗中破壞",
+     "words": [
+      "undermine",
+      "undercut",
+      "vitiate",
+      "impair",
+      "subvert",
+      "dismantle"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "neutralize",
+   "title": "抵銷、使無效",
+   "poles": [
+    {
+     "label": "抵銷、作廢",
+     "words": [
+      "neutralize",
+      "negate",
+      "nullify"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "certainty",
+   "title": "確鑿 ↔ 存疑",
+   "poles": [
+    {
+     "label": "確鑿、無可爭辯",
+     "words": [
+      "incontrovertible",
+      "indisputable",
+      "unassailable",
+      "unimpeachable",
+      "definitive"
+     ]
+    },
+    {
+     "label": "可疑、未定",
+     "words": [
+      "dubious",
+      "inconclusive",
+      "indeterminate"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ambiguity",
+   "title": "明確 ↔ 模稜兩可",
+   "poles": [
+    {
+     "label": "明確",
+     "words": [
+      "unambiguous",
+      "unequivocal",
+      "explicit"
+     ]
+    },
+    {
+     "label": "模稜兩可、含糊",
+     "words": [
+      "ambiguous",
+      "ambiguity",
+      "equivocal",
+      "nebulous",
+      "evasive"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "qualify",
+   "title": "有保留 ↔ 武斷",
+   "poles": [
+    {
+     "label": "有所保留、暫定",
+     "words": [
+      "qualify",
+      "provisional",
+      "tentative"
+     ]
+    },
+    {
+     "label": "武斷、毫無保留",
+     "words": [
+      "dogmatic",
+      "unqualified",
+      "categorical"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "authenticity",
+   "title": "真實 ↔ 偽造",
+   "poles": [
+    {
+     "label": "真實、逼真",
+     "words": [
+      "authentic",
+      "verisimilitude"
+     ]
+    },
+    {
+     "label": "虛假、偽造",
+     "words": [
+      "spurious",
+      "apocryphal",
+      "sham",
+      "fabricate"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "distortion",
+   "title": "曲解 ↔ 忠實",
+   "poles": [
+    {
+     "label": "曲解、扭曲",
+     "words": [
+      "misrepresent",
+      "distort",
+      "misconstrue"
+     ]
+    },
+    {
+     "label": "忠實、照原樣",
+     "words": [
+      "fidelity",
+      "verbatim"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acknowledge",
+   "title": "承認 ↔ 推諉",
+   "poles": [
+    {
+     "label": "承認、讓步",
+     "words": [
+      "acknowledge",
+      "concede",
+      "avow"
+     ]
+    },
+    {
+     "label": "否認、找藉口",
+     "words": [
+      "disavow",
+      "rationalize"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "culpability",
+   "title": "無罪 ↔ 有罪",
+   "poles": [
+    {
+     "label": "開脫、無過失",
+     "words": [
+      "exculpatory",
+      "exonerate",
+      "absolve"
+     ]
+    },
+    {
+     "label": "有罪、應受譴責",
+     "words": [
+      "culpable",
+      "incriminate",
+      "reprehensible"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "premise",
+   "title": "前提、假設",
+   "poles": [
+    {
+     "label": "假設、預設",
+     "words": [
+      "premise",
+      "presuppose",
+      "presume"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "prescience",
+   "title": "先見 ↔ 短視",
+   "poles": [
+    {
+     "label": "有先見之明",
+     "words": [
+      "prescient",
+      "prophetic",
+      "anticipate",
+      "foretell"
+     ]
+    },
+    {
+     "label": "短視、欠考慮",
+     "words": [
+      "myopic",
+      "improvident"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "omen",
+   "title": "預兆",
+   "poles": [
+    {
+     "label": "預示、預兆",
+     "words": [
+      "harbinger",
+      "presage",
+      "portend"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "erudite",
+   "title": "博學 ↔ 無知",
+   "poles": [
+    {
+     "label": "博學",
+     "words": [
+      "erudite",
+      "erudition",
+      "learned"
+     ]
+    },
+    {
+     "label": "無知、未受教育",
+     "words": [
+      "benighted",
+      "unlettered"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "insight",
+   "title": "深刻 ↔ 膚淺",
+   "poles": [
+    {
+     "label": "深刻、敏銳",
+     "words": [
+      "incisive",
+      "trenchant",
+      "profound",
+      "acute"
+     ]
+    },
+    {
+     "label": "膚淺、空洞",
+     "words": [
+      "superficial",
+      "vacuous",
+      "glib"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "comprehensive",
+   "title": "全面 ↔ 粗略",
+   "poles": [
+    {
+     "label": "全面、詳盡",
+     "words": [
+      "comprehensive",
+      "comprehensiveness",
+      "exhaustive",
+      "wide-ranging"
+     ]
+    },
+    {
+     "label": "粗略、片面",
+     "words": [
+      "cursory",
+      "partial",
+      "fragmentary"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "clarity",
+   "title": "清晰 ↔ 晦澀",
+   "poles": [
+    {
+     "label": "清楚易懂",
+     "words": [
+      "lucid",
+      "perspicuous",
+      "pellucidity",
+      "clarity",
+      "intelligible",
+      "accessible",
+      "explicable"
+     ]
+    },
+    {
+     "label": "晦澀難懂",
+     "words": [
+      "opaque",
+      "obscure",
+      "convoluted",
+      "unintelligible"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "esoteric",
+   "title": "深奧、冷門",
+   "poles": [
+    {
+     "label": "只有少數人懂",
+     "words": [
+      "esoteric",
+      "arcane",
+      "abstruse"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "enigma",
+   "title": "費解、難以捉摸",
+   "poles": [
+    {
+     "label": "令人費解",
+     "words": [
+      "enigmatic",
+      "inexplicable",
+      "unfathomable",
+      "conundrum",
+      "elusive"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "elucidate",
+   "title": "使困惑 ↔ 闡明",
+   "poles": [
+    {
+     "label": "使困惑、混淆",
+     "words": [
+      "perplexing",
+      "confound",
+      "baffle",
+      "obfuscate"
+     ]
+    },
+    {
+     "label": "闡明、釐清",
+     "words": [
+      "elucidate",
+      "illuminate",
+      "delineate",
+      "clarify"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sophistication",
+   "title": "精緻成熟 ↔ 粗淺初步",
+   "poles": [
+    {
+     "label": "精緻、複雜",
+     "words": [
+      "sophisticated",
+      "refinement",
+      "intricate",
+      "involved"
+     ]
+    },
+    {
+     "label": "初步、未成形",
+     "words": [
+      "rudimentary",
+      "inchoate",
+      "unsophisticated"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "discern",
+   "title": "察覺 ↔ 渾然不覺",
+   "poles": [
+    {
+     "label": "察覺、查明",
+     "words": [
+      "discern",
+      "ascertain"
+     ]
+    },
+    {
+     "label": "渾然不覺",
+     "words": [
+      "oblivious",
+      "heedless",
+      "unwitting"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heed",
+   "title": "重視 ↔ 忽視",
+   "poles": [
+    {
+     "label": "留意、細察",
+     "words": [
+      "heed",
+      "scrutinize",
+      "peruse"
+     ]
+    },
+    {
+     "label": "忽視、輕忽",
+     "words": [
+      "overlook",
+      "disregard",
+      "neglect",
+      "slight",
+      "dismiss"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "abundance",
+   "title": "充足 ↔ 匱乏",
+   "poles": [
+    {
+     "label": "大量、過剩、多產",
+     "words": [
+      "copious",
+      "profusion",
+      "surfeit",
+      "glut",
+      "abound",
+      "prolific"
+     ]
+    },
+    {
+     "label": "稀少、微薄",
+     "words": [
+      "dearth",
+      "paucity",
+      "meager",
+      "paltry",
+      "minuscule"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "importance",
+   "title": "重大 ↔ 微不足道",
+   "poles": [
+    {
+     "label": "重大、關鍵",
+     "words": [
+      "momentous",
+      "pivotal",
+      "paramount"
+     ]
+    },
+    {
+     "label": "瑣碎、次要",
+     "words": [
+      "trivial",
+      "inconsequential",
+      "negligible",
+      "marginal",
+      "peripheral"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "redundancy",
+   "title": "必要 ↔ 多餘",
+   "poles": [
+    {
+     "label": "不可或缺",
+     "words": [
+      "indispensable",
+      "vital",
+      "integral"
+     ]
+    },
+    {
+     "label": "多餘、不相干",
+     "words": [
+      "superfluous",
+      "redundant",
+      "extraneous"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "increase",
+   "title": "增強 ↔ 減弱",
+   "poles": [
+    {
+     "label": "增加、加劇",
+     "words": [
+      "augment",
+      "amplify",
+      "escalate",
+      "proliferate"
+     ]
+    },
+    {
+     "label": "減少、消退",
+     "words": [
+      "diminish",
+      "dwindle",
+      "ebb",
+      "curtail"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "improve",
+   "title": "緩解 ↔ 惡化",
+   "poles": [
+    {
+     "label": "緩解、改善",
+     "words": [
+      "mitigate",
+      "alleviate",
+      "ameliorate",
+      "remedy",
+      "rehabilitate"
+     ]
+    },
+    {
+     "label": "加劇、惡化",
+     "words": [
+      "exacerbate",
+      "degrade",
+      "aggravate"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "harm",
+   "title": "無害有益 ↔ 有害",
+   "poles": [
+    {
+     "label": "無害、有益",
+     "words": [
+      "benign",
+      "innocuous",
+      "salutary"
+     ]
+    },
+    {
+     "label": "有害",
+     "words": [
+      "deleterious",
+      "malignant",
+      "corrosive"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efficacy",
+   "title": "有效 ↔ 徒勞",
+   "poles": [
+    {
+     "label": "有效",
+     "words": [
+      "efficacious",
+      "potent",
+      "efficacy"
+     ]
+    },
+    {
+     "label": "無效、徒勞",
+     "words": [
+      "futile",
+      "fruitless"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "emphasis",
+   "title": "突顯 ↔ 使失色",
+   "poles": [
+    {
+     "label": "強調、突顯",
+     "words": [
+      "accentuate",
+      "underscore",
+      "foreground"
+     ]
+    },
+    {
+     "label": "使黯然失色",
+     "words": [
+      "eclipse",
+      "overshadow"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "supersede",
+   "title": "取代、超越",
+   "poles": [
+    {
+     "label": "取代、勝過",
+     "words": [
+      "supersede",
+      "supplant",
+      "transcend"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ubiquity",
+   "title": "普遍 ↔ 零星",
+   "poles": [
+    {
+     "label": "普遍、無所不在",
+     "words": [
+      "ubiquitous",
+      "pervasive",
+      "prevalent",
+      "predominant"
+     ]
+    },
+    {
+     "label": "零星、稀疏",
+     "words": [
+      "sporadic",
+      "sparse"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "subtle",
+   "title": "細微 ↔ 明顯",
+   "poles": [
+    {
+     "label": "細微、難察覺",
+     "words": [
+      "subtle",
+      "indiscernible",
+      "undetectable"
+     ]
+    },
+    {
+     "label": "明顯、刺眼",
+     "words": [
+      "conspicuous",
+      "obtrusive",
+      "blatant"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tangible",
+   "title": "具體 ↔ 虛幻",
+   "poles": [
+    {
+     "label": "具體、實在",
+     "words": [
+      "concrete",
+      "tangible",
+      "palpable"
+     ]
+    },
+    {
+     "label": "虛幻、想像的",
+     "words": [
+      "chimerical",
+      "illusory",
+      "fanciful",
+      "intangible"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "diversity",
+   "title": "多元 ↔ 單一",
+   "poles": [
+    {
+     "label": "多元、混雜",
+     "words": [
+      "eclectic",
+      "heterogeneous",
+      "multifarious",
+      "multifaceted"
+     ]
+    },
+    {
+     "label": "同質、單一",
+     "words": [
+      "homogeneity",
+      "uniformity",
+      "homogeneous"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "similarity",
+   "title": "相似 ↔ 相異",
+   "poles": [
+    {
+     "label": "相似、可互換",
+     "words": [
+      "analogous",
+      "interchangeable",
+      "fungible"
+     ]
+    },
+    {
+     "label": "相異、分歧",
+     "words": [
+      "disparate",
+      "divergent"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coalesce",
+   "title": "融合 ↔ 分散",
+   "poles": [
+    {
+     "label": "融合、統整",
+     "words": [
+      "coalesce",
+      "synthesis",
+      "amalgamate"
+     ]
+    },
+    {
+     "label": "分散、消散",
+     "words": [
+      "disperse",
+      "dissipate",
+      "fragment"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dissemination",
+   "title": "傳播 ↔ 壓制",
+   "poles": [
+    {
+     "label": "傳播、宣揚",
+     "words": [
+      "disseminate",
+      "promulgate",
+      "propagate"
+     ]
+    },
+    {
+     "label": "壓制、扼殺",
+     "words": [
+      "stifle",
+      "suppress",
+      "quash"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wealth",
+   "title": "富裕 ↔ 貧困",
+   "poles": [
+    {
+     "label": "有錢、賺錢",
+     "words": [
+      "lucrative",
+      "affluent",
+      "opulent"
+     ]
+    },
+    {
+     "label": "貧困",
+     "words": [
+      "impecunious",
+      "indigent",
+      "destitute"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "volatility",
+   "title": "善變 ↔ 堅定",
+   "poles": [
+    {
+     "label": "善變、反覆無常",
+     "words": [
+      "capricious",
+      "caprice",
+      "fickle",
+      "whimsical",
+      "erratic",
+      "volatile"
+     ]
+    },
+    {
+     "label": "堅定不移",
+     "words": [
+      "steadfast",
+      "staunch"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malleable",
+   "title": "可塑 ↔ 僵硬",
+   "poles": [
+    {
+     "label": "可塑、靈活",
+     "words": [
+      "malleable",
+      "plastic",
+      "protean"
+     ]
+    },
+    {
+     "label": "僵硬、死板",
+     "words": [
+      "rigid",
+      "inflexible"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stasis",
+   "title": "停滯 ↔ 變動",
+   "poles": [
+    {
+     "label": "不變、停滯",
+     "words": [
+      "immutable",
+      "static",
+      "stagnant",
+      "stagnate"
+     ]
+    },
+    {
+     "label": "可變、流動",
+     "words": [
+      "mutable",
+      "flux"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vacillation",
+   "title": "猶豫 ↔ 果斷",
+   "poles": [
+    {
+     "label": "搖擺不定",
+     "words": [
+      "vacillate",
+      "vacillation",
+      "waver",
+      "ambivalent"
+     ]
+    },
+    {
+     "label": "果斷、堅決",
+     "words": [
+      "resolve",
+      "resolute"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "transience",
+   "title": "短暫 ↔ 持久",
+   "poles": [
+    {
+     "label": "短暫",
+     "words": [
+      "ephemeral",
+      "transitory",
+      "transient",
+      "fleeting",
+      "momentary"
+     ]
+    },
+    {
+     "label": "持久、延續",
+     "words": [
+      "enduring",
+      "long-standing",
+      "perpetuate",
+      "self-perpetuating"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "persistence",
+   "title": "堅持 ↔ 放棄",
+   "poles": [
+    {
+     "label": "堅持不懈",
+     "words": [
+      "tenacity",
+      "tenacious",
+      "dogged"
+     ]
+    },
+    {
+     "label": "放棄、捨棄",
+     "words": [
+      "relinquish",
+      "forgo",
+      "jettison"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "espouse",
+   "title": "擁護 ↔ 摒棄",
+   "poles": [
+    {
+     "label": "擁護、採納",
+     "words": [
+      "espouse",
+      "champion",
+      "endorse",
+      "embrace"
+     ]
+    },
+    {
+     "label": "摒棄、拒絕",
+     "words": [
+      "repudiate",
+      "renounce",
+      "eschew"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "evasion",
+   "title": "迴避 ↔ 正面處理",
+   "poles": [
+    {
+     "label": "迴避、轉移",
+     "words": [
+      "circumvent",
+      "evade",
+      "circuitous",
+      "divert",
+      "deflect"
+     ]
+    },
+    {
+     "label": "正面處理",
+     "words": [
+      "address",
+      "tackle"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "speed",
+   "title": "迅速 ↔ 拖延",
+   "poles": [
+    {
+     "label": "加快、迅速",
+     "words": [
+      "expedite",
+      "accelerate",
+      "hasten"
+     ]
+    },
+    {
+     "label": "拖延、冗長",
+     "words": [
+      "dilatory",
+      "prolong",
+      "protract"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "timing",
+   "title": "恰當適時 ↔ 不合時宜",
+   "poles": [
+    {
+     "label": "適時、恰當",
+     "words": [
+      "timely",
+      "apt",
+      "felicitous"
+     ]
+    },
+    {
+     "label": "不合時宜",
+     "words": [
+      "premature",
+      "inopportune",
+      "belated"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inevitable",
+   "title": "必然 ↔ 偶然",
+   "poles": [
+    {
+     "label": "必然、即將到來",
+     "words": [
+      "inevitable",
+      "imminent",
+      "inexorable"
+     ]
+    },
+    {
+     "label": "偶然、意外",
+     "words": [
+      "fortuitous",
+      "serendipitous",
+      "adventitious"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "anachronism",
+   "title": "古老過時、懷舊",
+   "poles": [
+    {
+     "label": "過時、懷舊",
+     "words": [
+      "anachronistic",
+      "archaic",
+      "antiquated",
+      "nostalgia"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tradition",
+   "title": "傳統 ↔ 反傳統",
+   "poles": [
+    {
+     "label": "傳統、正統",
+     "words": [
+      "conventional",
+      "orthodox",
+      "hidebound"
+     ]
+    },
+    {
+     "label": "打破傳統",
+     "words": [
+      "iconoclast",
+      "iconoclastic",
+      "maverick"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "anomaly",
+   "title": "反常 ↔ 典型",
+   "poles": [
+    {
+     "label": "反常、古怪",
+     "words": [
+      "anomaly",
+      "anomalous",
+      "atypical",
+      "singular",
+      "outlandish"
+     ]
+    },
+    {
+     "label": "典型、範例",
+     "words": [
+      "paradigmatic",
+      "paragon",
+      "prototype"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "paradox",
+   "title": "矛盾 ↔ 協調",
+   "poles": [
+    {
+     "label": "矛盾、不協調",
+     "words": [
+      "paradox",
+      "paradoxical",
+      "contradictory",
+      "incongruous",
+      "antithesis"
+     ]
+    },
+    {
+     "label": "一致、協調",
+     "words": [
+      "coherent",
+      "congruent",
+      "consonant"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "originality",
+   "title": "原創 ↔ 模仿",
+   "poles": [
+    {
+     "label": "原創、新穎",
+     "words": [
+      "originality",
+      "novel",
+      "novelty",
+      "unprecedented"
+     ]
+    },
+    {
+     "label": "模仿、衍生",
+     "words": [
+      "derivative",
+      "emulate",
+      "mimic"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hackneyed",
+   "title": "巧妙創新 ↔ 陳腐",
+   "poles": [
+    {
+     "label": "巧妙、有創意",
+     "words": [
+      "ingenious",
+      "ingenuity"
+     ]
+    },
+    {
+     "label": "陳腐、老套",
+     "words": [
+      "hackneyed",
+      "trite",
+      "banal",
+      "cliché",
+      "formulaic",
+      "rote"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mundane",
+   "title": "平凡 ↔ 非凡",
+   "poles": [
+    {
+     "label": "平凡、平庸",
+     "words": [
+      "mundane",
+      "pedestrian",
+      "prosaic",
+      "unremarkable",
+      "unexceptional",
+      "commonplace",
+      "mediocrity"
+     ]
+    },
+    {
+     "label": "非凡、無與倫比",
+     "words": [
+      "unparalleled",
+      "prodigious"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "engaging",
+   "title": "引人入勝 ↔ 乏味",
+   "poles": [
+    {
+     "label": "引人入勝",
+     "words": [
+      "absorbing",
+      "engaging",
+      "captivating",
+      "intrigue"
+     ]
+    },
+    {
+     "label": "乏味、無聊",
+     "words": [
+      "tedious",
+      "insipid",
+      "jejune",
+      "interminable"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eminence",
+   "title": "顯赫、著名",
+   "poles": [
+    {
+     "label": "傑出、有名望",
+     "words": [
+      "eminence",
+      "celebrated",
+      "illustrious"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "revival",
+   "title": "復興 ↔ 衰落",
+   "poles": [
+    {
+     "label": "復興、復甦",
+     "words": [
+      "resurgence",
+      "revive"
+     ]
+    },
+    {
+     "label": "衰落、失敗",
+     "words": [
+      "demise",
+      "founder",
+      "moribund"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pristine",
+   "title": "純淨 ↔ 玷汙",
+   "poles": [
+    {
+     "label": "原始、完好",
+     "words": [
+      "pristine",
+      "intact"
+     ]
+    },
+    {
+     "label": "汙損、玷汙",
+     "words": [
+      "taint",
+      "sully",
+      "tarnish"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "secrecy",
+   "title": "公開 ↔ 隱密",
+   "poles": [
+    {
+     "label": "公開、透明",
+     "words": [
+      "transparent",
+      "transparency",
+      "disclose"
+     ]
+    },
+    {
+     "label": "隱密、掩蓋",
+     "words": [
+      "clandestine",
+      "furtive",
+      "conceal",
+      "cloak"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "praise",
+   "title": "讚揚 ↔ 譴責",
+   "poles": [
+    {
+     "label": "讚揚、稱頌",
+     "words": [
+      "commend",
+      "acclaim",
+      "extol"
+     ]
+    },
+    {
+     "label": "譴責、痛斥",
+     "words": [
+      "censure",
+      "excoriate",
+      "decry"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "approbation",
+   "title": "讚許 ↔ 非難",
+   "poles": [
+    {
+     "label": "讚許、值得稱讚",
+     "words": [
+      "approbation",
+      "laudatory",
+      "laudable"
+     ]
+    },
+    {
+     "label": "非難、尖刻批評",
+     "words": [
+      "opprobrium",
+      "scathing",
+      "acerbic",
+      "captious"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "disparage",
+   "title": "抬舉 ↔ 貶低",
+   "poles": [
+    {
+     "label": "抬舉、美化",
+     "words": [
+      "lionize",
+      "exalt",
+      "idealize"
+     ]
+    },
+    {
+     "label": "貶低、詆毀",
+     "words": [
+      "denigrate",
+      "malign",
+      "vilify"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "reverence",
+   "title": "崇敬 ↔ 輕蔑",
+   "poles": [
+    {
+     "label": "崇敬、神聖不可侵犯",
+     "words": [
+      "reverence",
+      "veneration",
+      "sacrosanct"
+     ]
+    },
+    {
+     "label": "輕蔑、鄙視",
+     "words": [
+      "disdain",
+      "contempt",
+      "scorn"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lament",
+   "title": "哀嘆 ↔ 歡欣",
+   "poles": [
+    {
+     "label": "哀嘆、惋惜",
+     "words": [
+      "lament",
+      "deplore",
+      "rue"
+     ]
+    },
+    {
+     "label": "歡欣、享受",
+     "words": [
+      "relish",
+      "exult",
+      "savor"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "condone",
+   "title": "容許 ↔ 禁止",
+   "poles": [
+    {
+     "label": "容忍、教唆",
+     "words": [
+      "condone",
+      "countenance",
+      "abet"
+     ]
+    },
+    {
+     "label": "禁止",
+     "words": [
+      "proscribe",
+      "interdict"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "difficulty",
+   "title": "艱難 ↔ 容易",
+   "poles": [
+    {
+     "label": "艱難、繁重",
+     "words": [
+      "onerous",
+      "arduous",
+      "daunting",
+      "formidable",
+      "taxing",
+      "exacting",
+      "intractable",
+      "intractability"
+     ]
+    },
+    {
+     "label": "輕鬆、易處理",
+     "words": [
+      "facile",
+      "tractable"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "facilitate",
+   "title": "促進 ↔ 阻礙",
+   "poles": [
+    {
+     "label": "促進、助長",
+     "words": [
+      "facilitate",
+      "foster",
+      "nurture"
+     ]
+    },
+    {
+     "label": "阻礙、挫敗",
+     "words": [
+      "hamper",
+      "hinder",
+      "stymie",
+      "thwart"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "forestall",
+   "title": "防止 ↔ 引發",
+   "poles": [
+    {
+     "label": "預防、排除",
+     "words": [
+      "forestall",
+      "preclude",
+      "obviate",
+      "deter"
+     ]
+    },
+    {
+     "label": "引發、促成",
+     "words": [
+      "engender",
+      "induce",
+      "precipitate"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "motivation",
+   "title": "激勵 ↔ 打擊",
+   "poles": [
+    {
+     "label": "激勵、振奮",
+     "words": [
+      "galvanize",
+      "invigorate",
+      "spur"
+     ]
+    },
+    {
+     "label": "打擊、使沮喪",
+     "words": [
+      "dampen",
+      "demoralize",
+      "dishearten"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "constraint",
+   "title": "限制、侷限",
+   "poles": [
+    {
+     "label": "限制、劃定範圍",
+     "words": [
+      "circumscribe",
+      "constrain",
+      "confine",
+      "demarcate"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "compulsory",
+   "title": "強制 ↔ 自願",
+   "poles": [
+    {
+     "label": "強制、義務",
+     "words": [
+      "compulsory",
+      "mandatory",
+      "obligatory"
+     ]
+    },
+    {
+     "label": "自由決定、自願",
+     "words": [
+      "discretionary",
+      "voluntary"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "robust",
+   "title": "堅固 ↔ 脆弱",
+   "poles": [
+    {
+     "label": "堅固、有韌性",
+     "words": [
+      "robust",
+      "resilience",
+      "resilient"
+     ]
+    },
+    {
+     "label": "岌岌可危、脆弱",
+     "words": [
+      "precarious",
+      "fragile"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "turbulence",
+   "title": "動盪 ↔ 平靜",
+   "poles": [
+    {
+     "label": "動盪、騷亂",
+     "words": [
+      "turbulent",
+      "upheaval",
+      "tumultuous"
+     ]
+    },
+    {
+     "label": "平靜、安寧",
+     "words": [
+      "tranquil",
+      "halcyon"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skill",
+   "title": "靈巧 ↔ 笨拙",
+   "poles": [
+    {
+     "label": "熟練、靈巧",
+     "words": [
+      "adroit",
+      "proficient",
+      "deft"
+     ]
+    },
+    {
+     "label": "笨拙、無能",
+     "words": [
+      "maladroit",
+      "inept"
+     ]
+    }
+   ]
+  }
+ ],
+ "counts": {
+  "abet": 2,
+  "abound": 2,
+  "absolve": 1,
+  "absorbing": 3,
+  "abstruse": 16,
+  "accede": 0,
+  "accelerate": 3,
+  "accentuate": 5,
+  "accessible": 5,
+  "acclaim": 3,
+  "accord": 2,
+  "acerbic": 3,
+  "acknowledge": 9,
+  "acquiesce": 2,
+  "acumen": 13,
+  "acute": 2,
+  "adamant": 2,
+  "address": 2,
+  "adroit": 2,
+  "adventitious": 0,
+  "aesthetic": 5,
+  "affable": 3,
+  "affluent": 0,
+  "aggravate": 0,
+  "agitated": 0,
+  "alleviate": 3,
+  "altruism": 2,
+  "altruistic": 3,
+  "amalgamate": 0,
+  "ambiguity": 3,
+  "ambiguous": 10,
+  "ambivalent": 18,
+  "ameliorate": 4,
+  "amiable": 1,
+  "amplify": 4,
+  "anachronistic": 6,
+  "analogous": 2,
+  "anomalous": 6,
+  "anomaly": 13,
+  "anticipate": 17,
+  "antiquated": 3,
+  "antithesis": 2,
+  "apathetic": 6,
+  "apathy": 6,
+  "apocryphal": 2,
+  "appease": 13,
+  "apprehensive": 3,
+  "approbation": 2,
+  "apt": 3,
+  "arbitrary": 11,
+  "arcane": 5,
+  "archaic": 6,
+  "arduous": 3,
+  "articulate": 2,
+  "ascertain": 2,
+  "ascetic": 1,
+  "assiduous": 6,
+  "astute": 2,
+  "atypical": 3,
+  "audacious": 2,
+  "augment": 9,
+  "austere": 14,
+  "authentic": 2,
+  "averse": 0,
+  "avid": 0,
+  "avow": 0,
+  "baffle": 2,
+  "banal": 3,
+  "baroque": 2,
+  "baseless": 3,
+  "beguile": 2,
+  "belated": 0,
+  "belie": 7,
+  "belittle": 0,
+  "benevolent": 2,
+  "benighted": 0,
+  "benign": 7,
+  "bias": 6,
+  "blatant": 1,
+  "blithe": 2,
+  "blunt": 3,
+  "bolster": 7,
+  "braggart": 2,
+  "brash": 0,
+  "brevity": 2,
+  "buoyant": 0,
+  "buttress": 2,
+  "calculated": 2,
+  "callous": 0,
+  "candid": 3,
+  "caprice": 2,
+  "capricious": 15,
+  "captious": 2,
+  "captivating": 2,
+  "categorical": 1,
+  "cavalier": 2,
+  "cavil": 0,
+  "celebrated": 3,
+  "censure": 2,
+  "champion": 2,
+  "chimerical": 2,
+  "circuitous": 2,
+  "circumscribe": 5,
+  "circumspect": 16,
+  "circumvent": 11,
+  "clandestine": 3,
+  "clarify": 3,
+  "clarity": 4,
+  "cliché": 2,
+  "cloak": 2,
+  "coalesce": 2,
+  "cogent": 12,
+  "coherent": 1,
+  "comity": 2,
+  "commend": 3,
+  "commonplace": 3,
+  "compelling": 4,
+  "complacency": 3,
+  "complacent": 2,
+  "compliant": 2,
+  "comprehensive": 14,
+  "comprehensiveness": 3,
+  "compromise": 7,
+  "compulsory": 2,
+  "conceal": 3,
+  "concede": 3,
+  "conciliatory": 17,
+  "concise": 3,
+  "concision": 3,
+  "concrete": 3,
+  "concur": 0,
+  "condescending": 5,
+  "condone": 4,
+  "confine": 4,
+  "confound": 7,
+  "congruent": 0,
+  "conjectural": 12,
+  "conjecture": 3,
+  "conscientious": 2,
+  "consensus": 2,
+  "considered": 3,
+  "consonant": 0,
+  "conspicuous": 3,
+  "constrain": 5,
+  "contempt": 0,
+  "contentious": 7,
+  "contradict": 6,
+  "contradictory": 3,
+  "controversial": 15,
+  "conundrum": 2,
+  "conventional": 12,
+  "convoluted": 8,
+  "copious": 3,
+  "corroborate": 5,
+  "corrosive": 2,
+  "cosmopolitan": 3,
+  "countenance": 3,
+  "credulous": 2,
+  "culpable": 0,
+  "cunning": 2,
+  "cursory": 3,
+  "curtail": 2,
+  "cynical": 2,
+  "dampen": 2,
+  "daunting": 3,
+  "dearth": 5,
+  "debunk": 4,
+  "deceptive": 9,
+  "decry": 3,
+  "deferential": 4,
+  "definitive": 2,
+  "deflect": 2,
+  "deft": 1,
+  "defy": 4,
+  "degrade": 2,
+  "deleterious": 18,
+  "deliberate": 2,
+  "delineate": 5,
+  "demarcate": 2,
+  "demise": 2,
+  "demoralize": 2,
+  "demur": 2,
+  "denigrate": 3,
+  "deplore": 0,
+  "derivative": 9,
+  "despotic": 2,
+  "destitute": 0,
+  "deter": 2,
+  "devious": 2,
+  "didactic": 4,
+  "didacticism": 3,
+  "diffidence": 6,
+  "diffident": 10,
+  "diffuse": 5,
+  "dilatory": 3,
+  "diligent": 2,
+  "diminish": 6,
+  "disavow": 3,
+  "discern": 3,
+  "disclose": 2,
+  "discount": 4,
+  "discredit": 3,
+  "discretionary": 2,
+  "disdain": 2,
+  "dishearten": 1,
+  "disinclined": 2,
+  "disingenuous": 8,
+  "disinterested": 3,
+  "dismantle": 2,
+  "dismiss": 5,
+  "disparate": 4,
+  "dispassionate": 4,
+  "dispel": 4,
+  "disperse": 2,
+  "disposed": 2,
+  "disregard": 6,
+  "disseminate": 4,
+  "dissent": 0,
+  "dissipate": 0,
+  "dissolute": 0,
+  "distort": 3,
+  "divergent": 2,
+  "divert": 4,
+  "document": 4,
+  "dogged": 0,
+  "dogmatic": 20,
+  "dour": 0,
+  "downplay": 5,
+  "dubious": 8,
+  "duplicity": 3,
+  "dwindle": 2,
+  "ebb": 2,
+  "eclectic": 9,
+  "eclipse": 2,
+  "edify": 1,
+  "efficacious": 3,
+  "efficacy": 0,
+  "egalitarian": 3,
+  "eloquence": 2,
+  "eloquent": 1,
+  "elucidate": 3,
+  "elusive": 3,
+  "embrace": 3,
+  "eminence": 2,
+  "empirical": 4,
+  "emulate": 6,
+  "endorse": 7,
+  "enduring": 5,
+  "engaging": 4,
+  "engender": 3,
+  "enigmatic": 4,
+  "enterprising": 3,
+  "ephemeral": 8,
+  "equitable": 4,
+  "equivocal": 14,
+  "erratic": 2,
+  "erudite": 11,
+  "erudition": 2,
+  "escalate": 2,
+  "eschew": 2,
+  "esoteric": 6,
+  "espouse": 2,
+  "evade": 2,
+  "evasive": 3,
+  "exacerbate": 8,
+  "exacting": 5,
+  "exaggerate": 5,
+  "exalt": 2,
+  "exasperate": 1,
+  "excoriate": 4,
+  "exculpatory": 2,
+  "exhaustive": 4,
+  "exhilaration": 2,
+  "exonerate": 0,
+  "expedite": 5,
+  "explicable": 2,
+  "explicit": 1,
+  "extol": 1,
+  "extraneous": 5,
+  "extravagant": 1,
+  "exult": 1,
+  "fabricate": 2,
+  "facile": 2,
+  "facilitate": 6,
+  "fallacious": 2,
+  "fanciful": 3,
+  "fastidious": 15,
+  "fastidiousness": 3,
+  "feckless": 2,
+  "felicitous": 2,
+  "fervor": 3,
+  "fickle": 3,
+  "fidelity": 0,
+  "fleeting": 2,
+  "florid": 1,
+  "flout": 3,
+  "flux": 0,
+  "forbearance": 2,
+  "foreground": 2,
+  "forestall": 8,
+  "foretell": 2,
+  "forgo": 4,
+  "formidable": 2,
+  "formulaic": 2,
+  "forthright": 0,
+  "fortify": 0,
+  "fortuitous": 11,
+  "foster": 3,
+  "founder": 2,
+  "fragile": 1,
+  "fragment": 0,
+  "fragmentary": 0,
+  "frugal": 0,
+  "frugality": 3,
+  "fruitless": 1,
+  "functional": 3,
+  "fungible": 2,
+  "furtive": 2,
+  "futile": 2,
+  "galvanize": 3,
+  "garrulous": 3,
+  "genteel": 2,
+  "glib": 0,
+  "glut": 2,
+  "gravity": 0,
+  "gullible": 1,
+  "hackneyed": 10,
+  "halcyon": 1,
+  "hamper": 3,
+  "harbinger": 2,
+  "hasten": 0,
+  "heed": 1,
+  "heedless": 0,
+  "heterogeneous": 3,
+  "hidebound": 0,
+  "hinder": 2,
+  "histrionic": 2,
+  "homogeneity": 4,
+  "homogeneous": 0,
+  "hubris": 2,
+  "humility": 4,
+  "hyperbole": 1,
+  "hypocrisy": 2,
+  "iconoclast": 13,
+  "iconoclastic": 2,
+  "idealism": 4,
+  "idealistic": 3,
+  "idealize": 3,
+  "idiosyncratic": 1,
+  "illuminate": 6,
+  "illusory": 3,
+  "illustrious": 1,
+  "imminent": 3,
+  "immutable": 4,
+  "impair": 4,
+  "impartial": 2,
+  "impassioned": 2,
+  "impecunious": 2,
+  "imperious": 2,
+  "imperturbable": 2,
+  "implacable": 2,
+  "implausible": 6,
+  "improvident": 0,
+  "improvisation": 2,
+  "improvise": 3,
+  "imprudent": 3,
+  "impugn": 3,
+  "inarticulate": 1,
+  "inchoate": 13,
+  "incisive": 3,
+  "inconclusive": 3,
+  "incongruous": 3,
+  "inconsequential": 10,
+  "incontrovertible": 3,
+  "incriminate": 0,
+  "indeterminate": 2,
+  "indifferent": 7,
+  "indigent": 0,
+  "indiscernible": 2,
+  "indiscriminate": 4,
+  "indispensable": 3,
+  "indisputable": 2,
+  "indolence": 3,
+  "indolent": 4,
+  "induce": 2,
+  "indulgent": 0,
+  "ineffable": 0,
+  "inept": 1,
+  "inertia": 2,
+  "inevitable": 6,
+  "inexorable": 0,
+  "inexplicable": 5,
+  "inexpressible": 2,
+  "inflammatory": 2,
+  "inflexible": 3,
+  "ingenious": 5,
+  "ingenuity": 2,
+  "ingenuous": 5,
+  "innocuous": 8,
+  "inopportune": 1,
+  "insatiable": 2,
+  "insincere": 2,
+  "insipid": 2,
+  "insouciance": 2,
+  "insular": 5,
+  "intact": 0,
+  "intangible": 2,
+  "integral": 1,
+  "integrity": 3,
+  "intelligible": 2,
+  "intemperate": 0,
+  "interchangeable": 5,
+  "interdict": 0,
+  "interminable": 2,
+  "intractability": 3,
+  "intractable": 3,
+  "intransigent": 5,
+  "intrepid": 1,
+  "intricate": 5,
+  "intrigue": 6,
+  "invalidate": 3,
+  "invigorate": 2,
+  "involved": 4,
+  "irascible": 2,
+  "jejune": 4,
+  "jettison": 4,
+  "jovial": 2,
+  "judicious": 4,
+  "laconic": 21,
+  "lament": 3,
+  "laudable": 2,
+  "laudatory": 2,
+  "learned": 3,
+  "lethargic": 3,
+  "lionize": 2,
+  "loath": 2,
+  "long-standing": 2,
+  "loquacious": 3,
+  "lucid": 16,
+  "lucrative": 4,
+  "magnanimity": 2,
+  "magnanimous": 1,
+  "maladroit": 1,
+  "malign": 3,
+  "malignant": 2,
+  "malleable": 3,
+  "mandatory": 0,
+  "marginal": 3,
+  "maverick": 2,
+  "meager": 3,
+  "mediocrity": 2,
+  "mendacity": 4,
+  "mercenary": 3,
+  "methodical": 4,
+  "meticulous": 8,
+  "meticulousness": 3,
+  "mimic": 2,
+  "minuscule": 2,
+  "mirthful": 2,
+  "misconstrue": 2,
+  "miserly": 0,
+  "misrepresent": 4,
+  "mitigate": 16,
+  "mollify": 3,
+  "momentary": 2,
+  "momentous": 2,
+  "moribund": 1,
+  "morose": 0,
+  "multifaceted": 2,
+  "multifarious": 3,
+  "mundane": 9,
+  "munificent": 2,
+  "mutable": 0,
+  "myopic": 0,
+  "naiveté": 2,
+  "nebulous": 2,
+  "negate": 2,
+  "neglect": 6,
+  "negligent": 1,
+  "negligible": 2,
+  "neutralize": 3,
+  "nonchalance": 2,
+  "nostalgia": 3,
+  "novel": 4,
+  "novelty": 4,
+  "nullify": 2,
+  "nurture": 0,
+  "obdurate": 15,
+  "obfuscate": 2,
+  "objective": 5,
+  "objectivity": 6,
+  "obligatory": 0,
+  "oblivious": 0,
+  "obscure": 22,
+  "obsequious": 2,
+  "obtrusive": 2,
+  "obviate": 6,
+  "onerous": 5,
+  "opaque": 20,
+  "opprobrium": 3,
+  "opulent": 0,
+  "originality": 5,
+  "ornamental": 1,
+  "ornate": 2,
+  "orthodox": 4,
+  "outlandish": 2,
+  "overlook": 8,
+  "overshadow": 4,
+  "overstate": 2,
+  "overwrought": 1,
+  "palpable": 0,
+  "paltry": 2,
+  "paradigmatic": 2,
+  "paradox": 4,
+  "paradoxical": 5,
+  "paragon": 2,
+  "paramount": 0,
+  "parochial": 1,
+  "parsimonious": 2,
+  "partial": 2,
+  "partisan": 3,
+  "partisanship": 5,
+  "passivity": 2,
+  "paucity": 2,
+  "pedestrian": 7,
+  "pellucidity": 2,
+  "perfunctory": 1,
+  "peripheral": 2,
+  "perpetuate": 5,
+  "perplexing": 11,
+  "perspicuous": 2,
+  "peruse": 1,
+  "pervasive": 5,
+  "philistine": 2,
+  "pivotal": 0,
+  "placate": 2,
+  "placid": 2,
+  "plastic": 3,
+  "plausible": 5,
+  "polarize": 2,
+  "polemical": 3,
+  "portend": 2,
+  "potent": 0,
+  "pragmatic": 11,
+  "pragmatism": 2,
+  "precarious": 4,
+  "precipitate": 1,
+  "preclude": 7,
+  "predominant": 2,
+  "premature": 6,
+  "premise": 3,
+  "presage": 2,
+  "prescient": 5,
+  "presume": 3,
+  "presuppose": 3,
+  "pretense": 2,
+  "pretentious": 6,
+  "prevalent": 2,
+  "pristine": 3,
+  "probity": 4,
+  "prodigal": 0,
+  "prodigious": 1,
+  "proficient": 2,
+  "profligate": 2,
+  "profound": 2,
+  "profusion": 2,
+  "proliferate": 5,
+  "prolific": 3,
+  "prolix": 2,
+  "prolong": 2,
+  "promulgate": 1,
+  "propagate": 1,
+  "prophetic": 3,
+  "prosaic": 3,
+  "proscribe": 0,
+  "protean": 2,
+  "prototype": 3,
+  "protract": 1,
+  "provisional": 8,
+  "provocative": 6,
+  "prudent": 2,
+  "pugnacious": 2,
+  "punctiliousness": 2,
+  "qualify": 2,
+  "quash": 0,
+  "quixotic": 5,
+  "rapacious": 1,
+  "rationalize": 6,
+  "recapitulate": 3,
+  "rectitude": 1,
+  "redundant": 10,
+  "refinement": 2,
+  "refute": 2,
+  "rehabilitate": 2,
+  "rehash": 2,
+  "reiterate": 1,
+  "relinquish": 2,
+  "relish": 2,
+  "remedy": 3,
+  "renounce": 2,
+  "repetitious": 2,
+  "replicate": 4,
+  "reprehensible": 1,
+  "repudiate": 4,
+  "reserved": 2,
+  "resilience": 2,
+  "resilient": 1,
+  "resolute": 1,
+  "resolve": 5,
+  "restive": 2,
+  "restrain": 3,
+  "restraint": 2,
+  "resurgence": 3,
+  "reticent": 11,
+  "reverence": 2,
+  "revive": 2,
+  "rigid": 3,
+  "rigor": 2,
+  "rigorous": 3,
+  "robust": 4,
+  "rote": 3,
+  "rudimentary": 3,
+  "rue": 0,
+  "sacrosanct": 2,
+  "sagacious": 3,
+  "salutary": 2,
+  "sanctimonious": 2,
+  "sanguine": 9,
+  "savor": 0,
+  "scathing": 2,
+  "scorn": 0,
+  "scrupulous": 12,
+  "scrutinize": 1,
+  "sectarian": 2,
+  "seditious": 2,
+  "self-aggrandizing": 3,
+  "self-effacing": 3,
+  "self-perpetuating": 3,
+  "self-serving": 3,
+  "sensationalism": 2,
+  "serendipitous": 0,
+  "sham": 2,
+  "shrewd": 2,
+  "singular": 2,
+  "skeptical": 2,
+  "skepticism": 3,
+  "slight": 2,
+  "slipshod": 0,
+  "sluggish": 2,
+  "sober": 1,
+  "solicitous": 2,
+  "somber": 1,
+  "sophisticated": 4,
+  "sound": 3,
+  "sparse": 0,
+  "spartan": 2,
+  "specious": 17,
+  "speculative": 5,
+  "spontaneity": 3,
+  "spontaneous": 6,
+  "sporadic": 0,
+  "spur": 2,
+  "spurious": 3,
+  "stagnant": 2,
+  "stagnate": 3,
+  "static": 2,
+  "staunch": 0,
+  "steadfast": 0,
+  "stifle": 2,
+  "stingy": 1,
+  "stoicism": 2,
+  "stymie": 2,
+  "subjective": 6,
+  "substantiate": 1,
+  "subtle": 10,
+  "subversive": 2,
+  "subvert": 5,
+  "sully": 0,
+  "supercilious": 2,
+  "superficial": 7,
+  "superfluous": 4,
+  "supersede": 3,
+  "supplant": 2,
+  "suppress": 0,
+  "surfeit": 4,
+  "sycophantic": 3,
+  "synthesis": 2,
+  "taciturn": 4,
+  "tackle": 0,
+  "taint": 0,
+  "tangible": 0,
+  "tarnish": 0,
+  "taxing": 2,
+  "tedious": 4,
+  "temper": 2,
+  "temperate": 2,
+  "tenacious": 0,
+  "tenacity": 4,
+  "tendentious": 4,
+  "tentative": 1,
+  "tenuous": 10,
+  "tepid": 2,
+  "terse": 2,
+  "thrift": 2,
+  "thwart": 2,
+  "timely": 4,
+  "timidity": 3,
+  "torpor": 2,
+  "tractable": 1,
+  "tranquil": 2,
+  "transcend": 5,
+  "transient": 2,
+  "transitory": 3,
+  "transparency": 3,
+  "transparent": 4,
+  "trenchant": 13,
+  "trepidation": 3,
+  "trite": 2,
+  "trivial": 9,
+  "truculent": 2,
+  "tumultuous": 1,
+  "turbulent": 3,
+  "ubiquitous": 18,
+  "unambiguous": 2,
+  "unassailable": 2,
+  "unassuming": 3,
+  "uncritical": 2,
+  "undercut": 2,
+  "undermine": 21,
+  "underscore": 3,
+  "understated": 2,
+  "undetectable": 2,
+  "unequivocal": 1,
+  "unexceptional": 4,
+  "unfathomable": 3,
+  "unfeeling": 2,
+  "unfounded": 7,
+  "uniformity": 2,
+  "unimpeachable": 2,
+  "unintelligible": 2,
+  "unjustified": 2,
+  "unlettered": 0,
+  "unparalleled": 2,
+  "unprecedented": 5,
+  "unprincipled": 2,
+  "unqualified": 6,
+  "unremarkable": 3,
+  "unsophisticated": 4,
+  "untenable": 2,
+  "untested": 3,
+  "unwitting": 0,
+  "upheaval": 2,
+  "urbane": 2,
+  "utilitarian": 1,
+  "vacillate": 2,
+  "vacillation": 3,
+  "vacuous": 3,
+  "valid": 3,
+  "venal": 2,
+  "veneration": 2,
+  "veracious": 0,
+  "veracity": 1,
+  "verbatim": 0,
+  "verisimilitude": 2,
+  "vigilant": 0,
+  "vigorous": 3,
+  "vilify": 2,
+  "vindicate": 4,
+  "visionary": 3,
+  "vital": 2,
+  "vitiate": 2,
+  "vociferous": 2,
+  "volatile": 4,
+  "voluntary": 0,
+  "voracious": 4,
+  "warrant": 1,
+  "wary": 0,
+  "waver": 2,
+  "whimsical": 3,
+  "wide-ranging": 3,
+  "yield": 3,
+  "zealous": 2
+ }
+}

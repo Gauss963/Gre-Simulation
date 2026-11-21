@@ -121,6 +121,15 @@ private enum FlashcardDeckSize: Int, CaseIterable, Identifiable {
     }
 }
 
+/// Which words a flash-card deck draws from.
+private enum FlashcardWordSet: String, CaseIterable, Identifiable {
+    case allVocabulary
+    case answerChoices
+
+    var id: String { rawValue }
+    var title: String { self == .allVocabulary ? "All vocabulary" : "Answer-choice words" }
+}
+
 private enum FlashcardMode: String, CaseIterable, Identifiable {
     case deck
     case infinite
@@ -135,6 +144,9 @@ struct FlashcardStudyView: View {
     @StateObject private var progress = FlashcardProgressStore()
     @StateObject private var speech = VocabularySpeechController()
     @AppStorage("gre-simulation.flashcards.mode") private var studyMode: FlashcardMode = .deck
+    @AppStorage("gre-simulation.flashcards.wordSet") private var wordSet: FlashcardWordSet = .allVocabulary
+    @AppStorage("gre-simulation.flashcards.answerChoiceOrder") private var answerChoiceOrder: AnswerChoiceOrder = .groups
+    @State private var partOfSpeech: AnswerChoicePartOfSpeech = .all
     @State private var selectedSource = "All sources"
     @State private var deckSize: FlashcardDeckSize = .twenty
     @State private var unmasteredOnly = true
@@ -148,9 +160,15 @@ struct FlashcardStudyView: View {
     @State private var confirmReset = false
     @FocusState private var acceptsKeyboardInput: Bool
 
+    private var deckWords: [VocabularyWord] {
+        wordSet == .answerChoices ? AnswerChoiceWords.words : words
+    }
+
     private var eligibleWords: [VocabularyWord] {
-        words.filter { item in
-            let matchesSource = selectedSource == "All sources" || item.sources.contains(selectedSource)
+        deckWords.filter { item in
+            let matchesSource = wordSet == .answerChoices
+                ? partOfSpeech.matches(item)
+                : selectedSource == "All sources" || item.sources.contains(selectedSource)
             let skipsMastered = unmasteredOnly || studyMode == .infinite
             let matchesProgress = !skipsMastered || !progress.mastered.contains(item.id)
             return matchesSource && matchesProgress
@@ -163,7 +181,7 @@ struct FlashcardStudyView: View {
     }
 
     private var overallMasteredCount: Int {
-        words.lazy.filter { progress.mastered.contains($0.id) }.count
+        deckWords.lazy.filter { progress.mastered.contains($0.id) }.count
     }
 
     var body: some View {
@@ -208,6 +226,9 @@ struct FlashcardStudyView: View {
         .onAppear {
             if !hasStarted {
                 startNewDeck()
+                #if DEBUG
+                if ProcessInfo.processInfo.arguments.contains("-revealFlashcard") { isRevealed = true }
+                #endif
             }
             restoreKeyboardFocus()
         }
@@ -215,6 +236,9 @@ struct FlashcardStudyView: View {
             speech.stop()
         }
         .onChange(of: studyMode) { startNewDeck() }
+        .onChange(of: wordSet) { startNewDeck() }
+        .onChange(of: answerChoiceOrder) { startNewDeck() }
+        .onChange(of: partOfSpeech) { startNewDeck() }
         .confirmationDialog("Reset all flash-card progress?", isPresented: $confirmReset, titleVisibility: .visible) {
             Button("Reset mastery progress", role: .destructive) {
                 progress.reset()
@@ -254,12 +278,19 @@ struct FlashcardStudyView: View {
                 VStack(alignment: .leading, spacing: 12) { deckSettings }
             }
 
+            if wordSet == .answerChoices {
+                Text("\(AnswerChoiceWords.words.count) words that appear most often as Text Completion and Sentence Equivalence answer choices, with a few opposites added, sorted into \(AnswerChoiceWords.set.groups.count) meaning groups. The back of each card shows its group: near-synonyms and the opposite side.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
             HStack {
                 Label("\(eligibleWords.count) available", systemImage: "rectangle.stack")
                 Spacer()
                 Label("\(overallMasteredCount) mastered", systemImage: "checkmark.seal.fill")
                     .foregroundStyle(GRETheme.teal)
-                Button(studyMode == .infinite ? "Restart loop" : "New shuffled deck") { startNewDeck() }
+                Button(studyMode == .infinite ? "Restart loop" : wordSet == .answerChoices && answerChoiceOrder != .shuffled ? "New deck" : "New shuffled deck") { startNewDeck() }
                     .buttonStyle(SecondaryGREButtonStyle())
             }
             .font(.caption.weight(.semibold))
@@ -269,13 +300,36 @@ struct FlashcardStudyView: View {
 
     private var deckSettings: some View {
         Group {
-            Picker("Source", selection: $selectedSource) {
-                Text("All sources").tag("All sources")
-                ForEach(VocabularyBank.sourceOptions, id: \.self) { source in
-                    Text(source).tag(source)
+            Picker("Words", selection: $wordSet) {
+                ForEach(FlashcardWordSet.allCases) { set in
+                    Text(set.title).tag(set)
                 }
             }
             .pickerStyle(.menu)
+
+            if wordSet == .answerChoices {
+                Picker("Part of speech", selection: $partOfSpeech) {
+                    ForEach(AnswerChoicePartOfSpeech.allCases) { kind in
+                        Text(kind.title).tag(kind)
+                    }
+                }
+                .pickerStyle(.menu)
+
+                Picker("Order", selection: $answerChoiceOrder) {
+                    ForEach(AnswerChoiceOrder.allCases) { order in
+                        Text(order.title).tag(order)
+                    }
+                }
+                .pickerStyle(.menu)
+            } else {
+                Picker("Source", selection: $selectedSource) {
+                    Text("All sources").tag("All sources")
+                    ForEach(VocabularyBank.sourceOptions, id: \.self) { source in
+                        Text(source).tag(source)
+                    }
+                }
+                .pickerStyle(.menu)
+            }
 
             Picker("Mode", selection: $studyMode) {
                 ForEach(FlashcardMode.allCases) { mode in
@@ -368,11 +422,18 @@ struct FlashcardStudyView: View {
 
     private func cardFront(_ item: VocabularyWord) -> some View {
         VStack(spacing: 16) {
-            if item.isHighFrequency {
-                Label("High frequency", systemImage: "flame.fill")
-                    .font(.caption.bold())
-                    .foregroundStyle(GRETheme.warning)
+            HStack(spacing: 14) {
+                if item.isHighFrequency {
+                    Label("High frequency", systemImage: "flame.fill")
+                        .foregroundStyle(GRETheme.warning)
+                }
+                let choiceCount = AnswerChoiceWords.count(for: item)
+                if choiceCount > 0 {
+                    Label("In \(choiceCount) answer \(choiceCount == 1 ? "choice" : "choices")", systemImage: "list.bullet.circle.fill")
+                        .foregroundStyle(GRETheme.blue)
+                }
             }
+            .font(.caption.bold())
             Text(item.word)
                 .font(.system(size: 48, weight: .bold, design: .serif))
                 .multilineTextAlignment(.center)
@@ -423,6 +484,9 @@ struct FlashcardStudyView: View {
             definitionBlock("English definition", item.definition)
             if !item.chinese.isEmpty {
                 definitionBlock("Taiwan Traditional Chinese", item.chinese, color: GRETheme.teal)
+            }
+            if let placement = AnswerChoiceWords.group(for: item) {
+                AnswerChoiceGroupView(group: placement.group, pole: placement.pole, current: item)
             }
             if !item.synonyms.isEmpty {
                 definitionBlock("Synonyms", item.synonyms.joined(separator: " · "))
@@ -560,7 +624,7 @@ struct FlashcardStudyView: View {
         } description: {
             Text(unmasteredOnly || studyMode == .infinite
                  ? "Every matching card is mastered. Switch to a fixed deck with Unmastered only off, or reset mastery progress."
-                 : "Choose a different source to build a deck.")
+                 : wordSet == .answerChoices ? "Choose a different part of speech to build a deck." : "Choose a different source to build a deck.")
         }
         .frame(maxWidth: .infinity, minHeight: 340)
         .greCard()
@@ -621,7 +685,9 @@ struct FlashcardStudyView: View {
 
     private func startNewDeck() {
         speech.stop()
-        let shuffled = eligibleWords.shuffled()
+        let shuffled = wordSet == .answerChoices
+            ? AnswerChoiceWords.ordered(eligibleWords, by: answerChoiceOrder)
+            : eligibleWords.shuffled()
         let limit = deckSize.rawValue == 0 || studyMode == .infinite
             ? shuffled.count
             : min(deckSize.rawValue, shuffled.count)
@@ -637,7 +703,8 @@ struct FlashcardStudyView: View {
 
     private func reviewMissedCards() {
         speech.stop()
-        deck = words.filter { missedThisRound.contains($0.id) }.shuffled()
+        let missed = deckWords.filter { missedThisRound.contains($0.id) }
+        deck = wordSet == .answerChoices ? AnswerChoiceWords.ordered(missed, by: answerChoiceOrder) : missed.shuffled()
         infiniteTotal = 0
         currentIndex = 0
         isRevealed = false
@@ -651,5 +718,62 @@ struct FlashcardStudyView: View {
         DispatchQueue.main.async {
             acceptsKeyboardInput = true
         }
+    }
+}
+
+/// The back-of-card meaning group: the word's own side (near-synonyms) and, when there is one, the
+/// opposite side, each word with the first sense of its Chinese gloss.
+struct AnswerChoiceGroupView: View {
+    let group: AnswerChoiceGroup
+    let pole: Int
+    let current: VocabularyWord
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            HStack(spacing: 6) {
+                Text("Meaning group")
+                    .font(.caption.bold())
+                    .foregroundStyle(.secondary)
+                Text(group.title)
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(GRETheme.blue)
+            }
+            ForEach(sideOrder, id: \.self) { index in
+                let side = group.poles[index]
+                VStack(alignment: .leading, spacing: 3) {
+                    Text((index == pole ? "Same side · " : "Opposite · ") + side.label)
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(index == pole ? GRETheme.teal : GRETheme.warning)
+                    Text(memberList(side.words))
+                        .font(.callout)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+        }
+        .padding(10)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(GRETheme.blue.opacity(0.06), in: RoundedRectangle(cornerRadius: 8))
+    }
+
+    /// The card's own side first, then the opposite side.
+    private var sideOrder: [Int] {
+        [pole] + group.poles.indices.filter { $0 != pole }
+    }
+
+    private func memberList(_ members: [String]) -> AttributedString {
+        var result = AttributedString()
+        for (index, member) in members.enumerated() {
+            if index > 0 { result += AttributedString("  ·  ") }
+            var word = AttributedString(member)
+            word.font = .callout.bold()
+            if member.lowercased() == current.word.lowercased() { word.underlineStyle = .single }
+            result += word
+            if let entry = AnswerChoiceWords.entry(for: member) {
+                var gloss = AttributedString(" " + AnswerChoiceWords.shortGloss(entry))
+                gloss.foregroundColor = .secondary
+                result += gloss
+            }
+        }
+        return result
     }
 }

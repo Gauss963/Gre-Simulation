@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using GreSimulation.App.Controls;
 using GreSimulation.App.Services;
 using GreSimulation.Core;
 using Microsoft.UI.Input;
@@ -7,6 +8,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Automation;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.Documents;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
@@ -46,6 +48,9 @@ public sealed partial class VocabularyPage : Page
         InfiniteHintText.Text = FlashcardSession.InfiniteHint;
         FlashModeBox.ItemsSource = new List<string> { FlashcardMode.Deck.Title(), FlashcardMode.Infinite.Title() };
         DeckSizeBox.ItemsSource = FlashcardText.AllDeckSizes.Select(size => size.Title()).ToList();
+        FlashWordSetBox.ItemsSource = FlashcardText.AllWordSets.Select(set => set.Title()).ToList();
+        FlashPartOfSpeechBox.ItemsSource = AnswerChoiceText.AllPartsOfSpeech.Select(kind => kind.Title()).ToList();
+        FlashOrderBox.ItemsSource = AnswerChoiceText.AllOrders.Select(order => order.Title()).ToList();
         Loaded += OnLoaded;
     }
 
@@ -240,6 +245,15 @@ public sealed partial class VocabularyPage : Page
         {
             if (!Equals(FlashSourceBox.SelectedItem, cards.SelectedSource)) FlashSourceBox.SelectedItem = cards.SelectedSource;
             FlashModeBox.SelectedIndex = cards.StudyMode == FlashcardMode.Deck ? 0 : 1;
+            FlashWordSetBox.SelectedIndex = IndexOf(FlashcardText.AllWordSets, cards.WordSet);
+            FlashPartOfSpeechBox.SelectedIndex = IndexOf(AnswerChoiceText.AllPartsOfSpeech, cards.PartOfSpeech);
+            FlashOrderBox.SelectedIndex = IndexOf(AnswerChoiceText.AllOrders, cards.AnswerChoiceOrder);
+            var answerChoiceOptions = Show(cards.ShowsAnswerChoiceOptions);
+            FlashPartOfSpeechBox.Visibility = answerChoiceOptions;
+            FlashOrderBox.Visibility = answerChoiceOptions;
+            AnswerChoiceSummaryText.Visibility = answerChoiceOptions;
+            AnswerChoiceSummaryText.Text = cards.AnswerChoiceSummary;
+            FlashSourceBox.Visibility = Show(!cards.ShowsAnswerChoiceOptions);
             DeckSizeBox.SelectedIndex = IndexOf(FlashcardText.AllDeckSizes, cards.DeckSize);
             UnmasteredSwitch.IsOn = cards.UnmasteredOnly;
             var deckOptions = cards.ShowsDeckOptions ? Visibility.Visible : Visibility.Collapsed;
@@ -307,6 +321,10 @@ public sealed partial class VocabularyPage : Page
 
         // Front
         FrontHighFrequency.Visibility = Show(word.IsHighFrequency);
+        var answerChoices = session?.AnswerChoices;
+        var countText = answerChoices?.CountText(word);
+        FrontAnswerChoiceText.Text = countText ?? "";
+        FrontAnswerChoice.Visibility = Show(countText is not null);
         FrontWord.Text = word.Word;
         var detail = string.Join("  ", new[] { word.Pronunciation, word.PartOfSpeech ?? "" }.Where(part => part.Length > 0));
         FrontDetail.Text = detail;
@@ -320,6 +338,7 @@ public sealed partial class VocabularyPage : Page
         BackDefinition.Text = word.Definition;
         BackChinese.Text = word.Chinese;
         BackChineseBlock.Visibility = Show(word.Chinese.Length > 0);
+        ShowMeaningGroup(word, answerChoices);
         BackSynonyms.Text = string.Join(" · ", word.Synonyms);
         BackSynonymsBlock.Visibility = Show(word.Synonyms.Count > 0);
         BackExample.Text = word.Example;
@@ -333,6 +352,54 @@ public sealed partial class VocabularyPage : Page
         BackExampleSource.Visibility = Show(source.Length > 0 && !hasLink);
         BackSources.Text = string.Join(" · ", word.Sources);
         BackSources.Visibility = Show(word.Sources.Count > 0);
+    }
+
+    /// <summary>The meaningGroup block of the Mac card back: same side (near-synonyms) and the opposite side.</summary>
+    private void ShowMeaningGroup(VocabularyWord word, AnswerChoiceWords? answerChoices)
+    {
+        MeaningGroupPoles.Children.Clear();
+        if (answerChoices?.Group(word) is not { } placement)
+        {
+            MeaningGroupBlock.Visibility = Visibility.Collapsed;
+            return;
+        }
+        MeaningGroupBlock.Visibility = Visibility.Visible;
+        MeaningGroupTitle.Text = "  " + placement.Group.Title;
+        // The card's own side first, then the opposite side.
+        var sideOrder = new[] { placement.Pole }.Concat(Enumerable.Range(0, placement.Group.Poles.Count).Where(i => i != placement.Pole));
+        foreach (var index in sideOrder)
+        {
+            var side = placement.Group.Poles[index];
+            var isOwnSide = index == placement.Pole;
+            var panel = new StackPanel { Spacing = 3 };
+            panel.Children.Add(new TextBlock
+            {
+                Text = (isOwnSide ? "Same side · " : "Opposite · ") + side.Label,
+                FontSize = 12,
+                FontWeight = Microsoft.UI.Text.FontWeights.SemiBold,
+                TextWrapping = TextWrapping.Wrap,
+                Foreground = Palette.Brush(MeaningGroupBlock, isOwnSide ? Tone.Teal : Tone.Warning),
+            });
+            var members = new TextBlock { FontSize = 14, TextWrapping = TextWrapping.Wrap, IsTextSelectionEnabled = true };
+            for (var i = 0; i < side.Words.Count; i++)
+            {
+                var member = side.Words[i];
+                if (i > 0) members.Inlines.Add(new Run { Text = "  ·  " });
+                var name = new Run { Text = member, FontWeight = Microsoft.UI.Text.FontWeights.Bold };
+                if (string.Equals(member, word.Word, StringComparison.OrdinalIgnoreCase))
+                    members.Inlines.Add(new Underline { Inlines = { name } });
+                else
+                    members.Inlines.Add(name);
+                if (answerChoices.Entry(member) is { } entry)
+                    members.Inlines.Add(new Run
+                    {
+                        Text = " " + AnswerChoiceWords.ShortGloss(entry),
+                        Foreground = Palette.Brush(MeaningGroupBlock, Tone.Secondary),
+                    });
+            }
+            panel.Children.Add(members);
+            MeaningGroupPoles.Children.Add(panel);
+        }
     }
 
     private void UpdateListenButtons()
@@ -358,6 +425,29 @@ public sealed partial class VocabularyPage : Page
     {
         if (refreshing || session is null || FlashSourceBox.SelectedItem is not string source) return;
         session.SelectedSource = source;
+    }
+
+    private void OnFlashWordSetChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (refreshing || session is null || FlashWordSetBox.SelectedIndex < 0) return;
+        var set = FlashcardText.AllWordSets[FlashWordSetBox.SelectedIndex];
+        if (session.WordSet == set) return;
+        session.WordSet = set; // starts a new deck, like onChange(of: wordSet)
+        RestoreKeyboardFocus();
+    }
+
+    private void OnFlashPartOfSpeechChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (refreshing || session is null || FlashPartOfSpeechBox.SelectedIndex < 0) return;
+        session.PartOfSpeech = AnswerChoiceText.AllPartsOfSpeech[FlashPartOfSpeechBox.SelectedIndex];
+        RestoreKeyboardFocus();
+    }
+
+    private void OnFlashOrderChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (refreshing || session is null || FlashOrderBox.SelectedIndex < 0) return;
+        session.AnswerChoiceOrder = AnswerChoiceText.AllOrders[FlashOrderBox.SelectedIndex];
+        RestoreKeyboardFocus();
     }
 
     private void OnFlashModeChanged(object sender, SelectionChangedEventArgs e)

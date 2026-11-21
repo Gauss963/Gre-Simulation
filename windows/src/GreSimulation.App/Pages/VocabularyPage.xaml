@@ -163,8 +163,14 @@
                         </Grid>
 
                         <controls:WrapPanel HorizontalSpacing="14" VerticalSpacing="12">
+                            <ComboBox x:Name="FlashWordSetBox" Header="Words" MinWidth="190"
+                                      SelectionChanged="OnFlashWordSetChanged" />
                             <ComboBox x:Name="FlashSourceBox" Header="Source" MinWidth="200"
                                       SelectionChanged="OnFlashSourceChanged" />
+                            <ComboBox x:Name="FlashPartOfSpeechBox" Header="Part of speech" MinWidth="190"
+                                      SelectionChanged="OnFlashPartOfSpeechChanged" />
+                            <ComboBox x:Name="FlashOrderBox" Header="Order" MinWidth="210"
+                                      SelectionChanged="OnFlashOrderChanged" />
                             <ComboBox x:Name="FlashModeBox" Header="Mode" MinWidth="160"
                                       SelectionChanged="OnFlashModeChanged" />
                             <ComboBox x:Name="DeckSizeBox" Header="Deck size" MinWidth="140"
@@ -172,6 +178,9 @@
                             <ToggleSwitch x:Name="UnmasteredSwitch" Header="Unmastered only" MinWidth="0"
                                           Toggled="OnUnmasteredToggled" />
                         </controls:WrapPanel>
+
+                        <TextBlock x:Name="AnswerChoiceSummaryText" FontSize="12" TextWrapping="Wrap"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
 
                         <Grid ColumnSpacing="12">
                             <Grid.ColumnDefinitions>
@@ -231,10 +240,17 @@
                         <Grid>
                             <!-- Front -->
                             <StackPanel x:Name="CardFront" Spacing="16" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <StackPanel x:Name="FrontHighFrequency" Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center">
-                                    <FontIcon Glyph="&#xE945;" FontSize="12" Foreground="{ThemeResource WarningBrush}" />
-                                    <TextBlock Text="High frequency" FontSize="12" FontWeight="Bold"
-                                               Foreground="{ThemeResource WarningBrush}" />
+                                <StackPanel Orientation="Horizontal" Spacing="14" HorizontalAlignment="Center">
+                                    <StackPanel x:Name="FrontHighFrequency" Orientation="Horizontal" Spacing="5">
+                                        <FontIcon Glyph="&#xE945;" FontSize="12" Foreground="{ThemeResource WarningBrush}" />
+                                        <TextBlock Text="High frequency" FontSize="12" FontWeight="Bold"
+                                                   Foreground="{ThemeResource WarningBrush}" />
+                                    </StackPanel>
+                                    <StackPanel x:Name="FrontAnswerChoice" Orientation="Horizontal" Spacing="5">
+                                        <FontIcon Glyph="&#xE8FD;" FontSize="12" Foreground="{ThemeResource BlueBrush}" />
+                                        <TextBlock x:Name="FrontAnswerChoiceText" FontSize="12" FontWeight="Bold"
+                                                   Foreground="{ThemeResource BlueBrush}" />
+                                    </StackPanel>
                                 </StackPanel>
                                 <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Center">
                                     <TextBlock x:Name="FrontWord" FontFamily="Georgia" FontSize="48" FontWeight="Bold"
@@ -288,6 +304,19 @@
                                     <TextBlock x:Name="BackChinese" Style="{StaticResource DefinitionTextStyle}"
                                                Foreground="{ThemeResource TealBrush}" />
                                 </StackPanel>
+                                <!-- The card's meaning group: its own side and the opposite side. -->
+                                <Border x:Name="MeaningGroupBlock" CornerRadius="8" Padding="10"
+                                        Background="{ThemeResource SubtleFillColorSecondaryBrush}">
+                                    <StackPanel Spacing="6">
+                                        <TextBlock TextWrapping="Wrap">
+                                            <Run Text="Meaning group" FontSize="12" FontWeight="Bold"
+                                                 Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                            <Run x:Name="MeaningGroupTitle" FontSize="12" FontWeight="SemiBold"
+                                                 Foreground="{ThemeResource BlueBrush}" />
+                                        </TextBlock>
+                                        <StackPanel x:Name="MeaningGroupPoles" Spacing="6" />
+                                    </StackPanel>
+                                </Border>
                                 <StackPanel x:Name="BackSynonymsBlock" Spacing="4">
                                     <TextBlock Text="Synonyms" Style="{StaticResource CaptionHeadingStyle}" />
                                     <TextBlock x:Name="BackSynonyms" Style="{StaticResource DefinitionTextStyle}" />

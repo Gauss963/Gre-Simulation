@@ -1,0 +1,6169 @@
+[
+ {
+  "word": "laconic",
+  "count": 21,
+  "forms": [
+   "laconic"
+  ]
+ },
+ {
+  "word": "taciturn",
+  "count": 4,
+  "forms": [
+   "taciturn"
+  ]
+ },
+ {
+  "word": "reticent",
+  "count": 11,
+  "forms": [
+   "reticent"
+  ]
+ },
+ {
+  "word": "reserved",
+  "count": 2,
+  "forms": [
+   "reserved"
+  ]
+ },
+ {
+  "word": "garrulous",
+  "count": 3,
+  "forms": [
+   "garrulous"
+  ]
+ },
+ {
+  "word": "loquacious",
+  "count": 3,
+  "forms": [
+   "loquacious"
+  ]
+ },
+ {
+  "word": "vociferous",
+  "count": 2,
+  "forms": [
+   "vociferous"
+  ]
+ },
+ {
+  "word": "affable",
+  "count": 3,
+  "forms": [
+   "affable"
+  ]
+ },
+ {
+  "word": "amiable",
+  "count": 1,
+  "forms": [
+   "amiable"
+  ]
+ },
+ {
+  "word": "irascible",
+  "count": 2,
+  "forms": [
+   "irascible"
+  ]
+ },
+ {
+  "word": "truculent",
+  "count": 2,
+  "forms": [
+   "truculent"
+  ]
+ },
+ {
+  "word": "pugnacious",
+  "count": 2,
+  "forms": [
+   "pugnacious"
+  ]
+ },
+ {
+  "word": "humility",
+  "count": 4,
+  "forms": [
+   "humility"
+  ]
+ },
+ {
+  "word": "unassuming",
+  "count": 3,
+  "forms": [
+   "unassuming"
+  ]
+ },
+ {
+  "word": "self-effacing",
+  "count": 3,
+  "forms": [
+   "self-effacing"
+  ],
+  "pronunciation": "ˌsɛlf ɪˈfeɪsɪŋ",
+  "partOfSpeech": "adj.",
+  "definition": "modest; keeping oneself out of the spotlight",
+  "chinese": "謙遜低調的；不愛出風頭的",
+  "example": "Despite her fame, the self-effacing scientist credited her students for nearly every discovery."
+ },
+ {
+  "word": "hubris",
+  "count": 2,
+  "forms": [
+   "hubris"
+  ]
+ },
+ {
+  "word": "imperious",
+  "count": 2,
+  "forms": [
+   "imperious"
+  ]
+ },
+ {
+  "word": "supercilious",
+  "count": 2,
+  "forms": [
+   "supercilious"
+  ]
+ },
+ {
+  "word": "condescending",
+  "count": 5,
+  "forms": [
+   "condescending"
+  ]
+ },
+ {
+  "word": "pretentious",
+  "count": 6,
+  "forms": [
+   "pretentious"
+  ]
+ },
+ {
+  "word": "self-aggrandizing",
+  "count": 3,
+  "forms": [
+   "self-aggrandizing"
+  ],
+  "pronunciation": "ˌsɛlf əˈɡrændaɪzɪŋ",
+  "partOfSpeech": "adj.",
+  "definition": "acting to make oneself seem more important",
+  "chinese": "自我吹捧的；自我抬高的",
+  "example": "His self-aggrandizing memoir exaggerated his role in events he had barely witnessed."
+ },
+ {
+  "word": "braggart",
+  "count": 2,
+  "forms": [
+   "braggart"
+  ]
+ },
+ {
+  "word": "despotic",
+  "count": 2,
+  "forms": [
+   "despotic"
+  ]
+ },
+ {
+  "word": "diffident",
+  "count": 10,
+  "forms": [
+   "diffident"
+  ]
+ },
+ {
+  "word": "diffidence",
+  "count": 6,
+  "forms": [
+   "diffidence"
+  ],
+  "pronunciation": "ˈdɪfɪdəns",
+  "partOfSpeech": "n.",
+  "definition": "shyness resulting from a lack of self-confidence",
+  "chinese": "缺乏自信；羞怯；畏縮",
+  "example": "Her diffidence in seminars belied the boldness of her written arguments."
+ },
+ {
+  "word": "timidity",
+  "count": 3,
+  "forms": [
+   "timidity"
+  ],
+  "pronunciation": "tɪˈmɪdəti",
+  "partOfSpeech": "n.",
+  "definition": "lack of courage or confidence",
+  "chinese": "膽怯；羞怯",
+  "example": "The committee's timidity allowed a minor problem to grow into a crisis."
+ },
+ {
+  "word": "trepidation",
+  "count": 3,
+  "forms": [
+   "trepidation"
+  ]
+ },
+ {
+  "word": "apprehensive",
+  "count": 3,
+  "forms": [
+   "apprehensive"
+  ]
+ },
+ {
+  "word": "audacious",
+  "count": 2,
+  "forms": [
+   "audacious"
+  ]
+ },
+ {
+  "word": "intrepid",
+  "count": 1,
+  "forms": [
+   "intrepid"
+  ]
+ },
+ {
+  "word": "brash",
+  "count": 0,
+  "forms": [
+   "brash"
+  ]
+ },
+ {
+  "word": "sanguine",
+  "count": 9,
+  "forms": [
+   "sanguine"
+  ]
+ },
+ {
+  "word": "buoyant",
+  "count": 0,
+  "forms": [
+   "buoyant"
+  ]
+ },
+ {
+  "word": "morose",
+  "count": 0,
+  "forms": [
+   "morose"
+  ]
+ },
+ {
+  "word": "dour",
+  "count": 0,
+  "forms": [
+   "dour"
+  ]
+ },
+ {
+  "word": "quixotic",
+  "count": 5,
+  "forms": [
+   "quixotic"
+  ]
+ },
+ {
+  "word": "idealistic",
+  "count": 3,
+  "forms": [
+   "idealistic"
+  ],
+  "pronunciation": "aɪˌdiəˈlɪstɪk",
+  "partOfSpeech": "adj.",
+  "definition": "guided by ideals rather than practical concerns",
+  "chinese": "理想主義的；不切實際的",
+  "example": "The idealistic reformers underestimated how entrenched the old bureaucracy was."
+ },
+ {
+  "word": "idealism",
+  "count": 4,
+  "forms": [
+   "idealism"
+  ],
+  "pronunciation": "aɪˈdiəˌlɪzəm",
+  "partOfSpeech": "n.",
+  "definition": "the pursuit of high principles, often unrealistically",
+  "chinese": "理想主義",
+  "example": "Youthful idealism gave way to a wary pragmatism after years in government."
+ },
+ {
+  "word": "visionary",
+  "count": 3,
+  "forms": [
+   "visionary",
+   "visionaries"
+  ]
+ },
+ {
+  "word": "pragmatic",
+  "count": 11,
+  "forms": [
+   "pragmatic"
+  ]
+ },
+ {
+  "word": "pragmatism",
+  "count": 2,
+  "forms": [
+   "pragmatism"
+  ],
+  "pronunciation": "ˈpræɡməˌtɪzəm",
+  "partOfSpeech": "n.",
+  "definition": "a practical approach to problems",
+  "chinese": "務實主義；實用主義",
+  "example": "The mayor's pragmatism won over voters weary of ideological battles."
+ },
+ {
+  "word": "apathy",
+  "count": 6,
+  "forms": [
+   "apathy"
+  ]
+ },
+ {
+  "word": "apathetic",
+  "count": 6,
+  "forms": [
+   "apathetic"
+  ]
+ },
+ {
+  "word": "indifferent",
+  "count": 7,
+  "forms": [
+   "indifferent"
+  ]
+ },
+ {
+  "word": "nonchalance",
+  "count": 2,
+  "forms": [
+   "nonchalance"
+  ],
+  "pronunciation": "ˌnɑnʃəˈlɑns",
+  "partOfSpeech": "n.",
+  "definition": "a casual lack of concern",
+  "chinese": "漫不經心；若無其事；冷淡",
+  "example": "He received the alarming news with a nonchalance that unsettled his colleagues."
+ },
+ {
+  "word": "insouciance",
+  "count": 2,
+  "forms": [
+   "insouciance"
+  ]
+ },
+ {
+  "word": "tepid",
+  "count": 2,
+  "forms": [
+   "tepid"
+  ]
+ },
+ {
+  "word": "blithe",
+  "count": 2,
+  "forms": [
+   "blithe"
+  ]
+ },
+ {
+  "word": "fervor",
+  "count": 3,
+  "forms": [
+   "fervor"
+  ]
+ },
+ {
+  "word": "zealous",
+  "count": 2,
+  "forms": [
+   "zealous"
+  ]
+ },
+ {
+  "word": "impassioned",
+  "count": 2,
+  "forms": [
+   "impassioned"
+  ]
+ },
+ {
+  "word": "indolent",
+  "count": 4,
+  "forms": [
+   "indolent"
+  ]
+ },
+ {
+  "word": "indolence",
+  "count": 3,
+  "forms": [
+   "indolence"
+  ],
+  "pronunciation": "ˈɪndələns",
+  "partOfSpeech": "n.",
+  "definition": "habitual laziness",
+  "chinese": "懶惰；怠惰",
+  "example": "What critics called indolence was in fact a deliberate refusal to rush the work."
+ },
+ {
+  "word": "lethargic",
+  "count": 3,
+  "forms": [
+   "lethargic"
+  ]
+ },
+ {
+  "word": "sluggish",
+  "count": 2,
+  "forms": [
+   "sluggish"
+  ]
+ },
+ {
+  "word": "torpor",
+  "count": 2,
+  "forms": [
+   "torpor"
+  ]
+ },
+ {
+  "word": "inertia",
+  "count": 2,
+  "forms": [
+   "inertia"
+  ],
+  "pronunciation": "ɪˈnɝʃə",
+  "partOfSpeech": "n.",
+  "definition": "tendency to remain unchanged; lack of motivation to act",
+  "chinese": "慣性；惰性；遲滯不前",
+  "example": "Institutional inertia kept the outdated policy in place for decades."
+ },
+ {
+  "word": "passivity",
+  "count": 2,
+  "forms": [
+   "passivity"
+  ]
+ },
+ {
+  "word": "assiduous",
+  "count": 6,
+  "forms": [
+   "assiduous"
+  ]
+ },
+ {
+  "word": "diligent",
+  "count": 2,
+  "forms": [
+   "diligent"
+  ]
+ },
+ {
+  "word": "enterprising",
+  "count": 3,
+  "forms": [
+   "enterprising"
+  ],
+  "pronunciation": "ˈɛntərˌpraɪzɪŋ",
+  "partOfSpeech": "adj.",
+  "definition": "showing initiative and resourcefulness",
+  "chinese": "有進取心的；有創業精神的",
+  "example": "An enterprising graduate student turned the abandoned lab into a thriving workshop."
+ },
+ {
+  "word": "vigorous",
+  "count": 3,
+  "forms": [
+   "vigorous"
+  ]
+ },
+ {
+  "word": "complacency",
+  "count": 3,
+  "forms": [
+   "complacency"
+  ]
+ },
+ {
+  "word": "complacent",
+  "count": 2,
+  "forms": [
+   "complacent"
+  ]
+ },
+ {
+  "word": "vigilant",
+  "count": 0,
+  "forms": [
+   "vigilant"
+  ]
+ },
+ {
+  "word": "wary",
+  "count": 0,
+  "forms": [
+   "wary"
+  ]
+ },
+ {
+  "word": "imperturbable",
+  "count": 2,
+  "forms": [
+   "imperturbable"
+  ]
+ },
+ {
+  "word": "placid",
+  "count": 2,
+  "forms": [
+   "placid"
+  ]
+ },
+ {
+  "word": "stoicism",
+  "count": 2,
+  "forms": [
+   "stoicism"
+  ]
+ },
+ {
+  "word": "restive",
+  "count": 2,
+  "forms": [
+   "restive"
+  ]
+ },
+ {
+  "word": "agitated",
+  "count": 0,
+  "forms": [
+   "agitated"
+  ]
+ },
+ {
+  "word": "overwrought",
+  "count": 1,
+  "forms": [
+   "overwrought"
+  ]
+ },
+ {
+  "word": "mirthful",
+  "count": 2,
+  "forms": [
+   "mirthful"
+  ]
+ },
+ {
+  "word": "jovial",
+  "count": 2,
+  "forms": [
+   "jovial"
+  ]
+ },
+ {
+  "word": "exhilaration",
+  "count": 2,
+  "forms": [
+   "exhilaration"
+  ]
+ },
+ {
+  "word": "somber",
+  "count": 1,
+  "forms": [
+   "somber"
+  ]
+ },
+ {
+  "word": "gravity",
+  "count": 0,
+  "forms": [
+   "gravity"
+  ]
+ },
+ {
+  "word": "meticulous",
+  "count": 8,
+  "forms": [
+   "meticulous"
+  ]
+ },
+ {
+  "word": "meticulousness",
+  "count": 3,
+  "forms": [
+   "meticulousness"
+  ],
+  "pronunciation": "məˈtɪkjələsnəs",
+  "partOfSpeech": "n.",
+  "definition": "extreme care about details",
+  "chinese": "一絲不苟；極度細心",
+  "example": "The meticulousness of her footnotes left reviewers little to dispute."
+ },
+ {
+  "word": "scrupulous",
+  "count": 12,
+  "forms": [
+   "scrupulous"
+  ]
+ },
+ {
+  "word": "fastidious",
+  "count": 15,
+  "forms": [
+   "fastidious"
+  ]
+ },
+ {
+  "word": "fastidiousness",
+  "count": 3,
+  "forms": [
+   "fastidiousness"
+  ],
+  "pronunciation": "fæˈstɪdiəsnəs",
+  "partOfSpeech": "n.",
+  "definition": "excessive concern about accuracy or cleanliness",
+  "chinese": "挑剔；過分講究",
+  "example": "His fastidiousness about wording delayed the report by weeks."
+ },
+ {
+  "word": "punctiliousness",
+  "count": 2,
+  "forms": [
+   "punctiliousness"
+  ],
+  "pronunciation": "pʌŋkˈtɪliəsnəs",
+  "partOfSpeech": "n.",
+  "definition": "strict attention to detail or correct behavior",
+  "chinese": "拘泥細節；一絲不苟",
+  "example": "The diplomat's punctiliousness about protocol was legendary."
+ },
+ {
+  "word": "conscientious",
+  "count": 2,
+  "forms": [
+   "conscientious"
+  ]
+ },
+ {
+  "word": "rigorous",
+  "count": 3,
+  "forms": [
+   "rigorous"
+  ]
+ },
+ {
+  "word": "rigor",
+  "count": 2,
+  "forms": [
+   "rigor"
+  ]
+ },
+ {
+  "word": "perfunctory",
+  "count": 1,
+  "forms": [
+   "perfunctory"
+  ]
+ },
+ {
+  "word": "slipshod",
+  "count": 0,
+  "forms": [
+   "slipshod"
+  ]
+ },
+ {
+  "word": "negligent",
+  "count": 1,
+  "forms": [
+   "negligent"
+  ]
+ },
+ {
+  "word": "circumspect",
+  "count": 16,
+  "forms": [
+   "circumspect"
+  ]
+ },
+ {
+  "word": "prudent",
+  "count": 2,
+  "forms": [
+   "prudent"
+  ]
+ },
+ {
+  "word": "judicious",
+  "count": 4,
+  "forms": [
+   "judicious"
+  ]
+ },
+ {
+  "word": "imprudent",
+  "count": 3,
+  "forms": [
+   "imprudent"
+  ]
+ },
+ {
+  "word": "cavalier",
+  "count": 2,
+  "forms": [
+   "cavalier"
+  ]
+ },
+ {
+  "word": "feckless",
+  "count": 2,
+  "forms": [
+   "feckless"
+  ]
+ },
+ {
+  "word": "spontaneous",
+  "count": 6,
+  "forms": [
+   "spontaneous"
+  ]
+ },
+ {
+  "word": "spontaneity",
+  "count": 3,
+  "forms": [
+   "spontaneity"
+  ],
+  "pronunciation": "ˌspɑntəˈneɪəti",
+  "partOfSpeech": "n.",
+  "definition": "acting naturally without planning",
+  "chinese": "自發性；隨性；自然流露",
+  "example": "The rehearsed speech lacked the spontaneity of her earlier remarks."
+ },
+ {
+  "word": "improvise",
+  "count": 3,
+  "forms": [
+   "improvise",
+   "improvised",
+   "improvising"
+  ]
+ },
+ {
+  "word": "improvisation",
+  "count": 2,
+  "forms": [
+   "improvisation"
+  ],
+  "pronunciation": "ɪmˌprɑvəˈzeɪʃən",
+  "partOfSpeech": "n.",
+  "definition": "creating or performing without preparation",
+  "chinese": "即興創作；即興表演；臨時拼湊",
+  "example": "The jazz trio's improvisation made each performance unique."
+ },
+ {
+  "word": "arbitrary",
+  "count": 11,
+  "forms": [
+   "arbitrary"
+  ]
+ },
+ {
+  "word": "indiscriminate",
+  "count": 4,
+  "forms": [
+   "indiscriminate"
+  ]
+ },
+ {
+  "word": "deliberate",
+  "count": 2,
+  "forms": [
+   "deliberate"
+  ]
+ },
+ {
+  "word": "calculated",
+  "count": 2,
+  "forms": [
+   "calculated"
+  ]
+ },
+ {
+  "word": "considered",
+  "count": 3,
+  "forms": [
+   "considered"
+  ],
+  "pronunciation": "kənˈsɪdərd",
+  "partOfSpeech": "adj.",
+  "definition": "carefully thought out",
+  "chinese": "經過深思熟慮的；慎重的",
+  "example": "Her considered judgment carried more weight than his hasty objections."
+ },
+ {
+  "word": "methodical",
+  "count": 4,
+  "forms": [
+   "methodical"
+  ]
+ },
+ {
+  "word": "acumen",
+  "count": 13,
+  "forms": [
+   "acumen"
+  ]
+ },
+ {
+  "word": "astute",
+  "count": 2,
+  "forms": [
+   "astute"
+  ]
+ },
+ {
+  "word": "shrewd",
+  "count": 2,
+  "forms": [
+   "shrewd"
+  ]
+ },
+ {
+  "word": "sagacious",
+  "count": 3,
+  "forms": [
+   "sagacious"
+  ]
+ },
+ {
+  "word": "ingenuous",
+  "count": 5,
+  "forms": [
+   "ingenuous"
+  ]
+ },
+ {
+  "word": "naiveté",
+  "count": 2,
+  "forms": [
+   "naiveté"
+  ],
+  "pronunciation": "ˌnaɪivˈteɪ",
+  "partOfSpeech": "n.",
+  "definition": "lack of experience or sophistication",
+  "chinese": "天真；幼稚；缺乏經驗",
+  "example": "The novelist mocks the naiveté of travelers who expect every village to be quaint."
+ },
+ {
+  "word": "skeptical",
+  "count": 2,
+  "forms": [
+   "skeptical"
+  ],
+  "pronunciation": "ˈskɛptɪkəl",
+  "partOfSpeech": "adj.",
+  "definition": "inclined to doubt",
+  "chinese": "懷疑的；不輕信的",
+  "example": "Reviewers were skeptical of claims that the drug had no side effects."
+ },
+ {
+  "word": "skepticism",
+  "count": 3,
+  "forms": [
+   "skepticism"
+  ],
+  "pronunciation": "ˈskɛptɪˌsɪzəm",
+  "partOfSpeech": "n.",
+  "definition": "a doubting attitude",
+  "chinese": "懷疑態度；懷疑論",
+  "example": "Healthy skepticism kept the team from accepting the first plausible explanation."
+ },
+ {
+  "word": "cynical",
+  "count": 2,
+  "forms": [
+   "cynical"
+  ]
+ },
+ {
+  "word": "credulous",
+  "count": 2,
+  "forms": [
+   "credulous"
+  ]
+ },
+ {
+  "word": "uncritical",
+  "count": 2,
+  "forms": [
+   "uncritical"
+  ],
+  "pronunciation": "ʌnˈkrɪtɪkəl",
+  "partOfSpeech": "adj.",
+  "definition": "accepting without judgment or analysis",
+  "chinese": "不加批判的；盲目接受的",
+  "example": "The biography offers an uncritical portrait that ignores its subject's failures."
+ },
+ {
+  "word": "gullible",
+  "count": 1,
+  "forms": [
+   "gullible"
+  ]
+ },
+ {
+  "word": "cosmopolitan",
+  "count": 3,
+  "forms": [
+   "cosmopolitan"
+  ]
+ },
+ {
+  "word": "urbane",
+  "count": 2,
+  "forms": [
+   "urbane"
+  ]
+ },
+ {
+  "word": "genteel",
+  "count": 2,
+  "forms": [
+   "genteel"
+  ]
+ },
+ {
+  "word": "insular",
+  "count": 5,
+  "forms": [
+   "insular"
+  ]
+ },
+ {
+  "word": "philistine",
+  "count": 2,
+  "forms": [
+   "philistine"
+  ]
+ },
+ {
+  "word": "parochial",
+  "count": 1,
+  "forms": [
+   "parochial"
+  ]
+ },
+ {
+  "word": "candid",
+  "count": 3,
+  "forms": [
+   "candid"
+  ]
+ },
+ {
+  "word": "blunt",
+  "count": 3,
+  "forms": [
+   "blunt",
+   "blunted"
+  ]
+ },
+ {
+  "word": "forthright",
+  "count": 0,
+  "forms": [
+   "forthright"
+  ]
+ },
+ {
+  "word": "disingenuous",
+  "count": 8,
+  "forms": [
+   "disingenuous"
+  ]
+ },
+ {
+  "word": "insincere",
+  "count": 2,
+  "forms": [
+   "insincere"
+  ]
+ },
+ {
+  "word": "hypocrisy",
+  "count": 2,
+  "forms": [
+   "hypocrisy"
+  ]
+ },
+ {
+  "word": "duplicity",
+  "count": 3,
+  "forms": [
+   "duplicity"
+  ]
+ },
+ {
+  "word": "sanctimonious",
+  "count": 2,
+  "forms": [
+   "sanctimonious"
+  ]
+ },
+ {
+  "word": "pretense",
+  "count": 2,
+  "forms": [
+   "pretense"
+  ]
+ },
+ {
+  "word": "veracity",
+  "count": 1,
+  "forms": [
+   "veracity"
+  ]
+ },
+ {
+  "word": "veracious",
+  "count": 0,
+  "forms": [
+   "veracious"
+  ]
+ },
+ {
+  "word": "mendacity",
+  "count": 4,
+  "forms": [
+   "mendacity"
+  ]
+ },
+ {
+  "word": "deceptive",
+  "count": 9,
+  "forms": [
+   "deceptive"
+  ],
+  "pronunciation": "dɪˈsɛptɪv",
+  "partOfSpeech": "adj.",
+  "definition": "giving a false impression",
+  "chinese": "欺騙性的；誤導的；虛有其表的",
+  "example": "The apparent simplicity of the poem is deceptive."
+ },
+ {
+  "word": "devious",
+  "count": 2,
+  "forms": [
+   "devious"
+  ]
+ },
+ {
+  "word": "cunning",
+  "count": 2,
+  "forms": [
+   "cunning"
+  ]
+ },
+ {
+  "word": "beguile",
+  "count": 2,
+  "forms": [
+   "beguile",
+   "beguiled"
+  ]
+ },
+ {
+  "word": "probity",
+  "count": 4,
+  "forms": [
+   "probity"
+  ]
+ },
+ {
+  "word": "integrity",
+  "count": 3,
+  "forms": [
+   "integrity"
+  ]
+ },
+ {
+  "word": "rectitude",
+  "count": 1,
+  "forms": [
+   "rectitude"
+  ]
+ },
+ {
+  "word": "venal",
+  "count": 2,
+  "forms": [
+   "venal"
+  ]
+ },
+ {
+  "word": "mercenary",
+  "count": 3,
+  "forms": [
+   "mercenary"
+  ]
+ },
+ {
+  "word": "unprincipled",
+  "count": 2,
+  "forms": [
+   "unprincipled"
+  ],
+  "pronunciation": "ʌnˈprɪnsəpəld",
+  "partOfSpeech": "adj.",
+  "definition": "lacking moral principles",
+  "chinese": "無原則的；不道德的",
+  "example": "The unprincipled lobbyist switched sides whenever it paid to do so."
+ },
+ {
+  "word": "altruism",
+  "count": 2,
+  "forms": [
+   "altruism"
+  ]
+ },
+ {
+  "word": "altruistic",
+  "count": 3,
+  "forms": [
+   "altruistic"
+  ],
+  "pronunciation": "ˌæltruˈɪstɪk",
+  "partOfSpeech": "adj.",
+  "definition": "unselfishly concerned for others",
+  "chinese": "利他的；無私的",
+  "example": "Some biologists ask whether seemingly altruistic behavior in animals is truly selfless."
+ },
+ {
+  "word": "benevolent",
+  "count": 2,
+  "forms": [
+   "benevolent"
+  ]
+ },
+ {
+  "word": "solicitous",
+  "count": 2,
+  "forms": [
+   "solicitous"
+  ]
+ },
+ {
+  "word": "self-serving",
+  "count": 3,
+  "forms": [
+   "self-serving"
+  ],
+  "pronunciation": "ˌsɛlfˈsɝvɪŋ",
+  "partOfSpeech": "adj.",
+  "definition": "serving one's own interests",
+  "chinese": "自私自利的；只為自己打算的",
+  "example": "The executive's apology seemed self-serving rather than sincere."
+ },
+ {
+  "word": "unfeeling",
+  "count": 2,
+  "forms": [
+   "unfeeling"
+  ],
+  "pronunciation": "ʌnˈfilɪŋ",
+  "partOfSpeech": "adj.",
+  "definition": "lacking sympathy",
+  "chinese": "冷酷無情的；麻木不仁的",
+  "example": "The report's unfeeling tone angered the families it described."
+ },
+ {
+  "word": "callous",
+  "count": 0,
+  "forms": [
+   "callous"
+  ]
+ },
+ {
+  "word": "voracious",
+  "count": 4,
+  "forms": [
+   "voracious"
+  ]
+ },
+ {
+  "word": "insatiable",
+  "count": 2,
+  "forms": [
+   "insatiable"
+  ]
+ },
+ {
+  "word": "rapacious",
+  "count": 1,
+  "forms": [
+   "rapacious"
+  ]
+ },
+ {
+  "word": "munificent",
+  "count": 2,
+  "forms": [
+   "munificent"
+  ]
+ },
+ {
+  "word": "magnanimity",
+  "count": 2,
+  "forms": [
+   "magnanimity"
+  ],
+  "pronunciation": "ˌmæɡnəˈnɪməti",
+  "partOfSpeech": "n.",
+  "definition": "generosity, especially toward a rival",
+  "chinese": "寬宏大量；慷慨",
+  "example": "In victory she showed a magnanimity her opponents had not expected."
+ },
+ {
+  "word": "magnanimous",
+  "count": 1,
+  "forms": [
+   "magnanimous"
+  ]
+ },
+ {
+  "word": "parsimonious",
+  "count": 2,
+  "forms": [
+   "parsimonious"
+  ]
+ },
+ {
+  "word": "stingy",
+  "count": 1,
+  "forms": [
+   "stingy"
+  ]
+ },
+ {
+  "word": "miserly",
+  "count": 0,
+  "forms": [
+   "miserly"
+  ]
+ },
+ {
+  "word": "frugality",
+  "count": 3,
+  "forms": [
+   "frugality",
+   "frugalities"
+  ],
+  "pronunciation": "fruˈɡæləti",
+  "partOfSpeech": "n.",
+  "definition": "careful economy in spending",
+  "chinese": "節儉；儉樸",
+  "example": "The founder's frugality was evident in the company's spartan offices."
+ },
+ {
+  "word": "thrift",
+  "count": 2,
+  "forms": [
+   "thrift"
+  ],
+  "pronunciation": "θrɪft",
+  "partOfSpeech": "n.",
+  "definition": "careful management of money",
+  "chinese": "節儉；節約",
+  "example": "Generations of thrift allowed the family to survive the recession."
+ },
+ {
+  "word": "frugal",
+  "count": 0,
+  "forms": [
+   "frugal"
+  ]
+ },
+ {
+  "word": "profligate",
+  "count": 2,
+  "forms": [
+   "profligate"
+  ]
+ },
+ {
+  "word": "extravagant",
+  "count": 1,
+  "forms": [
+   "extravagant"
+  ]
+ },
+ {
+  "word": "prodigal",
+  "count": 0,
+  "forms": [
+   "prodigal"
+  ]
+ },
+ {
+  "word": "temperate",
+  "count": 2,
+  "forms": [
+   "temperate"
+  ]
+ },
+ {
+  "word": "forbearance",
+  "count": 2,
+  "forms": [
+   "forbearance"
+  ]
+ },
+ {
+  "word": "restrain",
+  "count": 3,
+  "forms": [
+   "restrain",
+   "restrained"
+  ]
+ },
+ {
+  "word": "temper",
+  "count": 2,
+  "forms": [
+   "temper",
+   "tempered",
+   "tempers"
+  ]
+ },
+ {
+  "word": "intemperate",
+  "count": 0,
+  "forms": [
+   "intemperate"
+  ]
+ },
+ {
+  "word": "indulgent",
+  "count": 0,
+  "forms": [
+   "indulgent"
+  ]
+ },
+ {
+  "word": "dissolute",
+  "count": 0,
+  "forms": [
+   "dissolute"
+  ]
+ },
+ {
+  "word": "compliant",
+  "count": 2,
+  "forms": [
+   "compliant"
+  ]
+ },
+ {
+  "word": "deferential",
+  "count": 4,
+  "forms": [
+   "deferential"
+  ],
+  "pronunciation": "ˌdɛfəˈrɛnʃəl",
+  "partOfSpeech": "adj.",
+  "definition": "showing respectful submission",
+  "chinese": "恭敬的；順從的",
+  "example": "The junior researchers were deferential to the point of never questioning her methods."
+ },
+ {
+  "word": "obsequious",
+  "count": 2,
+  "forms": [
+   "obsequious"
+  ]
+ },
+ {
+  "word": "sycophantic",
+  "count": 3,
+  "forms": [
+   "sycophantic"
+  ],
+  "pronunciation": "ˌsɪkəˈfæntɪk",
+  "partOfSpeech": "adj.",
+  "definition": "excessively flattering to gain favor",
+  "chinese": "諂媚的；阿諛奉承的",
+  "example": "The sycophantic aides told the minister only what he wished to hear."
+ },
+ {
+  "word": "defy",
+  "count": 4,
+  "forms": [
+   "defy",
+   "defied",
+   "defies",
+   "defying"
+  ]
+ },
+ {
+  "word": "flout",
+  "count": 3,
+  "forms": [
+   "flout"
+  ]
+ },
+ {
+  "word": "seditious",
+  "count": 2,
+  "forms": [
+   "seditious"
+  ]
+ },
+ {
+  "word": "subversive",
+  "count": 2,
+  "forms": [
+   "subversive"
+  ]
+ },
+ {
+  "word": "obdurate",
+  "count": 15,
+  "forms": [
+   "obdurate"
+  ]
+ },
+ {
+  "word": "intransigent",
+  "count": 5,
+  "forms": [
+   "intransigent"
+  ]
+ },
+ {
+  "word": "adamant",
+  "count": 2,
+  "forms": [
+   "adamant"
+  ]
+ },
+ {
+  "word": "implacable",
+  "count": 2,
+  "forms": [
+   "implacable"
+  ]
+ },
+ {
+  "word": "conciliatory",
+  "count": 17,
+  "forms": [
+   "conciliatory"
+  ]
+ },
+ {
+  "word": "compromise",
+  "count": 7,
+  "forms": [
+   "compromise",
+   "compromised",
+   "compromises"
+  ]
+ },
+ {
+  "word": "yield",
+  "count": 3,
+  "forms": [
+   "yield"
+  ],
+  "pronunciation": "jild",
+  "partOfSpeech": "v./n.",
+  "definition": "v. to give way or surrender; to produce; n. amount produced",
+  "chinese": "v. 讓步；屈服；產生；n. 產量；收益",
+  "example": "The negotiators refused to yield on any point of substance."
+ },
+ {
+  "word": "acquiesce",
+  "count": 2,
+  "forms": [
+   "acquiesce",
+   "acquiesced"
+  ]
+ },
+ {
+  "word": "accede",
+  "count": 0,
+  "forms": [
+   "accede"
+  ]
+ },
+ {
+  "word": "concur",
+  "count": 0,
+  "forms": [
+   "concur"
+  ]
+ },
+ {
+  "word": "demur",
+  "count": 2,
+  "forms": [
+   "demur",
+   "demurred"
+  ]
+ },
+ {
+  "word": "dissent",
+  "count": 0,
+  "forms": [
+   "dissent"
+  ]
+ },
+ {
+  "word": "cavil",
+  "count": 0,
+  "forms": [
+   "cavil"
+  ]
+ },
+ {
+  "word": "appease",
+  "count": 13,
+  "forms": [
+   "appease"
+  ]
+ },
+ {
+  "word": "placate",
+  "count": 2,
+  "forms": [
+   "placate",
+   "placating"
+  ]
+ },
+ {
+  "word": "mollify",
+  "count": 3,
+  "forms": [
+   "mollify",
+   "mollified",
+   "mollifying"
+  ]
+ },
+ {
+  "word": "provocative",
+  "count": 6,
+  "forms": [
+   "provocative"
+  ]
+ },
+ {
+  "word": "inflammatory",
+  "count": 2,
+  "forms": [
+   "inflammatory"
+  ]
+ },
+ {
+  "word": "exasperate",
+  "count": 1,
+  "forms": [
+   "exasperate",
+   "exasperates"
+  ]
+ },
+ {
+  "word": "disinclined",
+  "count": 2,
+  "forms": [
+   "disinclined"
+  ]
+ },
+ {
+  "word": "loath",
+  "count": 2,
+  "forms": [
+   "loath"
+  ]
+ },
+ {
+  "word": "averse",
+  "count": 0,
+  "forms": [
+   "averse"
+  ]
+ },
+ {
+  "word": "disposed",
+  "count": 2,
+  "forms": [
+   "disposed"
+  ],
+  "pronunciation": "dɪˈspoʊzd",
+  "partOfSpeech": "adj.",
+  "definition": "inclined or willing",
+  "chinese": "傾向於…的；願意的",
+  "example": "Few voters were disposed to trust a candidate who had changed positions so often."
+ },
+ {
+  "word": "avid",
+  "count": 0,
+  "forms": [
+   "avid"
+  ]
+ },
+ {
+  "word": "impartial",
+  "count": 2,
+  "forms": [
+   "impartial"
+  ]
+ },
+ {
+  "word": "disinterested",
+  "count": 3,
+  "forms": [
+   "disinterested"
+  ]
+ },
+ {
+  "word": "equitable",
+  "count": 4,
+  "forms": [
+   "equitable"
+  ]
+ },
+ {
+  "word": "egalitarian",
+  "count": 3,
+  "forms": [
+   "egalitarian"
+  ]
+ },
+ {
+  "word": "bias",
+  "count": 6,
+  "forms": [
+   "bias",
+   "biased"
+  ]
+ },
+ {
+  "word": "partisan",
+  "count": 3,
+  "forms": [
+   "partisan"
+  ]
+ },
+ {
+  "word": "partisanship",
+  "count": 5,
+  "forms": [
+   "partisanship"
+  ],
+  "pronunciation": "ˈpɑrtəzənˌʃɪp",
+  "partOfSpeech": "n.",
+  "definition": "strong, often biased support for a party",
+  "chinese": "黨派偏見；黨派之爭",
+  "example": "Bitter partisanship stalled even uncontroversial legislation."
+ },
+ {
+  "word": "tendentious",
+  "count": 4,
+  "forms": [
+   "tendentious"
+  ]
+ },
+ {
+  "word": "sectarian",
+  "count": 2,
+  "forms": [
+   "sectarian"
+  ]
+ },
+ {
+  "word": "objective",
+  "count": 5,
+  "forms": [
+   "objective"
+  ]
+ },
+ {
+  "word": "objectivity",
+  "count": 6,
+  "forms": [
+   "objectivity"
+  ],
+  "pronunciation": "ˌɑbdʒɛkˈtɪvəti",
+  "partOfSpeech": "n.",
+  "definition": "freedom from personal bias",
+  "chinese": "客觀性；客觀",
+  "example": "The historian's objectivity was questioned once her family ties became known."
+ },
+ {
+  "word": "dispassionate",
+  "count": 4,
+  "forms": [
+   "dispassionate"
+  ]
+ },
+ {
+  "word": "subjective",
+  "count": 6,
+  "forms": [
+   "subjective"
+  ]
+ },
+ {
+  "word": "idiosyncratic",
+  "count": 1,
+  "forms": [
+   "idiosyncratic"
+  ]
+ },
+ {
+  "word": "concise",
+  "count": 3,
+  "forms": [
+   "concise"
+  ]
+ },
+ {
+  "word": "concision",
+  "count": 3,
+  "forms": [
+   "concision"
+  ],
+  "pronunciation": "kənˈsɪʒən",
+  "partOfSpeech": "n.",
+  "definition": "the quality of being brief and clear",
+  "chinese": "簡潔；簡明",
+  "example": "The editor admired the concision of a writer who never used two words where one sufficed."
+ },
+ {
+  "word": "brevity",
+  "count": 2,
+  "forms": [
+   "brevity"
+  ]
+ },
+ {
+  "word": "terse",
+  "count": 2,
+  "forms": [
+   "terse"
+  ]
+ },
+ {
+  "word": "prolix",
+  "count": 2,
+  "forms": [
+   "prolix"
+  ]
+ },
+ {
+  "word": "repetitious",
+  "count": 2,
+  "forms": [
+   "repetitious"
+  ]
+ },
+ {
+  "word": "diffuse",
+  "count": 5,
+  "forms": [
+   "diffuse",
+   "diffusing"
+  ]
+ },
+ {
+  "word": "articulate",
+  "count": 2,
+  "forms": [
+   "articulate",
+   "articulated"
+  ]
+ },
+ {
+  "word": "eloquence",
+  "count": 2,
+  "forms": [
+   "eloquence"
+  ]
+ },
+ {
+  "word": "eloquent",
+  "count": 1,
+  "forms": [
+   "eloquent"
+  ]
+ },
+ {
+  "word": "inexpressible",
+  "count": 2,
+  "forms": [
+   "inexpressible"
+  ],
+  "pronunciation": "ˌɪnɪkˈsprɛsəbəl",
+  "partOfSpeech": "adj.",
+  "definition": "too strong or subtle to be put into words",
+  "chinese": "無法言喻的；難以表達的",
+  "example": "The poem tries to capture an inexpressible sense of loss."
+ },
+ {
+  "word": "ineffable",
+  "count": 0,
+  "forms": [
+   "ineffable"
+  ]
+ },
+ {
+  "word": "inarticulate",
+  "count": 1,
+  "forms": [
+   "inarticulate"
+  ]
+ },
+ {
+  "word": "sensationalism",
+  "count": 2,
+  "forms": [
+   "sensationalism"
+  ],
+  "pronunciation": "sɛnˈseɪʃənəˌlɪzəm",
+  "partOfSpeech": "n.",
+  "definition": "use of shocking content to provoke interest",
+  "chinese": "譁眾取寵；聳動報導",
+  "example": "The documentary avoided sensationalism, letting quiet testimony speak for itself."
+ },
+ {
+  "word": "histrionic",
+  "count": 2,
+  "forms": [
+   "histrionic"
+  ]
+ },
+ {
+  "word": "understated",
+  "count": 2,
+  "forms": [
+   "understated"
+  ]
+ },
+ {
+  "word": "restraint",
+  "count": 2,
+  "forms": [
+   "restraint"
+  ],
+  "pronunciation": "rɪˈstreɪnt",
+  "partOfSpeech": "n.",
+  "definition": "self-control; moderation; a limiting measure",
+  "chinese": "克制；節制；約束",
+  "example": "The director's restraint makes the film's final scene all the more powerful."
+ },
+ {
+  "word": "sober",
+  "count": 1,
+  "forms": [
+   "sober"
+  ]
+ },
+ {
+  "word": "exaggerate",
+  "count": 5,
+  "forms": [
+   "exaggerate",
+   "exaggerated",
+   "exaggerates"
+  ],
+  "pronunciation": "ɪɡˈzædʒəˌreɪt",
+  "partOfSpeech": "v.",
+  "definition": "to represent as greater than is true",
+  "chinese": "誇大；誇張",
+  "example": "Early reports exaggerated the damage, causing needless panic."
+ },
+ {
+  "word": "overstate",
+  "count": 2,
+  "forms": [
+   "overstate",
+   "overstated"
+  ],
+  "pronunciation": "ˌoʊvərˈsteɪt",
+  "partOfSpeech": "v.",
+  "definition": "to state too strongly",
+  "chinese": "誇大；言過其實",
+  "example": "It would be hard to overstate the influence of her early essays."
+ },
+ {
+  "word": "hyperbole",
+  "count": 1,
+  "forms": [
+   "hyperbole"
+  ]
+ },
+ {
+  "word": "downplay",
+  "count": 5,
+  "forms": [
+   "downplay",
+   "downplayed",
+   "downplaying"
+  ]
+ },
+ {
+  "word": "discount",
+  "count": 4,
+  "forms": [
+   "discount",
+   "discounted"
+  ]
+ },
+ {
+  "word": "belittle",
+  "count": 0,
+  "forms": [
+   "belittle"
+  ]
+ },
+ {
+  "word": "didactic",
+  "count": 4,
+  "forms": [
+   "didactic"
+  ]
+ },
+ {
+  "word": "didacticism",
+  "count": 3,
+  "forms": [
+   "didacticism"
+  ],
+  "pronunciation": "daɪˈdæktəˌsɪzəm",
+  "partOfSpeech": "n.",
+  "definition": "excessive tendency to instruct or moralize",
+  "chinese": "說教傾向；說教意味",
+  "example": "The novel's heavy didacticism alienated readers seeking entertainment."
+ },
+ {
+  "word": "edify",
+  "count": 1,
+  "forms": [
+   "edify",
+   "edifying"
+  ]
+ },
+ {
+  "word": "recapitulate",
+  "count": 3,
+  "forms": [
+   "recapitulate",
+   "recapitulated",
+   "recapitulates"
+  ]
+ },
+ {
+  "word": "rehash",
+  "count": 2,
+  "forms": [
+   "rehash",
+   "rehashed"
+  ]
+ },
+ {
+  "word": "reiterate",
+  "count": 1,
+  "forms": [
+   "reiterate",
+   "reiterated"
+  ]
+ },
+ {
+  "word": "ornate",
+  "count": 2,
+  "forms": [
+   "ornate"
+  ]
+ },
+ {
+  "word": "baroque",
+  "count": 2,
+  "forms": [
+   "baroque"
+  ]
+ },
+ {
+  "word": "florid",
+  "count": 1,
+  "forms": [
+   "florid"
+  ]
+ },
+ {
+  "word": "austere",
+  "count": 14,
+  "forms": [
+   "austere"
+  ]
+ },
+ {
+  "word": "spartan",
+  "count": 2,
+  "forms": [
+   "spartan"
+  ]
+ },
+ {
+  "word": "ascetic",
+  "count": 1,
+  "forms": [
+   "ascetic"
+  ]
+ },
+ {
+  "word": "aesthetic",
+  "count": 5,
+  "forms": [
+   "aesthetic"
+  ]
+ },
+ {
+  "word": "ornamental",
+  "count": 1,
+  "forms": [
+   "ornamental"
+  ]
+ },
+ {
+  "word": "functional",
+  "count": 3,
+  "forms": [
+   "functional"
+  ],
+  "pronunciation": "ˈfʌŋkʃənəl",
+  "partOfSpeech": "adj.",
+  "definition": "designed to be practical and useful; working",
+  "chinese": "實用的；功能性的；運作正常的",
+  "example": "The architect favored functional design over decorative flourishes."
+ },
+ {
+  "word": "utilitarian",
+  "count": 1,
+  "forms": [
+   "utilitarian"
+  ]
+ },
+ {
+  "word": "controversial",
+  "count": 15,
+  "forms": [
+   "controversial"
+  ]
+ },
+ {
+  "word": "contentious",
+  "count": 7,
+  "forms": [
+   "contentious"
+  ]
+ },
+ {
+  "word": "polemical",
+  "count": 3,
+  "forms": [
+   "polemical"
+  ]
+ },
+ {
+  "word": "polarize",
+  "count": 2,
+  "forms": [
+   "polarize",
+   "polarizes",
+   "polarizing"
+  ]
+ },
+ {
+  "word": "consensus",
+  "count": 2,
+  "forms": [
+   "consensus"
+  ]
+ },
+ {
+  "word": "accord",
+  "count": 2,
+  "forms": [
+   "accord"
+  ]
+ },
+ {
+  "word": "comity",
+  "count": 2,
+  "forms": [
+   "comity"
+  ]
+ },
+ {
+  "word": "cogent",
+  "count": 12,
+  "forms": [
+   "cogent"
+  ]
+ },
+ {
+  "word": "compelling",
+  "count": 4,
+  "forms": [
+   "compelling"
+  ]
+ },
+ {
+  "word": "sound",
+  "count": 3,
+  "forms": [
+   "sound"
+  ]
+ },
+ {
+  "word": "valid",
+  "count": 3,
+  "forms": [
+   "valid"
+  ]
+ },
+ {
+  "word": "plausible",
+  "count": 5,
+  "forms": [
+   "plausible"
+  ]
+ },
+ {
+  "word": "tenuous",
+  "count": 10,
+  "forms": [
+   "tenuous"
+  ]
+ },
+ {
+  "word": "untenable",
+  "count": 2,
+  "forms": [
+   "untenable"
+  ]
+ },
+ {
+  "word": "implausible",
+  "count": 6,
+  "forms": [
+   "implausible"
+  ]
+ },
+ {
+  "word": "specious",
+  "count": 17,
+  "forms": [
+   "specious"
+  ]
+ },
+ {
+  "word": "fallacious",
+  "count": 2,
+  "forms": [
+   "fallacious"
+  ]
+ },
+ {
+  "word": "substantiate",
+  "count": 1,
+  "forms": [
+   "substantiate",
+   "substantiated"
+  ]
+ },
+ {
+  "word": "warrant",
+  "count": 1,
+  "forms": [
+   "warrant",
+   "warranted"
+  ]
+ },
+ {
+  "word": "unfounded",
+  "count": 7,
+  "forms": [
+   "unfounded"
+  ],
+  "pronunciation": "ʌnˈfaʊndɪd",
+  "partOfSpeech": "adj.",
+  "definition": "having no basis in fact",
+  "chinese": "毫無根據的",
+  "example": "Fears that the vaccine caused infertility proved unfounded."
+ },
+ {
+  "word": "baseless",
+  "count": 3,
+  "forms": [
+   "baseless"
+  ],
+  "pronunciation": "ˈbeɪsləs",
+  "partOfSpeech": "adj.",
+  "definition": "without foundation",
+  "chinese": "毫無根據的",
+  "example": "The senator dismissed the accusations as baseless."
+ },
+ {
+  "word": "unjustified",
+  "count": 2,
+  "forms": [
+   "unjustified"
+  ],
+  "pronunciation": "ʌnˈdʒʌstəˌfaɪd",
+  "partOfSpeech": "adj.",
+  "definition": "not shown to be right or reasonable",
+  "chinese": "不合理的；無正當理由的",
+  "example": "Critics called the sudden price increase unjustified."
+ },
+ {
+  "word": "empirical",
+  "count": 4,
+  "forms": [
+   "empirical"
+  ]
+ },
+ {
+  "word": "replicate",
+  "count": 4,
+  "forms": [
+   "replicate",
+   "replicated"
+  ]
+ },
+ {
+  "word": "document",
+  "count": 4,
+  "forms": [
+   "document",
+   "documented"
+  ]
+ },
+ {
+  "word": "speculative",
+  "count": 5,
+  "forms": [
+   "speculative"
+  ]
+ },
+ {
+  "word": "conjectural",
+  "count": 12,
+  "forms": [
+   "conjectural"
+  ],
+  "pronunciation": "kənˈdʒɛktʃərəl",
+  "partOfSpeech": "adj.",
+  "definition": "based on guesswork rather than evidence",
+  "chinese": "推測的；臆測的",
+  "example": "Any date for the manuscript remains conjectural until the paper is analyzed."
+ },
+ {
+  "word": "conjecture",
+  "count": 3,
+  "forms": [
+   "conjecture",
+   "conjectures"
+  ]
+ },
+ {
+  "word": "untested",
+  "count": 3,
+  "forms": [
+   "untested"
+  ],
+  "pronunciation": "ʌnˈtɛstɪd",
+  "partOfSpeech": "adj.",
+  "definition": "not yet tried or proven",
+  "chinese": "未經檢驗的；未經考驗的",
+  "example": "Investors hesitated to back an untested technology."
+ },
+ {
+  "word": "corroborate",
+  "count": 5,
+  "forms": [
+   "corroborate",
+   "corroborated",
+   "corroborating"
+  ]
+ },
+ {
+  "word": "vindicate",
+  "count": 4,
+  "forms": [
+   "vindicate"
+  ]
+ },
+ {
+  "word": "refute",
+  "count": 2,
+  "forms": [
+   "refute",
+   "refuted",
+   "refuting"
+  ]
+ },
+ {
+  "word": "debunk",
+  "count": 4,
+  "forms": [
+   "debunk",
+   "debunked",
+   "debunking"
+  ]
+ },
+ {
+  "word": "discredit",
+  "count": 3,
+  "forms": [
+   "discredit",
+   "discredited"
+  ]
+ },
+ {
+  "word": "invalidate",
+  "count": 3,
+  "forms": [
+   "invalidate",
+   "invalidated",
+   "invalidating"
+  ]
+ },
+ {
+  "word": "belie",
+  "count": 7,
+  "forms": [
+   "belie",
+   "belies"
+  ]
+ },
+ {
+  "word": "contradict",
+  "count": 6,
+  "forms": [
+   "contradict",
+   "contradicted",
+   "contradicting"
+  ]
+ },
+ {
+  "word": "impugn",
+  "count": 3,
+  "forms": [
+   "impugn",
+   "impugned",
+   "impugning",
+   "impugns"
+  ]
+ },
+ {
+  "word": "dispel",
+  "count": 4,
+  "forms": [
+   "dispel",
+   "dispelled",
+   "dispels"
+  ]
+ },
+ {
+  "word": "bolster",
+  "count": 7,
+  "forms": [
+   "bolster",
+   "bolstered",
+   "bolstering"
+  ]
+ },
+ {
+  "word": "buttress",
+  "count": 2,
+  "forms": [
+   "buttress",
+   "buttressed",
+   "buttressing"
+  ]
+ },
+ {
+  "word": "fortify",
+  "count": 0,
+  "forms": [
+   "fortify"
+  ]
+ },
+ {
+  "word": "undermine",
+  "count": 21,
+  "forms": [
+   "undermine",
+   "undermined",
+   "undermines",
+   "undermining"
+  ]
+ },
+ {
+  "word": "undercut",
+  "count": 2,
+  "forms": [
+   "undercut",
+   "undercuts"
+  ]
+ },
+ {
+  "word": "vitiate",
+  "count": 2,
+  "forms": [
+   "vitiate"
+  ]
+ },
+ {
+  "word": "impair",
+  "count": 4,
+  "forms": [
+   "impair",
+   "impaired",
+   "impairing"
+  ]
+ },
+ {
+  "word": "subvert",
+  "count": 5,
+  "forms": [
+   "subvert",
+   "subverted"
+  ]
+ },
+ {
+  "word": "dismantle",
+  "count": 2,
+  "forms": [
+   "dismantle"
+  ]
+ },
+ {
+  "word": "neutralize",
+  "count": 3,
+  "forms": [
+   "neutralize",
+   "neutralized"
+  ]
+ },
+ {
+  "word": "negate",
+  "count": 2,
+  "forms": [
+   "negate",
+   "negated"
+  ]
+ },
+ {
+  "word": "nullify",
+  "count": 2,
+  "forms": [
+   "nullify",
+   "nullifies"
+  ]
+ },
+ {
+  "word": "incontrovertible",
+  "count": 3,
+  "forms": [
+   "incontrovertible"
+  ]
+ },
+ {
+  "word": "indisputable",
+  "count": 2,
+  "forms": [
+   "indisputable"
+  ]
+ },
+ {
+  "word": "unassailable",
+  "count": 2,
+  "forms": [
+   "unassailable"
+  ]
+ },
+ {
+  "word": "unimpeachable",
+  "count": 2,
+  "forms": [
+   "unimpeachable"
+  ]
+ },
+ {
+  "word": "definitive",
+  "count": 2,
+  "forms": [
+   "definitive"
+  ]
+ },
+ {
+  "word": "dubious",
+  "count": 8,
+  "forms": [
+   "dubious"
+  ]
+ },
+ {
+  "word": "inconclusive",
+  "count": 3,
+  "forms": [
+   "inconclusive"
+  ]
+ },
+ {
+  "word": "indeterminate",
+  "count": 2,
+  "forms": [
+   "indeterminate"
+  ],
+  "pronunciation": "ˌɪndɪˈtɝmənət",
+  "partOfSpeech": "adj.",
+  "definition": "not exactly known or established",
+  "chinese": "不確定的；模糊的；未定的",
+  "example": "The fossil's age remains indeterminate."
+ },
+ {
+  "word": "unambiguous",
+  "count": 2,
+  "forms": [
+   "unambiguous"
+  ],
+  "pronunciation": "ˌʌnæmˈbɪɡjuəs",
+  "partOfSpeech": "adj.",
+  "definition": "having only one clear meaning",
+  "chinese": "明確的；毫不含糊的",
+  "example": "The data sent an unambiguous message: the policy had failed."
+ },
+ {
+  "word": "unequivocal",
+  "count": 1,
+  "forms": [
+   "unequivocal"
+  ]
+ },
+ {
+  "word": "explicit",
+  "count": 1,
+  "forms": [
+   "explicit"
+  ]
+ },
+ {
+  "word": "ambiguous",
+  "count": 10,
+  "forms": [
+   "ambiguous"
+  ]
+ },
+ {
+  "word": "ambiguity",
+  "count": 3,
+  "forms": [
+   "ambiguity"
+  ],
+  "pronunciation": "ˌæmbɪˈɡjuəti",
+  "partOfSpeech": "n.",
+  "definition": "uncertainty of meaning",
+  "chinese": "模稜兩可；含糊；歧義",
+  "example": "The ambiguity of the contract invited competing interpretations."
+ },
+ {
+  "word": "equivocal",
+  "count": 14,
+  "forms": [
+   "equivocal"
+  ]
+ },
+ {
+  "word": "nebulous",
+  "count": 2,
+  "forms": [
+   "nebulous"
+  ]
+ },
+ {
+  "word": "evasive",
+  "count": 3,
+  "forms": [
+   "evasive"
+  ]
+ },
+ {
+  "word": "qualify",
+  "count": 2,
+  "forms": [
+   "qualify",
+   "qualifies"
+  ]
+ },
+ {
+  "word": "provisional",
+  "count": 8,
+  "forms": [
+   "provisional"
+  ]
+ },
+ {
+  "word": "tentative",
+  "count": 1,
+  "forms": [
+   "tentative"
+  ]
+ },
+ {
+  "word": "dogmatic",
+  "count": 20,
+  "forms": [
+   "dogmatic"
+  ]
+ },
+ {
+  "word": "unqualified",
+  "count": 6,
+  "forms": [
+   "unqualified"
+  ],
+  "pronunciation": "ʌnˈkwɑləˌfaɪd",
+  "partOfSpeech": "adj.",
+  "definition": "without reservation; complete; lacking qualifications",
+  "chinese": "無保留的；完全的；不合格的",
+  "example": "The play was an unqualified success, praised by every major critic."
+ },
+ {
+  "word": "categorical",
+  "count": 1,
+  "forms": [
+   "categorical"
+  ]
+ },
+ {
+  "word": "authentic",
+  "count": 2,
+  "forms": [
+   "authentic"
+  ]
+ },
+ {
+  "word": "verisimilitude",
+  "count": 2,
+  "forms": [
+   "verisimilitude"
+  ]
+ },
+ {
+  "word": "spurious",
+  "count": 3,
+  "forms": [
+   "spurious"
+  ]
+ },
+ {
+  "word": "apocryphal",
+  "count": 2,
+  "forms": [
+   "apocryphal"
+  ]
+ },
+ {
+  "word": "sham",
+  "count": 2,
+  "forms": [
+   "sham"
+  ]
+ },
+ {
+  "word": "fabricate",
+  "count": 2,
+  "forms": [
+   "fabricate",
+   "fabricated"
+  ]
+ },
+ {
+  "word": "misrepresent",
+  "count": 4,
+  "forms": [
+   "misrepresent",
+   "misrepresented"
+  ]
+ },
+ {
+  "word": "distort",
+  "count": 3,
+  "forms": [
+   "distort",
+   "distorted"
+  ]
+ },
+ {
+  "word": "misconstrue",
+  "count": 2,
+  "forms": [
+   "misconstrue",
+   "misconstrued"
+  ]
+ },
+ {
+  "word": "fidelity",
+  "count": 0,
+  "forms": [
+   "fidelity"
+  ]
+ },
+ {
+  "word": "verbatim",
+  "count": 0,
+  "forms": [
+   "verbatim"
+  ]
+ },
+ {
+  "word": "acknowledge",
+  "count": 9,
+  "forms": [
+   "acknowledge",
+   "acknowledged",
+   "acknowledging"
+  ]
+ },
+ {
+  "word": "concede",
+  "count": 3,
+  "forms": [
+   "concede",
+   "conceded",
+   "concedes",
+   "conceding"
+  ]
+ },
+ {
+  "word": "avow",
+  "count": 0,
+  "forms": [
+   "avow"
+  ]
+ },
+ {
+  "word": "disavow",
+  "count": 3,
+  "forms": [
+   "disavow",
+   "disavowing"
+  ]
+ },
+ {
+  "word": "rationalize",
+  "count": 6,
+  "forms": [
+   "rationalize",
+   "rationalized"
+  ]
+ },
+ {
+  "word": "exculpatory",
+  "count": 2,
+  "forms": [
+   "exculpatory"
+  ],
+  "pronunciation": "ɪkˈskʌlpəˌtɔri",
+  "partOfSpeech": "adj.",
+  "definition": "tending to clear from blame",
+  "chinese": "開脫罪責的；證明無罪的",
+  "example": "The defense uncovered exculpatory evidence the prosecution had overlooked."
+ },
+ {
+  "word": "exonerate",
+  "count": 0,
+  "forms": [
+   "exonerate"
+  ]
+ },
+ {
+  "word": "absolve",
+  "count": 1,
+  "forms": [
+   "absolve",
+   "absolving"
+  ]
+ },
+ {
+  "word": "culpable",
+  "count": 0,
+  "forms": [
+   "culpable"
+  ]
+ },
+ {
+  "word": "incriminate",
+  "count": 0,
+  "forms": [
+   "incriminate"
+  ]
+ },
+ {
+  "word": "reprehensible",
+  "count": 1,
+  "forms": [
+   "reprehensible"
+  ]
+ },
+ {
+  "word": "premise",
+  "count": 3,
+  "forms": [
+   "premise",
+   "premises"
+  ]
+ },
+ {
+  "word": "presuppose",
+  "count": 3,
+  "forms": [
+   "presuppose",
+   "presupposes"
+  ]
+ },
+ {
+  "word": "presume",
+  "count": 3,
+  "forms": [
+   "presume",
+   "presumed",
+   "presuming"
+  ]
+ },
+ {
+  "word": "prescient",
+  "count": 5,
+  "forms": [
+   "prescient"
+  ]
+ },
+ {
+  "word": "prophetic",
+  "count": 3,
+  "forms": [
+   "prophetic"
+  ]
+ },
+ {
+  "word": "anticipate",
+  "count": 17,
+  "forms": [
+   "anticipate",
+   "anticipated",
+   "anticipates",
+   "anticipating"
+  ]
+ },
+ {
+  "word": "foretell",
+  "count": 2,
+  "forms": [
+   "foretell"
+  ],
+  "pronunciation": "fɔrˈtɛl",
+  "partOfSpeech": "v.",
+  "definition": "to predict",
+  "chinese": "預言；預示",
+  "example": "No economist foretold how quickly the market would recover."
+ },
+ {
+  "word": "myopic",
+  "count": 0,
+  "forms": [
+   "myopic"
+  ]
+ },
+ {
+  "word": "improvident",
+  "count": 0,
+  "forms": [
+   "improvident"
+  ]
+ },
+ {
+  "word": "harbinger",
+  "count": 2,
+  "forms": [
+   "harbinger"
+  ]
+ },
+ {
+  "word": "presage",
+  "count": 2,
+  "forms": [
+   "presage"
+  ]
+ },
+ {
+  "word": "portend",
+  "count": 2,
+  "forms": [
+   "portend"
+  ]
+ },
+ {
+  "word": "erudite",
+  "count": 11,
+  "forms": [
+   "erudite"
+  ]
+ },
+ {
+  "word": "erudition",
+  "count": 2,
+  "forms": [
+   "erudition"
+  ],
+  "pronunciation": "ˌɛrjəˈdɪʃən",
+  "partOfSpeech": "n.",
+  "definition": "extensive scholarly knowledge",
+  "chinese": "博學；學識淵博",
+  "example": "Her erudition was evident in footnotes drawing on six languages."
+ },
+ {
+  "word": "learned",
+  "count": 3,
+  "forms": [
+   "learned"
+  ],
+  "pronunciation": "ˈlɝnɪd",
+  "partOfSpeech": "adj.",
+  "definition": "having much knowledge from study",
+  "chinese": "博學的；學術性的",
+  "example": "The learned commentary assumes a familiarity with classical texts."
+ },
+ {
+  "word": "benighted",
+  "count": 0,
+  "forms": [
+   "benighted"
+  ]
+ },
+ {
+  "word": "unlettered",
+  "count": 0,
+  "forms": [
+   "unlettered"
+  ]
+ },
+ {
+  "word": "incisive",
+  "count": 3,
+  "forms": [
+   "incisive"
+  ]
+ },
+ {
+  "word": "trenchant",
+  "count": 13,
+  "forms": [
+   "trenchant"
+  ]
+ },
+ {
+  "word": "profound",
+  "count": 2,
+  "forms": [
+   "profound"
+  ]
+ },
+ {
+  "word": "acute",
+  "count": 2,
+  "forms": [
+   "acute"
+  ]
+ },
+ {
+  "word": "superficial",
+  "count": 7,
+  "forms": [
+   "superficial"
+  ]
+ },
+ {
+  "word": "vacuous",
+  "count": 3,
+  "forms": [
+   "vacuous"
+  ]
+ },
+ {
+  "word": "glib",
+  "count": 0,
+  "forms": [
+   "glib"
+  ]
+ },
+ {
+  "word": "comprehensive",
+  "count": 14,
+  "forms": [
+   "comprehensive"
+  ]
+ },
+ {
+  "word": "comprehensiveness",
+  "count": 3,
+  "forms": [
+   "comprehensiveness"
+  ],
+  "pronunciation": "ˌkɑmprɪˈhɛnsɪvnəs",
+  "partOfSpeech": "n.",
+  "definition": "completeness; inclusion of everything relevant",
+  "chinese": "全面性；廣泛性",
+  "example": "The survey's comprehensiveness made it the standard reference for decades."
+ },
+ {
+  "word": "exhaustive",
+  "count": 4,
+  "forms": [
+   "exhaustive"
+  ],
+  "pronunciation": "ɪɡˈzɔstɪv",
+  "partOfSpeech": "adj.",
+  "definition": "including all elements; thorough",
+  "chinese": "詳盡的；徹底的",
+  "example": "An exhaustive search of the archives turned up no trace of the letter."
+ },
+ {
+  "word": "wide-ranging",
+  "count": 3,
+  "forms": [
+   "wide-ranging"
+  ],
+  "pronunciation": "ˌwaɪdˈreɪndʒɪŋ",
+  "partOfSpeech": "adj.",
+  "definition": "covering many subjects",
+  "chinese": "廣泛的；範圍廣的",
+  "example": "The wide-ranging interview touched on art, politics, and physics."
+ },
+ {
+  "word": "cursory",
+  "count": 3,
+  "forms": [
+   "cursory"
+  ]
+ },
+ {
+  "word": "partial",
+  "count": 2,
+  "forms": [
+   "partial"
+  ]
+ },
+ {
+  "word": "fragmentary",
+  "count": 0,
+  "forms": [
+   "fragmentary"
+  ]
+ },
+ {
+  "word": "lucid",
+  "count": 16,
+  "forms": [
+   "lucid"
+  ]
+ },
+ {
+  "word": "perspicuous",
+  "count": 2,
+  "forms": [
+   "perspicuous"
+  ]
+ },
+ {
+  "word": "pellucidity",
+  "count": 2,
+  "forms": [
+   "pellucidity"
+  ],
+  "pronunciation": "ˌpɛljuˈsɪdəti",
+  "partOfSpeech": "n.",
+  "definition": "clarity of expression",
+  "chinese": "清晰明瞭；文字明晰",
+  "example": "The pellucidity of her prose makes difficult ideas seem effortless."
+ },
+ {
+  "word": "clarity",
+  "count": 4,
+  "forms": [
+   "clarity"
+  ]
+ },
+ {
+  "word": "intelligible",
+  "count": 2,
+  "forms": [
+   "intelligible"
+  ]
+ },
+ {
+  "word": "accessible",
+  "count": 5,
+  "forms": [
+   "accessible"
+  ]
+ },
+ {
+  "word": "explicable",
+  "count": 2,
+  "forms": [
+   "explicable"
+  ]
+ },
+ {
+  "word": "opaque",
+  "count": 20,
+  "forms": [
+   "opaque"
+  ]
+ },
+ {
+  "word": "obscure",
+  "count": 22,
+  "forms": [
+   "obscure",
+   "obscured",
+   "obscuring"
+  ]
+ },
+ {
+  "word": "convoluted",
+  "count": 8,
+  "forms": [
+   "convoluted"
+  ]
+ },
+ {
+  "word": "unintelligible",
+  "count": 2,
+  "forms": [
+   "unintelligible"
+  ],
+  "pronunciation": "ˌʌnɪnˈtɛlədʒəbəl",
+  "partOfSpeech": "adj.",
+  "definition": "impossible to understand",
+  "chinese": "無法理解的；難以辨認的",
+  "example": "Without a glossary the dialect was nearly unintelligible to outsiders."
+ },
+ {
+  "word": "esoteric",
+  "count": 6,
+  "forms": [
+   "esoteric"
+  ]
+ },
+ {
+  "word": "arcane",
+  "count": 5,
+  "forms": [
+   "arcane"
+  ]
+ },
+ {
+  "word": "abstruse",
+  "count": 16,
+  "forms": [
+   "abstruse"
+  ]
+ },
+ {
+  "word": "enigmatic",
+  "count": 4,
+  "forms": [
+   "enigmatic"
+  ]
+ },
+ {
+  "word": "inexplicable",
+  "count": 5,
+  "forms": [
+   "inexplicable"
+  ]
+ },
+ {
+  "word": "unfathomable",
+  "count": 3,
+  "forms": [
+   "unfathomable"
+  ]
+ },
+ {
+  "word": "conundrum",
+  "count": 2,
+  "forms": [
+   "conundrum"
+  ]
+ },
+ {
+  "word": "elusive",
+  "count": 3,
+  "forms": [
+   "elusive"
+  ]
+ },
+ {
+  "word": "perplexing",
+  "count": 11,
+  "forms": [
+   "perplexing",
+   "perplex",
+   "perplexed"
+  ]
+ },
+ {
+  "word": "confound",
+  "count": 7,
+  "forms": [
+   "confound",
+   "confounded",
+   "confounding",
+   "confounds"
+  ]
+ },
+ {
+  "word": "baffle",
+  "count": 2,
+  "forms": [
+   "baffle",
+   "baffled",
+   "baffling"
+  ]
+ },
+ {
+  "word": "obfuscate",
+  "count": 2,
+  "forms": [
+   "obfuscate",
+   "obfuscating"
+  ]
+ },
+ {
+  "word": "elucidate",
+  "count": 3,
+  "forms": [
+   "elucidate",
+   "elucidated"
+  ]
+ },
+ {
+  "word": "illuminate",
+  "count": 6,
+  "forms": [
+   "illuminate",
+   "illuminated"
+  ]
+ },
+ {
+  "word": "delineate",
+  "count": 5,
+  "forms": [
+   "delineate",
+   "delineated",
+   "delineates"
+  ]
+ },
+ {
+  "word": "clarify",
+  "count": 3,
+  "forms": [
+   "clarify",
+   "clarified",
+   "clarifying"
+  ]
+ },
+ {
+  "word": "sophisticated",
+  "count": 4,
+  "forms": [
+   "sophisticated"
+  ]
+ },
+ {
+  "word": "refinement",
+  "count": 2,
+  "forms": [
+   "refinement"
+  ],
+  "pronunciation": "rɪˈfaɪnmənt",
+  "partOfSpeech": "n.",
+  "definition": "elegance; an improvement through small changes",
+  "chinese": "優雅；精緻；改良",
+  "example": "Each refinement of the model brought its predictions closer to observation."
+ },
+ {
+  "word": "intricate",
+  "count": 5,
+  "forms": [
+   "intricate"
+  ]
+ },
+ {
+  "word": "involved",
+  "count": 4,
+  "forms": [
+   "involved"
+  ]
+ },
+ {
+  "word": "rudimentary",
+  "count": 3,
+  "forms": [
+   "rudimentary"
+  ]
+ },
+ {
+  "word": "inchoate",
+  "count": 13,
+  "forms": [
+   "inchoate"
+  ]
+ },
+ {
+  "word": "unsophisticated",
+  "count": 4,
+  "forms": [
+   "unsophisticated"
+  ],
+  "pronunciation": "ˌʌnsəˈfɪstəˌkeɪtɪd",
+  "partOfSpeech": "adj.",
+  "definition": "lacking complexity or worldly experience",
+  "chinese": "不精密的；粗淺的；單純的",
+  "example": "The study relied on unsophisticated methods that could not detect subtle effects."
+ },
+ {
+  "word": "discern",
+  "count": 3,
+  "forms": [
+   "discern",
+   "discerning"
+  ]
+ },
+ {
+  "word": "ascertain",
+  "count": 2,
+  "forms": [
+   "ascertain"
+  ]
+ },
+ {
+  "word": "oblivious",
+  "count": 0,
+  "forms": [
+   "oblivious"
+  ]
+ },
+ {
+  "word": "heedless",
+  "count": 0,
+  "forms": [
+   "heedless"
+  ]
+ },
+ {
+  "word": "unwitting",
+  "count": 0,
+  "forms": [
+   "unwitting"
+  ]
+ },
+ {
+  "word": "heed",
+  "count": 1,
+  "forms": [
+   "heed"
+  ]
+ },
+ {
+  "word": "scrutinize",
+  "count": 1,
+  "forms": [
+   "scrutinize",
+   "scrutinized"
+  ]
+ },
+ {
+  "word": "peruse",
+  "count": 1,
+  "forms": [
+   "peruse",
+   "perused"
+  ]
+ },
+ {
+  "word": "overlook",
+  "count": 8,
+  "forms": [
+   "overlook",
+   "overlooked",
+   "overlooks"
+  ],
+  "pronunciation": "ˌoʊvərˈlʊk",
+  "partOfSpeech": "v.",
+  "definition": "to fail to notice; to ignore",
+  "chinese": "忽略；忽視；俯瞰",
+  "example": "Earlier historians overlooked the role of women in the movement."
+ },
+ {
+  "word": "disregard",
+  "count": 6,
+  "forms": [
+   "disregard",
+   "disregarded"
+  ]
+ },
+ {
+  "word": "neglect",
+  "count": 6,
+  "forms": [
+   "neglect",
+   "neglected",
+   "neglects"
+  ],
+  "pronunciation": "nɪˈɡlɛkt",
+  "partOfSpeech": "v./n.",
+  "definition": "v. to fail to give attention to; n. failure to care for",
+  "chinese": "v. 忽視；疏忽；n. 忽略；疏忽",
+  "example": "The theory neglects factors that later proved decisive."
+ },
+ {
+  "word": "slight",
+  "count": 2,
+  "forms": [
+   "slight",
+   "slighted"
+  ]
+ },
+ {
+  "word": "dismiss",
+  "count": 5,
+  "forms": [
+   "dismiss"
+  ]
+ },
+ {
+  "word": "copious",
+  "count": 3,
+  "forms": [
+   "copious"
+  ]
+ },
+ {
+  "word": "profusion",
+  "count": 2,
+  "forms": [
+   "profusion"
+  ]
+ },
+ {
+  "word": "surfeit",
+  "count": 4,
+  "forms": [
+   "surfeit"
+  ]
+ },
+ {
+  "word": "glut",
+  "count": 2,
+  "forms": [
+   "glut"
+  ]
+ },
+ {
+  "word": "abound",
+  "count": 2,
+  "forms": [
+   "abound"
+  ]
+ },
+ {
+  "word": "prolific",
+  "count": 3,
+  "forms": [
+   "prolific"
+  ]
+ },
+ {
+  "word": "dearth",
+  "count": 5,
+  "forms": [
+   "dearth"
+  ]
+ },
+ {
+  "word": "paucity",
+  "count": 2,
+  "forms": [
+   "paucity"
+  ]
+ },
+ {
+  "word": "meager",
+  "count": 3,
+  "forms": [
+   "meager"
+  ]
+ },
+ {
+  "word": "paltry",
+  "count": 2,
+  "forms": [
+   "paltry"
+  ]
+ },
+ {
+  "word": "minuscule",
+  "count": 2,
+  "forms": [
+   "minuscule"
+  ]
+ },
+ {
+  "word": "momentous",
+  "count": 2,
+  "forms": [
+   "momentous"
+  ]
+ },
+ {
+  "word": "pivotal",
+  "count": 0,
+  "forms": [
+   "pivotal"
+  ]
+ },
+ {
+  "word": "paramount",
+  "count": 0,
+  "forms": [
+   "paramount"
+  ]
+ },
+ {
+  "word": "trivial",
+  "count": 9,
+  "forms": [
+   "trivial"
+  ]
+ },
+ {
+  "word": "inconsequential",
+  "count": 10,
+  "forms": [
+   "inconsequential"
+  ]
+ },
+ {
+  "word": "negligible",
+  "count": 2,
+  "forms": [
+   "negligible"
+  ]
+ },
+ {
+  "word": "marginal",
+  "count": 3,
+  "forms": [
+   "marginal"
+  ]
+ },
+ {
+  "word": "peripheral",
+  "count": 2,
+  "forms": [
+   "peripheral"
+  ]
+ },
+ {
+  "word": "indispensable",
+  "count": 3,
+  "forms": [
+   "indispensable"
+  ]
+ },
+ {
+  "word": "vital",
+  "count": 2,
+  "forms": [
+   "vital"
+  ]
+ },
+ {
+  "word": "integral",
+  "count": 1,
+  "forms": [
+   "integral"
+  ]
+ },
+ {
+  "word": "superfluous",
+  "count": 4,
+  "forms": [
+   "superfluous"
+  ]
+ },
+ {
+  "word": "redundant",
+  "count": 10,
+  "forms": [
+   "redundant"
+  ]
+ },
+ {
+  "word": "extraneous",
+  "count": 5,
+  "forms": [
+   "extraneous"
+  ]
+ },
+ {
+  "word": "augment",
+  "count": 9,
+  "forms": [
+   "augment",
+   "augmented"
+  ]
+ },
+ {
+  "word": "amplify",
+  "count": 4,
+  "forms": [
+   "amplify",
+   "amplified"
+  ]
+ },
+ {
+  "word": "escalate",
+  "count": 2,
+  "forms": [
+   "escalate"
+  ]
+ },
+ {
+  "word": "proliferate",
+  "count": 5,
+  "forms": [
+   "proliferate",
+   "proliferating"
+  ]
+ },
+ {
+  "word": "diminish",
+  "count": 6,
+  "forms": [
+   "diminish",
+   "diminished"
+  ]
+ },
+ {
+  "word": "dwindle",
+  "count": 2,
+  "forms": [
+   "dwindle",
+   "dwindling"
+  ]
+ },
+ {
+  "word": "ebb",
+  "count": 2,
+  "forms": [
+   "ebb",
+   "ebbing"
+  ]
+ },
+ {
+  "word": "curtail",
+  "count": 2,
+  "forms": [
+   "curtail",
+   "curtailed"
+  ]
+ },
+ {
+  "word": "mitigate",
+  "count": 16,
+  "forms": [
+   "mitigate",
+   "mitigated",
+   "mitigates",
+   "mitigating"
+  ]
+ },
+ {
+  "word": "alleviate",
+  "count": 3,
+  "forms": [
+   "alleviate",
+   "alleviated"
+  ]
+ },
+ {
+  "word": "ameliorate",
+  "count": 4,
+  "forms": [
+   "ameliorate",
+   "ameliorated"
+  ]
+ },
+ {
+  "word": "remedy",
+  "count": 3,
+  "forms": [
+   "remedy"
+  ]
+ },
+ {
+  "word": "rehabilitate",
+  "count": 2,
+  "forms": [
+   "rehabilitate",
+   "rehabilitating"
+  ]
+ },
+ {
+  "word": "exacerbate",
+  "count": 8,
+  "forms": [
+   "exacerbate",
+   "exacerbated",
+   "exacerbates",
+   "exacerbating"
+  ]
+ },
+ {
+  "word": "degrade",
+  "count": 2,
+  "forms": [
+   "degrade",
+   "degraded"
+  ]
+ },
+ {
+  "word": "aggravate",
+  "count": 0,
+  "forms": [
+   "aggravate"
+  ]
+ },
+ {
+  "word": "benign",
+  "count": 7,
+  "forms": [
+   "benign"
+  ]
+ },
+ {
+  "word": "innocuous",
+  "count": 8,
+  "forms": [
+   "innocuous"
+  ]
+ },
+ {
+  "word": "salutary",
+  "count": 2,
+  "forms": [
+   "salutary"
+  ]
+ },
+ {
+  "word": "deleterious",
+  "count": 18,
+  "forms": [
+   "deleterious"
+  ]
+ },
+ {
+  "word": "malignant",
+  "count": 2,
+  "forms": [
+   "malignant"
+  ]
+ },
+ {
+  "word": "corrosive",
+  "count": 2,
+  "forms": [
+   "corrosive"
+  ]
+ },
+ {
+  "word": "efficacious",
+  "count": 3,
+  "forms": [
+   "efficacious"
+  ]
+ },
+ {
+  "word": "potent",
+  "count": 0,
+  "forms": [
+   "potent"
+  ]
+ },
+ {
+  "word": "efficacy",
+  "count": 0,
+  "forms": [
+   "efficacy"
+  ]
+ },
+ {
+  "word": "futile",
+  "count": 2,
+  "forms": [
+   "futile"
+  ]
+ },
+ {
+  "word": "fruitless",
+  "count": 1,
+  "forms": [
+   "fruitless"
+  ]
+ },
+ {
+  "word": "accentuate",
+  "count": 5,
+  "forms": [
+   "accentuate",
+   "accentuated",
+   "accentuates"
+  ]
+ },
+ {
+  "word": "underscore",
+  "count": 3,
+  "forms": [
+   "underscore",
+   "underscored",
+   "underscores"
+  ]
+ },
+ {
+  "word": "foreground",
+  "count": 2,
+  "forms": [
+   "foreground"
+  ]
+ },
+ {
+  "word": "eclipse",
+  "count": 2,
+  "forms": [
+   "eclipse"
+  ]
+ },
+ {
+  "word": "overshadow",
+  "count": 4,
+  "forms": [
+   "overshadow",
+   "overshadowed",
+   "overshadows"
+  ]
+ },
+ {
+  "word": "supersede",
+  "count": 3,
+  "forms": [
+   "supersede",
+   "superseded"
+  ]
+ },
+ {
+  "word": "supplant",
+  "count": 2,
+  "forms": [
+   "supplant"
+  ]
+ },
+ {
+  "word": "transcend",
+  "count": 5,
+  "forms": [
+   "transcend",
+   "transcending",
+   "transcends"
+  ]
+ },
+ {
+  "word": "ubiquitous",
+  "count": 18,
+  "forms": [
+   "ubiquitous"
+  ]
+ },
+ {
+  "word": "pervasive",
+  "count": 5,
+  "forms": [
+   "pervasive"
+  ]
+ },
+ {
+  "word": "prevalent",
+  "count": 2,
+  "forms": [
+   "prevalent"
+  ]
+ },
+ {
+  "word": "predominant",
+  "count": 2,
+  "forms": [
+   "predominant"
+  ]
+ },
+ {
+  "word": "sporadic",
+  "count": 0,
+  "forms": [
+   "sporadic"
+  ]
+ },
+ {
+  "word": "sparse",
+  "count": 0,
+  "forms": [
+   "sparse"
+  ]
+ },
+ {
+  "word": "subtle",
+  "count": 10,
+  "forms": [
+   "subtle"
+  ]
+ },
+ {
+  "word": "indiscernible",
+  "count": 2,
+  "forms": [
+   "indiscernible"
+  ],
+  "pronunciation": "ˌɪndɪˈsɝnəbəl",
+  "partOfSpeech": "adj.",
+  "definition": "impossible to see or detect",
+  "chinese": "難以察覺的；無法辨別的",
+  "example": "The difference between the two samples was indiscernible to the naked eye."
+ },
+ {
+  "word": "undetectable",
+  "count": 2,
+  "forms": [
+   "undetectable"
+  ],
+  "pronunciation": "ˌʌndɪˈtɛktəbəl",
+  "partOfSpeech": "adj.",
+  "definition": "not able to be noticed or measured",
+  "chinese": "偵測不到的；難以察覺的",
+  "example": "The contaminant was present at nearly undetectable levels."
+ },
+ {
+  "word": "conspicuous",
+  "count": 3,
+  "forms": [
+   "conspicuous"
+  ]
+ },
+ {
+  "word": "obtrusive",
+  "count": 2,
+  "forms": [
+   "obtrusive"
+  ]
+ },
+ {
+  "word": "blatant",
+  "count": 1,
+  "forms": [
+   "blatant"
+  ]
+ },
+ {
+  "word": "concrete",
+  "count": 3,
+  "forms": [
+   "concrete"
+  ]
+ },
+ {
+  "word": "tangible",
+  "count": 0,
+  "forms": [
+   "tangible"
+  ]
+ },
+ {
+  "word": "palpable",
+  "count": 0,
+  "forms": [
+   "palpable"
+  ]
+ },
+ {
+  "word": "chimerical",
+  "count": 2,
+  "forms": [
+   "chimerical"
+  ]
+ },
+ {
+  "word": "illusory",
+  "count": 3,
+  "forms": [
+   "illusory"
+  ]
+ },
+ {
+  "word": "fanciful",
+  "count": 3,
+  "forms": [
+   "fanciful"
+  ]
+ },
+ {
+  "word": "intangible",
+  "count": 2,
+  "forms": [
+   "intangible"
+  ]
+ },
+ {
+  "word": "eclectic",
+  "count": 9,
+  "forms": [
+   "eclectic"
+  ]
+ },
+ {
+  "word": "heterogeneous",
+  "count": 3,
+  "forms": [
+   "heterogeneous"
+  ]
+ },
+ {
+  "word": "multifarious",
+  "count": 3,
+  "forms": [
+   "multifarious"
+  ]
+ },
+ {
+  "word": "multifaceted",
+  "count": 2,
+  "forms": [
+   "multifaceted"
+  ]
+ },
+ {
+  "word": "homogeneity",
+  "count": 4,
+  "forms": [
+   "homogeneity"
+  ],
+  "pronunciation": "ˌhoʊmədʒəˈniəti",
+  "partOfSpeech": "n.",
+  "definition": "the quality of being uniform throughout",
+  "chinese": "同質性；均一性",
+  "example": "The town's cultural homogeneity began to fade as newcomers arrived."
+ },
+ {
+  "word": "uniformity",
+  "count": 2,
+  "forms": [
+   "uniformity"
+  ],
+  "pronunciation": "ˌjunəˈfɔrməti",
+  "partOfSpeech": "n.",
+  "definition": "sameness throughout",
+  "chinese": "一致性；均勻；單調",
+  "example": "Critics lamented the uniformity of suburban architecture."
+ },
+ {
+  "word": "homogeneous",
+  "count": 0,
+  "forms": [
+   "homogeneous"
+  ]
+ },
+ {
+  "word": "analogous",
+  "count": 2,
+  "forms": [
+   "analogous"
+  ]
+ },
+ {
+  "word": "interchangeable",
+  "count": 5,
+  "forms": [
+   "interchangeable"
+  ]
+ },
+ {
+  "word": "fungible",
+  "count": 2,
+  "forms": [
+   "fungible"
+  ]
+ },
+ {
+  "word": "disparate",
+  "count": 4,
+  "forms": [
+   "disparate"
+  ]
+ },
+ {
+  "word": "divergent",
+  "count": 2,
+  "forms": [
+   "divergent"
+  ]
+ },
+ {
+  "word": "coalesce",
+  "count": 2,
+  "forms": [
+   "coalesce"
+  ]
+ },
+ {
+  "word": "synthesis",
+  "count": 2,
+  "forms": [
+   "synthesis"
+  ]
+ },
+ {
+  "word": "amalgamate",
+  "count": 0,
+  "forms": [
+   "amalgamate"
+  ]
+ },
+ {
+  "word": "disperse",
+  "count": 2,
+  "forms": [
+   "disperse",
+   "dispersed",
+   "disperses"
+  ]
+ },
+ {
+  "word": "dissipate",
+  "count": 0,
+  "forms": [
+   "dissipate"
+  ]
+ },
+ {
+  "word": "fragment",
+  "count": 0,
+  "forms": [
+   "fragment"
+  ]
+ },
+ {
+  "word": "disseminate",
+  "count": 4,
+  "forms": [
+   "disseminate",
+   "disseminated",
+   "disseminates"
+  ]
+ },
+ {
+  "word": "promulgate",
+  "count": 1,
+  "forms": [
+   "promulgate",
+   "promulgates"
+  ]
+ },
+ {
+  "word": "propagate",
+  "count": 1,
+  "forms": [
+   "propagate"
+  ]
+ },
+ {
+  "word": "stifle",
+  "count": 2,
+  "forms": [
+   "stifle",
+   "stifling"
+  ]
+ },
+ {
+  "word": "suppress",
+  "count": 0,
+  "forms": [
+   "suppress"
+  ]
+ },
+ {
+  "word": "quash",
+  "count": 0,
+  "forms": [
+   "quash"
+  ]
+ },
+ {
+  "word": "lucrative",
+  "count": 4,
+  "forms": [
+   "lucrative"
+  ]
+ },
+ {
+  "word": "affluent",
+  "count": 0,
+  "forms": [
+   "affluent"
+  ]
+ },
+ {
+  "word": "opulent",
+  "count": 0,
+  "forms": [
+   "opulent"
+  ]
+ },
+ {
+  "word": "impecunious",
+  "count": 2,
+  "forms": [
+   "impecunious"
+  ]
+ },
+ {
+  "word": "indigent",
+  "count": 0,
+  "forms": [
+   "indigent"
+  ]
+ },
+ {
+  "word": "destitute",
+  "count": 0,
+  "forms": [
+   "destitute"
+  ]
+ },
+ {
+  "word": "capricious",
+  "count": 15,
+  "forms": [
+   "capricious"
+  ]
+ },
+ {
+  "word": "caprice",
+  "count": 2,
+  "forms": [
+   "caprice"
+  ]
+ },
+ {
+  "word": "fickle",
+  "count": 3,
+  "forms": [
+   "fickle"
+  ]
+ },
+ {
+  "word": "whimsical",
+  "count": 3,
+  "forms": [
+   "whimsical"
+  ]
+ },
+ {
+  "word": "erratic",
+  "count": 2,
+  "forms": [
+   "erratic"
+  ]
+ },
+ {
+  "word": "volatile",
+  "count": 4,
+  "forms": [
+   "volatile"
+  ]
+ },
+ {
+  "word": "steadfast",
+  "count": 0,
+  "forms": [
+   "steadfast"
+  ]
+ },
+ {
+  "word": "staunch",
+  "count": 0,
+  "forms": [
+   "staunch"
+  ]
+ },
+ {
+  "word": "malleable",
+  "count": 3,
+  "forms": [
+   "malleable"
+  ]
+ },
+ {
+  "word": "plastic",
+  "count": 3,
+  "forms": [
+   "plastic"
+  ]
+ },
+ {
+  "word": "protean",
+  "count": 2,
+  "forms": [
+   "protean"
+  ]
+ },
+ {
+  "word": "rigid",
+  "count": 3,
+  "forms": [
+   "rigid"
+  ]
+ },
+ {
+  "word": "inflexible",
+  "count": 3,
+  "forms": [
+   "inflexible"
+  ],
+  "pronunciation": "ɪnˈflɛksəbəl",
+  "partOfSpeech": "adj.",
+  "definition": "unwilling to change; rigid",
+  "chinese": "不變通的；死板的；僵硬的",
+  "example": "An inflexible schedule left no room for unexpected discoveries."
+ },
+ {
+  "word": "immutable",
+  "count": 4,
+  "forms": [
+   "immutable"
+  ]
+ },
+ {
+  "word": "static",
+  "count": 2,
+  "forms": [
+   "static"
+  ]
+ },
+ {
+  "word": "stagnant",
+  "count": 2,
+  "forms": [
+   "stagnant"
+  ]
+ },
+ {
+  "word": "stagnate",
+  "count": 3,
+  "forms": [
+   "stagnate",
+   "stagnated"
+  ],
+  "pronunciation": "ˈstæɡneɪt",
+  "partOfSpeech": "v.",
+  "definition": "to stop developing or progressing",
+  "chinese": "停滯；不發展",
+  "example": "Without new ideas the field began to stagnate."
+ },
+ {
+  "word": "mutable",
+  "count": 0,
+  "forms": [
+   "mutable"
+  ]
+ },
+ {
+  "word": "flux",
+  "count": 0,
+  "forms": [
+   "flux"
+  ]
+ },
+ {
+  "word": "vacillate",
+  "count": 2,
+  "forms": [
+   "vacillate"
+  ]
+ },
+ {
+  "word": "vacillation",
+  "count": 3,
+  "forms": [
+   "vacillation",
+   "vacillations"
+  ],
+  "pronunciation": "ˌvæsəˈleɪʃən",
+  "partOfSpeech": "n.",
+  "definition": "inability to decide between options",
+  "chinese": "猶豫不決；搖擺不定",
+  "example": "The government's vacillation on the issue confused allies and rivals alike."
+ },
+ {
+  "word": "waver",
+  "count": 2,
+  "forms": [
+   "waver",
+   "wavering"
+  ]
+ },
+ {
+  "word": "ambivalent",
+  "count": 18,
+  "forms": [
+   "ambivalent"
+  ]
+ },
+ {
+  "word": "resolve",
+  "count": 5,
+  "forms": [
+   "resolve",
+   "resolves"
+  ],
+  "pronunciation": "rɪˈzɑlv",
+  "partOfSpeech": "v./n.",
+  "definition": "v. to settle or find a solution; to decide firmly; n. firm determination",
+  "chinese": "v. 解決；決心；n. 決心；堅定",
+  "example": "The new data resolve a paradox that had puzzled astronomers for decades."
+ },
+ {
+  "word": "resolute",
+  "count": 1,
+  "forms": [
+   "resolute"
+  ]
+ },
+ {
+  "word": "ephemeral",
+  "count": 8,
+  "forms": [
+   "ephemeral"
+  ]
+ },
+ {
+  "word": "transitory",
+  "count": 3,
+  "forms": [
+   "transitory"
+  ]
+ },
+ {
+  "word": "transient",
+  "count": 2,
+  "forms": [
+   "transient"
+  ]
+ },
+ {
+  "word": "fleeting",
+  "count": 2,
+  "forms": [
+   "fleeting"
+  ]
+ },
+ {
+  "word": "momentary",
+  "count": 2,
+  "forms": [
+   "momentary"
+  ]
+ },
+ {
+  "word": "enduring",
+  "count": 5,
+  "forms": [
+   "enduring"
+  ],
+  "pronunciation": "ɪnˈdʊrɪŋ",
+  "partOfSpeech": "adj.",
+  "definition": "lasting over a long period",
+  "chinese": "持久的；長久的",
+  "example": "The novel's enduring popularity surprised its own author."
+ },
+ {
+  "word": "long-standing",
+  "count": 2,
+  "forms": [
+   "long-standing"
+  ],
+  "pronunciation": "ˌlɔŋˈstændɪŋ",
+  "partOfSpeech": "adj.",
+  "definition": "having existed for a long time",
+  "chinese": "長期存在的；由來已久的",
+  "example": "The discovery settled a long-standing dispute among geologists."
+ },
+ {
+  "word": "perpetuate",
+  "count": 5,
+  "forms": [
+   "perpetuate",
+   "perpetuating"
+  ]
+ },
+ {
+  "word": "self-perpetuating",
+  "count": 3,
+  "forms": [
+   "self-perpetuating"
+  ]
+ },
+ {
+  "word": "tenacity",
+  "count": 4,
+  "forms": [
+   "tenacity"
+  ]
+ },
+ {
+  "word": "tenacious",
+  "count": 0,
+  "forms": [
+   "tenacious"
+  ]
+ },
+ {
+  "word": "dogged",
+  "count": 0,
+  "forms": [
+   "dogged"
+  ]
+ },
+ {
+  "word": "relinquish",
+  "count": 2,
+  "forms": [
+   "relinquish",
+   "relinquishing"
+  ]
+ },
+ {
+  "word": "forgo",
+  "count": 4,
+  "forms": [
+   "forgo",
+   "forgoes"
+  ]
+ },
+ {
+  "word": "jettison",
+  "count": 4,
+  "forms": [
+   "jettison",
+   "jettisoned",
+   "jettisons"
+  ]
+ },
+ {
+  "word": "espouse",
+  "count": 2,
+  "forms": [
+   "espouse",
+   "espoused"
+  ]
+ },
+ {
+  "word": "champion",
+  "count": 2,
+  "forms": [
+   "champion"
+  ]
+ },
+ {
+  "word": "endorse",
+  "count": 7,
+  "forms": [
+   "endorse",
+   "endorsed",
+   "endorsing"
+  ]
+ },
+ {
+  "word": "embrace",
+  "count": 3,
+  "forms": [
+   "embrace",
+   "embraced"
+  ]
+ },
+ {
+  "word": "repudiate",
+  "count": 4,
+  "forms": [
+   "repudiate",
+   "repudiated",
+   "repudiates"
+  ]
+ },
+ {
+  "word": "renounce",
+  "count": 2,
+  "forms": [
+   "renounce",
+   "renounced"
+  ]
+ },
+ {
+  "word": "eschew",
+  "count": 2,
+  "forms": [
+   "eschew",
+   "eschewed"
+  ]
+ },
+ {
+  "word": "circumvent",
+  "count": 11,
+  "forms": [
+   "circumvent",
+   "circumvented",
+   "circumventing",
+   "circumvents"
+  ]
+ },
+ {
+  "word": "evade",
+  "count": 2,
+  "forms": [
+   "evade"
+  ]
+ },
+ {
+  "word": "circuitous",
+  "count": 2,
+  "forms": [
+   "circuitous"
+  ]
+ },
+ {
+  "word": "divert",
+  "count": 4,
+  "forms": [
+   "divert",
+   "diverting",
+   "diverts"
+  ]
+ },
+ {
+  "word": "deflect",
+  "count": 2,
+  "forms": [
+   "deflect"
+  ]
+ },
+ {
+  "word": "address",
+  "count": 2,
+  "forms": [
+   "address",
+   "addressing"
+  ],
+  "pronunciation": "əˈdrɛs",
+  "partOfSpeech": "v./n.",
+  "definition": "v. to deal with; to speak to; n. a formal speech",
+  "chinese": "v. 處理；應對；致詞；n. 演說；地址",
+  "example": "The report raises important questions but fails to address them."
+ },
+ {
+  "word": "tackle",
+  "count": 0,
+  "forms": [
+   "tackle"
+  ]
+ },
+ {
+  "word": "expedite",
+  "count": 5,
+  "forms": [
+   "expedite",
+   "expedited",
+   "expediting"
+  ]
+ },
+ {
+  "word": "accelerate",
+  "count": 3,
+  "forms": [
+   "accelerate",
+   "accelerated",
+   "accelerating"
+  ]
+ },
+ {
+  "word": "hasten",
+  "count": 0,
+  "forms": [
+   "hasten"
+  ]
+ },
+ {
+  "word": "dilatory",
+  "count": 3,
+  "forms": [
+   "dilatory"
+  ]
+ },
+ {
+  "word": "prolong",
+  "count": 2,
+  "forms": [
+   "prolong"
+  ]
+ },
+ {
+  "word": "protract",
+  "count": 1,
+  "forms": [
+   "protract",
+   "protracted"
+  ]
+ },
+ {
+  "word": "timely",
+  "count": 4,
+  "forms": [
+   "timely"
+  ]
+ },
+ {
+  "word": "apt",
+  "count": 3,
+  "forms": [
+   "apt"
+  ]
+ },
+ {
+  "word": "felicitous",
+  "count": 2,
+  "forms": [
+   "felicitous"
+  ]
+ },
+ {
+  "word": "premature",
+  "count": 6,
+  "forms": [
+   "premature"
+  ],
+  "pronunciation": "ˌpriməˈtʃʊr",
+  "partOfSpeech": "adj.",
+  "definition": "occurring too early",
+  "chinese": "過早的；不成熟的",
+  "example": "Celebrations proved premature when the results were overturned."
+ },
+ {
+  "word": "inopportune",
+  "count": 1,
+  "forms": [
+   "inopportune"
+  ]
+ },
+ {
+  "word": "belated",
+  "count": 0,
+  "forms": [
+   "belated"
+  ]
+ },
+ {
+  "word": "inevitable",
+  "count": 6,
+  "forms": [
+   "inevitable"
+  ]
+ },
+ {
+  "word": "imminent",
+  "count": 3,
+  "forms": [
+   "imminent"
+  ]
+ },
+ {
+  "word": "inexorable",
+  "count": 0,
+  "forms": [
+   "inexorable"
+  ]
+ },
+ {
+  "word": "fortuitous",
+  "count": 11,
+  "forms": [
+   "fortuitous"
+  ]
+ },
+ {
+  "word": "serendipitous",
+  "count": 0,
+  "forms": [
+   "serendipitous"
+  ]
+ },
+ {
+  "word": "adventitious",
+  "count": 0,
+  "forms": [
+   "adventitious"
+  ]
+ },
+ {
+  "word": "anachronistic",
+  "count": 6,
+  "forms": [
+   "anachronistic"
+  ]
+ },
+ {
+  "word": "archaic",
+  "count": 6,
+  "forms": [
+   "archaic"
+  ]
+ },
+ {
+  "word": "antiquated",
+  "count": 3,
+  "forms": [
+   "antiquated"
+  ]
+ },
+ {
+  "word": "nostalgia",
+  "count": 3,
+  "forms": [
+   "nostalgia"
+  ]
+ },
+ {
+  "word": "conventional",
+  "count": 12,
+  "forms": [
+   "conventional"
+  ]
+ },
+ {
+  "word": "orthodox",
+  "count": 4,
+  "forms": [
+   "orthodox"
+  ]
+ },
+ {
+  "word": "hidebound",
+  "count": 0,
+  "forms": [
+   "hidebound"
+  ]
+ },
+ {
+  "word": "iconoclast",
+  "count": 13,
+  "forms": [
+   "iconoclast",
+   "iconoclasts"
+  ]
+ },
+ {
+  "word": "iconoclastic",
+  "count": 2,
+  "forms": [
+   "iconoclastic"
+  ]
+ },
+ {
+  "word": "maverick",
+  "count": 2,
+  "forms": [
+   "maverick",
+   "mavericks"
+  ]
+ },
+ {
+  "word": "anomaly",
+  "count": 13,
+  "forms": [
+   "anomaly",
+   "anomalies"
+  ]
+ },
+ {
+  "word": "anomalous",
+  "count": 6,
+  "forms": [
+   "anomalous"
+  ]
+ },
+ {
+  "word": "atypical",
+  "count": 3,
+  "forms": [
+   "atypical"
+  ]
+ },
+ {
+  "word": "singular",
+  "count": 2,
+  "forms": [
+   "singular"
+  ]
+ },
+ {
+  "word": "outlandish",
+  "count": 2,
+  "forms": [
+   "outlandish"
+  ]
+ },
+ {
+  "word": "paradigmatic",
+  "count": 2,
+  "forms": [
+   "paradigmatic"
+  ],
+  "pronunciation": "ˌpærədɪɡˈmætɪk",
+  "partOfSpeech": "adj.",
+  "definition": "serving as a typical example or model",
+  "chinese": "典型的；範例的",
+  "example": "Her career is paradigmatic of a generation that moved from labs to startups."
+ },
+ {
+  "word": "paragon",
+  "count": 2,
+  "forms": [
+   "paragon",
+   "paragons"
+  ]
+ },
+ {
+  "word": "prototype",
+  "count": 3,
+  "forms": [
+   "prototype",
+   "prototypes"
+  ]
+ },
+ {
+  "word": "paradox",
+  "count": 4,
+  "forms": [
+   "paradox",
+   "paradoxes"
+  ]
+ },
+ {
+  "word": "paradoxical",
+  "count": 5,
+  "forms": [
+   "paradoxical"
+  ],
+  "pronunciation": "ˌpærəˈdɑksɪkəl",
+  "partOfSpeech": "adj.",
+  "definition": "seemingly contradictory but possibly true",
+  "chinese": "矛盾的；似非而是的",
+  "example": "It is paradoxical that the most isolated island had the most diverse dialects."
+ },
+ {
+  "word": "contradictory",
+  "count": 3,
+  "forms": [
+   "contradictory"
+  ],
+  "pronunciation": "ˌkɑntrəˈdɪktəri",
+  "partOfSpeech": "adj.",
+  "definition": "mutually opposed or inconsistent",
+  "chinese": "相互矛盾的；對立的",
+  "example": "Witnesses gave contradictory accounts of the night's events."
+ },
+ {
+  "word": "incongruous",
+  "count": 3,
+  "forms": [
+   "incongruous"
+  ]
+ },
+ {
+  "word": "antithesis",
+  "count": 2,
+  "forms": [
+   "antithesis"
+  ]
+ },
+ {
+  "word": "coherent",
+  "count": 1,
+  "forms": [
+   "coherent"
+  ]
+ },
+ {
+  "word": "congruent",
+  "count": 0,
+  "forms": [
+   "congruent"
+  ]
+ },
+ {
+  "word": "consonant",
+  "count": 0,
+  "forms": [
+   "consonant"
+  ]
+ },
+ {
+  "word": "originality",
+  "count": 5,
+  "forms": [
+   "originality"
+  ],
+  "pronunciation": "əˌrɪdʒəˈnæləti",
+  "partOfSpeech": "n.",
+  "definition": "the ability to think independently and creatively",
+  "chinese": "原創性；獨創性",
+  "example": "Reviewers praised the originality of a debut that resembled nothing else on the shelf."
+ },
+ {
+  "word": "novel",
+  "count": 4,
+  "forms": [
+   "novel"
+  ]
+ },
+ {
+  "word": "novelty",
+  "count": 4,
+  "forms": [
+   "novelty",
+   "novelties"
+  ]
+ },
+ {
+  "word": "unprecedented",
+  "count": 5,
+  "forms": [
+   "unprecedented"
+  ]
+ },
+ {
+  "word": "derivative",
+  "count": 9,
+  "forms": [
+   "derivative"
+  ]
+ },
+ {
+  "word": "emulate",
+  "count": 6,
+  "forms": [
+   "emulate",
+   "emulating"
+  ]
+ },
+ {
+  "word": "mimic",
+  "count": 2,
+  "forms": [
+   "mimic"
+  ]
+ },
+ {
+  "word": "ingenious",
+  "count": 5,
+  "forms": [
+   "ingenious"
+  ]
+ },
+ {
+  "word": "ingenuity",
+  "count": 2,
+  "forms": [
+   "ingenuity"
+  ],
+  "pronunciation": "ˌɪndʒəˈnuəti",
+  "partOfSpeech": "n.",
+  "definition": "cleverness and inventiveness",
+  "chinese": "巧思；獨創力；足智多謀",
+  "example": "The engineers showed great ingenuity in repairing the probe from millions of miles away."
+ },
+ {
+  "word": "hackneyed",
+  "count": 10,
+  "forms": [
+   "hackneyed"
+  ]
+ },
+ {
+  "word": "trite",
+  "count": 2,
+  "forms": [
+   "trite"
+  ]
+ },
+ {
+  "word": "banal",
+  "count": 3,
+  "forms": [
+   "banal"
+  ]
+ },
+ {
+  "word": "cliché",
+  "count": 2,
+  "forms": [
+   "cliché"
+  ],
+  "pronunciation": "kliˈʃeɪ",
+  "partOfSpeech": "n.",
+  "definition": "an overused phrase or idea",
+  "chinese": "陳腔濫調；老套",
+  "example": "The screenplay relies on every cliché of the detective genre."
+ },
+ {
+  "word": "formulaic",
+  "count": 2,
+  "forms": [
+   "formulaic"
+  ]
+ },
+ {
+  "word": "rote",
+  "count": 3,
+  "forms": [
+   "rote"
+  ]
+ },
+ {
+  "word": "mundane",
+  "count": 9,
+  "forms": [
+   "mundane"
+  ]
+ },
+ {
+  "word": "pedestrian",
+  "count": 7,
+  "forms": [
+   "pedestrian"
+  ]
+ },
+ {
+  "word": "prosaic",
+  "count": 3,
+  "forms": [
+   "prosaic"
+  ]
+ },
+ {
+  "word": "unremarkable",
+  "count": 3,
+  "forms": [
+   "unremarkable"
+  ],
+  "pronunciation": "ˌʌnrɪˈmɑrkəbəl",
+  "partOfSpeech": "adj.",
+  "definition": "not particularly interesting or surprising",
+  "chinese": "平凡的；不起眼的",
+  "example": "The site looked unremarkable until excavation revealed an ancient temple."
+ },
+ {
+  "word": "unexceptional",
+  "count": 4,
+  "forms": [
+   "unexceptional"
+  ],
+  "pronunciation": "ˌʌnɪkˈsɛpʃənəl",
+  "partOfSpeech": "adj.",
+  "definition": "ordinary; not outstanding",
+  "chinese": "普通的；平庸的",
+  "example": "His early paintings were competent but unexceptional."
+ },
+ {
+  "word": "commonplace",
+  "count": 3,
+  "forms": [
+   "commonplace",
+   "commonplaces"
+  ]
+ },
+ {
+  "word": "mediocrity",
+  "count": 2,
+  "forms": [
+   "mediocrity"
+  ]
+ },
+ {
+  "word": "unparalleled",
+  "count": 2,
+  "forms": [
+   "unparalleled"
+  ],
+  "pronunciation": "ʌnˈpærəˌlɛld",
+  "partOfSpeech": "adj.",
+  "definition": "having no equal",
+  "chinese": "無與倫比的；空前的",
+  "example": "The archive offers unparalleled access to medieval trade records."
+ },
+ {
+  "word": "prodigious",
+  "count": 1,
+  "forms": [
+   "prodigious"
+  ]
+ },
+ {
+  "word": "absorbing",
+  "count": 3,
+  "forms": [
+   "absorbing"
+  ]
+ },
+ {
+  "word": "engaging",
+  "count": 4,
+  "forms": [
+   "engaging"
+  ],
+  "pronunciation": "ɪnˈɡeɪdʒɪŋ",
+  "partOfSpeech": "adj.",
+  "definition": "charming and attractive; holding attention",
+  "chinese": "引人入勝的；迷人的",
+  "example": "An engaging lecturer can make even statistics seem exciting."
+ },
+ {
+  "word": "captivating",
+  "count": 2,
+  "forms": [
+   "captivating"
+  ]
+ },
+ {
+  "word": "intrigue",
+  "count": 6,
+  "forms": [
+   "intrigue",
+   "intrigued",
+   "intriguing"
+  ]
+ },
+ {
+  "word": "tedious",
+  "count": 4,
+  "forms": [
+   "tedious"
+  ]
+ },
+ {
+  "word": "insipid",
+  "count": 2,
+  "forms": [
+   "insipid"
+  ]
+ },
+ {
+  "word": "jejune",
+  "count": 4,
+  "forms": [
+   "jejune"
+  ]
+ },
+ {
+  "word": "interminable",
+  "count": 2,
+  "forms": [
+   "interminable"
+  ]
+ },
+ {
+  "word": "eminence",
+  "count": 2,
+  "forms": [
+   "eminence"
+  ]
+ },
+ {
+  "word": "celebrated",
+  "count": 3,
+  "forms": [
+   "celebrated"
+  ]
+ },
+ {
+  "word": "illustrious",
+  "count": 1,
+  "forms": [
+   "illustrious"
+  ]
+ },
+ {
+  "word": "resurgence",
+  "count": 3,
+  "forms": [
+   "resurgence"
+  ]
+ },
+ {
+  "word": "revive",
+  "count": 2,
+  "forms": [
+   "revive",
+   "revived"
+  ]
+ },
+ {
+  "word": "demise",
+  "count": 2,
+  "forms": [
+   "demise"
+  ]
+ },
+ {
+  "word": "founder",
+  "count": 2,
+  "forms": [
+   "founder",
+   "foundered",
+   "foundering"
+  ]
+ },
+ {
+  "word": "moribund",
+  "count": 1,
+  "forms": [
+   "moribund"
+  ]
+ },
+ {
+  "word": "pristine",
+  "count": 3,
+  "forms": [
+   "pristine"
+  ]
+ },
+ {
+  "word": "intact",
+  "count": 0,
+  "forms": [
+   "intact"
+  ]
+ },
+ {
+  "word": "taint",
+  "count": 0,
+  "forms": [
+   "taint"
+  ]
+ },
+ {
+  "word": "sully",
+  "count": 0,
+  "forms": [
+   "sully"
+  ]
+ },
+ {
+  "word": "tarnish",
+  "count": 0,
+  "forms": [
+   "tarnish"
+  ]
+ },
+ {
+  "word": "transparent",
+  "count": 4,
+  "forms": [
+   "transparent"
+  ]
+ },
+ {
+  "word": "transparency",
+  "count": 3,
+  "forms": [
+   "transparency"
+  ],
+  "pronunciation": "trænsˈpɛrənsi",
+  "partOfSpeech": "n.",
+  "definition": "openness; the quality of being easily understood",
+  "chinese": "透明度；公開；易懂",
+  "example": "Voters demanded greater transparency in campaign financing."
+ },
+ {
+  "word": "disclose",
+  "count": 2,
+  "forms": [
+   "disclose"
+  ]
+ },
+ {
+  "word": "clandestine",
+  "count": 3,
+  "forms": [
+   "clandestine"
+  ]
+ },
+ {
+  "word": "furtive",
+  "count": 2,
+  "forms": [
+   "furtive"
+  ]
+ },
+ {
+  "word": "conceal",
+  "count": 3,
+  "forms": [
+   "conceal",
+   "concealed"
+  ]
+ },
+ {
+  "word": "cloak",
+  "count": 2,
+  "forms": [
+   "cloak",
+   "cloaked"
+  ]
+ },
+ {
+  "word": "commend",
+  "count": 3,
+  "forms": [
+   "commend",
+   "commending"
+  ]
+ },
+ {
+  "word": "acclaim",
+  "count": 3,
+  "forms": [
+   "acclaim",
+   "acclaimed"
+  ]
+ },
+ {
+  "word": "extol",
+  "count": 1,
+  "forms": [
+   "extol"
+  ]
+ },
+ {
+  "word": "censure",
+  "count": 2,
+  "forms": [
+   "censure"
+  ]
+ },
+ {
+  "word": "excoriate",
+  "count": 4,
+  "forms": [
+   "excoriate",
+   "excoriated"
+  ]
+ },
+ {
+  "word": "decry",
+  "count": 3,
+  "forms": [
+   "decry",
+   "decrying"
+  ]
+ },
+ {
+  "word": "approbation",
+  "count": 2,
+  "forms": [
+   "approbation"
+  ]
+ },
+ {
+  "word": "laudatory",
+  "count": 2,
+  "forms": [
+   "laudatory"
+  ]
+ },
+ {
+  "word": "laudable",
+  "count": 2,
+  "forms": [
+   "laudable"
+  ]
+ },
+ {
+  "word": "opprobrium",
+  "count": 3,
+  "forms": [
+   "opprobrium"
+  ]
+ },
+ {
+  "word": "scathing",
+  "count": 2,
+  "forms": [
+   "scathing"
+  ]
+ },
+ {
+  "word": "acerbic",
+  "count": 3,
+  "forms": [
+   "acerbic"
+  ]
+ },
+ {
+  "word": "captious",
+  "count": 2,
+  "forms": [
+   "captious"
+  ]
+ },
+ {
+  "word": "lionize",
+  "count": 2,
+  "forms": [
+   "lionize",
+   "lionized",
+   "lionizing"
+  ]
+ },
+ {
+  "word": "exalt",
+  "count": 2,
+  "forms": [
+   "exalt",
+   "exalted"
+  ]
+ },
+ {
+  "word": "idealize",
+  "count": 3,
+  "forms": [
+   "idealize",
+   "idealized"
+  ],
+  "pronunciation": "aɪˈdiəˌlaɪz",
+  "partOfSpeech": "v.",
+  "definition": "to regard as perfect or better than in reality",
+  "chinese": "理想化；美化",
+  "example": "Nostalgic accounts tend to idealize rural life, ignoring its hardships."
+ },
+ {
+  "word": "denigrate",
+  "count": 3,
+  "forms": [
+   "denigrate"
+  ]
+ },
+ {
+  "word": "malign",
+  "count": 3,
+  "forms": [
+   "malign",
+   "maligned"
+  ]
+ },
+ {
+  "word": "vilify",
+  "count": 2,
+  "forms": [
+   "vilify",
+   "vilified"
+  ]
+ },
+ {
+  "word": "reverence",
+  "count": 2,
+  "forms": [
+   "reverence"
+  ]
+ },
+ {
+  "word": "veneration",
+  "count": 2,
+  "forms": [
+   "veneration"
+  ]
+ },
+ {
+  "word": "sacrosanct",
+  "count": 2,
+  "forms": [
+   "sacrosanct"
+  ]
+ },
+ {
+  "word": "disdain",
+  "count": 2,
+  "forms": [
+   "disdain",
+   "disdained"
+  ]
+ },
+ {
+  "word": "contempt",
+  "count": 0,
+  "forms": [
+   "contempt"
+  ]
+ },
+ {
+  "word": "scorn",
+  "count": 0,
+  "forms": [
+   "scorn"
+  ]
+ },
+ {
+  "word": "lament",
+  "count": 3,
+  "forms": [
+   "lament",
+   "lamenting"
+  ]
+ },
+ {
+  "word": "deplore",
+  "count": 0,
+  "forms": [
+   "deplore"
+  ]
+ },
+ {
+  "word": "rue",
+  "count": 0,
+  "forms": [
+   "rue"
+  ]
+ },
+ {
+  "word": "relish",
+  "count": 2,
+  "forms": [
+   "relish",
+   "relished"
+  ]
+ },
+ {
+  "word": "exult",
+  "count": 1,
+  "forms": [
+   "exult",
+   "exulted"
+  ]
+ },
+ {
+  "word": "savor",
+  "count": 0,
+  "forms": [
+   "savor"
+  ]
+ },
+ {
+  "word": "condone",
+  "count": 4,
+  "forms": [
+   "condone"
+  ]
+ },
+ {
+  "word": "countenance",
+  "count": 3,
+  "forms": [
+   "countenance",
+   "countenanced"
+  ]
+ },
+ {
+  "word": "abet",
+  "count": 2,
+  "forms": [
+   "abet"
+  ]
+ },
+ {
+  "word": "proscribe",
+  "count": 0,
+  "forms": [
+   "proscribe"
+  ]
+ },
+ {
+  "word": "interdict",
+  "count": 0,
+  "forms": [
+   "interdict"
+  ]
+ },
+ {
+  "word": "onerous",
+  "count": 5,
+  "forms": [
+   "onerous"
+  ]
+ },
+ {
+  "word": "arduous",
+  "count": 3,
+  "forms": [
+   "arduous"
+  ]
+ },
+ {
+  "word": "daunting",
+  "count": 3,
+  "forms": [
+   "daunting"
+  ]
+ },
+ {
+  "word": "formidable",
+  "count": 2,
+  "forms": [
+   "formidable"
+  ]
+ },
+ {
+  "word": "taxing",
+  "count": 2,
+  "forms": [
+   "taxing"
+  ]
+ },
+ {
+  "word": "exacting",
+  "count": 5,
+  "forms": [
+   "exacting"
+  ]
+ },
+ {
+  "word": "intractable",
+  "count": 3,
+  "forms": [
+   "intractable"
+  ]
+ },
+ {
+  "word": "intractability",
+  "count": 3,
+  "forms": [
+   "intractability"
+  ],
+  "pronunciation": "ɪnˌtræktəˈbɪləti",
+  "partOfSpeech": "n.",
+  "definition": "the quality of being hard to solve or control",
+  "chinese": "棘手；難以處理；倔強",
+  "example": "The intractability of the conflict frustrated three generations of diplomats."
+ },
+ {
+  "word": "facile",
+  "count": 2,
+  "forms": [
+   "facile"
+  ]
+ },
+ {
+  "word": "tractable",
+  "count": 1,
+  "forms": [
+   "tractable"
+  ]
+ },
+ {
+  "word": "facilitate",
+  "count": 6,
+  "forms": [
+   "facilitate",
+   "facilitating"
+  ]
+ },
+ {
+  "word": "foster",
+  "count": 3,
+  "forms": [
+   "foster",
+   "fostering",
+   "fosters"
+  ]
+ },
+ {
+  "word": "nurture",
+  "count": 0,
+  "forms": [
+   "nurture"
+  ]
+ },
+ {
+  "word": "hamper",
+  "count": 3,
+  "forms": [
+   "hamper",
+   "hampered",
+   "hampering"
+  ]
+ },
+ {
+  "word": "hinder",
+  "count": 2,
+  "forms": [
+   "hinder",
+   "hindered"
+  ],
+  "pronunciation": "ˈhɪndər",
+  "partOfSpeech": "v.",
+  "definition": "to create difficulties that slow progress",
+  "chinese": "阻礙；妨礙",
+  "example": "A lack of reliable data hindered efforts to model the epidemic."
+ },
+ {
+  "word": "stymie",
+  "count": 2,
+  "forms": [
+   "stymie",
+   "stymied"
+  ]
+ },
+ {
+  "word": "thwart",
+  "count": 2,
+  "forms": [
+   "thwart",
+   "thwarted"
+  ]
+ },
+ {
+  "word": "forestall",
+  "count": 8,
+  "forms": [
+   "forestall",
+   "forestalled"
+  ]
+ },
+ {
+  "word": "preclude",
+  "count": 7,
+  "forms": [
+   "preclude",
+   "precluded",
+   "precludes"
+  ]
+ },
+ {
+  "word": "obviate",
+  "count": 6,
+  "forms": [
+   "obviate",
+   "obviated",
+   "obviates"
+  ]
+ },
+ {
+  "word": "deter",
+  "count": 2,
+  "forms": [
+   "deter",
+   "deterring"
+  ]
+ },
+ {
+  "word": "engender",
+  "count": 3,
+  "forms": [
+   "engender",
+   "engenders"
+  ]
+ },
+ {
+  "word": "induce",
+  "count": 2,
+  "forms": [
+   "induce",
+   "induced",
+   "induces"
+  ]
+ },
+ {
+  "word": "precipitate",
+  "count": 1,
+  "forms": [
+   "precipitate"
+  ]
+ },
+ {
+  "word": "galvanize",
+  "count": 3,
+  "forms": [
+   "galvanize",
+   "galvanizes"
+  ]
+ },
+ {
+  "word": "invigorate",
+  "count": 2,
+  "forms": [
+   "invigorate"
+  ]
+ },
+ {
+  "word": "spur",
+  "count": 2,
+  "forms": [
+   "spur",
+   "spurred",
+   "spurring"
+  ]
+ },
+ {
+  "word": "dampen",
+  "count": 2,
+  "forms": [
+   "dampen"
+  ]
+ },
+ {
+  "word": "demoralize",
+  "count": 2,
+  "forms": [
+   "demoralize",
+   "demoralizes",
+   "demoralizing"
+  ]
+ },
+ {
+  "word": "dishearten",
+  "count": 1,
+  "forms": [
+   "dishearten",
+   "disheartening"
+  ]
+ },
+ {
+  "word": "circumscribe",
+  "count": 5,
+  "forms": [
+   "circumscribe",
+   "circumscribed"
+  ]
+ },
+ {
+  "word": "constrain",
+  "count": 5,
+  "forms": [
+   "constrain",
+   "constraining",
+   "constrains"
+  ]
+ },
+ {
+  "word": "confine",
+  "count": 4,
+  "forms": [
+   "confine",
+   "confined",
+   "confining"
+  ]
+ },
+ {
+  "word": "demarcate",
+  "count": 2,
+  "forms": [
+   "demarcate",
+   "demarcated",
+   "demarcates"
+  ]
+ },
+ {
+  "word": "compulsory",
+  "count": 2,
+  "forms": [
+   "compulsory"
+  ]
+ },
+ {
+  "word": "mandatory",
+  "count": 0,
+  "forms": [
+   "mandatory"
+  ]
+ },
+ {
+  "word": "obligatory",
+  "count": 0,
+  "forms": [
+   "obligatory"
+  ]
+ },
+ {
+  "word": "discretionary",
+  "count": 2,
+  "forms": [
+   "discretionary"
+  ]
+ },
+ {
+  "word": "voluntary",
+  "count": 0,
+  "forms": [
+   "voluntary"
+  ]
+ },
+ {
+  "word": "robust",
+  "count": 4,
+  "forms": [
+   "robust"
+  ]
+ },
+ {
+  "word": "resilience",
+  "count": 2,
+  "forms": [
+   "resilience"
+  ]
+ },
+ {
+  "word": "resilient",
+  "count": 1,
+  "forms": [
+   "resilient"
+  ]
+ },
+ {
+  "word": "precarious",
+  "count": 4,
+  "forms": [
+   "precarious"
+  ]
+ },
+ {
+  "word": "fragile",
+  "count": 1,
+  "forms": [
+   "fragile"
+  ]
+ },
+ {
+  "word": "turbulent",
+  "count": 3,
+  "forms": [
+   "turbulent"
+  ]
+ },
+ {
+  "word": "upheaval",
+  "count": 2,
+  "forms": [
+   "upheaval"
+  ]
+ },
+ {
+  "word": "tumultuous",
+  "count": 1,
+  "forms": [
+   "tumultuous"
+  ]
+ },
+ {
+  "word": "tranquil",
+  "count": 2,
+  "forms": [
+   "tranquil"
+  ]
+ },
+ {
+  "word": "halcyon",
+  "count": 1,
+  "forms": [
+   "halcyon"
+  ]
+ },
+ {
+  "word": "adroit",
+  "count": 2,
+  "forms": [
+   "adroit"
+  ]
+ },
+ {
+  "word": "proficient",
+  "count": 2,
+  "forms": [
+   "proficient"
+  ]
+ },
+ {
+  "word": "deft",
+  "count": 1,
+  "forms": [
+   "deft"
+  ]
+ },
+ {
+  "word": "maladroit",
+  "count": 1,
+  "forms": [
+   "maladroit"
+  ]
+ },
+ {
+  "word": "inept",
+  "count": 1,
+  "forms": [
+   "inept"
+  ]
+ }
+]

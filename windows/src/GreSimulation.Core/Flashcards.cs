@@ -42,6 +42,13 @@ public enum FlashcardDeckSize
     All = 0,
 }
 
+/// <summary>Which words a flash-card deck draws from.</summary>
+public enum FlashcardWordSet
+{
+    AllVocabulary,
+    AnswerChoices,
+}
+
 public enum FlashcardMode
 {
     Deck,
@@ -54,6 +61,10 @@ public static class FlashcardText
     public static string Title(this FlashcardMode mode) => mode == FlashcardMode.Deck ? "Fixed deck" : "Infinite loop";
     /// <summary>The @AppStorage raw value ("deck" / "infinite").</summary>
     public static string RawValue(this FlashcardMode mode) => mode == FlashcardMode.Deck ? "deck" : "infinite";
+    public static string Title(this FlashcardWordSet set) => set == FlashcardWordSet.AllVocabulary ? "All vocabulary" : "Answer-choice words";
+    /// <summary>The @AppStorage raw value ("allVocabulary" / "answerChoices").</summary>
+    public static string RawValue(this FlashcardWordSet set) => set == FlashcardWordSet.AllVocabulary ? "allVocabulary" : "answerChoices";
+    public static IReadOnlyList<FlashcardWordSet> AllWordSets { get; } = [FlashcardWordSet.AllVocabulary, FlashcardWordSet.AnswerChoices];
     public static IReadOnlyList<FlashcardDeckSize> AllDeckSizes { get; } =
         [FlashcardDeckSize.Twenty, FlashcardDeckSize.Fifty, FlashcardDeckSize.OneHundred, FlashcardDeckSize.All];
 }
@@ -83,6 +94,8 @@ public enum FlashcardScreen
 public sealed class FlashcardSession : ObservableObject
 {
     public const string ModeStorageKey = "gre-simulation.flashcards.mode";
+    public const string WordSetStorageKey = "gre-simulation.flashcards.wordSet";
+    public const string AnswerChoiceOrderStorageKey = "gre-simulation.flashcards.answerChoiceOrder";
 
     private readonly IReadOnlyList<VocabularyWord> _words;
     private readonly KeyValueStore _store;
@@ -98,22 +111,69 @@ public sealed class FlashcardSession : ObservableObject
     private readonly HashSet<string> _missedThisRound = [];
     private bool _hasStarted;
     private int _infiniteTotal;
+    private FlashcardWordSet _wordSet;
+    private AnswerChoiceOrder _answerChoiceOrder;
+    private AnswerChoicePartOfSpeech _partOfSpeech = AnswerChoicePartOfSpeech.All;
 
     public FlashcardProgressStore Progress { get; }
 
     /// <summary>Fires when any playing pronunciation must stop.</summary>
     public event EventHandler? StopSpeechRequested;
 
-    public FlashcardSession(IReadOnlyList<VocabularyWord> words, KeyValueStore store, Random? random = null)
+    public FlashcardSession(IReadOnlyList<VocabularyWord> words, KeyValueStore store, Random? random = null,
+        AnswerChoiceWords? answerChoices = null)
     {
         _words = words;
+        AnswerChoices = answerChoices ?? new AnswerChoiceWords(new AnswerChoiceWordSet(), words);
+        _wordSet = store.GetString(WordSetStorageKey) == "answerChoices" ? FlashcardWordSet.AnswerChoices : FlashcardWordSet.AllVocabulary;
+        _answerChoiceOrder = AnswerChoiceText.ParseOrder(store.GetString(AnswerChoiceOrderStorageKey));
         _store = store;
         _random = random ?? Random.Shared;
         Progress = new FlashcardProgressStore(store);
         _studyMode = store.GetString(ModeStorageKey) == "infinite" ? FlashcardMode.Infinite : FlashcardMode.Deck;
     }
 
+    /// <summary>The grouped answer-choice words (the Answer-choice words deck, card badges and meaning groups).</summary>
+    public AnswerChoiceWords AnswerChoices { get; }
+
     // MARK: - Settings
+
+    /// <summary>Persisted like @AppStorage; changing it starts a new deck.</summary>
+    public FlashcardWordSet WordSet
+    {
+        get => _wordSet;
+        set
+        {
+            if (!SetProperty(ref _wordSet, value)) return;
+            _store.SetString(WordSetStorageKey, value.RawValue());
+            StartNewDeck();
+        }
+    }
+
+    /// <summary>Persisted like @AppStorage; changing it starts a new deck.</summary>
+    public AnswerChoiceOrder AnswerChoiceOrder
+    {
+        get => _answerChoiceOrder;
+        set
+        {
+            if (!SetProperty(ref _answerChoiceOrder, value)) return;
+            _store.SetString(AnswerChoiceOrderStorageKey, value.RawValue());
+            StartNewDeck();
+        }
+    }
+
+    /// <summary>Answer-choice words only; changing it starts a new deck.</summary>
+    public AnswerChoicePartOfSpeech PartOfSpeech
+    {
+        get => _partOfSpeech;
+        set { if (SetProperty(ref _partOfSpeech, value)) StartNewDeck(); }
+    }
+
+    /// <summary>Part of speech and Order replace Source for the Answer-choice words deck.</summary>
+    public bool ShowsAnswerChoiceOptions => _wordSet == FlashcardWordSet.AnswerChoices;
+
+    public string AnswerChoiceSummary =>
+        $"{AnswerChoices.Words.Count} words that appear most often as Text Completion and Sentence Equivalence answer choices, with a few opposites added, sorted into {AnswerChoices.Set.Groups.Count} meaning groups. The back of each card shows its group: near-synonyms and the opposite side.";
 
     public string SelectedSource
     {
@@ -158,9 +218,13 @@ public sealed class FlashcardSession : ObservableObject
     public int MasteredThisRoundCount => _masteredThisRound.Count;
     public int MissedThisRoundCount => _missedThisRound.Count;
 
-    public IReadOnlyList<VocabularyWord> EligibleWords => _words.Where(item =>
+    private IReadOnlyList<VocabularyWord> DeckWords => _wordSet == FlashcardWordSet.AnswerChoices ? AnswerChoices.Words : _words;
+
+    public IReadOnlyList<VocabularyWord> EligibleWords => DeckWords.Where(item =>
     {
-        var matchesSource = _selectedSource == VocabularyBank.AllSources || item.Sources.Contains(_selectedSource);
+        var matchesSource = _wordSet == FlashcardWordSet.AnswerChoices
+            ? _partOfSpeech.Matches(item)
+            : _selectedSource == VocabularyBank.AllSources || item.Sources.Contains(_selectedSource);
         var skipsMastered = _unmasteredOnly || _studyMode == FlashcardMode.Infinite;
         var matchesProgress = !skipsMastered || !Progress.Mastered.Contains(item.Id);
         return matchesSource && matchesProgress;
@@ -168,7 +232,7 @@ public sealed class FlashcardSession : ObservableObject
 
     public VocabularyWord? CurrentCard => _currentIndex < _deck.Count ? _deck[_currentIndex] : null;
 
-    public int OverallMasteredCount => _words.Count(w => Progress.Mastered.Contains(w.Id));
+    public int OverallMasteredCount => DeckWords.Count(w => Progress.Mastered.Contains(w.Id));
 
     public FlashcardScreen Screen =>
         CurrentCard is not null ? FlashcardScreen.Card
@@ -180,7 +244,9 @@ public sealed class FlashcardSession : ObservableObject
     // Display text
     public string AvailableText => $"{EligibleWords.Count} available";
     public string MasteredText => $"{OverallMasteredCount} mastered";
-    public string RestartButtonTitle => _studyMode == FlashcardMode.Infinite ? "Restart loop" : "New shuffled deck";
+    public string RestartButtonTitle => _studyMode == FlashcardMode.Infinite ? "Restart loop"
+        : _wordSet == FlashcardWordSet.AnswerChoices && _answerChoiceOrder != AnswerChoiceOrder.Shuffled ? "New deck"
+        : "New shuffled deck";
     public string DeckProgressTitle => $"Card {_currentIndex + 1} of {_deck.Count}";
     public string DeckProgressDetail => $"{_masteredThisRound.Count} known · {_missedThisRound.Count} review";
     /// <summary>Fixed-deck progress bar: value / total.</summary>
@@ -195,6 +261,7 @@ public sealed class FlashcardSession : ObservableObject
     public string InfiniteCompletionText => $"You worked through all {_infiniteTotal} cards in this loop until each one was marked Know it.";
     public string EmptyDeckText => _unmasteredOnly || _studyMode == FlashcardMode.Infinite
         ? "Every matching card is mastered. Switch to a fixed deck with Unmastered only off, or reset mastery progress."
+        : _wordSet == FlashcardWordSet.AnswerChoices ? "Choose a different part of speech to build a deck."
         : "Choose a different source to build a deck.";
     public const string ResetTitle = "Reset all flash-card progress?";
     public const string ResetMessage = "Every saved mastered word will return to the study pool.";
@@ -265,7 +332,9 @@ public sealed class FlashcardSession : ObservableObject
     public void StartNewDeck()
     {
         StopSpeechRequested?.Invoke(this, EventArgs.Empty);
-        var shuffled = Shuffle(EligibleWords);
+        var shuffled = _wordSet == FlashcardWordSet.AnswerChoices
+            ? AnswerChoices.Ordered(EligibleWords, _answerChoiceOrder, _random)
+            : Shuffle(EligibleWords);
         var limit = _deckSize == FlashcardDeckSize.All || _studyMode == FlashcardMode.Infinite
             ? shuffled.Count
             : Math.Min((int)_deckSize, shuffled.Count);
@@ -283,7 +352,8 @@ public sealed class FlashcardSession : ObservableObject
     public void ReviewMissedCards()
     {
         StopSpeechRequested?.Invoke(this, EventArgs.Empty);
-        _deck = Shuffle(_words.Where(w => _missedThisRound.Contains(w.Id)));
+        var missed = DeckWords.Where(w => _missedThisRound.Contains(w.Id)).ToList();
+        _deck = _wordSet == FlashcardWordSet.AnswerChoices ? AnswerChoices.Ordered(missed, _answerChoiceOrder, _random) : Shuffle(missed);
         _infiniteTotal = 0;
         _currentIndex = 0;
         _isRevealed = false;
