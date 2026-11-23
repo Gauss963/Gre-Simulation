@@ -46,6 +46,9 @@
                 <NavigationViewItem Content="Practice Tests" Tag="dashboard">
                     <NavigationViewItem.Icon><FontIcon Glyph="&#xE70F;" /></NavigationViewItem.Icon>
                 </NavigationViewItem>
+                <NavigationViewItem Content="Verbal Practice" Tag="verbalPractice">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xE9D5;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
                 <NavigationViewItem Content="Vocabulary" Tag="vocabulary">
                     <NavigationViewItem.Icon><FontIcon Glyph="&#xE82D;" /></NavigationViewItem.Icon>
                 </NavigationViewItem>

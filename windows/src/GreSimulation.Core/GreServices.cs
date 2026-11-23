@@ -20,6 +20,7 @@ public sealed class GreServices : IDisposable
         Settings = new KeyValueStore(dataDirectory);
         Questions = new QuestionBank(resourceDirectory, Settings, random);
         Forms = new FormBuilder(Questions);
+        VerbalDrill = new VerbalDrillPool(Questions);
         Vocabulary = new VocabularyBank(resourceDirectory);
         AnswerChoices = new AnswerChoiceWords(resourceDirectory, Vocabulary);
         Pronunciations = new WordPronunciationLibrary(resourceDirectory);
@@ -37,6 +38,8 @@ public sealed class GreServices : IDisposable
     public KeyValueStore Settings { get; }
     public QuestionBank Questions { get; }
     public FormBuilder Forms { get; }
+    /// <summary>Every Verbal question for the one-at-a-time Verbal Practice page.</summary>
+    public VerbalDrillPool VerbalDrill { get; }
     public VocabularyBank Vocabulary { get; }
     /// <summary>Words that appear most often as TC/SE answer choices, in meaning groups.</summary>
     public AnswerChoiceWords AnswerChoices { get; }
@@ -49,6 +52,9 @@ public sealed class GreServices : IDisposable
     public FlashcardSession CreateFlashcards() => new(Vocabulary.Words, Settings, answerChoices: AnswerChoices);
 
     public VocabularyBrowser CreateVocabularyBrowser() => new(Vocabulary);
+
+    /// <summary>The Verbal Practice page's state, reading and saving attempts in <see cref="Settings"/>.</summary>
+    public VerbalDrillSession CreateVerbalDrill(Random? random = null) => new(new VerbalDrillStore(VerbalDrill, Settings), random);
 
     /// <summary>The report for a just-finished exam ("Practice test complete" / "Save &amp; Close").</summary>
     public ScoreReport ReportForCompletedExam(ExamResult result) => new(result, Questions);

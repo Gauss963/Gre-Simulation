@@ -3,6 +3,7 @@ import Foundation
 
 enum AppPage: String, CaseIterable, Identifiable {
     case dashboard
+    case verbalPractice
     case vocabulary
     case history
     case resources
@@ -12,6 +13,7 @@ enum AppPage: String, CaseIterable, Identifiable {
     var title: String {
         switch self {
         case .dashboard: "Practice Tests"
+        case .verbalPractice: "Verbal Practice"
         case .vocabulary: "Vocabulary"
         case .history: "Score History"
         case .resources: "Official Resources"
@@ -21,6 +23,7 @@ enum AppPage: String, CaseIterable, Identifiable {
     var icon: String {
         switch self {
         case .dashboard: "rectangle.and.pencil.and.ellipsis"
+        case .verbalPractice: "text.badge.checkmark"
         case .vocabulary: "text.book.closed"
         case .history: "chart.line.uptrend.xyaxis"
         case .resources: "checkmark.seal"
@@ -38,6 +41,9 @@ struct ContentView: View {
         let arguments = ProcessInfo.processInfo.arguments
         if arguments.contains("-openVocabulary") {
             _selection = State(initialValue: .vocabulary)
+        }
+        if arguments.contains("-openVerbalPractice") {
+            _selection = State(initialValue: .verbalPractice)
         }
         if arguments.contains("-startFullPractice") {
             _activeExamMode = State(initialValue: .fullLength)
@@ -90,6 +96,8 @@ struct ContentView: View {
                 switch selection ?? .dashboard {
                 case .dashboard:
                     DashboardView(history: history.results, start: { activeExamMode = $0 })
+                case .verbalPractice:
+                    VerbalDrillView()
                 case .vocabulary:
                     VocabularyView()
                 case .history:

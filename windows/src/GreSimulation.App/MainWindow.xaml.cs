@@ -13,6 +13,7 @@ public sealed partial class MainWindow : Window
     private static readonly Dictionary<string, Type> Pages = new()
     {
         ["dashboard"] = typeof(Pages.DashboardPage),
+        ["verbalPractice"] = typeof(Pages.VerbalPracticePage),
         ["vocabulary"] = typeof(Pages.VocabularyPage),
         ["history"] = typeof(Pages.HistoryPage),
         ["resources"] = typeof(Pages.ResourcesPage),
@@ -61,6 +62,9 @@ public sealed partial class MainWindow : Window
     }
 
     private object? pendingParameter;
+
+    /// <summary>The page shown in the content frame (smoke test).</summary>
+    internal object? CurrentPage => ContentFrame.Content;
 
     private void OnNavigationSelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
     {

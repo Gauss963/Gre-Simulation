@@ -12,6 +12,13 @@ struct Gre_SimulationApp: App {
     init() {
         #if DEBUG
         if ProcessInfo.processInfo.arguments.contains("-selfTest") { SelfTest.run() }
+        if let flag = ProcessInfo.processInfo.arguments.firstIndex(of: "-renderVerbalDrill"),
+           ProcessInfo.processInfo.arguments.indices.contains(flag + 1) {
+            MainActor.assumeIsolated {
+                VerbalDrillView.renderSnapshots(to: URL(fileURLWithPath: ProcessInfo.processInfo.arguments[flag + 1]))
+            }
+            exit(0)
+        }
         if let flag = ProcessInfo.processInfo.arguments.firstIndex(of: "-exportVerbal"),
            ProcessInfo.processInfo.arguments.indices.contains(flag + 1) {
             SelfTest.exportVerbal(to: ProcessInfo.processInfo.arguments[flag + 1])

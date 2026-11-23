@@ -19,6 +19,36 @@ enum SelfTest {
         check(QuestionBank.all.allSatisfy { !retired.contains($0.id) }, "A retired question is still in the bank")
         log("Retired questions: \(retired.count); Verbal pool \(QuestionBank.all.filter { $0.measure == .verbal }.count)")
 
+        // Verbal practice: every Verbal question and type is covered; passages continue in order;
+        // missed questions come back.
+        let verbalCount = QuestionBank.all.filter { $0.measure == .verbal }.count
+        check(VerbalDrill.pool.count == verbalCount, "Verbal practice covers \(VerbalDrill.pool.count) of \(verbalCount) questions")
+        for type in VerbalDrillType.allCases {
+            check(VerbalDrill.pool.contains { VerbalDrillType.of($0) == type }, "No Verbal practice questions of type \(type)")
+        }
+        let drillDefaults = UserDefaults(suiteName: "gre-selftest-verbal-drill")!
+        drillDefaults.removePersistentDomain(forName: "gre-selftest-verbal-drill")
+        let drill = VerbalDrillStore(defaults: drillDefaults)
+        let savedExposure = UserDefaults.standard.stringArray(forKey: "gre-simulation.question-exposure.v1.verbal")
+        if let set = VerbalDrill.setMembers.values.first(where: { $0.count >= 3 }) {
+            let first = drill.next(after: set[0], types: nil, difficulty: nil, focus: nil, missedOnly: false)
+            check(first?.id == set[1].id, "Verbal practice did not continue the passage")
+            var wrong = GREAnswer()
+            for group in set[0].groups { wrong.selections[group.id] = [group.options.first { !(set[0].correctSelections[group.id] ?? []).contains($0.id) }!.id] }
+            check(drill.record(set[0], answer: wrong) == false, "A wrong Verbal practice answer was scored correct")
+            check(drill.record(set[1], answer: GREAnswer(selections: set[1].correctSelections)), "A correct Verbal practice answer was scored wrong")
+            check(drill.next(after: nil, types: nil, difficulty: nil, focus: nil, missedOnly: true)?.id == set[0].id, "Missed only did not return the missed question")
+            check(drill.missedCount == 1 && drill.practicedCount == 2, "Verbal practice counts are wrong")
+            check(VerbalDrillStore(defaults: drillDefaults).history.count == 2, "Verbal practice history was not saved")
+        }
+        let tc = VerbalDrill.pool.first { VerbalDrillType.of($0) == .textCompletion2 }!
+        let started = drill.next(after: nil, types: [.textCompletion2], difficulty: .hard, focus: nil, missedOnly: false)
+        check(started.map { VerbalDrillType.of($0) == .textCompletion2 && $0.difficulty == .hard } == true, "Verbal practice filters were ignored")
+        check(!VerbalDrill.isComplete(GREAnswer(selections: [tc.groups[0].id: [tc.groups[0].options[0].id]]), for: tc), "A half-answered two-blank item counted as complete")
+        drillDefaults.removePersistentDomain(forName: "gre-selftest-verbal-drill")
+        UserDefaults.standard.set(savedExposure, forKey: "gre-simulation.question-exposure.v1.verbal")
+        log("Verbal practice: \(VerbalDrill.pool.count) questions, " + VerbalDrillType.allCases.map { type in "\(type.shortTitle) \(VerbalDrill.pool.filter { VerbalDrillType.of($0) == type }.count)" }.joined(separator: ", "))
+
         for run in 0..<12 {
             let session = ExamSession(mode: .fullLength)
             let layout = session.sections.map { "\($0.measure.shortTitle)\($0.ordinal)[\($0.questions.count)q/\($0.durationSeconds / 60)m]" }

@@ -14,7 +14,7 @@ namespace GreSimulation.App;
 /// Launch with <c>--smoke-test &lt;folder&gt;</c> (used by CI): opens every sidebar page and walks
 /// every practice mode through all sections and questions with sample answers, saving screenshots
 /// and a log to the folder. The process exits 0 when nothing threw, 1 otherwise. Nothing is saved
-/// to the learner's history.
+/// to the learner's score history (the Verbal Practice steps do record their practice attempts).
 /// </summary>
 internal static class SmokeTest
 {
@@ -60,8 +60,21 @@ internal static class SmokeTest
             var services = await AppServices.Ready;
             await Task.Delay(1500);
             await Step("dashboard", () => { });
-            foreach (var tag in new[] { "vocabulary", "history", "resources", "dashboard" })
+            foreach (var tag in new[] { "verbalPractice", "vocabulary", "history", "resources", "dashboard" })
                 await Step($"page-{tag}", () => window.Navigate(tag));
+
+            // Verbal Practice: check a few questions, then look at the history and a review.
+            await Step("verbal-practice", () => window.Navigate("verbalPractice"));
+            for (var i = 0; i < 4; i++)
+            {
+                await Step($"verbal-practice-check-{i + 1}", () =>
+                {
+                    if (window.CurrentPage is not Pages.VerbalPracticePage page || !page.AnswerAndCheckForSmokeTest())
+                        throw new InvalidOperationException("Verbal Practice did not check the question.");
+                });
+                await Step($"verbal-practice-next-{i + 1}", () => (window.CurrentPage as Pages.VerbalPracticePage)?.NextForSmokeTest());
+            }
+            window.Navigate("dashboard");
 
             foreach (var mode in Enum.GetValues<ExamMode>())
             {
