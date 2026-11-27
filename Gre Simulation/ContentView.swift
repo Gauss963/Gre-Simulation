@@ -4,6 +4,7 @@ import Foundation
 enum AppPage: String, CaseIterable, Identifiable {
     case dashboard
     case verbalPractice
+    case quantPractice
     case vocabulary
     case history
     case resources
@@ -14,6 +15,7 @@ enum AppPage: String, CaseIterable, Identifiable {
         switch self {
         case .dashboard: "Practice Tests"
         case .verbalPractice: "Verbal Practice"
+        case .quantPractice: "Quant Practice"
         case .vocabulary: "Vocabulary"
         case .history: "Score History"
         case .resources: "Official Resources"
@@ -24,6 +26,7 @@ enum AppPage: String, CaseIterable, Identifiable {
         switch self {
         case .dashboard: "rectangle.and.pencil.and.ellipsis"
         case .verbalPractice: "text.badge.checkmark"
+        case .quantPractice: "function"
         case .vocabulary: "text.book.closed"
         case .history: "chart.line.uptrend.xyaxis"
         case .resources: "checkmark.seal"
@@ -44,6 +47,9 @@ struct ContentView: View {
         }
         if arguments.contains("-openVerbalPractice") {
             _selection = State(initialValue: .verbalPractice)
+        }
+        if arguments.contains("-openQuantPractice") {
+            _selection = State(initialValue: .quantPractice)
         }
         if arguments.contains("-startFullPractice") {
             _activeExamMode = State(initialValue: .fullLength)
@@ -97,7 +103,9 @@ struct ContentView: View {
                 case .dashboard:
                     DashboardView(history: history.results, start: { activeExamMode = $0 })
                 case .verbalPractice:
-                    VerbalDrillView()
+                    PracticeDrillView(measure: .verbal).id(GREMeasure.verbal)
+                case .quantPractice:
+                    PracticeDrillView(measure: .quantitative).id(GREMeasure.quantitative)
                 case .vocabulary:
                     VocabularyView()
                 case .history:

@@ -19,18 +19,22 @@ enum SelfTest {
         check(QuestionBank.all.allSatisfy { !retired.contains($0.id) }, "A retired question is still in the bank")
         log("Retired questions: \(retired.count); Verbal pool \(QuestionBank.all.filter { $0.measure == .verbal }.count)")
 
-        // Verbal practice: every Verbal question and type is covered; passages continue in order;
-        // missed questions come back.
-        let verbalCount = QuestionBank.all.filter { $0.measure == .verbal }.count
-        check(VerbalDrill.pool.count == verbalCount, "Verbal practice covers \(VerbalDrill.pool.count) of \(verbalCount) questions")
-        for type in VerbalDrillType.allCases {
-            check(VerbalDrill.pool.contains { VerbalDrillType.of($0) == type }, "No Verbal practice questions of type \(type)")
+        // Practice pages: every Verbal and Quant question and type is covered; sets continue in order;
+        // missed questions come back; numeric answers are checked like the test.
+        for measure in [GREMeasure.verbal, .quantitative] {
+            let count = QuestionBank.all.filter { $0.measure == measure }.count
+            check(PracticeDrill.pool(for: measure).count == count, "\(measure) practice covers \(PracticeDrill.pool(for: measure).count) of \(count) questions")
+            for type in DrillType.types(for: measure) {
+                check(PracticeDrill.pool(for: measure).contains { DrillType.of($0) == type }, "No practice questions of type \(type)")
+            }
         }
-        let drillDefaults = UserDefaults(suiteName: "gre-selftest-verbal-drill")!
-        drillDefaults.removePersistentDomain(forName: "gre-selftest-verbal-drill")
-        let drill = VerbalDrillStore(defaults: drillDefaults)
-        let savedExposure = UserDefaults.standard.stringArray(forKey: "gre-simulation.question-exposure.v1.verbal")
-        if let set = VerbalDrill.setMembers.values.first(where: { $0.count >= 3 }) {
+        check(PracticeDrill.quantPool.allSatisfy { question in DrillCategory.quantAreas.contains { $0.id == DrillCategory.quantArea(of: question) } }, "A Quant question has no content area")
+        let drillSuite = "gre-selftest-practice-drill"
+        let drillDefaults = UserDefaults(suiteName: drillSuite)!
+        drillDefaults.removePersistentDomain(forName: drillSuite)
+        let savedExposure = [GREMeasure.verbal, .quantitative].map { UserDefaults.standard.stringArray(forKey: "gre-simulation.question-exposure.v1.\($0.rawValue)") }
+        let drill = PracticeDrillStore(measure: .verbal, defaults: drillDefaults)
+        if let set = PracticeDrill.setMembers.values.first(where: { $0.count >= 3 && $0[0].measure == .verbal }) {
             let first = drill.next(after: set[0], types: nil, difficulty: nil, focus: nil, missedOnly: false)
             check(first?.id == set[1].id, "Verbal practice did not continue the passage")
             var wrong = GREAnswer()
@@ -39,15 +43,39 @@ enum SelfTest {
             check(drill.record(set[1], answer: GREAnswer(selections: set[1].correctSelections)), "A correct Verbal practice answer was scored wrong")
             check(drill.next(after: nil, types: nil, difficulty: nil, focus: nil, missedOnly: true)?.id == set[0].id, "Missed only did not return the missed question")
             check(drill.missedCount == 1 && drill.practicedCount == 2, "Verbal practice counts are wrong")
-            check(VerbalDrillStore(defaults: drillDefaults).history.count == 2, "Verbal practice history was not saved")
+            check(PracticeDrillStore(measure: .verbal, defaults: drillDefaults).history.count == 2, "Verbal practice history was not saved")
         }
-        let tc = VerbalDrill.pool.first { VerbalDrillType.of($0) == .textCompletion2 }!
+        let tc = PracticeDrill.verbalPool.first { DrillType.of($0) == .textCompletion2 }!
         let started = drill.next(after: nil, types: [.textCompletion2], difficulty: .hard, focus: nil, missedOnly: false)
-        check(started.map { VerbalDrillType.of($0) == .textCompletion2 && $0.difficulty == .hard } == true, "Verbal practice filters were ignored")
-        check(!VerbalDrill.isComplete(GREAnswer(selections: [tc.groups[0].id: [tc.groups[0].options[0].id]]), for: tc), "A half-answered two-blank item counted as complete")
-        drillDefaults.removePersistentDomain(forName: "gre-selftest-verbal-drill")
-        UserDefaults.standard.set(savedExposure, forKey: "gre-simulation.question-exposure.v1.verbal")
-        log("Verbal practice: \(VerbalDrill.pool.count) questions, " + VerbalDrillType.allCases.map { type in "\(type.shortTitle) \(VerbalDrill.pool.filter { VerbalDrillType.of($0) == type }.count)" }.joined(separator: ", "))
+        check(started.map { DrillType.of($0) == .textCompletion2 && $0.difficulty == .hard } == true, "Verbal practice filters were ignored")
+        check(!PracticeDrill.isComplete(GREAnswer(selections: [tc.groups[0].id: [tc.groups[0].options[0].id]]), for: tc), "A half-answered two-blank item counted as complete")
+
+        let quant = PracticeDrillStore(measure: .quantitative, defaults: drillDefaults)
+        check(quant.history.isEmpty, "Quant practice shares Verbal practice records")
+        let geometry = quant.next(after: nil, types: [.numericEntry], area: "Geometry", difficulty: nil, focus: nil, missedOnly: false)
+        check(geometry.map { $0.format == .numericEntry && DrillCategory.quantArea(of: $0) == "Geometry" } == true, "Quant practice area filter was ignored")
+        if let numeric = PracticeDrill.quantPool.first(where: { $0.format == .numericEntry && !PracticeDrill.isFractionEntry($0) }),
+           let accepted = numeric.acceptedNumericAnswers.first {
+            check(PracticeDrill.isComplete(GREAnswer(numericEntry: accepted), for: numeric), "A numeric answer counted as incomplete")
+            check(quant.record(numeric, answer: GREAnswer(numericEntry: accepted)), "A correct numeric practice answer was scored wrong")
+            check(!quant.record(numeric, answer: GREAnswer(numericEntry: accepted + "9")), "A wrong numeric practice answer was scored correct")
+            check(PracticeDrillStore(measure: .quantitative, defaults: drillDefaults).history.first?.answer.numericEntry == accepted + "9", "Quant practice did not save the numeric entry")
+        }
+        if let fraction = PracticeDrill.quantPool.first(where: { PracticeDrill.isFractionEntry($0) }) {
+            check(!PracticeDrill.isComplete(GREAnswer(numericEntry: "3/"), for: fraction), "A fraction without a denominator counted as complete")
+        }
+        if let qc = PracticeDrill.quantPool.first(where: { $0.format == .quantitativeComparison }) {
+            check(quant.record(qc, answer: GREAnswer(selections: qc.correctSelections)), "A correct comparison answer was scored wrong")
+        }
+        check(quant.accuracyByCategory.allSatisfy { area in DrillCategory.quantAreas.contains { $0.id == area.id } }, "Quant accuracy is not by content area")
+        drillDefaults.removePersistentDomain(forName: drillSuite)
+        for (measure, saved) in zip([GREMeasure.verbal, .quantitative], savedExposure) {
+            UserDefaults.standard.set(saved, forKey: "gre-simulation.question-exposure.v1.\(measure.rawValue)")
+        }
+        for measure in [GREMeasure.verbal, .quantitative] {
+            let pool = PracticeDrill.pool(for: measure)
+            log("\(measure.rawValue.capitalized) practice: \(pool.count) questions, " + DrillType.types(for: measure).map { type in "\(type.shortTitle) \(pool.filter { DrillType.of($0) == type }.count)" }.joined(separator: ", "))
+        }
 
         for run in 0..<12 {
             let session = ExamSession(mode: .fullLength)

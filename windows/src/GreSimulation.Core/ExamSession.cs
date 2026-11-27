@@ -39,7 +39,7 @@ public static class QuestionStatusText
 /// When <see cref="Phase"/> becomes Completed, <see cref="Result"/> holds the score report; add it to
 /// <see cref="HistoryStore"/> when the user chooses Save &amp; Close.
 /// </remarks>
-public sealed class ExamSession : ObservableObject
+public sealed class ExamSession : ObservableObject, ICalculatorHost
 {
     private readonly FormBuilder _forms;
     private readonly QuestionBank _bank;
@@ -260,6 +260,9 @@ public sealed class ExamSession : ObservableObject
         parts[index] = CleanNumber(typed, allowDecimal: false);
         UpdateNumericEntry(parts.All(p => p.Length == 0) ? "" : string.Join("/", parts));
     }
+
+    /// <summary>The calculator's close button.</summary>
+    public void CloseCalculator() => IsCalculatorPresented = false;
 
     /// <summary>Transfer Display: copies the calculator display into the Numeric Entry box when allowed.</summary>
     public void TransferCalculatorDisplay()

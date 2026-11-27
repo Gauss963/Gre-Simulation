@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Port of PracticeDrillView (PracticeDrillView.swift): Verbal or Quant practice one question at a time.
+     The navigation parameter is the measure. -->
+<Page
+    x:Class="GreSimulation.App.Pages.PracticePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:GreSimulation.App.Controls">
+
+    <Grid>
+        <ScrollViewer x:Name="PageScroller">
+            <StackPanel Style="{StaticResource PageContentStyle}" MaxWidth="1100" Spacing="22">
+                <!-- Header: title, filters, stats, accuracy -->
+                <Border Style="{StaticResource CardStyle}" CornerRadius="12">
+                    <StackPanel Spacing="14">
+                        <Grid ColumnSpacing="16">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Spacing="6">
+                                <TextBlock x:Name="HeadingText" FontSize="30" FontWeight="Bold" TextWrapping="Wrap"
+                                           Foreground="{ThemeResource NavyBrush}" />
+                                <TextBlock x:Name="SubheadingText" TextWrapping="Wrap"
+                                           Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                            </StackPanel>
+                            <Button x:Name="CalculatorButton" Grid.Column="1" VerticalAlignment="Top" Padding="14,8"
+                                    Click="OnCalculatorClick">
+                                <StackPanel Orientation="Horizontal" Spacing="8">
+                                    <FontIcon Glyph="&#xE8EF;" FontSize="16" />
+                                    <TextBlock x:Name="CalculatorButtonText" Text="Calculator" FontWeight="SemiBold" />
+                                </StackPanel>
+                            </Button>
+                        </Grid>
+                        <controls:WrapPanel HorizontalSpacing="16" VerticalSpacing="12">
+                            <ComboBox x:Name="TypeBox" Header="Type" MinWidth="280" SelectionChanged="OnTypeChanged" />
+                            <ComboBox x:Name="AreaBox" Header="Area" MinWidth="180" SelectionChanged="OnAreaChanged" />
+                            <ComboBox x:Name="DifficultyBox" Header="Difficulty" MinWidth="150" SelectionChanged="OnDifficultyChanged" />
+                            <ToggleSwitch x:Name="FocusSwitch" MinWidth="0" Toggled="OnFocusToggled" />
+                            <ToggleSwitch x:Name="MissedSwitch" Header="Missed only" MinWidth="0" Toggled="OnMissedToggled"
+                                          ToolTipService.ToolTip="Only questions whose latest attempt was wrong." />
+                        </controls:WrapPanel>
+                        <controls:WrapPanel HorizontalSpacing="26" VerticalSpacing="10">
+                            <StackPanel Spacing="2">
+                                <TextBlock Text="Questions practiced" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                <TextBlock x:Name="PracticedText" FontSize="22" FontWeight="Bold" />
+                            </StackPanel>
+                            <StackPanel Spacing="2">
+                                <TextBlock Text="Accuracy (latest tries)" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                <TextBlock x:Name="AccuracyText" FontSize="22" FontWeight="Bold" />
+                            </StackPanel>
+                            <StackPanel Spacing="2">
+                                <TextBlock Text="This session" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                <TextBlock x:Name="SessionText" FontSize="22" FontWeight="Bold" />
+                            </StackPanel>
+                            <StackPanel Spacing="2">
+                                <TextBlock Text="To redo" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                <TextBlock x:Name="MissedText" FontSize="22" FontWeight="Bold" />
+                            </StackPanel>
+                        </controls:WrapPanel>
+                        <StackPanel x:Name="AccuracyPanel" Spacing="6">
+                            <TextBlock x:Name="AccuracyCaption" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                            <controls:WrapPanel x:Name="AccuracyChips" HorizontalSpacing="8" VerticalSpacing="8" />
+                            <TextBlock x:Name="WeakestText" FontSize="12" TextWrapping="Wrap"
+                                       Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <ProgressRing x:Name="LoadingRing" IsActive="True" HorizontalAlignment="Left" Width="32" Height="32" />
+
+                <TextBlock x:Name="LastTimeText" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+
+                <!-- The question (built in code) -->
+                <Border x:Name="QuestionCard" Style="{StaticResource CardStyle}" CornerRadius="12">
+                    <StackPanel x:Name="QuestionHost" Spacing="16" />
+                </Border>
+
+                <!-- Check / Next -->
+                <Border x:Name="ActionsCard" Style="{StaticResource CardStyle}" CornerRadius="12">
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="ActionText" VerticalAlignment="Center" TextWrapping="Wrap" />
+                        <Button x:Name="SecondaryButton" Grid.Column="1" Padding="18,9" FontWeight="SemiBold" Click="OnSecondaryClick" />
+                        <Button x:Name="PrimaryButton" Grid.Column="2" Padding="22,9" FontWeight="SemiBold"
+                                Style="{StaticResource AccentButtonStyle}" Click="OnPrimaryClick">
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Modifiers="Control" Key="Enter" />
+                            </Button.KeyboardAccelerators>
+                        </Button>
+                    </Grid>
+                </Border>
+
+                <!-- No matching questions -->
+                <Border x:Name="EmptyCard" Style="{StaticResource CardStyle}" CornerRadius="12" MinHeight="240">
+                    <StackPanel Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="520">
+                        <FontIcon Glyph="&#xE930;" FontSize="40" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        <TextBlock x:Name="EmptyTitle" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Center" />
+                        <TextBlock x:Name="EmptyText" TextAlignment="Center" TextWrapping="Wrap"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                </Border>
+
+                <!-- Answer history -->
+                <Border x:Name="HistoryCard" Style="{StaticResource CardStyle}" CornerRadius="12">
+                    <StackPanel Spacing="10">
+                        <Grid>
+                            <TextBlock Text="Answer history" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" />
+                            <HyperlinkButton x:Name="ShowAllButton" HorizontalAlignment="Right" Click="OnShowAllClick" />
+                        </Grid>
+                        <StackPanel x:Name="HistoryRows" Spacing="8" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- The floating calculator (Quant) stays put while the page scrolls. -->
+        <Canvas x:Name="OverlayCanvas" />
+    </Grid>
+</Page>

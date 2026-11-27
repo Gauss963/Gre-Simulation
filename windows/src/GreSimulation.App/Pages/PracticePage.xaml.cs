@@ -1,5 +1,7 @@
 using System.ComponentModel;
+using System.Globalization;
 using GreSimulation.App.Controls;
+using GreSimulation.App.Exam;
 using GreSimulation.App.Services;
 using GreSimulation.Core;
 using Microsoft.UI.Text;
@@ -10,31 +12,42 @@ using Microsoft.UI.Xaml.Navigation;
 namespace GreSimulation.App.Pages;
 
 /// <summary>
-/// Verbal Practice: one question at a time with Check Answer (Ctrl+Enter), the key, the explanation and the
-/// guessing tip, accuracy by question type, and an answer history that reopens each attempt.
-/// Port of VerbalDrillView (VerbalDrillView.swift).
+/// Verbal Practice and Quant Practice: one question at a time with Check Answer (Ctrl+Enter), the key, the explanation
+/// (and for Verbal the guessing tip), accuracy by question type or content area, an answer history that reopens each
+/// attempt, and for Quant the floating calculator. Navigate with the measure as the parameter.
+/// Port of PracticeDrillView (PracticeDrillView.swift).
 /// </summary>
-public sealed partial class VerbalPracticePage : Page
+public sealed partial class PracticePage : Page
 {
     private static readonly QuestionDifficulty?[] Difficulties = [null, QuestionDifficulty.Easy, QuestionDifficulty.Medium, QuestionDifficulty.Hard];
 
+    private GREMeasure measure = GREMeasure.Verbal;
     private GreServices? services;
-    private VerbalDrillSession? session;
+    private PracticeDrillSession? session;
+    private DrillQuestionView? questionView;
+    private CalculatorPanel? calculator;
     private bool refreshing;
     private bool showsAllHistory;
     private string? renderedKey;
 
-    public VerbalPracticePage()
+    public PracticePage()
     {
         InitializeComponent();
-        HeadingText.Text = VerbalDrillSession.Title;
-        SubheadingText.Text = VerbalDrillSession.Subtitle;
-        AccuracyCaption.Text = VerbalDrillSession.AccuracyCaption;
-        TypeBox.ItemsSource = VerbalDrillFilter.Menu.Select(f => f.Title).ToList();
         DifficultyBox.ItemsSource = Difficulties.Select(d => d?.Title() ?? "All").ToList();
+        AreaBox.ItemsSource = PracticeDrillSession.AreaChoices.Select(a => a ?? "All areas").ToList();
         SetContentVisible(false);
         Loaded += OnLoaded;
         ActualThemeChanged += (_, _) => { renderedKey = null; Refresh(); };
+    }
+
+    protected override void OnNavigatedTo(NavigationEventArgs e)
+    {
+        base.OnNavigatedTo(e);
+        if (e.Parameter is GREMeasure parameter) measure = parameter;
+        var isQuant = measure == GREMeasure.Quantitative;
+        TypeBox.ItemsSource = DrillTypeFilter.Menu(measure).Select(f => f.Title).ToList();
+        AreaBox.Visibility = Show(isQuant);
+        CalculatorButton.Visibility = Show(isQuant);
     }
 
     private async void OnLoaded(object sender, RoutedEventArgs e)
@@ -49,8 +62,12 @@ public sealed partial class VerbalPracticePage : Page
             CrashLog.Write(error);
             return;
         }
-        session = services.CreateVerbalDrill();
+        session = services.CreatePracticeDrill(measure);
         session.PropertyChanged += OnSessionChanged;
+        HeadingText.Text = session.Title;
+        SubheadingText.Text = session.Subtitle;
+        AccuracyCaption.Text = session.AccuracyCaption;
+        FocusSwitch.Header = session.FocusTitle;
         session.OnAppear();
         LoadingRing.IsActive = false;
         LoadingRing.Visibility = Visibility.Collapsed;
@@ -67,7 +84,7 @@ public sealed partial class VerbalPracticePage : Page
 
     private void SetContentVisible(bool visible)
     {
-        var show = visible ? Visibility.Visible : Visibility.Collapsed;
+        var show = Show(visible);
         QuestionCard.Visibility = show;
         ActionsCard.Visibility = show;
         EmptyCard.Visibility = Visibility.Collapsed;
@@ -81,13 +98,12 @@ public sealed partial class VerbalPracticePage : Page
         refreshing = true;
         try
         {
-            TypeBox.SelectedIndex = VerbalDrillFilter.Menu.ToList().IndexOf(drill.Filter);
+            TypeBox.SelectedIndex = DrillTypeFilter.Menu(measure).ToList().IndexOf(drill.Filter);
+            AreaBox.SelectedIndex = PracticeDrillSession.AreaChoices.ToList().IndexOf(drill.Area);
             DifficultyBox.SelectedIndex = Array.IndexOf(Difficulties, drill.Difficulty);
             FocusSwitch.IsOn = drill.FocusWeak;
             FocusSwitch.IsEnabled = drill.CanFocusWeak;
-            ToolTipService.SetToolTip(FocusSwitch, drill.CanFocusWeak
-                ? "Unpracticed questions of your two weakest types come first."
-                : "Available after five answers of a type.");
+            ToolTipService.SetToolTip(FocusSwitch, drill.FocusHelp);
             MissedSwitch.IsOn = drill.MissedOnly;
 
             PracticedText.Text = drill.PracticedText;
@@ -95,6 +111,7 @@ public sealed partial class VerbalPracticePage : Page
             SessionText.Text = drill.SessionText;
             MissedText.Text = drill.MissedText;
             RefreshAccuracy(drill);
+            RefreshCalculator(drill);
 
             var question = drill.Current;
             QuestionCard.Visibility = Show(question is not null);
@@ -108,16 +125,18 @@ public sealed partial class VerbalPracticePage : Page
             if (question is not null)
             {
                 var dark = Palette.IsDark(this);
+                // Typing a Numeric Entry does not rebuild the question (the boxes keep focus); their text is synced.
                 var key = $"{question.Id}|{drill.IsCorrect}|{string.Join(";", drill.Answer.Selections.Select(p => p.Key + "=" + string.Join(",", p.Value.Order())))}|{dark}";
                 if (key != renderedKey)
                 {
                     var isNewQuestion = renderedKey?.Split('|')[0] != question.Id;
                     renderedKey = key;
+                    questionView = new DrillQuestionView(question, drill.Answer, drill.IsCorrect, services.Questions.GuessingTip(question), dark, drill);
                     QuestionHost.Children.Clear();
-                    QuestionHost.Children.Add(VerbalDrillQuestionView.Build(question, drill.Answer, drill.IsCorrect,
-                        services.Questions.GuessingTip(question), dark, drill.IsChecked ? null : drill.Toggle));
+                    QuestionHost.Children.Add(questionView.View);
                     if (isNewQuestion) PageScroller.ChangeView(null, 0, null, true);
                 }
+                questionView?.SyncNumericText(drill);
 
                 if (drill.IsCorrect is { } correct)
                 {
@@ -143,6 +162,7 @@ public sealed partial class VerbalPracticePage : Page
             else
             {
                 renderedKey = null;
+                questionView = null;
             }
             RefreshHistory(drill);
         }
@@ -152,16 +172,38 @@ public sealed partial class VerbalPracticePage : Page
         }
     }
 
-    private void RefreshAccuracy(VerbalDrillSession drill)
+    private void RefreshCalculator(PracticeDrillSession drill)
     {
-        var entries = drill.Store.AccuracyByType.OrderBy(a => a.Accuracy).ToList();
+        CalculatorButtonText.Text = drill.ShowsCalculator ? "Hide Calculator" : "Calculator";
+        if (drill.ShowsCalculator)
+        {
+            if (calculator is null)
+            {
+                calculator = new CalculatorPanel(drill);
+                OverlayCanvas.Children.Add(calculator);
+                calculator.UpdateLayout();
+                Canvas.SetLeft(calculator, Math.Max(0, OverlayCanvas.ActualWidth - calculator.Width - 30));
+                Canvas.SetTop(calculator, 90);
+            }
+            calculator.Visibility = Visibility.Visible;
+            calculator.Refresh();
+        }
+        else if (calculator is not null)
+        {
+            calculator.Visibility = Visibility.Collapsed;
+        }
+    }
+
+    private void RefreshAccuracy(PracticeDrillSession drill)
+    {
+        var entries = drill.Store.AccuracyByCategory.OrderBy(a => a.Accuracy).ToList();
         AccuracyPanel.Visibility = Show(entries.Count > 0);
         AccuracyChips.Children.Clear();
-        var weak = drill.Store.WeakTypes.ToHashSet();
+        var weak = drill.Store.WeakCategories.Select(c => c.Id).ToHashSet();
         foreach (var entry in entries)
         {
             var row = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 6 };
-            row.Children.Add(new TextBlock { Text = entry.Type.ShortTitle(), FontSize = 12, FontWeight = FontWeights.SemiBold });
+            row.Children.Add(new TextBlock { Text = entry.Category.Title, FontSize = 12, FontWeight = FontWeights.SemiBold });
             row.Children.Add(new TextBlock
             {
                 Text = $"{Math.Round(entry.Accuracy * 100, MidpointRounding.AwayFromZero):0}%",
@@ -170,21 +212,22 @@ public sealed partial class VerbalPracticePage : Page
                 Foreground = Palette.Brush(this, entry.Accuracy >= 0.8 ? Tone.Teal : entry.Accuracy >= 0.6 ? Tone.Warning : Tone.Red),
             });
             row.Children.Add(new TextBlock { Text = $"· {entry.Total}", FontSize = 11, Foreground = Palette.Brush(this, Tone.Secondary) });
+            var isWeak = weak.Contains(entry.Category.Id);
             AccuracyChips.Children.Add(new Border
             {
                 Child = row,
                 Padding = new Thickness(10, 5, 10, 5),
                 CornerRadius = new CornerRadius(12),
-                Background = weak.Contains(entry.Type) ? Palette.Brush(this, Tone.Red, 0.08) : Palette.Brush(this, Tone.Input),
-                BorderBrush = weak.Contains(entry.Type) ? Palette.Brush(this, Tone.Red, 0.35) : null,
-                BorderThickness = new Thickness(weak.Contains(entry.Type) ? 1 : 0),
+                Background = isWeak ? Palette.Brush(this, Tone.Red, 0.08) : Palette.Brush(this, Tone.Input),
+                BorderBrush = isWeak ? Palette.Brush(this, Tone.Red, 0.35) : null,
+                BorderThickness = new Thickness(isWeak ? 1 : 0),
             });
         }
         WeakestText.Text = drill.WeakestText is { } text ? "💡 " + text : "";
         WeakestText.Visibility = Show(drill.WeakestText is not null);
     }
 
-    private void RefreshHistory(VerbalDrillSession drill)
+    private void RefreshHistory(PracticeDrillSession drill)
     {
         var history = drill.Store.History;
         HistoryCard.Visibility = Show(history.Count > 0);
@@ -208,12 +251,7 @@ public sealed partial class VerbalPracticePage : Page
             });
             var text = new StackPanel { Spacing = 2 };
             text.Children.Add(new TextBlock { Text = question.Prompt, FontSize = 14, FontWeight = FontWeights.SemiBold, TextTrimming = TextTrimming.CharacterEllipsis, MaxLines = 1 });
-            text.Children.Add(new TextBlock
-            {
-                Text = $"{VerbalDrillText.Of(question)?.Title()} · {question.Difficulty.Title()} · {record.Date.ToLocalTime():MMM d, yyyy h:mm tt}",
-                FontSize = 12,
-                Foreground = Palette.Brush(this, Tone.Secondary),
-            });
+            text.Children.Add(new TextBlock { Text = drill.HistoryDetail(record), FontSize = 12, Foreground = Palette.Brush(this, Tone.Secondary) });
             Grid.SetColumn(text, 1);
             grid.Children.Add(text);
             var chevron = new FontIcon { Glyph = "", FontSize = 12, Foreground = Palette.Brush(this, Tone.Secondary) };
@@ -235,15 +273,15 @@ public sealed partial class VerbalPracticePage : Page
     }
 
     /// <summary>The Mac review sheet: the attempt as it was checked, with Practice Again and Done.</summary>
-    private async void ShowReview(VerbalDrillStore.Record record, GREQuestion question)
+    private async void ShowReview(PracticeDrillStore.Record record, GREQuestion question)
     {
         if (services is null || session is null) return;
-        var view = VerbalDrillQuestionView.Build(question, record.Answer, record.IsCorrect, services.Questions.GuessingTip(question), Palette.IsDark(this), null);
+        var view = new DrillQuestionView(question, record.Answer, record.IsCorrect, services.Questions.GuessingTip(question), Palette.IsDark(this), null);
         var dialog = new ContentDialog
         {
             XamlRoot = XamlRoot,
-            Title = record.Date.ToLocalTime().ToString("MMM d, yyyy h:mm tt"),
-            Content = new ScrollViewer { Content = view, MaxHeight = 640, Padding = new Thickness(0, 0, 14, 0) },
+            Title = record.Date.ToLocalTime().ToString("MMM d, yyyy h:mm tt", CultureInfo.InvariantCulture),
+            Content = new ScrollViewer { Content = view.View, MaxHeight = 640, Padding = new Thickness(0, 0, 14, 0) },
             PrimaryButtonText = "Practice Again",
             CloseButtonText = "Done",
             DefaultButton = ContentDialogButton.Close,
@@ -256,7 +294,13 @@ public sealed partial class VerbalPracticePage : Page
     private void OnTypeChanged(object sender, SelectionChangedEventArgs e)
     {
         if (refreshing || session is null || TypeBox.SelectedIndex < 0) return;
-        session.Filter = VerbalDrillFilter.Menu[TypeBox.SelectedIndex];
+        session.Filter = DrillTypeFilter.Menu(measure)[TypeBox.SelectedIndex];
+    }
+
+    private void OnAreaChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (refreshing || session is null || AreaBox.SelectedIndex < 0) return;
+        session.Area = PracticeDrillSession.AreaChoices[AreaBox.SelectedIndex];
     }
 
     private void OnDifficultyChanged(object sender, SelectionChangedEventArgs e)
@@ -275,6 +319,11 @@ public sealed partial class VerbalPracticePage : Page
     {
         if (refreshing || session is null) return;
         session.MissedOnly = MissedSwitch.IsOn;
+    }
+
+    private void OnCalculatorClick(object sender, RoutedEventArgs e)
+    {
+        if (session is not null) session.ShowsCalculator = !session.ShowsCalculator;
     }
 
     private void OnPrimaryClick(object sender, RoutedEventArgs e)
@@ -297,10 +346,15 @@ public sealed partial class VerbalPracticePage : Page
         if (session is not null) RefreshHistory(session);
     }
 
-    /// <summary>Smoke test: answers the current question with the first choices (two for Sentence Equivalence) and checks it.</summary>
+    /// <summary>Smoke test: answers the current question (first choices, two for Sentence Equivalence, or a number) and checks it.</summary>
     internal bool AnswerAndCheckForSmokeTest()
     {
         if (session?.Current is not { } question) return false;
+        if (question.Format == QuestionFormat.NumericEntry)
+        {
+            if (PracticeDrillPool.IsFractionEntry(question)) { session.SetFractionPart(0, "1"); session.SetFractionPart(1, "2"); }
+            else session.SetNumericEntryText("12.5");
+        }
         foreach (var group in question.Groups)
             foreach (var option in group.Options.Take(question.Format == QuestionFormat.SentenceEquivalence ? 2 : 1))
                 session.Toggle(group, option);
@@ -310,6 +364,12 @@ public sealed partial class VerbalPracticePage : Page
 
     /// <summary>Smoke test: the next question.</summary>
     internal void NextForSmokeTest() => session?.Next();
+
+    /// <summary>Smoke test: opens or closes the calculator (Quant).</summary>
+    internal void ToggleCalculatorForSmokeTest()
+    {
+        if (session is not null) session.ShowsCalculator = !session.ShowsCalculator;
+    }
 
     private static Visibility Show(bool visible) => visible ? Visibility.Visible : Visibility.Collapsed;
 }

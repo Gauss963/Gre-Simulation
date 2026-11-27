@@ -60,19 +60,24 @@ internal static class SmokeTest
             var services = await AppServices.Ready;
             await Task.Delay(1500);
             await Step("dashboard", () => { });
-            foreach (var tag in new[] { "verbalPractice", "vocabulary", "history", "resources", "dashboard" })
+            foreach (var tag in new[] { "verbalPractice", "quantPractice", "vocabulary", "history", "resources", "dashboard" })
                 await Step($"page-{tag}", () => window.Navigate(tag));
 
-            // Verbal Practice: check a few questions, then look at the history and a review.
-            await Step("verbal-practice", () => window.Navigate("verbalPractice"));
-            for (var i = 0; i < 4; i++)
+            // Verbal and Quant Practice: check a few questions (and open the Quant calculator).
+            foreach (var tag in new[] { "verbalPractice", "quantPractice" })
             {
-                await Step($"verbal-practice-check-{i + 1}", () =>
+                await Step(tag, () => window.Navigate(tag));
+                if (tag == "quantPractice")
+                    await Step($"{tag}-calculator", () => (window.CurrentPage as Pages.PracticePage)?.ToggleCalculatorForSmokeTest());
+                for (var i = 0; i < 6; i++)
                 {
-                    if (window.CurrentPage is not Pages.VerbalPracticePage page || !page.AnswerAndCheckForSmokeTest())
-                        throw new InvalidOperationException("Verbal Practice did not check the question.");
-                });
-                await Step($"verbal-practice-next-{i + 1}", () => (window.CurrentPage as Pages.VerbalPracticePage)?.NextForSmokeTest());
+                    await Step($"{tag}-check-{i + 1}", () =>
+                    {
+                        if (window.CurrentPage is not Pages.PracticePage page || !page.AnswerAndCheckForSmokeTest())
+                            throw new InvalidOperationException($"{tag} did not check the question.");
+                    });
+                    await Step($"{tag}-next-{i + 1}", () => (window.CurrentPage as Pages.PracticePage)?.NextForSmokeTest());
+                }
             }
             window.Navigate("dashboard");
 

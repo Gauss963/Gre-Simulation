@@ -13,10 +13,18 @@ public sealed partial class MainWindow : Window
     private static readonly Dictionary<string, Type> Pages = new()
     {
         ["dashboard"] = typeof(Pages.DashboardPage),
-        ["verbalPractice"] = typeof(Pages.VerbalPracticePage),
+        ["verbalPractice"] = typeof(Pages.PracticePage),
+        ["quantPractice"] = typeof(Pages.PracticePage),
         ["vocabulary"] = typeof(Pages.VocabularyPage),
         ["history"] = typeof(Pages.HistoryPage),
         ["resources"] = typeof(Pages.ResourcesPage),
+    };
+
+    /// <summary>The navigation parameter a page gets when it is opened from the sidebar.</summary>
+    private static readonly Dictionary<string, object> DefaultParameters = new()
+    {
+        ["verbalPractice"] = GREMeasure.Verbal,
+        ["quantPractice"] = GREMeasure.Quantitative,
     };
 
     public MainWindow()
@@ -57,7 +65,7 @@ public sealed partial class MainWindow : Window
         }
         else
         {
-            ContentFrame.Navigate(Pages[tag], parameter, new SuppressNavigationTransitionInfo());
+            ContentFrame.Navigate(Pages[tag], parameter ?? DefaultParameters.GetValueOrDefault(tag), new SuppressNavigationTransitionInfo());
         }
     }
 
@@ -70,7 +78,7 @@ public sealed partial class MainWindow : Window
     {
         if (args.SelectedItem is NavigationViewItem { Tag: string tag } && Pages.TryGetValue(tag, out var page))
         {
-            ContentFrame.Navigate(page, pendingParameter, new EntranceNavigationTransitionInfo());
+            ContentFrame.Navigate(page, pendingParameter ?? DefaultParameters.GetValueOrDefault(tag), new EntranceNavigationTransitionInfo());
             pendingParameter = null;
         }
     }

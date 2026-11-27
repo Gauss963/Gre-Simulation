@@ -8,6 +8,17 @@ namespace GreSimulation.Core;
 /// operations, parentheses, memory, square root, CE/C, ± and Transfer Display for Numeric Entry.
 /// Bind <see cref="Display"/>, <see cref="Expression"/>, <see cref="HasMemory"/>; send every key with <see cref="Input"/>.
 /// </summary>
+/// <summary>What the floating calculator panel works with: a practice test or a Quant practice page.</summary>
+public interface ICalculatorHost
+{
+    CalculatorModel Calculator { get; }
+    /// <summary>Transfer Display is enabled only for decimal Numeric Entry questions.</summary>
+    bool CanTransferFromCalculator { get; }
+    /// <summary>Copies the display into the Numeric Entry box when allowed.</summary>
+    void TransferCalculatorDisplay();
+    void CloseCalculator();
+}
+
 public sealed class CalculatorModel : ObservableObject
 {
     /// <summary>Key layout of the official GRE calculator (rows of key labels, as on the Mac).</summary>

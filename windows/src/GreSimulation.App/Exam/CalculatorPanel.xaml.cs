@@ -13,13 +13,13 @@ using Windows.UI.Core;
 namespace GreSimulation.App.Exam;
 
 /// <summary>
-/// The floating GRE calculator (CalculatorView.swift) for one <see cref="ExamSession"/>. It lives on a
-/// <see cref="Canvas"/> and can be dragged by its title bar. Keys go to <see cref="ExamSession.Calculator"/>;
+/// The floating GRE calculator (CalculatorView.swift) for a practice test or the Quant practice page. It lives
+/// on a <see cref="Canvas"/> and can be dragged by its title bar. Keys go to <see cref="ICalculatorHost.Calculator"/>;
 /// when the panel has focus the keyboard works too (digits, + − × ÷, parentheses, Enter =, Esc C, Backspace CE).
 /// </summary>
 public sealed partial class CalculatorPanel : UserControl
 {
-    private readonly ExamSession _session;
+    private readonly ICalculatorHost _session;
     private Point? _dragStart;
     private double _dragLeft;
     private double _dragTop;
@@ -43,7 +43,7 @@ public sealed partial class CalculatorPanel : UserControl
         ["="] = "Equals",
     };
 
-    public CalculatorPanel(ExamSession session)
+    public CalculatorPanel(ICalculatorHost session)
     {
         _session = session;
         InitializeComponent();
@@ -94,7 +94,7 @@ public sealed partial class CalculatorPanel : UserControl
         AutomationProperties.SetName(DisplayText, $"Display {calculator.Display}");
     }
 
-    private void OnCloseClick(object sender, RoutedEventArgs e) => _session.IsCalculatorPresented = false;
+    private void OnCloseClick(object sender, RoutedEventArgs e) => _session.CloseCalculator();
 
     private void OnTransferClick(object sender, RoutedEventArgs e) => _session.TransferCalculatorDisplay();
 
